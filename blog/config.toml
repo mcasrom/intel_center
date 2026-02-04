@@ -3,8 +3,8 @@ languageCode = "es"
 title = "Intel Center"
 theme = "terminal"
 
-# Crucial: canonifyURLs en false evita que Hugo meta 'intel_center' dos veces
-canonifyURLs = false
+# Esto obliga a Hugo a usar la baseURL completa en cada enlace del menú
+canonifyURLs = true
 relativeURLs = false
 
 [params]
@@ -15,17 +15,17 @@ relativeURLs = false
 [menu]
   [[menu.main]]
     name = "Mapa"
-    url = "/intel_center/mapa/"
+    url = "mapa/"
     weight = 10
   [[menu.main]]
     name = "Informes"
-    url = "/intel_center/posts/"
+    url = "posts/"
     weight = 20
   [[menu.main]]
     name = "Acerca de"
-    url = "/intel_center/about/"
+    url = "about/"
     weight = 30
   [[menu.main]]
     name = "Contacto"
-    url = "/intel_center/contact/"
+    url = "contact/"
     weight = 40
