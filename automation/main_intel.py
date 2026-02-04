@@ -42,22 +42,25 @@ def init_db():
     conn.commit()
     return conn
 
+
 def housekeeping(conn):
-    print("🧹 Iniciando autolimpieza...")
+    print("🧹 Iniciando autolimpieza y rotación (30 días)...")
+    # 1. Limpieza de Base de Datos (opcional, para no engordar el .db)
     cur = conn.cursor()
-    # 1. Limpiar noticias viejas en DB (> 90 días) para mantenerla ligera
-    cur.execute("DELETE FROM news WHERE timestamp < date('now', '-90 days')")
+    cur.execute("DELETE FROM news WHERE timestamp < date('now', '-30 days')")
     conn.commit()
-    cur.execute("VACUUM") # Optimiza el tamaño del archivo en disco
-    
-    # 2. Borrar informes de Hugo antiguos (> 30 días)
+
+    # 2. Rotación de archivos Markdown en la carpeta posts
+    import time
     now = time.time()
     for f in os.listdir(POSTS_OUTPUT):
         f_path = os.path.join(POSTS_OUTPUT, f)
-        if os.stat(f_path).st_mtime < now - (30 * 86400):
-            if os.path.isfile(f_path) and f.startswith("intel-"):
+        # Si el archivo es un .md y tiene más de 30 días (30 * 24 * 60 * 60 segundos)
+        if f.endswith(".md") and f != "_index.md":
+            if os.stat(f_path).st_mtime < now - (30 * 86400):
                 os.remove(f_path)
                 print(f"🗑️ Eliminado informe antiguo: {f}")
+
 
 def fetch_data(conn):
     cur = conn.cursor()
@@ -82,7 +85,7 @@ def export_map_json(conn):
 def create_hugo_post(conn):
     date_str = datetime.now().strftime("%Y-%m-%d")
     date_iso = datetime.now().strftime('%Y-%m-%dT%H:%M:%S')
-    filename = os.path.join(POSTS_OUTPUT, f"intel-{date_str}.md")
+    filename = os.path.join(POSTS_OUTPUT, f"{date_str}-informe-inteligencia.md")    
     cur = conn.cursor()
     cur.execute("SELECT region, title FROM news WHERE date(timestamp) = date('now') ORDER BY timestamp DESC")
     news_today = cur.fetchall()
