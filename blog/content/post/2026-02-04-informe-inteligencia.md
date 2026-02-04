@@ -1,11 +1,14 @@
 ---
 title: "Resumen Inteligencia 2026-02-04"
-date: 2026-02-04T20:24:36
-type: "posts"
+date: "2026-02-04T20:29:03"
+type: "post"
 layout: "single"
 draft: false
 ---
 
+- **[Medio_Oriente]**: Russia jails stand-up comic Artemy Ostani over war joke
+- **[Medio_Oriente]**: Russia’s Putin holds video call with China’s Xi
+- **[Medio_Oriente]**: Israeli strikes kill more than 20 in Gaza, shatter ‘ceasefire’ myth
 - **[Asia_Nikkei]**: Japan's 3  top banks on track to earn record profits for fiscal year
 - **[Asia_Nikkei]**: Southeast Asia IPOs rebound in second half, raising $4.5bn
 - **[Asia_Nikkei]**: Japan, US insurers snap up Lloyd's operators on war risk expertise
