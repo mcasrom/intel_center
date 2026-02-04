@@ -3,30 +3,29 @@ languageCode = "es"
 title = "Intel Center"
 theme = "terminal"
 
-# Forzamos URLs absolutas para evitar el descuadre en subpáginas
-canonifyURLs = true
+# Esto evita que Hugo intente ser "inteligente" con las rutas
+canonifyURLs = false
 relativeURLs = false
 
 [params]
     contentTypeName = "posts"
     themeColor = "orange"
     defaultTheme = "dark"
-    centerTheme = true
 
 [menu]
   [[menu.main]]
     name = "Mapa"
-    url = "https://mcasrom.github.io/intel_center/mapa/"
+    url = "/intel_center/mapa/"
     weight = 10
   [[menu.main]]
     name = "Informes"
-    url = "https://mcasrom.github.io/intel_center/posts/"
+    url = "/intel_center/posts/"
     weight = 20
   [[menu.main]]
     name = "Acerca de"
-    url = "https://mcasrom.github.io/intel_center/about/"
+    url = "/intel_center/about/"
     weight = 30
   [[menu.main]]
     name = "Contacto"
-    url = "https://mcasrom.github.io/intel_center/contact/"
+    url = "/intel_center/contact/"
     weight = 40
