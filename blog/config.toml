@@ -1,31 +1,34 @@
 baseURL = "https://mcasrom.github.io/intel_center/"
 languageCode = "es"
 title = "Intel Center"
-theme = "terminal"
+theme = "PaperMod"
 
-# Esto obliga a Hugo a usar la baseURL completa en cada enlace del menú
+# Esto asegura que los enlaces sean absolutos y no se dupliquen
 canonifyURLs = true
 relativeURLs = false
 
 [params]
-    contentTypeName = "posts"
-    themeColor = "orange"
     defaultTheme = "dark"
+    showCodeCopyButtons = true
 
 [menu]
-  [[menu.main]]
-    name = "Mapa"
-    url = "mapa/"
-    weight = 10
-  [[menu.main]]
-    name = "Informes"
-    url = "posts/"
-    weight = 20
-  [[menu.main]]
-    name = "Acerca de"
-    url = "about/"
-    weight = 30
-  [[menu.main]]
-    name = "Contacto"
-    url = "contact/"
-    weight = 40
+    [[menu.main]]
+        identifier = "mapa"
+        name = "Mapa"
+        url = "/mapa/"
+        weight = 10
+    [[menu.main]]
+        identifier = "posts"
+        name = "Informes"
+        url = "/posts/"
+        weight = 20
+    [[menu.main]]
+        identifier = "about"
+        name = "Acerca de"
+        url = "/about/"
+        weight = 30
+    [[menu.main]]
+        identifier = "contact"
+        name = "Contacto"
+        url = "/contact/"
+        weight = 40
