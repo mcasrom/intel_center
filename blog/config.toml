@@ -6,13 +6,9 @@ theme = "ananke"
 [menu]
   [[menu.main]]
     name = "Mapa"
-    url = "https://mcasrom.github.io/intel_center/mapa/"
+    url = "/mapa/"
     weight = 10
   [[menu.main]]
     name = "Informes"
-    url = "https://mcasrom.github.io/intel_center/posts/"
+    url = "/post/"
     weight = 20
-  [[menu.main]]
-    name = "Acerca de"
-    url = "https://mcasrom.github.io/intel_center/about/"
-    weight = 30

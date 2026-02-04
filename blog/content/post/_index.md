@@ -1,7 +1,5 @@
 ---
-title: "Archivo de Informes"
-date: 2026-02-04
+title: "Informes de Inteligencia"
 layout: "list"
 ---
-
-Aquí encontrarás los reportes diarios de inteligencia procesados por el nodo.
+Listado actualizado de noticias globales.
