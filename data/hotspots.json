@@ -1,86 +1,26 @@
 [
-  {
-    "region": "Rusia_Eurasia",
-    "lat": 55.75,
-    "lon": 37.61,
-    "intensity": 102,
-    "keywords": [
-      [
-        "russian",
-        29
-      ],
-      [
-        "russia",
-        23
-      ],
-      [
-        "ukraine",
-        12
-      ],
-      [
-        "dhabi",
-        7
-      ],
-      [
-        "trump",
-        7
-      ]
-    ]
-  },
-  {
-    "region": "Medio_Oriente",
-    "lat": 25.27,
-    "lon": 51.53,
-    "intensity": 26,
-    "keywords": [
-      [
-        "israel",
-        4
-      ],
-      [
-        "rafah",
-        4
-      ],
-      [
-        "crossing",
-        3
-      ],
-      [
-        "gaza",
-        3
-      ],
-      [
-        "suspends",
-        2
-      ]
-    ]
-  },
-  {
-    "region": "Asia_Nikkei",
-    "lat": 35.68,
-    "lon": 139.76,
-    "intensity": 50,
-    "keywords": [
-      [
-        "japan",
-        11
-      ],
-      [
-        "china",
-        9
-      ],
-      [
-        "election",
-        4
-      ],
-      [
-        "trump",
-        4
-      ],
-      [
-        "trade",
-        4
-      ]
-    ]
-  }
+    {
+        "name": "Asia_Nikkei",
+        "lat": 35.0,
+        "lon": 135.0,
+        "intensity": 56
+    },
+    {
+        "name": "LATAM_Insight",
+        "lat": -15.0,
+        "lon": -60.0,
+        "intensity": 11
+    },
+    {
+        "name": "Medio_Oriente",
+        "lat": 25.0,
+        "lon": 45.0,
+        "intensity": 54
+    },
+    {
+        "name": "Rusia_Eurasia",
+        "lat": 60.0,
+        "lon": 90.0,
+        "intensity": 292
+    }
 ]
