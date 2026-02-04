@@ -1,6 +1,6 @@
 ---
 title: "Resumen Inteligencia 2026-02-04"
-date: 2026-02-04T20:19:34
+date: 2026-02-04T20:22:25
 type: "posts"
 layout: "single"
 draft: false
