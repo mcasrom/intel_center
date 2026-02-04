@@ -13,7 +13,7 @@ except ImportError:
     DB_PATH = os.path.join(BASE_DIR, "data", "news.db")
 
 JSON_OUTPUT = os.path.join(BASE_DIR, "blog/static/data/hotspots.json")
-POSTS_OUTPUT = os.path.join(BASE_DIR, "blog/content/posts/")
+POSTS_OUTPUT = os.path.join(BASE_DIR, "blog/content/postss/")
 USER_AGENT = 'Mozilla/5.0 (X11; Linux x86_64) Intel-Center-Bot/1.0'
 
 FEEDS = {
