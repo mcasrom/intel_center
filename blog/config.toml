@@ -15,12 +15,13 @@ theme = "terminal"
     showTitlePlaceholder = true
     terminalTitle = "CENTRO_INTEL ~ mcasrom"
 
+
 [menu]
   [[menu.main]]
     name = "Mapa de Hotspots"
-    url = "/mapa"
+    url = "mapa/"
     weight = 10
   [[menu.main]]
     name = "Informes"
-    url = "/posts"
+    url = "posts/"
     weight = 20
