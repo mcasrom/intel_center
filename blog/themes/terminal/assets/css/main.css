@@ -538,3 +538,17 @@ iframe[src*="youtube.com"] {
     margin: 0 auto !important;
 }
 
+
+/* EXCEPCIÓN PARA EL MAPA: Queremos que sea casi full-screen */
+.mapa-container {
+    max-width: 95% !important;
+    width: 95%;
+    margin: 0 auto;
+}
+
+#map {
+    height: 70vh; /* 70% de la altura de la pantalla */
+    width: 100%;
+    border: 2px solid #00ff00;
+}
+
