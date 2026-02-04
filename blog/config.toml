@@ -4,17 +4,14 @@ title = "El Mapa y El Código"
 theme = "terminal"
 
 [params]
-  # Configuración del estilo terminal
+  customCSS = ["css/custom.css"]
   contentTypeName = "posts"
   placeholderLowResImg = "/img/placeholder.png"
-  
-  # Color del tema: green, red, blue, orange, pink
   themeColor = "green"
-  
+
   [params.terminal]
     showTitlePlaceholder = true
     terminalTitle = "CENTRO_INTEL ~ mcasrom"
-
 
 [menu]
   [[menu.main]]

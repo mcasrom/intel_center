@@ -1,0 +1,10 @@
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Opcional: Centrar también el contenido de los posts si el tema lo requiere */
+.post {
+    margin: 0 auto;
+}
