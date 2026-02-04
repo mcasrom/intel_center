@@ -3,7 +3,6 @@ languageCode = "es"
 title = "Intel Center"
 theme = "ananke"
 
-# Desactivamos las funciones de ayuda de Hugo para que no estorben
 canonifyURLs = false
 relativeURLs = false
 
