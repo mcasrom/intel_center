@@ -3,12 +3,9 @@ languageCode = "es"
 title = "Intel Center"
 theme = "terminal"
 
-# Esta combinación es la clave para subdirectorios en GitHub
+# Desactivamos canonify para que no meta rutas absolutas que fallen
 canonifyURLs = false
 relativeURLs = true
-
-[pagination]
-  pagerSize = 5
 
 [params]
     contentTypeName = "posts"
