@@ -1,0 +1,5 @@
+feedparser==6.0.10
+joblib==1.5.3
+nltk==3.9.2
+tqdm==4.67.3
+types-tqdm==4.66

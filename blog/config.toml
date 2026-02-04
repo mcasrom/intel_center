@@ -1,0 +1,26 @@
+baseURL = "/"
+languageCode = "es-es"
+title = "El Mapa y El Código"
+theme = "terminal"
+
+[params]
+  # Configuración del estilo terminal
+  contentTypeName = "posts"
+  placeholderLowResImg = "/img/placeholder.png"
+  
+  # Color del tema: green, red, blue, orange, pink
+  themeColor = "green"
+  
+  [params.terminal]
+    showTitlePlaceholder = true
+    terminalTitle = "CENTRO_INTEL ~ mcasrom"
+
+[menu]
+  [[menu.main]]
+    name = "Mapa de Hotspots"
+    url = "/mapa"
+    weight = 10
+  [[menu.main]]
+    name = "Informes"
+    url = "/posts"
+    weight = 20

@@ -1,0 +1,37 @@
+{{ define "main" }}
+<div class="post">
+    <h1 class="post-title">{{ .Title }}</h1>
+    <div id="map" style="height: 500px; width: 100%; background: #1a1b1c; border: 1px solid #00ff00;"></div>
+</div>
+
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+<script>
+    var map = L.map('map').setView([20, 0], 2);
+    
+    // Estilo de mapa oscuro (CartoDB Dark Matter)
+    L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
+        attribution: '© OpenStreetMap'
+    }).addTo(map);
+
+    // Cargar tus Hot Spots desde el JSON generado por Python
+    fetch('/data/hotspots.json')
+        .then(response => response.json())
+        .then(data => {
+            data.forEach(spot => {
+                var radius = spot.intensity * 2000; // Escalar el círculo
+                var circle = L.circle([spot.lat, spot.lon], {
+                    color: '#00ff00',
+                    fillColor: '#00ff00',
+                    fillOpacity: 0.5,
+                    radius: radius
+                }).addTo(map);
+                
+                // Formatear las keywords para el popup
+                var keys = spot.keywords.map(k => k[0] + " (" + k[1] + ")").join("<br>");
+                circle.bindPopup("<b>" + spot.region + "</b><br>" + keys);
+            });
+        });
+</script>
+{{ end }}
