@@ -2,6 +2,8 @@ baseURL = "https://mcasrom.github.io/intel_center/"
 languageCode = "es"
 title = "Intel Center"
 theme = "ananke"
+buildFuture = true
+buildDrafts = true
 
 [menu]
   [[menu.main]]
@@ -12,3 +14,11 @@ theme = "ananke"
     name = "Informes"
     url = "/post/"
     weight = 20
+  [[menu.main]]
+    name = "Acerca de"
+    url = "/about/"
+    weight = 30
+  [[menu.main]]
+    name = "Contacto"
+    url = "/contact/"
+    weight = 40
