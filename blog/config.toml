@@ -1,7 +1,9 @@
-baseURL = "http://localhost:1313/"
+baseURL = "https://mcasrom.github.io/intel_center/"
 languageCode = "es"
 title = "Intel Center"
 theme = "terminal"
+canonifyURLs = true
+relativeURLs = false
 
 [pagination]
   pagerSize = 5
@@ -9,21 +11,23 @@ theme = "terminal"
 [params]
     contentTypeName = "posts"
     centerTheme = true
+    # Esto asegura que el CSS cargue correctamente en subdirectorios
+    themeColor = "orange" 
 
 [menu]
   [[menu.main]]
     name = "Mapa"
-    url = "/mapa/"
+    url = "mapa/"
     weight = 10
   [[menu.main]]
     name = "Informes"
-    url = "/posts/"
+    url = "posts/"
     weight = 20
   [[menu.main]]
     name = "Acerca de"
-    url = "/about/"
+    url = "about/"
     weight = 30
   [[menu.main]]
     name = "Contacto"
-    url = "/contact/"
+    url = "contact/"
     weight = 40

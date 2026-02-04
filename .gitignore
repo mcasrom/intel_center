@@ -1,12 +1,16 @@
-# No subir la base de datos ni datos crudos
-data_simulation/
-/mnt/
-*.db
+# SQLite
+data/*.db
+data/*.db-wal
+data/*.db-shm
 
-# No subir basura de Python
-__pycache__/
-*.py[cod]
-
-# No subir la carpeta de salida de Hugo
+# Hugo
 blog/public/
 blog/resources/
+.hugo_build.lock
+
+# Python
+__pycache__/
+*.pyc
+
+# OS
+.DS_Store

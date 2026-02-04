@@ -1,14 +1,11 @@
 {{ define "main" }}
 <style>
   .number-label {
-    background: none;
-    border: none;
-    color: #00ff00;
-    font-weight: bold;
-    font-size: 16px;
-    text-shadow: 0 0 5px #000;
+    background: none; border: none; color: #00ff00;
+    font-weight: bold; font-size: 16px; text-shadow: 0 0 5px #000;
     text-align: center;
   }
+  .mapa-full-width { width: 100%; border: 1px solid #333; }
 </style>
 
 <div class="post">
@@ -26,20 +23,17 @@
         attribution: '© OpenStreetMap'
     }).addTo(map);
 
-    fetch('{{ "data/hotspots.json" | absURL }}')
+    // Ruta absoluta para GitHub Pages
+    fetch('https://mcasrom.github.io/intel_center/data/hotspots.json')
         .then(response => response.json())
         .then(data => {
             data.forEach(spot => {
-                // Dibujar el círculo (la nube)
                 var radius = Math.max(spot.intensity * 15000, 100000); 
                 L.circle([spot.lat, spot.lon], {
-                    color: '#00ff00',
-                    fillColor: '#00ff00',
-                    fillOpacity: 0.3,
-                    radius: radius
+                    color: '#00ff00', fillColor: '#00ff00',
+                    fillOpacity: 0.3, radius: radius
                 }).addTo(map);
 
-                // Dibujar el NÚMERO encima
                 var numberIcon = L.divIcon({
                     className: 'number-label',
                     html: `<div>${spot.intensity}</div>`,
@@ -47,13 +41,8 @@
                 });
 
                 L.marker([spot.lat, spot.lon], { icon: numberIcon }).addTo(map);
-
-                // Popup con información extra
-                L.marker([spot.lat, spot.lon], { opacity: 0 })
-                    .bindPopup(`<b>Región:</b> ${spot.name}<br><b>Alertas:</b> ${spot.intensity}`)
-                    .addTo(map);
             });
         })
-        .catch(err => console.error("Error:", err));
+        .catch(err => console.error("Error cargando datos:", err));
 </script>
 {{ end }}

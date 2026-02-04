@@ -1,0 +1,103 @@
+import sys, os, feedparser, sqlite3, json, socket, time
+from datetime import datetime, timedelta
+
+# --- OPTIMIZACIÓN DE RECURSOS ---
+TIMEOUT = 30 
+socket.setdefaulttimeout(TIMEOUT)
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+sys.path.append(BASE_DIR)
+
+try:
+    from config.settings import DB_PATH
+except ImportError:
+    DB_PATH = os.path.join(BASE_DIR, "data", "news.db")
+
+JSON_OUTPUT = os.path.join(BASE_DIR, "blog/static/data/hotspots.json")
+POSTS_OUTPUT = os.path.join(BASE_DIR, "blog/content/posts/")
+USER_AGENT = 'Mozilla/5.0 (X11; Linux x86_64) Intel-Center-Bot/1.0'
+
+FEEDS = {
+    "Rusia_Eurasia": "https://tass.com/rss/v2.xml",
+    "Medio_Oriente": "https://www.aljazeera.com/xml/rss/all.xml",
+    "Europa_DW": "https://www.dw.com/en/top-stories/s-9097/rss",
+    "Asia_Nikkei": "https://asia.nikkei.com/rss/feed/nar",
+    "LATAM_Insight": "https://insightcrime.org/feed/",
+    "MEX_Universal": "https://www.eluniversal.com.mx/rss.xml"
+}
+
+COORDENADAS = {
+    "Rusia_Eurasia": [60.0, 90.0], "Medio_Oriente": [25.0, 45.0],
+    "Europa_DW": [50.0, 10.0], "Asia_Nikkei": [35.0, 135.0],
+    "LATAM_Insight": [-15.0, -60.0], "MEX_Universal": [19.43, -99.13]
+}
+
+def init_db():
+    os.makedirs(os.path.dirname(DB_PATH), exist_ok=True)
+    conn = sqlite3.connect(str(DB_PATH), timeout=30)
+    cur = conn.cursor()
+    # MODO WAL: Vital para resiliencia ante cortes de luz en Odroid
+    try: cur.execute('PRAGMA journal_mode=WAL;')
+    except: pass
+    cur.execute('CREATE TABLE IF NOT EXISTS news (id INTEGER PRIMARY KEY AUTOINCREMENT, timestamp DATETIME DEFAULT CURRENT_TIMESTAMP, region TEXT, title TEXT, link TEXT UNIQUE)')
+    conn.commit()
+    return conn
+
+def housekeeping(conn):
+    print("🧹 Iniciando autolimpieza...")
+    cur = conn.cursor()
+    # 1. Limpiar noticias viejas en DB (> 90 días) para mantenerla ligera
+    cur.execute("DELETE FROM news WHERE timestamp < date('now', '-90 days')")
+    conn.commit()
+    cur.execute("VACUUM") # Optimiza el tamaño del archivo en disco
+    
+    # 2. Borrar informes de Hugo antiguos (> 30 días)
+    now = time.time()
+    for f in os.listdir(POSTS_OUTPUT):
+        f_path = os.path.join(POSTS_OUTPUT, f)
+        if os.stat(f_path).st_mtime < now - (30 * 86400):
+            if os.path.isfile(f_path) and f.startswith("intel-"):
+                os.remove(f_path)
+                print(f"🗑️ Eliminado informe antiguo: {f}")
+
+def fetch_data(conn):
+    cur = conn.cursor()
+    for reg, url in FEEDS.items():
+        print(f"📥 {reg}...", end=" ", flush=True)
+        try:
+            f = feedparser.parse(url, agent=USER_AGENT)
+            c = 0
+            for e in f.entries[:15]:
+                cur.execute("INSERT OR IGNORE INTO news (region, title, link) VALUES (?, ?, ?)", (reg, e.title, e.link))
+                if cur.rowcount > 0: c += 1
+            print(f"✅ {c}")
+        except: print("❌")
+    conn.commit()
+
+def export_map_json(conn):
+    cur = conn.cursor()
+    cur.execute("SELECT region, COUNT(*) FROM news GROUP BY region")
+    hs = [{"name": r, "lat": COORDENADAS[r][0], "lon": COORDENADAS[r][1], "intensity": ct} for r, ct in cur.fetchall() if r in COORDENADAS]
+    with open(JSON_OUTPUT, 'w') as f: json.dump(hs, f, indent=4)
+
+def create_hugo_post(conn):
+    date_str = datetime.now().strftime("%Y-%m-%d")
+    date_iso = datetime.now().strftime('%Y-%m-%dT%H:%M:%S')
+    filename = os.path.join(POSTS_OUTPUT, f"intel-{date_str}.md")
+    cur = conn.cursor()
+    cur.execute("SELECT region, title FROM news WHERE date(timestamp) = date('now') ORDER BY timestamp DESC")
+    news_today = cur.fetchall()
+
+    content = f"---\ntitle: \"Resumen Inteligencia {date_str}\"\ndate: {date_iso}\ntype: \"posts\"\ndraft: false\n---\n\n"
+    for reg, tit in news_today:
+        content += f"- **[{reg}]**: {tit}\n"
+
+    with open(filename, 'w') as f: f.write(content)
+
+if __name__ == "__main__":
+    db = init_db()
+    housekeeping(db) # Limpia antes de procesar
+    fetch_data(db)
+    export_map_json(db)
+    create_hugo_post(db)
+    db.close()
+    print("🚀 Nodo Optimizado y Sincronizado.")
