@@ -2,8 +2,6 @@ baseURL = "https://mcasrom.github.io/intel_center/"
 languageCode = "es"
 title = "Intel Center"
 theme = "terminal"
-
-# Forzamos que las URLs sean siempre absolutas y correctas
 canonifyURLs = true
 
 [pagination]
@@ -11,7 +9,6 @@ canonifyURLs = true
 
 [params]
     contentTypeName = "posts"
-    # Forzamos el color y el fondo
     themeColor = "orange"
     defaultTheme = "dark"
     centerTheme = true
@@ -19,17 +16,17 @@ canonifyURLs = true
 [menu]
   [[menu.main]]
     name = "Mapa"
-    url = "/mapa/"
+    url = "mapa/"
     weight = 10
   [[menu.main]]
     name = "Informes"
-    url = "/posts/"
+    url = "posts/"
     weight = 20
   [[menu.main]]
     name = "Acerca de"
-    url = "/about/"
+    url = "about/"
     weight = 30
   [[menu.main]]
     name = "Contacto"
-    url = "/contact/"
+    url = "contact/"
     weight = 40
