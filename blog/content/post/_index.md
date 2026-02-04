@@ -1,5 +1,6 @@
 ---
 title: "Informes de Inteligencia"
+type: "post"
 layout: "list"
 ---
-Listado actualizado de noticias globales.
+Listado de reportes diarios procesados por el nodo.

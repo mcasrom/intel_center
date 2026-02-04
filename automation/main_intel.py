@@ -84,13 +84,13 @@ def export_map_json(conn):
 
 def create_hugo_post(conn):
     date_str = datetime.now().strftime("%Y-%m-%d")
-    date_iso = datetime.now().strftime('%Y-%m-%dT%H:%M:%S')
+    date_iso = datetime.now().strftime('%Y-%m-%d')    
     filename = os.path.join(POSTS_OUTPUT, f"{date_str}-informe-inteligencia.md")    
     cur = conn.cursor()
     cur.execute("SELECT region, title FROM news WHERE date(timestamp) = date('now') ORDER BY timestamp DESC")
     news_today = cur.fetchall()
 
-    content = f"---\ntitle: \"Resumen Inteligencia {date_str}\"\ndate: \"{date_iso}\"\ntype: \"post\"\nlayout: \"single\"\ndraft: false\n---\n\n"
+    content = f"---\ntitle: \"Resumen Inteligencia {date_str}\"\ndate: \"{date_iso}\"\ntype: \"post\"\ndraft: false\n---\n\n"
     for reg, tit in news_today:
         content += f"- **[{reg}]**: {tit}\n"
 
