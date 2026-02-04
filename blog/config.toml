@@ -1,24 +1,29 @@
-baseURL = "https://mcasrom.github.io/intel_center/"
-languageCode = "es-es"
-title = "El Mapa y El Código"
+baseURL = "http://localhost:1313/"
+languageCode = "es"
+title = "Intel Center"
 theme = "terminal"
 
-[params]
-  # Esta es la forma estándar del tema Terminal para cargar CSS extra
-  customCSS = ["css/custom.css"]
-  themeColor = "green"
-  contentTypeName = "posts"
+[pagination]
+  pagerSize = 5
 
-  [params.terminal]
-    showTitlePlaceholder = true
-    terminalTitle = "CENTRO_INTEL ~ mcasrom"
+[params]
+    contentTypeName = "posts"
+    centerTheme = true
 
 [menu]
   [[menu.main]]
-    name = "Mapa de Hotspots"
-    url = "mapa/"
+    name = "Mapa"
+    url = "/mapa/"
     weight = 10
   [[menu.main]]
     name = "Informes"
-    url = "posts/"
+    url = "/posts/"
     weight = 20
+  [[menu.main]]
+    name = "Acerca de"
+    url = "/about/"
+    weight = 30
+  [[menu.main]]
+    name = "Contacto"
+    url = "/contact/"
+    weight = 40
