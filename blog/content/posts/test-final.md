@@ -5,5 +5,6 @@ description: "Verificación de renderizado del motor Hugo."
 tags: ["test"]
 draft: false
 ---
+type: "posts"
 
 Si puedes leer esto, el motor de renderizado de Hugo y el tema Terminal están sincronizados.
