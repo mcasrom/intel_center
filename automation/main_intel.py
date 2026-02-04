@@ -90,7 +90,7 @@ def create_hugo_post(conn):
     cur.execute("SELECT region, title FROM news WHERE date(timestamp) = date('now') ORDER BY timestamp DESC")
     news_today = cur.fetchall()
 
-    content = f"---\ntitle: \"Resumen Inteligencia {date_str}\"\ndate: {date_iso}\ntype: \"posts\"\ndraft: false\n---\n\n"
+    content = f"---\ntitle: \"Resumen Inteligencia {date_str}\"\ndate: {date_iso}\ntype: \"posts\"\nlayout: \"single\"\ndraft: false\n---\n\n"    
     for reg, tit in news_today:
         content += f"- **[{reg}]**: {tit}\n"
 

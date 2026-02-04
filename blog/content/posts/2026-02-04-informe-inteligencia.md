@@ -1,10 +1,12 @@
 ---
 title: "Resumen Inteligencia 2026-02-04"
-date: 2026-02-04T20:08:58
+date: 2026-02-04T20:19:34
 type: "posts"
+layout: "single"
 draft: false
 ---
 
+- **[Asia_Nikkei]**: Japan's 3  top banks on track to earn record profits for fiscal year
 - **[Asia_Nikkei]**: Southeast Asia IPOs rebound in second half, raising $4.5bn
 - **[Asia_Nikkei]**: Japan, US insurers snap up Lloyd's operators on war risk expertise
 - **[Asia_Nikkei]**: China money rattles gold market in volatile week
