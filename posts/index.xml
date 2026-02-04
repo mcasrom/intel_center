@@ -1,20 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Monitor Global de Inteligencia on Intel Center</title><link>https://mcasrom.github.io/intel_center/</link><description>Recent content in Monitor Global de Inteligencia on Intel Center</description><generator>Hugo</generator><language>es</language><lastBuildDate>Wed, 04 Feb 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://mcasrom.github.io/intel_center/index.xml" rel="self" type="application/rss+xml"/><item><title>Acerca del Proyecto</title><link>https://mcasrom.github.io/intel_center/about/</link><pubDate>Wed, 04 Feb 2026 00:00:00 +0000</pubDate><guid>https://mcasrom.github.io/intel_center/about/</guid><description>&lt;h3 id="centro-de-inteligencia-geopolítica"&gt;Centro de Inteligencia Geopolítica&lt;/h3&gt;
-&lt;p&gt;Este sistema es un monitor automatizado de fuentes abiertas (OSINT).&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Motor:&lt;/strong&gt; Python 3 con persistencia en SQLite.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Frontend:&lt;/strong&gt; Hugo (Tema Terminal) optimizado para baja latencia.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Hardware:&lt;/strong&gt; Desplegado en Odroid C2 (DietPi).&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;El objetivo es centralizar la información de regiones críticas en un solo panel visual.&lt;/p&gt;</description></item><item><title>Contacto</title><link>https://mcasrom.github.io/intel_center/contact/</link><pubDate>Wed, 04 Feb 2026 00:00:00 +0000</pubDate><guid>https://mcasrom.github.io/intel_center/contact/</guid><description>&lt;h3 id="canal-de-comunicación"&gt;Canal de Comunicación&lt;/h3&gt;
-&lt;p&gt;Para reportes de fallos en los feeds o sugerencias de nuevas fuentes:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Terminal:&lt;/strong&gt; &lt;code&gt;miguelc@vivobook&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Nodo:&lt;/strong&gt; Intel-Center-Alpha&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Estado:&lt;/strong&gt; Operativo&lt;/li&gt;
-&lt;/ul&gt;
-&lt;blockquote&gt;
-&lt;p&gt;&amp;ldquo;La información es el activo más valioso, pero solo si es procesable.&amp;rdquo;&lt;/p&gt;
-&lt;/blockquote&gt;</description></item><item><title>Informe de Inteligencia Actualizado</title><link>https://mcasrom.github.io/intel_center/posts/intel-2026-02-04/</link><pubDate>Wed, 04 Feb 2026 00:00:00 +0000</pubDate><guid>https://mcasrom.github.io/intel_center/posts/intel-2026-02-04/</guid><description>&lt;h2 id="draft-false"&gt;draft: false&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on Intel Center</title><link>https://mcasrom.github.io/intel_center/posts/</link><description>Recent content in Posts on Intel Center</description><generator>Hugo</generator><language>es</language><lastBuildDate>Wed, 04 Feb 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://mcasrom.github.io/intel_center/posts/index.xml" rel="self" type="application/rss+xml"/><item><title>Informe de Inteligencia Actualizado</title><link>https://mcasrom.github.io/intel_center/posts/intel-2026-02-04/</link><pubDate>Wed, 04 Feb 2026 00:00:00 +0000</pubDate><guid>https://mcasrom.github.io/intel_center/posts/intel-2026-02-04/</guid><description>&lt;h2 id="draft-false"&gt;draft: false&lt;/h2&gt;
 &lt;p&gt;type: &amp;ldquo;posts&amp;rdquo;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;[Rusia_Eurasia]&lt;/strong&gt;: India-China relations may provide important impetus to future of BRICS — expert&lt;/li&gt;
@@ -452,4 +436,4 @@
 &lt;li&gt;&lt;strong&gt;[Rusia_Eurasia]&lt;/strong&gt;: Norway’s parliament votes to maintain monarchy&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;[Rusia_Eurasia]&lt;/strong&gt;: Hungary is only EU country to maintain ties with Russia, US, China, Turkey — minister&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;[Rusia_Eurasia]&lt;/strong&gt;: More than 1,100 apartment buildings in Kyiv left without heating — mayor&lt;/li&gt;
-&lt;/ul&gt;</description></item><item><title>Situación Global en Tiempo Real</title><link>https://mcasrom.github.io/intel_center/mapa/</link><pubDate>Wed, 04 Feb 2026 00:00:00 +0000</pubDate><guid>https://mcasrom.github.io/intel_center/mapa/</guid><description>&lt;p&gt;Cargando matriz de datos geopolíticos&amp;hellip;&lt;/p&gt;</description></item></channel></rss>
+&lt;/ul&gt;</description></item></channel></rss>
