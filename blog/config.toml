@@ -3,9 +3,9 @@ languageCode = "es"
 title = "Intel Center"
 theme = "terminal"
 
-# Desactivamos canonify para que no meta rutas absolutas que fallen
-canonifyURLs = false
-relativeURLs = true
+# Forzamos URLs absolutas para evitar el descuadre en subpáginas
+canonifyURLs = true
+relativeURLs = false
 
 [params]
     contentTypeName = "posts"
@@ -16,17 +16,17 @@ relativeURLs = true
 [menu]
   [[menu.main]]
     name = "Mapa"
-    url = "mapa/"
+    url = "https://mcasrom.github.io/intel_center/mapa/"
     weight = 10
   [[menu.main]]
     name = "Informes"
-    url = "posts/"
+    url = "https://mcasrom.github.io/intel_center/posts/"
     weight = 20
   [[menu.main]]
     name = "Acerca de"
-    url = "about/"
+    url = "https://mcasrom.github.io/intel_center/about/"
     weight = 30
   [[menu.main]]
     name = "Contacto"
-    url = "contact/"
+    url = "https://mcasrom.github.io/intel_center/contact/"
     weight = 40
