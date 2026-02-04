@@ -1,0 +1,26 @@
+[
+    {
+        "name": "Asia_Nikkei",
+        "lat": 35.0,
+        "lon": 135.0,
+        "intensity": 56
+    },
+    {
+        "name": "LATAM_Insight",
+        "lat": -15.0,
+        "lon": -60.0,
+        "intensity": 11
+    },
+    {
+        "name": "Medio_Oriente",
+        "lat": 25.0,
+        "lon": 45.0,
+        "intensity": 55
+    },
+    {
+        "name": "Rusia_Eurasia",
+        "lat": 60.0,
+        "lon": 90.0,
+        "intensity": 313
+    }
+]

@@ -1,34 +1,26 @@
 baseURL = "https://mcasrom.github.io/intel_center/"
 languageCode = "es"
 title = "Intel Center"
-theme = "PaperMod"
+theme = "ananke"
 
-# Esto asegura que los enlaces sean absolutos y no se dupliquen
-canonifyURLs = true
+# Desactivamos las funciones de ayuda de Hugo para que no estorben
+canonifyURLs = false
 relativeURLs = false
 
-[params]
-    defaultTheme = "dark"
-    showCodeCopyButtons = true
-
 [menu]
-    [[menu.main]]
-        identifier = "mapa"
-        name = "Mapa"
-        url = "/mapa/"
-        weight = 10
-    [[menu.main]]
-        identifier = "posts"
-        name = "Informes"
-        url = "/posts/"
-        weight = 20
-    [[menu.main]]
-        identifier = "about"
-        name = "Acerca de"
-        url = "/about/"
-        weight = 30
-    [[menu.main]]
-        identifier = "contact"
-        name = "Contacto"
-        url = "/contact/"
-        weight = 40
+  [[menu.main]]
+    name = "Mapa"
+    url = "https://mcasrom.github.io/intel_center/mapa/"
+    weight = 10
+  [[menu.main]]
+    name = "Informes"
+    url = "https://mcasrom.github.io/intel_center/posts/"
+    weight = 20
+  [[menu.main]]
+    name = "Acerca de"
+    url = "https://mcasrom.github.io/intel_center/about/"
+    weight = 30
+  [[menu.main]]
+    name = "Contacto"
+    url = "https://mcasrom.github.io/intel_center/contact/"
+    weight = 40
