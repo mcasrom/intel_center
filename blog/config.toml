@@ -3,7 +3,7 @@ languageCode = "es"
 title = "Intel Center"
 theme = "terminal"
 
-# Esto evita que Hugo intente ser "inteligente" con las rutas
+# Crucial: canonifyURLs en false evita que Hugo meta 'intel_center' dos veces
 canonifyURLs = false
 relativeURLs = false
 
