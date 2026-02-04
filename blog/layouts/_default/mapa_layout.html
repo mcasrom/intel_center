@@ -1,7 +1,24 @@
 {{ define "main" }}
+<style>
+  /* Forzado de centrado para el contenedor de Terminal */
+  .container {
+    max-width: 1000px !important;
+    margin: 0 auto !important;
+    float: none !important;
+  }
+  .content {
+    max-width: 100% !important;
+  }
+  #map {
+    margin: 20px auto;
+    border: 2px solid #00ff00;
+    box-shadow: 0 0 15px rgba(0, 255, 0, 0.2);
+  }
+</style>
+
 <div class="post">
     <h1 class="post-title">{{ .Title }}</h1>
-    <div id="map" style="height: 500px; width: 100%; background: #1a1b1c; border: 1px solid #00ff00;"></div>
+    <div id="map" style="height: 600px; width: 100%; background: #1a1b1c;"></div>
 </div>
 
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
@@ -9,29 +26,31 @@
 
 <script>
     var map = L.map('map').setView([20, 0], 2);
-    
-    // Estilo de mapa oscuro (CartoDB Dark Matter)
+
     L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
         attribution: '© OpenStreetMap'
     }).addTo(map);
 
-    // Cargar tus Hot Spots desde el JSON generado por Python
-    fetch('/data/hotspots.json')
-        .then(response => response.json())
+    // CORRECCIÓN DE RUTA: Buscamos en la carpeta data relativa a la raíz del sitio
+    fetch('{{ "data/hotspots.json" | absURL }}')
+        .then(response => {
+            if (!response.ok) throw new Error("No se pudo cargar el JSON");
+            return response.json();
+        })
         .then(data => {
             data.forEach(spot => {
-                var radius = spot.intensity * 2000; // Escalar el círculo
+                var radius = spot.intensity * 20000; // Aumentado para visibilidad global
                 var circle = L.circle([spot.lat, spot.lon], {
                     color: '#00ff00',
                     fillColor: '#00ff00',
                     fillOpacity: 0.5,
                     radius: radius
                 }).addTo(map);
-                
-                // Formatear las keywords para el popup
+
                 var keys = spot.keywords.map(k => k[0] + " (" + k[1] + ")").join("<br>");
                 circle.bindPopup("<b>" + spot.region + "</b><br>" + keys);
             });
-        });
+        })
+        .catch(err => console.error("Error cargando hotspots:", err));
 </script>
 {{ end }}

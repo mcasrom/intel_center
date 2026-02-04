@@ -518,3 +518,23 @@ iframe[src*="youtube.com"] {
     display: initial;
   }
 }
+/* Centrado Global */
+
+
+/* FIX DE CENTRADO MANUAL */
+.container {
+}
+.content, .header__inner, .footer__inner {
+}
+
+
+/* FIX DE CENTRADO MANUAL */
+.container {
+    max-width: 1000px !important;
+    margin: 0 auto !important;
+}
+.content, .header__inner, .footer__inner {
+    max-width: 1000px !important;
+    margin: 0 auto !important;
+}
+

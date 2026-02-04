@@ -4,10 +4,10 @@ title = "El Mapa y El Código"
 theme = "terminal"
 
 [params]
+  # Esta es la forma estándar del tema Terminal para cargar CSS extra
   customCSS = ["css/custom.css"]
-  contentTypeName = "posts"
-  placeholderLowResImg = "/img/placeholder.png"
   themeColor = "green"
+  contentTypeName = "posts"
 
   [params.terminal]
     showTitlePlaceholder = true
