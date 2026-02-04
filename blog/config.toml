@@ -2,7 +2,10 @@ baseURL = "https://mcasrom.github.io/intel_center/"
 languageCode = "es"
 title = "Intel Center"
 theme = "terminal"
-canonifyURLs = true
+
+# Crucial para GitHub Pages:
+canonifyURLs = false
+relativeURLs = true
 
 [pagination]
   pagerSize = 5
@@ -16,17 +19,17 @@ canonifyURLs = true
 [menu]
   [[menu.main]]
     name = "Mapa"
-    url = "mapa/"
+    url = "mapa"
     weight = 10
   [[menu.main]]
     name = "Informes"
-    url = "posts/"
+    url = "posts"
     weight = 20
   [[menu.main]]
     name = "Acerca de"
-    url = "about/"
+    url = "about"
     weight = 30
   [[menu.main]]
     name = "Contacto"
-    url = "contact/"
+    url = "contact"
     weight = 40
