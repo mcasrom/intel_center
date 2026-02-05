@@ -6,16 +6,28 @@
         "intensity": 78
     },
     {
-        "name": "LATAM_Insight",
+        "name": "LATAM",
         "lat": -15.0,
         "lon": -60.0,
-        "intensity": 11
+        "intensity": 15
+    },
+    {
+        "name": "MEXICO",
+        "lat": 23.0,
+        "lon": -102.0,
+        "intensity": 15
     },
     {
         "name": "Medio_Oriente",
         "lat": 25.0,
         "lon": 45.0,
-        "intensity": 83
+        "intensity": 85
+    },
+    {
+        "name": "NORTEAMERICA",
+        "lat": 40.0,
+        "lon": -100.0,
+        "intensity": 15
     },
     {
         "name": "Rusia_Eurasia",
