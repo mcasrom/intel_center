@@ -6,6 +6,12 @@
         "intensity": 78
     },
     {
+        "name": "Europa_DW",
+        "lat": 50.0,
+        "lon": 10.0,
+        "intensity": 15
+    },
+    {
         "name": "LATAM",
         "lat": -15.0,
         "lon": -60.0,
@@ -33,6 +39,6 @@
         "name": "Rusia_Eurasia",
         "lat": 60.0,
         "lon": 90.0,
-        "intensity": 326
+        "intensity": 341
     }
 ]
