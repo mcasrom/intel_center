@@ -1,12 +1,16 @@
 import sys, os, feedparser, sqlite3, json, socket, time
 from datetime import datetime, timedelta
-from textblob import TextBlob
 
 # --- OPTIMIZACIÓN DE RECURSOS ---
 TIMEOUT = 30 
 socket.setdefaulttimeout(TIMEOUT)
 BASE_DIR = "/home/miguelc/intel_center_test"
 DB_PATH = os.path.join(BASE_DIR, "data/news.db")
+JSON_OUTPUT = os.path.join(BASE_DIR, "blog/static/data/hotspots.json")
+POSTS_OUTPUT = os.path.join(BASE_DIR, "blog/content/post/")
+
+
+
 JSON_OUTPUT = os.path.join(BASE_DIR, "blog/static/data/hotspots.json")
 POSTS_OUTPUT = os.path.join(BASE_DIR, "blog/content/post/")
 USER_AGENT = 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:120.0) Gecko/20100101 Firefox/120.0'
@@ -39,39 +43,36 @@ COORDENADAS = {
     "Africa_Sahel": [15.0, 15.0]
 }
 
-def analizar_sentimiento(texto):
-    """Retorna polaridad (-1 a 1) y color hexadecimal."""
-    blob = TextBlob(str(texto))
-    pola = blob.sentiment.polarity
-    if pola < -0.1: return pola, "#ff4b2b" # Rojo (Tensión)
-    if pola > 0.1:  return pola, "#2ecc71" # Verde (Calma)
-    return pola, "#f1c40f"                 # Amarillo (Neutral)
-
 def init_db():
     os.makedirs(os.path.dirname(DB_PATH), exist_ok=True)
     conn = sqlite3.connect(str(DB_PATH), timeout=30)
     cur = conn.cursor()
+    # MODO WAL: Vital para resiliencia ante cortes de luz en Odroid
     try: cur.execute('PRAGMA journal_mode=WAL;')
     except: pass
-    # AÑADIDA COLUMNA 'sentimiento'
-    cur.execute('''CREATE TABLE IF NOT EXISTS news 
-                  (id INTEGER PRIMARY KEY AUTOINCREMENT, 
-                   timestamp DATETIME DEFAULT CURRENT_TIMESTAMP, 
-                   region TEXT, title TEXT, link TEXT UNIQUE, sentimiento REAL)''')
+    cur.execute('CREATE TABLE IF NOT EXISTS news (id INTEGER PRIMARY KEY AUTOINCREMENT, timestamp DATETIME DEFAULT CURRENT_TIMESTAMP, region TEXT, title TEXT, link TEXT UNIQUE)')
     conn.commit()
     return conn
 
+
 def housekeeping(conn):
     print("🧹 Iniciando autolimpieza y rotación (30 días)...")
+    # 1. Limpieza de Base de Datos (opcional, para no engordar el .db)
     cur = conn.cursor()
     cur.execute("DELETE FROM news WHERE timestamp < date('now', '-30 days')")
     conn.commit()
+
+    # 2. Rotación de archivos Markdown en la carpeta posts
+    import time
     now = time.time()
     for f in os.listdir(POSTS_OUTPUT):
         f_path = os.path.join(POSTS_OUTPUT, f)
+        # Si el archivo es un .md y tiene más de 30 días (30 * 24 * 60 * 60 segundos)
         if f.endswith(".md") and f != "_index.md":
             if os.stat(f_path).st_mtime < now - (30 * 86400):
                 os.remove(f_path)
+                print(f"🗑️ Eliminado informe antiguo: {f}")
+
 
 def fetch_data(conn):
     cur = conn.cursor()
@@ -81,9 +82,7 @@ def fetch_data(conn):
             f = feedparser.parse(url, agent=USER_AGENT)
             c = 0
             for e in f.entries[:15]:
-                pola, _ = analizar_sentimiento(e.title)
-                cur.execute("INSERT OR IGNORE INTO news (region, title, link, sentimiento) VALUES (?, ?, ?, ?)", 
-                            (reg, e.title, e.link, pola))
+                cur.execute("INSERT OR IGNORE INTO news (region, title, link) VALUES (?, ?, ?)", (reg, e.title, e.link))
                 if cur.rowcount > 0: c += 1
             print(f"✅ {c}")
         except: print("❌")
@@ -91,53 +90,47 @@ def fetch_data(conn):
 
 def export_map_json(conn):
     cur = conn.cursor()
-    # Promediamos sentimiento y contamos noticias
-    cur.execute("""SELECT region, COUNT(*), AVG(sentimiento) FROM news 
-                   WHERE timestamp > datetime('now', '-24 hours') GROUP BY region""")
+    # Solo contamos noticias de las últimas 24 horas para que el mapa sea real
+    cur.execute("SELECT region, COUNT(*) FROM news WHERE timestamp > datetime('now', '-24 hours') GROUP BY region")
     results = cur.fetchall()
     
+    # Creamos la lista desde cero
     hs = []
-    for r, ct, sent_avg in results:
+    for r, ct in results:
         if r in COORDENADAS:
-            # Asignar color según el promedio de la región
-            color = "#f1c40f" # Default amarillo
-            if sent_avg < -0.1: color = "#ff4b2b" # Rojo
-            elif sent_avg > 0.1: color = "#2ecc71" # Verde
-            
             hs.append({
                 "name": r,
                 "lat": COORDENADAS[r][0],
                 "lon": COORDENADAS[r][1],
-                "intensity": ct,
-                "color": color,
-                "sentiment_index": round(sent_avg, 2)
+                "intensity": ct
             })
     
+    # Sobreescribimos el archivo JSON
     with open(JSON_OUTPUT, 'w') as f:
         json.dump(hs, f, indent=4)
-    print(f"📍 Mapa actualizado con {len(hs)} regiones y análisis de tensión.")
+    print(f"📍 Mapa actualizado con {len(hs)} regiones activas.")
+
+
 
 def create_hugo_post(conn):
     date_str = datetime.now().strftime("%Y-%m-%d")
     date_iso = datetime.now().strftime('%Y-%m-%d')    
     filename = os.path.join(POSTS_OUTPUT, f"{date_str}-informe-inteligencia.md")    
     cur = conn.cursor()
-    cur.execute("SELECT region, title, sentimiento FROM news WHERE date(timestamp) = date('now') ORDER BY timestamp DESC")
+    cur.execute("SELECT region, title FROM news WHERE date(timestamp) = date('now') ORDER BY timestamp DESC")
     news_today = cur.fetchall()
 
     content = f"---\ntitle: \"Resumen Inteligencia {date_str}\"\ndate: \"{date_iso}\"\ntype: \"post\"\ndraft: false\n---\n\n"
-    content += "### 🔴 Alerta de Tensión Global\n\n"
-    for reg, tit, sent in news_today:
-        marca = "⚠️" if sent < -0.1 else "🔹"
-        content += f"- {marca} **[{reg}]**: {tit}\n"
+    for reg, tit in news_today:
+        content += f"- **[{reg}]**: {tit}\n"
 
     with open(filename, 'w') as f: f.write(content)
 
 if __name__ == "__main__":
     db = init_db()
-    housekeeping(db)
+    housekeeping(db) # Limpia antes de procesar
     fetch_data(db)
     export_map_json(db)
     create_hugo_post(db)
     db.close()
-    print("🚀 Nodo Optimizado con Inteligencia de Sentimiento.")
+    print("🚀 Nodo Optimizado y Sincronizado.")

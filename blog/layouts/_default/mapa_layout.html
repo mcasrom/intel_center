@@ -1,48 +1,79 @@
 {{ define "main" }}
 <style>
+  /* Etiquetas numéricas dinámicas */
   .number-label {
-    background: none; border: none; color: #00ff00;
-    font-weight: bold; font-size: 16px; text-shadow: 0 0 5px #000;
+    background: none; 
+    border: none; 
+    font-weight: bold; 
+    font-size: 18px; 
+    text-shadow: 2px 2px 4px #000;
     text-align: center;
   }
-  .mapa-full-width { width: 100%; border: 1px solid #333; }
+  /* Contenedor del mapa con estética 'Terminal' */
+  .mapa-full-width { 
+    width: 100%; 
+    border: 2px solid #333; 
+    border-radius: 4px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.5);
+  }
 </style>
 
 <div class="post">
     <h1 class="post-title">{{ .Title }}</h1>
-    <div id="map" class="mapa-full-width" style="height: 650px; background: #1a1b1c;"></div>
+    <div id="map" class="mapa-full-width" style="height: 700px; background: #1a1b1c;"></div>
 </div>
 
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 
 <script>
+    // Inicialización del mapa centrada en el Ecuador
     var map = L.map('map').setView([20.0, 0.0], 2);    
 
+    // Capa de mapa oscura (CartoDB Dark Matter)
     L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
-        attribution: '© OpenStreetMap'
+        attribution: '© OpenStreetMap | Intel Center OSINT'
     }).addTo(map);
 
-    // Ruta absoluta para GitHub Pages
+    // Consumo del JSON generado por el script de Python
     fetch('https://mcasrom.github.io/intel_center/data/hotspots.json')
         .then(response => response.json())
         .then(data => {
             data.forEach(spot => {
-                var radius = Math.max(spot.intensity * 15000, 100000); 
+                // Cálculo dinámico del radio basado en volumen de noticias
+                var radius = Math.max(spot.intensity * 18000, 120000); 
+                
+                // Color extraído del análisis de sentimiento (Rojo/Amarillo/Verde)
+                var nodeColor = spot.color || '#00ff00'; 
+
+                // Dibujado del área de influencia (Círculo)
                 L.circle([spot.lat, spot.lon], {
-                    color: '#00ff00', fillColor: '#00ff00',
-                    fillOpacity: 0.3, radius: radius
+                    color: nodeColor, 
+                    fillColor: nodeColor,
+                    fillOpacity: 0.25, 
+                    weight: 2,
+                    radius: radius
                 }).addTo(map);
 
+                // Icono con el número de noticias y color de tensión
                 var numberIcon = L.divIcon({
                     className: 'number-label',
-                    html: `<div>${spot.intensity}</div>`,
-                    iconSize: [30, 30]
+                    html: `<div style="color: ${nodeColor};">${spot.intensity}</div>`,
+                    iconSize: [40, 40]
                 });
 
+                // Marcador invisible con etiqueta numérica
                 L.marker([spot.lat, spot.lon], { icon: numberIcon }).addTo(map);
+                
+                // Popup informativo al hacer clic
+                L.marker([spot.lat, spot.lon], { opacity: 0 })
+                 .bindPopup(`<b>Nodo: ${spot.name}</b><br>Intensidad: ${spot.intensity}<br>Tensión: ${spot.sentiment_index}`)
+                 .addTo(map);
             });
         })
-        .catch(err => console.error("Error cargando datos:", err));
+        .catch(err => {
+            console.error("Error en la telemetría de datos:", err);
+            document.getElementById('map').innerHTML = "<p style='color:red; padding:20px;'>Error: No se pudo conectar con el servidor de datos OSINT.</p>";
+        });
 </script>
 {{ end }}

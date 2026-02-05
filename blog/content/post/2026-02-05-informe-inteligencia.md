@@ -5,123 +5,141 @@ type: "post"
 draft: false
 ---
 
-- **[Africa_Sahel]**: Nigerian President Tinubu deploys army following Kwara State massacre
-- **[Africa_Sahel]**: Minneapolis residents sceptical about planned withdrawal of some ICE agents
-- **[Africa_Sahel]**: China to import some South African products duty-free
-- **[Africa_Sahel]**: Why Africa’s truth is falling behind in the digital race   (Africanews Debates)
-- **[Africa_Sahel]**: From stage to flame - Snoop Dogg joins Olympic torch relay
-- **[Africa_Sahel]**: Cameroon, Equatorial Guinea sign agreement for cross-border gas project
-- **[Africa_Sahel]**: UN warns Islamic State threat growing, situation urgent in West Africa, Sahel
-- **[Africa_Sahel]**: Ghana and Zambia sign visa-free travel agreement
-- **[Africa_Sahel]**: US and Iran reopen nuclear talks despite deep divisions and military threats
-- **[Africa_Sahel]**: Olympians turn runway models as IOC unveils teams' uniforms
-- **[Africa_Sahel]**: Education emerges as Africa’s top priority at World Government Summit
-- **[Africa_Sahel]**: N'Golo Kanté completes move to Turkey's Fenerbahce
-- **[Africa_Sahel]**: Russian drones strike Kyiv as capital battles power cuts and cold
-- **[Africa_Sahel]**: Moroccan security forces carry out evacuations as floods hit north
-- **[Africa_Sahel]**: Spain on red alert as Storm Leonardo unleashes torrential rain and floods
-- **[LATAM]**: Boletín: Primer ataque de EE.UU. y aliados árabes contra Estado Islámico en Siria y otras noticias
-- **[LATAM]**: Estrato 1, estrato 6: cómo los colombianos hablan de sí mismos divididos en clases sociales
-- **[LATAM]**: Las dos vidas de Cantinflas
-- **[LATAM]**: Santos: "No le estoy dando el país a las FARC"
-- **[LATAM]**: Fernández denuncia que con caso "fondos buitres" quieren poner de rodillas a Argentina
-- **[LATAM]**: ¿Por qué internet en Venezuela es tan lento?
-- **[LATAM]**: Vuelven a posponer el juicio a Leopoldo López
-- **[LATAM]**: Chile: roban US$3,3 millones a la casa de empeño "Tía Rica"
-- **[LATAM]**: Los consejos del Nobel mexicano que descubrió gases del agujero de ozono
-- **[LATAM]**: Boletín: más de 130.000 sirios kurdos cruzan a Turquía huyendo de Estado Islámico y otras noticias
-- **[LATAM]**: ¿Cómo se convirtió Cuba en una potencia humanitaria?
-- **[LATAM]**: Cómo operan las mafias del multimillonario negocio de la madera ilegal en Perú
-- **[LATAM]**: Los inodoros que ayudan a los haitianos a cultivar sus alimentos
-- **[LATAM]**: Un inodoro para combatir enfermedades
-- **[LATAM]**: Maduro anuncia un plan de desarme de civiles en Venezuela
-- **[USA_NORTE]**: Trump praises Tulsi Gabbard for joining FBI search on Georgia election offices – live
-- **[USA_NORTE]**: Michigan accuses big oil of being ‘cartel’ that fuels climate crisis and high energy costs
-- **[USA_NORTE]**: First Thing: Minnesota girl, 10, released from ICE custody after a month in detention
-- **[USA_NORTE]**: Calls to shut down Texas ICE facility for children grow amid measles outbreak
-- **[USA_NORTE]**: Trump’s border-czar takeover does little to calm Minneapolis tensions: ‘The agenda is still the same’
-- **[USA_NORTE]**: All the world’s enraged: a new era of ‘resistance theater’ is rising as Trump attacks the arts
-- **[USA_NORTE]**: ‘Do you think you’re the devil himself?’: highlights from the bizarre, newly released Bannon-Epstein interview
-- **[USA_NORTE]**: Woody Allen, a Florida mansion rulebook and a Paris ‘wife hunt’: stories you may have missed from the Epstein files
-- **[USA_NORTE]**: Brad Karp: Wall Street law firm boss resigns after emails to Epstein released
-- **[USA_NORTE]**: Thursday briefing: W​ill the Epstein ​files ​threaten ​Peter Mandelson’s ​legacy​?
-- **[USA_NORTE]**: Nancy Pelosi warns press freedom is ‘under siege’ after arrest of journalist
-- **[USA_NORTE]**: California can use a new congressional map in November, supreme court rules
-- **[USA_NORTE]**: Minnesota girl, 10, released from ICE custody after a month in detention
-- **[USA_NORTE]**: Donald Trump is making China great again | Steven Greenhouse
-- **[USA_NORTE]**: Why haven’t American elites stood up for Minnesota? | Daniel Altschuler
-- **[Australia]**: Starmer says sorry to Epstein's victims for appointing Mandelson as US ambassador
-- **[Australia]**: Australia's netballers thrash Jamaica in first Test
-- **[Australia]**: Politicians protest David Connolly appointment with NT parliament walkout
-- **[Australia]**: Porsches, Maserati allegedly stolen from Melbourne homes overnight
-- **[Australia]**: Could this supported housing model for the homeless prevent a future tragedy?
-- **[Australia]**: Chaos returns to MCG after 'unsatisfactory' Boxing Day Test
-- **[Australia]**: Nationals issue Ley with reunion counteroffer as deadline looms
-- **[Australia]**: Alleged attempted murder victim tells of 'cat-and-mouse' chase around office
-- **[Australia]**: 'Hijacked by left-wing extremists': Calls for Mardi Gras funding review
-- **[Australia]**: 'Max should not have died': Teen's family react to coronial findings
-- **[Australia]**: Man convicted of sexually assaulting two girls at Canberra Reptile Zoo
-- **[Australia]**: British billionaire urged to accept $350 million for mothballed mine
-- **[Australia]**: How capital gains tax changes could impact you
-- **[Australia]**: From September 27 to now: How the Gus Lamont story has unfolded
-- **[Australia]**: 'Incredible pieces of real estate': Sale of Perth barracks draws huge interest
-- **[Rusia_Eurasia]**: Bank of Russia sets official dollar rate at 76.55 rubles for February 6
-- **[Rusia_Eurasia]**: Progress made: what we know about negotiations on Ukraine in Abu Dhabi
-- **[Rusia_Eurasia]**: Russian PM arrives on visit to Brazil
-- **[Rusia_Eurasia]**: Russia covers about a quarter of Brazil’s needs of mineral fertilizers — Russian PM
-- **[Rusia_Eurasia]**: Russian LNG share in EU gas imports reaches 18% in January
-- **[Rusia_Eurasia]**: Russia, US should maintain exchange of ICBM launch notifications — expert
-- **[Rusia_Eurasia]**: Russia sees Madagascar as ‘partner supporting a multipolar world order" — Deputy PM Novak
-- **[Rusia_Eurasia]**: Russia’s Geoscan to launch mass production of new AI-powered educational drone
-- **[Rusia_Eurasia]**: US and Russia agree to resume high-level military dialogue — EUCOM
-- **[Rusia_Eurasia]**: Szijjarto calls Paks II NPP project ‘flagship nuclear revival of Europe’
-- **[Rusia_Eurasia]**: Putin announces start of Year of Russian Peoples’ Unity
-- **[Rusia_Eurasia]**: WADA says RUSADA may be reinstated when special military operation ends
-- **[Rusia_Eurasia]**: Russian chemical exports to India gain 66.2% in 2025 — Industry Ministry
-- **[Rusia_Eurasia]**: Knife-wielding man attacks kindergarten in Orenburg Region: what we know
-- **[Rusia_Eurasia]**: IN BRIEF: What we know about new prisoner exchange between Russia, Ukraine
-- **[Medio_Oriente]**: ‘US’s critical minerals summit will burden Global South with most costs’
-- **[Medio_Oriente]**: Gaza returnee recalls her journey through the Rafah crossing
-- **[Medio_Oriente]**: US-Iran talks face ‘serious obstacles in the way of diplomacy’
-- **[Medio_Oriente]**: It’s time for the world to boycott the US
-- **[Medio_Oriente]**: T20 World Cup 2026 quiz: How well do you know cricket’s shortest format?
-- **[Medio_Oriente]**: UK PM Starmer apologises to Epstein victims for appointing Mandelson
-- **[Medio_Oriente]**: T20 World Cup: India will travel to Colombo despite Pakistan boycott
-- **[Medio_Oriente]**: Russia-Ukraine talks end with agreement on prisoner swap
-- **[Medio_Oriente]**: Famine conditions spread to more towns in Sudan’s Darfur, experts warn
-- **[Medio_Oriente]**: Video: Bangladesh’s election and the return of banned Jamaat-e-Islami
-- **[Medio_Oriente]**: Israel sprays unknown chemical over land in south Lebanon
-- **[Medio_Oriente]**: Israeli air attacks on Lebanon reach highest level since ceasefire: Report
-- **[Medio_Oriente]**: One man killed, girl missing as Storm Leonardo hits Portugal and Spain
-- **[Medio_Oriente]**: Christian group says all abductees taken in Nigeria’s Kurmin Wali released
-- **[Medio_Oriente]**: Russia says will act responsibly despite New START nuclear treaty expiry
-- **[Europa_DW]**: Why Trump and his Republicans can't take over US elections
-- **[Europa_DW]**: South Korea stunned by Trump's latest tariff hike
-- **[Europa_DW]**: US-Iran talks: How far will Tehran go to make a deal?
-- **[Europa_DW]**: Russia expels German diplomat in tit-for-tat espionage row
-- **[Europa_DW]**: Uganda's anti-LGBTQ+ law exposes systemic failures
-- **[Europa_DW]**: Why scientists warn of privately funded geoengineering
-- **[Europa_DW]**: Nigeria: President deploys troops after Kwara state attack
-- **[Europa_DW]**: Moltbook explained: Where AI bots meet to 'discuss' humans
-- **[Europa_DW]**: The fight for American football in Europe
-- **[Europa_DW]**: Trump to be exposed at Cologne Carnival's Rose Monday parade
-- **[Europa_DW]**: How US Project Vault challenges China's rare-earth dominance
-- **[Europa_DW]**: Germany: Icy rain halts departures at Berlin airport
-- **[Europa_DW]**: Germany news: Merz on Gulf tour talks arms deals in Doha
-- **[Europa_DW]**: China's Xi holds calls with Trump, and Putin, on same day
-- **[Europa_DW]**: Ukraine updates: POW swap deal reached at Abu Dhabi talks
-- **[Asia_Nikkei]**: Japan's coalition could win more than 60% of lower house, Nikkei poll shows
-- **[Asia_Nikkei]**: Nikkei to launch index with Buffett-inspired moat concept
-- **[Asia_Nikkei]**: China's memory boost and Apple's iPhone shuffle
-- **[Asia_Nikkei]**: Sony lifts full-year profit outlook on chip demand, IP gain
-- **[Asia_Nikkei]**: Yum China aims to capture 'early signs' of improved consumer appetite
-- **[Asia_Nikkei]**: Saudi Arabia opens stock market to all foreign investors
-- **[Asia_Nikkei]**: Thai election due on Sunday: Three key points to watch
-- **[Asia_Nikkei]**: China's provinces ease growth targets, fueling expectations of national cut
-- **[Asia_Nikkei]**: Indonesia logs 5.1% GDP growth in 2025 but outlook remains downcast
-- **[Asia_Nikkei]**: Family offices eye niche strategies, impact investing in emerging managers
-- **[Asia_Nikkei]**: Trump and Xi talk Taiwan at dicey time for Taipei's defense spending
-- **[Asia_Nikkei]**: India's $166m bid to modernize critical mineral recycling takes shape
-- **[Asia_Nikkei]**: TSMC to make advanced chips for AI at 2nd Japan plant
-- **[Asia_Nikkei]**: HP, Dell, Acer and Asus mull using Chinese memory chips amid supply crunch
-- **[Asia_Nikkei]**: Jailed Vietnam airline mogul is back to work with South Korean talks
+### 🔴 Alerta de Tensión Global
+
+- 🔹 **[USA_NORTE]**: By the numbers: the latest ICE and CBP data on arrests, detentions and deportations in the US
+- 🔹 **[Rusia_Eurasia]**: German exports to Russia down 5.3% in April month-on-month
+- 🔹 **[Rusia_Eurasia]**: Khrunichev Center begins production of three Angara-A5M rockets for launching ROS modules
+- 🔹 **[Rusia_Eurasia]**: Gagauzia head faces court: recent developments
+- 🔹 **[Rusia_Eurasia]**: Trump-Musk clash costs both hefty sums in one day — media
+- 🔹 **[Rusia_Eurasia]**: Press review: Europe seeks to block US-Russia thaw as Russia eyes role in US-Iran talks
+- 🔹 **[Rusia_Eurasia]**: Israel to continue striking Beirut until Lebanon disarms Hezbollah — defense minister
+- 🔹 **[Rusia_Eurasia]**: WHO reports over 8,500 global attacks on health facilities since 2018 — director general
+- ⚠️ **[Rusia_Eurasia]**: Shadow of 'potential brutal divorce' between Trump-Musk looms over Republicans — TV
+- 🔹 **[Rusia_Eurasia]**: EU must conclude arms limitation agreement with Russia, says Orban
+- 🔹 **[Rusia_Eurasia]**: Bank of Russia sells yuan worth $83 mln with settlements on June 5
+- 🔹 **[Rusia_Eurasia]**: Attacks ahead of meeting between IAEA, Rosatom chiefs 'pressure tool,' ZNPP believes
+- 🔹 **[Rusia_Eurasia]**: Dodon calls on Sandu, Recean not to succumb to Western attempts to drag Moldova into war
+- 🔹 **[Rusia_Eurasia]**: Zelensky’s regime bears all hallmarks of terrorist organization — Russian senator
+- 🔹 **[Rusia_Eurasia]**: Russian stocks down as main trading session opens
+- 🔹 **[Rusia_Eurasia]**: Rosatom CEO, IAEA chief meet in Kaliningrad
+- 🔹 **[Africa_Sahel]**: Republic of Congo: president declares himself candidate for elections
+- 🔹 **[Africa_Sahel]**: Britain sanctions six over atrocities and arms support in Sudan War
+- 🔹 **[Africa_Sahel]**: Experts warn famine conditions spreading in Sudan's Darfur region
+- 🔹 **[Africa_Sahel]**: Nigerian President Tinubu deploys army following Kwara State massacre
+- 🔹 **[Africa_Sahel]**: Minneapolis residents sceptical about planned withdrawal of some ICE agents
+- 🔹 **[Africa_Sahel]**: China to import some South African products duty-free
+- ⚠️ **[Africa_Sahel]**: Why Africa’s truth is falling behind in the digital race   (Africanews Debates)
+- 🔹 **[Africa_Sahel]**: From stage to flame - Snoop Dogg joins Olympic torch relay
+- 🔹 **[Africa_Sahel]**: Cameroon, Equatorial Guinea sign agreement for cross-border gas project
+- 🔹 **[Africa_Sahel]**: UN warns Islamic State threat growing, situation urgent in West Africa, Sahel
+- 🔹 **[Africa_Sahel]**: Ghana and Zambia sign visa-free travel agreement
+- 🔹 **[Africa_Sahel]**: US and Iran reopen nuclear talks despite deep divisions and military threats
+- 🔹 **[Africa_Sahel]**: Olympians turn runway models as IOC unveils teams' uniforms
+- 🔹 **[Africa_Sahel]**: Education emerges as Africa’s top priority at World Government Summit
+- 🔹 **[Africa_Sahel]**: N'Golo Kanté completes move to Turkey's Fenerbahce
+- ⚠️ **[Australia]**: Starmer says sorry to Epstein's victims for appointing Mandelson as US ambassador
+- 🔹 **[Australia]**: Australia's netballers thrash Jamaica in first Test
+- 🔹 **[Australia]**: Politicians protest David Connolly appointment with NT parliament walkout
+- 🔹 **[Australia]**: Porsches, Maserati allegedly stolen from Melbourne homes overnight
+- 🔹 **[Australia]**: Could this supported housing model for the homeless prevent a future tragedy?
+- 🔹 **[Australia]**: Chaos returns to MCG after 'unsatisfactory' Boxing Day Test
+- 🔹 **[Australia]**: Nationals issue Ley with reunion counteroffer as deadline looms
+- 🔹 **[Australia]**: Alleged attempted murder victim tells of 'cat-and-mouse' chase around office
+- 🔹 **[Australia]**: 'Hijacked by left-wing extremists': Calls for Mardi Gras funding review
+- 🔹 **[Australia]**: 'Max should not have died': Teen's family react to coronial findings
+- 🔹 **[Australia]**: Man convicted of sexually assaulting two girls at Canberra Reptile Zoo
+- 🔹 **[Australia]**: British billionaire urged to accept $350 million for mothballed mine
+- 🔹 **[Australia]**: How capital gains tax changes could impact you
+- 🔹 **[Australia]**: From September 27 to now: How the Gus Lamont story has unfolded
+- 🔹 **[Australia]**: 'Incredible pieces of real estate': Sale of Perth barracks draws huge interest
+- 🔹 **[LATAM]**: Boletín: Primer ataque de EE.UU. y aliados árabes contra Estado Islámico en Siria y otras noticias
+- 🔹 **[LATAM]**: Estrato 1, estrato 6: cómo los colombianos hablan de sí mismos divididos en clases sociales
+- 🔹 **[LATAM]**: Las dos vidas de Cantinflas
+- 🔹 **[LATAM]**: Santos: "No le estoy dando el país a las FARC"
+- 🔹 **[LATAM]**: Fernández denuncia que con caso "fondos buitres" quieren poner de rodillas a Argentina
+- 🔹 **[LATAM]**: ¿Por qué internet en Venezuela es tan lento?
+- 🔹 **[LATAM]**: Vuelven a posponer el juicio a Leopoldo López
+- 🔹 **[LATAM]**: Chile: roban US$3,3 millones a la casa de empeño "Tía Rica"
+- 🔹 **[LATAM]**: Los consejos del Nobel mexicano que descubrió gases del agujero de ozono
+- 🔹 **[LATAM]**: Boletín: más de 130.000 sirios kurdos cruzan a Turquía huyendo de Estado Islámico y otras noticias
+- 🔹 **[LATAM]**: ¿Cómo se convirtió Cuba en una potencia humanitaria?
+- 🔹 **[LATAM]**: Cómo operan las mafias del multimillonario negocio de la madera ilegal en Perú
+- 🔹 **[LATAM]**: Los inodoros que ayudan a los haitianos a cultivar sus alimentos
+- 🔹 **[LATAM]**: Un inodoro para combatir enfermedades
+- 🔹 **[LATAM]**: Maduro anuncia un plan de desarme de civiles en Venezuela
+- 🔹 **[USA_NORTE]**: Trump praises Tulsi Gabbard for joining FBI search on Georgia election offices – live
+- 🔹 **[USA_NORTE]**: Michigan accuses big oil of being ‘cartel’ that fuels climate crisis and high energy costs
+- 🔹 **[USA_NORTE]**: First Thing: Minnesota girl, 10, released from ICE custody after a month in detention
+- ⚠️ **[USA_NORTE]**: Calls to shut down Texas ICE facility for children grow amid measles outbreak
+- 🔹 **[USA_NORTE]**: Trump’s border-czar takeover does little to calm Minneapolis tensions: ‘The agenda is still the same’
+- 🔹 **[USA_NORTE]**: All the world’s enraged: a new era of ‘resistance theater’ is rising as Trump attacks the arts
+- 🔹 **[USA_NORTE]**: ‘Do you think you’re the devil himself?’: highlights from the bizarre, newly released Bannon-Epstein interview
+- 🔹 **[USA_NORTE]**: Woody Allen, a Florida mansion rulebook and a Paris ‘wife hunt’: stories you may have missed from the Epstein files
+- ⚠️ **[USA_NORTE]**: Brad Karp: Wall Street law firm boss resigns after emails to Epstein released
+- 🔹 **[USA_NORTE]**: Thursday briefing: W​ill the Epstein ​files ​threaten ​Peter Mandelson’s ​legacy​?
+- 🔹 **[USA_NORTE]**: Nancy Pelosi warns press freedom is ‘under siege’ after arrest of journalist
+- 🔹 **[USA_NORTE]**: California can use a new congressional map in November, supreme court rules
+- 🔹 **[USA_NORTE]**: Minnesota girl, 10, released from ICE custody after a month in detention
+- 🔹 **[USA_NORTE]**: Donald Trump is making China great again | Steven Greenhouse
+- 🔹 **[USA_NORTE]**: Why haven’t American elites stood up for Minnesota? | Daniel Altschuler
+- 🔹 **[Medio_Oriente]**: Pakistan Super League signs Bangladesh’s Mustafizur after IPL controversy
+- 🔹 **[Medio_Oriente]**: How Epstein-Mandelson files rocked the UK government
+- 🔹 **[Medio_Oriente]**: Trump’s building a new world order, and there’s a method to his ‘madness’
+- 🔹 **[Medio_Oriente]**: ‘US’s critical minerals summit will burden Global South with most costs’
+- 🔹 **[Medio_Oriente]**: Gaza returnee recalls her journey through the Rafah crossing
+- ⚠️ **[Medio_Oriente]**: US-Iran talks face ‘serious obstacles in the way of diplomacy’
+- 🔹 **[Medio_Oriente]**: It’s time for the world to boycott the US
+- 🔹 **[Medio_Oriente]**: T20 World Cup 2026 quiz: How well do you know cricket’s shortest format?
+- 🔹 **[Medio_Oriente]**: UK PM Starmer apologises to Epstein victims for appointing Mandelson
+- 🔹 **[Medio_Oriente]**: T20 World Cup: India will travel to Colombo despite Pakistan boycott
+- 🔹 **[Medio_Oriente]**: Russia-Ukraine talks conclude without breakthrough on ending war
+- 🔹 **[Medio_Oriente]**: Famine conditions spread to more towns in Sudan’s Darfur, experts warn
+- 🔹 **[Medio_Oriente]**: Video: Bangladesh’s election and the return of banned Jamaat-e-Islami
+- 🔹 **[Medio_Oriente]**: Israel sprays unknown chemical over land in south Lebanon
+- 🔹 **[Medio_Oriente]**: Israeli air attacks on Lebanon reach highest level since ceasefire: Report
+- 🔹 **[Europa_DW]**: Why Trump and his Republicans can't take over US elections
+- 🔹 **[Europa_DW]**: South Korea stunned by Trump's latest tariff hike
+- 🔹 **[Europa_DW]**: US-Iran talks: How far will Tehran go to make a deal?
+- 🔹 **[Europa_DW]**: Russia expels German diplomat in tit-for-tat espionage row
+- 🔹 **[Europa_DW]**: Uganda's anti-LGBTQ+ law exposes systemic failures
+- 🔹 **[Europa_DW]**: Why scientists warn of privately funded geoengineering
+- 🔹 **[Europa_DW]**: Nigeria: President deploys troops after Kwara state attack
+- 🔹 **[Europa_DW]**: Moltbook explained: Where AI bots meet to 'discuss' humans
+- 🔹 **[Europa_DW]**: The fight for American football in Europe
+- 🔹 **[Europa_DW]**: Trump to be exposed at Cologne Carnival's Rose Monday parade
+- 🔹 **[Europa_DW]**: How US Project Vault challenges China's rare-earth dominance
+- 🔹 **[Europa_DW]**: Germany: Icy rain halts departures at Berlin airport
+- 🔹 **[Europa_DW]**: Germany news: Merz on Gulf tour talks arms deals in Doha
+- 🔹 **[Europa_DW]**: China's Xi holds calls with Trump, and Putin, on same day
+- 🔹 **[Europa_DW]**: Ukraine updates: POW swap deal reached at Abu Dhabi talks
+- 🔹 **[Asia_Nikkei]**: Japan's coalition could win more than 60% of lower house, Nikkei poll shows
+- 🔹 **[Asia_Nikkei]**: Nikkei to launch index with Buffett-inspired moat concept
+- 🔹 **[Asia_Nikkei]**: China's memory boost and Apple's iPhone shuffle
+- 🔹 **[Asia_Nikkei]**: Sony lifts full-year profit outlook on chip demand, IP gain
+- 🔹 **[Asia_Nikkei]**: Yum China aims to capture 'early signs' of improved consumer appetite
+- ⚠️ **[Asia_Nikkei]**: Saudi Arabia opens stock market to all foreign investors
+- 🔹 **[Asia_Nikkei]**: Thai election due on Sunday: Three key points to watch
+- 🔹 **[Asia_Nikkei]**: China's provinces ease growth targets, fueling expectations of national cut
+- 🔹 **[Asia_Nikkei]**: Indonesia logs 5.1% GDP growth in 2025 but outlook remains downcast
+- 🔹 **[Asia_Nikkei]**: Family offices eye niche strategies, impact investing in emerging managers
+- 🔹 **[Asia_Nikkei]**: Trump and Xi talk Taiwan at dicey time for Taipei's defense spending
+- 🔹 **[Asia_Nikkei]**: India's $166m bid to modernize critical mineral recycling takes shape
+- 🔹 **[Asia_Nikkei]**: TSMC to make advanced chips for AI at 2nd Japan plant
+- 🔹 **[Asia_Nikkei]**: HP, Dell, Acer and Asus mull using Chinese memory chips amid supply crunch
+- 🔹 **[Asia_Nikkei]**: Jailed Vietnam airline mogul is back to work with South Korean talks
+- 🔹 **[Rusia_Eurasia]**: Europe has changed rhetoric, realizing futility of plans to defeat Russia — Lavrov
+- 🔹 **[Rusia_Eurasia]**: Bank of Russia sets official dollar rate at 76.55 rubles for February 6
+- 🔹 **[Rusia_Eurasia]**: Progress made: what we know about negotiations on Ukraine in Abu Dhabi
+- 🔹 **[Rusia_Eurasia]**: Russian PM arrives on visit to Brazil
+- 🔹 **[Rusia_Eurasia]**: Russia covers about a quarter of Brazil’s needs of mineral fertilizers — Russian PM
+- 🔹 **[Rusia_Eurasia]**: Russian LNG share in EU gas imports reaches 18% in January
+- 🔹 **[Rusia_Eurasia]**: Russia, US should maintain exchange of ICBM launch notifications — expert
+- 🔹 **[Rusia_Eurasia]**: Russia sees Madagascar as ‘partner supporting a multipolar world order" — Deputy PM Novak
+- 🔹 **[Rusia_Eurasia]**: Russia’s Geoscan to launch mass production of new AI-powered educational drone
+- 🔹 **[Rusia_Eurasia]**: US and Russia agree to resume high-level military dialogue — EUCOM
+- 🔹 **[Rusia_Eurasia]**: Szijjarto calls Paks II NPP project ‘flagship nuclear revival of Europe’
+- 🔹 **[Rusia_Eurasia]**: Putin announces start of Year of Russian Peoples’ Unity
+- 🔹 **[Rusia_Eurasia]**: WADA says RUSADA may be reinstated when special military operation ends
+- 🔹 **[Rusia_Eurasia]**: Russian chemical exports to India gain 66.2% in 2025 — Industry Ministry
+- 🔹 **[Rusia_Eurasia]**: Knife-wielding man attacks kindergarten in Orenburg Region: what we know
