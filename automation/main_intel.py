@@ -122,22 +122,43 @@ def create_hugo_post(conn):
     date_iso = datetime.now().strftime('%Y-%m-%d')    
     filename = os.path.join(POSTS_OUTPUT, f"{date_str}-informe-inteligencia.md")    
     cur = conn.cursor()
-    cur.execute("SELECT region, title, sentimiento FROM news WHERE date(timestamp) = date('now') ORDER BY timestamp DESC")
+    
+    # Obtenemos noticias de hoy
+    cur.execute("SELECT region, title, sentimiento, link FROM news WHERE date(timestamp) = date('now') ORDER BY timestamp DESC")
     news_today = cur.fetchall()
 
-    content = f"---\ntitle: \"Resumen Inteligencia {date_str}\"\ndate: \"{date_iso}\"\ntype: \"post\"\ndraft: false\n---\n\n"
-    content += "### 🔴 Alerta de Tensión Global\n\n"
-    for reg, tit, sent in news_today:
-        marca = "⚠️" if sent < -0.1 else "🔹"
-        content += f"- {marca} **[{reg}]**: {tit}\n"
+    # --- WATCHLIST DE INTELIGENCIA ---
+    watchlist = ["golpe", "coup", "nuclear", "ataque", "attack", "crisis", "misil", "missile", "dictator", "muertos", "dead", "emergencia"]
+    alertas_criticas = []
+    reporte_normal = []
 
-    with open(filename, 'w') as f: f.write(content)
+    for reg, tit, sent, link in news_today:
+        # Verificamos si el título contiene alguna palabra de la watchlist
+        es_critica = any(word in tit.lower() for word in watchlist)
+        
+        linea = f"- **[{reg}]**: {tit} ([Link]({link}))"
+        
+        if es_critica or sent < -0.4:  # Si es crítica por palabra o por tensión extrema
+            alertas_criticas.append(f"⚠️ **CRÍTICO**: {linea}")
+        else:
+            marca = "🔴" if sent < -0.1 else "🔹"
+            reporte_normal.append(f"{marca} {linea}")
 
-if __name__ == "__main__":
-    db = init_db()
-    housekeeping(db)
-    fetch_data(db)
-    export_map_json(db)
-    create_hugo_post(db)
-    db.close()
-    print("🚀 Nodo Optimizado con Inteligencia de Sentimiento.")
+    # --- CONSTRUCCIÓN DEL DOCUMENTO MD ---
+    content = f"---\ntitle: \"Informe de Inteligencia OSINT - {date_str}\"\ndate: \"{date_iso}\"\ntype: \"post\"\n# Imagen de cabecera automática para el post\nfeatured_image: \"images/header_intel.jpg\"\n---\n\n"
+    
+    if alertas_criticas:
+        content += "## 🚨 ALERTAS DE ALTA PRIORIDAD\n"
+        content += "> **Aviso**: El sistema ha detectado eventos de potencial inestabilidad global.\n\n"
+        content += "\n".join(alertas_criticas) + "\n\n---\n\n"
+
+    content += "### 📡 Monitorización Global Diaria\n"
+    if reporte_normal:
+        content += "\n".join(reporte_normal)
+    else:
+        content += "No se registraron eventos significativos adicionales."
+
+    with open(filename, 'w') as f: 
+        f.write(content)
+    print(f"📄 Reporte generado con {len(alertas_criticas)} alertas críticas.")
+
