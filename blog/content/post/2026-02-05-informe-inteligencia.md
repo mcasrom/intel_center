@@ -5,6 +5,12 @@ type: "post"
 draft: false
 ---
 
+- **[Medio_Oriente]**: Boycotting India at T20 World Cup to support Bangladesh: Pakistan PM Sharif
+- **[Medio_Oriente]**: Russia-Ukraine war live: Second day of US-led war talks start in UAE
+- **[Medio_Oriente]**: South Sudan hospital hit by government air strike, MSF says
+- **[Medio_Oriente]**: Panama’s president hits back after China threat in canal ports row
+- **[Asia_Nikkei]**: Thai election due on Sunday: Three key points to watch
+- **[Asia_Nikkei]**: China's provinces ease growth targets, fueling expectations of national cut
 - **[Asia_Nikkei]**: Indonesia logs 5.1% GDP growth in 2025 but outlook remains downcast
 - **[Asia_Nikkei]**: Family offices eye niche strategies, impact investing in emerging managers
 - **[Asia_Nikkei]**: Trump and Xi talk Taiwan at dicey time for Taipei's defense spending
