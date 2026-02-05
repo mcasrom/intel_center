@@ -5,66 +5,21 @@ type: "post"
 draft: false
 ---
 
-- **[USA_NORTE]**: Woody Allen, a Florida mansion rulebook and a Paris ‘wife hunt’: stories you may have missed from the Epstein files
-- **[USA_NORTE]**: Brad Karp: Wall Street law firm boss resigns after emails to Epstein released
-- **[USA_NORTE]**: New York City and Illinois join WHO network after Trump pulls US out of global health body
-- **[USA_NORTE]**: Savannah Guthrie releases video appealing for proof her missing mother is alive
-- **[USA_NORTE]**: Tulsi Gabbard reportedly oversaw probe of Puerto Rico voting machines last year – as it happened
-- **[USA_NORTE]**: Nancy Pelosi warns press freedom is ‘under siege’ after arrest of journalist
-- **[USA_NORTE]**: Trump news at a glance: president hints at ‘softer touch’ on immigration as federal drawdown planned in Minnesota
-- **[USA_NORTE]**: California can use a new congressional map in November, supreme court rules
-- **[USA_NORTE]**: Minnesota girl, 10, released from ICE custody after a month in detention
-- **[USA_NORTE]**: Thursday briefing: W​ill the Epstein ​files ​threaten ​Peter Mandelson’s ​legacy​?
-- **[USA_NORTE]**: US congressional report explores option of not delivering any Aukus nuclear submarines to Australia
-- **[USA_NORTE]**: Florida bill seeks to ban use of ‘West Bank’ in schools and state agencies
-- **[USA_NORTE]**: Steve Bannon calls for immigration agents at polling sites during midterms
-- **[USA_NORTE]**: The Guardian view on Epstein, power and accountability: full transparency is the least survivors deserve | Editorial
-- **[USA_NORTE]**: What is happening in Fulton county is a warning to America | Jamil Smith
-- **[Rusia_Eurasia]**: Almaz-Antey to showcase latest air defense systems at exhibition in Riyadh
-- **[Rusia_Eurasia]**: Russian stocks down as main trading session opens
-- **[Rusia_Eurasia]**: Russia believes agreement on Ukraine should include Donbass recognition — TASS source
-- **[Rusia_Eurasia]**: UAE talks discuss ceasefire, territories — source
-- **[Rusia_Eurasia]**: Ukraine’s military shells Russia’s borderline Kursk Region 16 times over past day
-- **[Rusia_Eurasia]**: End of Russia-US nuclear accords: on Feb 5 world left without New START Treaty
-- **[Rusia_Eurasia]**: Polish PM arrives in Kiev for talks with Zelensky
-- **[Rusia_Eurasia]**: Talks on Ukraine continue in Abu Dhabi in trilateral format — TASS source
-- **[Rusia_Eurasia]**: Nearly 100 drones attack Russian regions overnight: aftermath
-- **[Rusia_Eurasia]**: Power plant accident leaves eastern Cuba without electricity
-- **[Rusia_Eurasia]**: Russia surprised by US sanctions against oil companies after Anchorage
-- **[Rusia_Eurasia]**: Russia not imposing itself as mediator between Iran, US — Lavrov
-- **[Rusia_Eurasia]**: Trump to make decision on New START when deems appropriate — media
-- **[Rusia_Eurasia]**: Russian companies openly forced out of Venezuela after events in republic — Lavrov
-- **[Rusia_Eurasia]**: Zelensky says 55,000 Ukrainian troops killed since start of special military operation
-- **[Medio_Oriente]**: Epstein’s help sought in bid to meet Chuck Schumer, files reveal
-- **[Medio_Oriente]**: Here’s why Israel is allowing record murder rates in its Palestinian towns
-- **[Medio_Oriente]**: Boycotting India at T20 World Cup to support Bangladesh: Pakistan PM Sharif
-- **[Medio_Oriente]**: Russia-Ukraine war live: Second day of US-led war talks start in UAE
-- **[Medio_Oriente]**: South Sudan hospital hit by government air strike, MSF says
-- **[Medio_Oriente]**: Panama’s president hits back after China threat in canal ports row
-- **[Medio_Oriente]**: Bitcoin plunge continues, erasing gains since Trump’s election
-- **[Medio_Oriente]**: ‘We have to rebuild’: Mozambique flood victims persevere in face of loss
-- **[Medio_Oriente]**: LIVE: US, Iran set to hold talks in Oman after barrage of threats
-- **[Medio_Oriente]**: Who are the past winners, and what’s the history of the T20 World Cup?
-- **[Medio_Oriente]**: Italy probes suspect in Sarajevo ‘sniper tourism’ during Bosnia war: Report
-- **[Medio_Oriente]**: Questions after Iran’s government releases victim list in protest killings
-- **[Medio_Oriente]**: UN warns of humanitarian collapse in Cuba as US seeks to block oil supplies
-- **[Medio_Oriente]**: ‘Country of the blind’: How will Bangladesh remember Muhammad Yunus?
-- **[Medio_Oriente]**: Zelenskyy reveals 55,000 Ukrainian soldiers killed fighting against Russia
-- **[Europa_DW]**: How US Project Vault challenges China's rare-earth dominance
-- **[Europa_DW]**: Germany: Icy rain halts departures at Berlin airport
-- **[Europa_DW]**: Germany updates: Merz meets with Saudi crown prince
-- **[Europa_DW]**: China’s Xi holds calls with Trump, and Putin, on same day
-- **[Europa_DW]**: Ukraine updates: Trilateral talks enter second day in UAE
-- **[Europa_DW]**: US wants to establish critical minerals trade bloc
-- **[Europa_DW]**: New START: Last US-Russia nuclear treaty expires, raising fears of new global arms race
-- **[Europa_DW]**: Winter Olympics begin quietly with curling
-- **[Europa_DW]**: US, Iran to hold talks in Oman on Friday
-- **[Europa_DW]**: 'Doomsday Clock': The US-Russia New START deal is ending
-- **[Europa_DW]**: US: Would-be Trump assassin gets life without parole
-- **[Europa_DW]**: Turkey's textile industry crushed by China and Bangladesh
-- **[Europa_DW]**: Italy says it has foiled Russian Olympic cyberattacks
-- **[Europa_DW]**: Nigeria: Extremists kill over 100 in western villages
-- **[Europa_DW]**: ICE to reduce numbers in Minnesota, but operations go on
+- **[Rusia_Eurasia]**: Ukraine, Russia to pore over memoranda exchanged at talks — Foreign Ministry
+- **[Rusia_Eurasia]**: Russia, Ukraine to agree on date of new round of talks after memorandums are studied
+- **[Rusia_Eurasia]**: Belarus’ defense ministry expects to strengthen cooperation with Pakistan significantly
+- **[Rusia_Eurasia]**: Frequency of meetings on Ukraine talks can’t be strictly standardized — Kremlin
+- **[Rusia_Eurasia]**: Pakistani PM asks Putin to help resolve conflict with India — aide
+- **[Rusia_Eurasia]**: Russia to take all measures to solve crime related to attacks on airfields — Kremlin
+- **[Rusia_Eurasia]**: France, Belgium oppose ban on gas imports from Russia to EU — Politico
+- **[Rusia_Eurasia]**: Putin’s stance on death penalty moratorium remains firm — Kremlin spokesman
+- **[Rusia_Eurasia]**: Europe’s gas stocks replenishment slower than usual, situation becomes tense
+- **[Rusia_Eurasia]**: Japan reports record-low birth rate in 2024, ministry reveals
+- **[Rusia_Eurasia]**: Russia takes measures proceeding from Kiev’s attacks on peaceful facilities — Kremlin
+- **[Rusia_Eurasia]**: Diamond prices mixed in May — industry agency
+- **[Rusia_Eurasia]**: Crimean bridge unaffected by Kiev’s attack, Kremlin spokesman says
+- **[Rusia_Eurasia]**: Poland's capacity to deliver arms to Ukraine heavily constrained — paper
+- **[Rusia_Eurasia]**: Russia not interested in arms race with Europe, European Parliament member says
 - **[Asia_Nikkei]**: Thai election due on Sunday: Three key points to watch
 - **[Asia_Nikkei]**: China's provinces ease growth targets, fueling expectations of national cut
 - **[Asia_Nikkei]**: Indonesia logs 5.1% GDP growth in 2025 but outlook remains downcast
@@ -95,3 +50,63 @@ draft: false
 - **[LATAM]**: Los inodoros que ayudan a los haitianos a cultivar sus alimentos
 - **[LATAM]**: Un inodoro para combatir enfermedades
 - **[LATAM]**: Maduro anuncia un plan de desarme de civiles en Venezuela
+- **[USA_NORTE]**: Woody Allen, a Florida mansion rulebook and a Paris ‘wife hunt’: stories you may have missed from the Epstein files
+- **[USA_NORTE]**: Brad Karp: Wall Street law firm boss resigns after emails to Epstein released
+- **[USA_NORTE]**: New York City and Illinois join WHO network after Trump pulls US out of global health body
+- **[USA_NORTE]**: Savannah Guthrie releases video appealing for proof her missing mother is alive
+- **[USA_NORTE]**: Tulsi Gabbard reportedly oversaw probe of Puerto Rico voting machines last year – as it happened
+- **[USA_NORTE]**: Nancy Pelosi warns press freedom is ‘under siege’ after arrest of journalist
+- **[USA_NORTE]**: Trump news at a glance: president hints at ‘softer touch’ on immigration as federal drawdown planned in Minnesota
+- **[USA_NORTE]**: California can use a new congressional map in November, supreme court rules
+- **[USA_NORTE]**: Minnesota girl, 10, released from ICE custody after a month in detention
+- **[USA_NORTE]**: Thursday briefing: W​ill the Epstein ​files ​threaten ​Peter Mandelson’s ​legacy​?
+- **[USA_NORTE]**: US congressional report explores option of not delivering any Aukus nuclear submarines to Australia
+- **[USA_NORTE]**: Florida bill seeks to ban use of ‘West Bank’ in schools and state agencies
+- **[USA_NORTE]**: Steve Bannon calls for immigration agents at polling sites during midterms
+- **[USA_NORTE]**: The Guardian view on Epstein, power and accountability: full transparency is the least survivors deserve | Editorial
+- **[USA_NORTE]**: What is happening in Fulton county is a warning to America | Jamil Smith
+- **[Rusia_Eurasia]**: Silver futures price down over 11%
+- **[Rusia_Eurasia]**: Almaz-Antey to showcase latest air defense systems at exhibition in Riyadh
+- **[Rusia_Eurasia]**: Russian stocks down as main trading session opens
+- **[Rusia_Eurasia]**: Russia believes agreement on Ukraine should include Donbass recognition — TASS source
+- **[Rusia_Eurasia]**: UAE talks discuss ceasefire, territories — source
+- **[Rusia_Eurasia]**: Ukraine’s military shells Russia’s borderline Kursk Region 16 times over past day
+- **[Rusia_Eurasia]**: End of Russia-US nuclear accords: on Feb 5 world left without New START Treaty
+- **[Rusia_Eurasia]**: Polish PM arrives in Kiev for talks with Zelensky
+- **[Rusia_Eurasia]**: Talks on Ukraine continue in Abu Dhabi in trilateral format — TASS source
+- **[Rusia_Eurasia]**: Nearly 100 drones attack Russian regions overnight: aftermath
+- **[Rusia_Eurasia]**: Power plant accident leaves eastern Cuba without electricity
+- **[Rusia_Eurasia]**: Russia surprised by US sanctions against oil companies after Anchorage
+- **[Rusia_Eurasia]**: Russia not imposing itself as mediator between Iran, US — Lavrov
+- **[Rusia_Eurasia]**: Trump to make decision on New START when deems appropriate — media
+- **[Rusia_Eurasia]**: Russian companies openly forced out of Venezuela after events in republic — Lavrov
+- **[Medio_Oriente]**: Epstein’s help sought in bid to meet Chuck Schumer, files reveal
+- **[Medio_Oriente]**: Here’s why Israel is allowing record murder rates in its Palestinian towns
+- **[Medio_Oriente]**: Boycotting India at T20 World Cup to support Bangladesh: Pakistan PM Sharif
+- **[Medio_Oriente]**: Russia-Ukraine war live: Second day of US-led war talks start in UAE
+- **[Medio_Oriente]**: South Sudan hospital hit by government air strike, MSF says
+- **[Medio_Oriente]**: Panama’s president hits back after China threat in canal ports row
+- **[Medio_Oriente]**: Bitcoin plunge continues, erasing gains since Trump’s election
+- **[Medio_Oriente]**: ‘We have to rebuild’: Mozambique flood victims persevere in face of loss
+- **[Medio_Oriente]**: LIVE: US, Iran set to hold talks in Oman after barrage of threats
+- **[Medio_Oriente]**: Who are the past winners, and what’s the history of the T20 World Cup?
+- **[Medio_Oriente]**: Italy probes suspect in Sarajevo ‘sniper tourism’ during Bosnia war: Report
+- **[Medio_Oriente]**: Questions after Iran’s government releases victim list in protest killings
+- **[Medio_Oriente]**: UN warns of humanitarian collapse in Cuba as US seeks to block oil supplies
+- **[Medio_Oriente]**: ‘Country of the blind’: How will Bangladesh remember Muhammad Yunus?
+- **[Medio_Oriente]**: Zelenskyy reveals 55,000 Ukrainian soldiers killed fighting against Russia
+- **[Europa_DW]**: How US Project Vault challenges China's rare-earth dominance
+- **[Europa_DW]**: Germany: Icy rain halts departures at Berlin airport
+- **[Europa_DW]**: Germany updates: Merz meets with Saudi crown prince
+- **[Europa_DW]**: China’s Xi holds calls with Trump, and Putin, on same day
+- **[Europa_DW]**: Ukraine updates: Trilateral talks enter second day in UAE
+- **[Europa_DW]**: US wants to establish critical minerals trade bloc
+- **[Europa_DW]**: New START: Last US-Russia nuclear treaty expires, raising fears of new global arms race
+- **[Europa_DW]**: Winter Olympics begin quietly with curling
+- **[Europa_DW]**: US, Iran to hold talks in Oman on Friday
+- **[Europa_DW]**: 'Doomsday Clock': The US-Russia New START deal is ending
+- **[Europa_DW]**: US: Would-be Trump assassin gets life without parole
+- **[Europa_DW]**: Turkey's textile industry crushed by China and Bangladesh
+- **[Europa_DW]**: Italy says it has foiled Russian Olympic cyberattacks
+- **[Europa_DW]**: Nigeria: Extremists kill over 100 in western villages
+- **[Europa_DW]**: ICE to reduce numbers in Minnesota, but operations go on
