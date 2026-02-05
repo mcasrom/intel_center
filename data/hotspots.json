@@ -1,15 +1,21 @@
 [
     {
+        "name": "Africa_Sahel",
+        "lat": "h",
+        "lon": "t",
+        "intensity": 15
+    },
+    {
         "name": "Asia_Nikkei",
         "lat": 35.0,
         "lon": 135.0,
-        "intensity": 16
+        "intensity": 15
     },
     {
         "name": "Europa_DW",
         "lat": 50.0,
         "lon": 10.0,
-        "intensity": 16
+        "intensity": 15
     },
     {
         "name": "LATAM",
@@ -27,7 +33,7 @@
         "name": "Rusia_Eurasia",
         "lat": 60.0,
         "lon": 90.0,
-        "intensity": 31
+        "intensity": 15
     },
     {
         "name": "USA_NORTE",
