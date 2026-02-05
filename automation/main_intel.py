@@ -34,7 +34,7 @@ COORDENADAS = {
     "Asia_Nikkei": [35.0, 135.0],
     "LATAM": [-15.0, -60.0], 
     "MEXICO": [23.0, -102.0],
-    "NORTEAMERICA": [40.0, -100.0]
+    "USA_NORTE": [40.0, -100.0]
 }
 
 def init_db():
