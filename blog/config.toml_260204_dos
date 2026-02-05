@@ -25,11 +25,10 @@ buildDrafts = true
 
 [params]
   description = "Nodo de inteligencia OSINT - Monitorización global en tiempo real"
-  # Imagen de fondo en la cabecera del sitio
+  # Imagen de fondo en la cabecera (Header)
   featured_image = "images/header_intel.jpg"
-  # Favicon (en la raíz de /static/)
+  # Favicon
   favicon = "favicon.png"
-  # Previsualización en redes sociales (Telegram, Signal, etc.)
-  images = ["images/header_intel.jpg"]
-  # Logo para el esquema de datos (opcional)
+  # Configuración para redes sociales (Preview)
   site_logo = "favicon.png"
+  facebook_admin = ""

@@ -5,6 +5,26 @@ type: "post"
 draft: false
 ---
 
+- **[Rusia_Eurasia]**: Bank of Russia sets official dollar rate at 76.55 rubles for February 6
+- **[Rusia_Eurasia]**: Progress made: what we know about negotiations on Ukraine in Abu Dhabi
+- **[Rusia_Eurasia]**: Russian PM arrives on visit to Brazil
+- **[Rusia_Eurasia]**: Russia covers about a quarter of Brazil’s needs of mineral fertilizers — Russian PM
+- **[Rusia_Eurasia]**: Russian LNG share in EU gas imports reaches 18% in January
+- **[Rusia_Eurasia]**: Russia, US should maintain exchange of ICBM launch notifications — expert
+- **[Rusia_Eurasia]**: Russia sees Madagascar as ‘partner supporting a multipolar world order" — Deputy PM Novak
+- **[Rusia_Eurasia]**: Russia’s Geoscan to launch mass production of new AI-powered educational drone
+- **[Rusia_Eurasia]**: US and Russia agree to resume high-level military dialogue — EUCOM
+- **[Rusia_Eurasia]**: Szijjarto calls Paks II NPP project ‘flagship nuclear revival of Europe’
+- **[Rusia_Eurasia]**: Putin announces start of Year of Russian Peoples’ Unity
+- **[Rusia_Eurasia]**: WADA says RUSADA may be reinstated when special military operation ends
+- **[Rusia_Eurasia]**: Russian chemical exports to India gain 66.2% in 2025 — Industry Ministry
+- **[Rusia_Eurasia]**: Knife-wielding man attacks kindergarten in Orenburg Region: what we know
+- **[Rusia_Eurasia]**: IN BRIEF: What we know about new prisoner exchange between Russia, Ukraine
+- **[Europa_DW]**: Why Trump and his Republicans can't take over US elections
+- **[Europa_DW]**: South Korea stunned by Trump's latest tariff hike
+- **[Europa_DW]**: US-Iran talks: How far will Tehran go to make a deal?
+- **[Europa_DW]**: Why scientists warn of privately funded geoengineering
+- **[Europa_DW]**: Germany news: Merz on Gulf tour talks arms deals in Doha
 - **[Africa_Sahel]**: Nigerian President Tinubu deploys army following Kwara State massacre
 - **[Africa_Sahel]**: Minneapolis residents sceptical about planned withdrawal of some ICE agents
 - **[Africa_Sahel]**: China to import some South African products duty-free

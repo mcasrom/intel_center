@@ -21,7 +21,7 @@
         "name": "Europa_DW",
         "lat": 50.0,
         "lon": 10.0,
-        "intensity": 15
+        "intensity": 20
     },
     {
         "name": "LATAM",
@@ -39,7 +39,7 @@
         "name": "Rusia_Eurasia",
         "lat": 60.0,
         "lon": 90.0,
-        "intensity": 15
+        "intensity": 30
     },
     {
         "name": "USA_NORTE",
