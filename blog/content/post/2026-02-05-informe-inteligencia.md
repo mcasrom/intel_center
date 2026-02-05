@@ -5,26 +5,6 @@ type: "post"
 draft: false
 ---
 
-- **[Rusia_Eurasia]**: Bank of Russia sets official dollar rate at 76.55 rubles for February 6
-- **[Rusia_Eurasia]**: Progress made: what we know about negotiations on Ukraine in Abu Dhabi
-- **[Rusia_Eurasia]**: Russian PM arrives on visit to Brazil
-- **[Rusia_Eurasia]**: Russia covers about a quarter of Brazil’s needs of mineral fertilizers — Russian PM
-- **[Rusia_Eurasia]**: Russian LNG share in EU gas imports reaches 18% in January
-- **[Rusia_Eurasia]**: Russia, US should maintain exchange of ICBM launch notifications — expert
-- **[Rusia_Eurasia]**: Russia sees Madagascar as ‘partner supporting a multipolar world order" — Deputy PM Novak
-- **[Rusia_Eurasia]**: Russia’s Geoscan to launch mass production of new AI-powered educational drone
-- **[Rusia_Eurasia]**: US and Russia agree to resume high-level military dialogue — EUCOM
-- **[Rusia_Eurasia]**: Szijjarto calls Paks II NPP project ‘flagship nuclear revival of Europe’
-- **[Rusia_Eurasia]**: Putin announces start of Year of Russian Peoples’ Unity
-- **[Rusia_Eurasia]**: WADA says RUSADA may be reinstated when special military operation ends
-- **[Rusia_Eurasia]**: Russian chemical exports to India gain 66.2% in 2025 — Industry Ministry
-- **[Rusia_Eurasia]**: Knife-wielding man attacks kindergarten in Orenburg Region: what we know
-- **[Rusia_Eurasia]**: IN BRIEF: What we know about new prisoner exchange between Russia, Ukraine
-- **[Europa_DW]**: Why Trump and his Republicans can't take over US elections
-- **[Europa_DW]**: South Korea stunned by Trump's latest tariff hike
-- **[Europa_DW]**: US-Iran talks: How far will Tehran go to make a deal?
-- **[Europa_DW]**: Why scientists warn of privately funded geoengineering
-- **[Europa_DW]**: Germany news: Merz on Gulf tour talks arms deals in Doha
 - **[Africa_Sahel]**: Nigerian President Tinubu deploys army following Kwara State massacre
 - **[Africa_Sahel]**: Minneapolis residents sceptical about planned withdrawal of some ICE agents
 - **[Africa_Sahel]**: China to import some South African products duty-free
@@ -40,21 +20,6 @@ draft: false
 - **[Africa_Sahel]**: Russian drones strike Kyiv as capital battles power cuts and cold
 - **[Africa_Sahel]**: Moroccan security forces carry out evacuations as floods hit north
 - **[Africa_Sahel]**: Spain on red alert as Storm Leonardo unleashes torrential rain and floods
-- **[Australia]**: Starmer says sorry to Epstein's victims for appointing Mandelson as US ambassador
-- **[Australia]**: Australia's netballers thrash Jamaica in first Test
-- **[Australia]**: Politicians protest David Connolly appointment with NT parliament walkout
-- **[Australia]**: Porsches, Maserati allegedly stolen from Melbourne homes overnight
-- **[Australia]**: Could this supported housing model for the homeless prevent a future tragedy?
-- **[Australia]**: Chaos returns to MCG after 'unsatisfactory' Boxing Day Test
-- **[Australia]**: Nationals issue Ley with reunion counteroffer as deadline looms
-- **[Australia]**: Alleged attempted murder victim tells of 'cat-and-mouse' chase around office
-- **[Australia]**: 'Hijacked by left-wing extremists': Calls for Mardi Gras funding review
-- **[Australia]**: 'Max should not have died': Teen's family react to coronial findings
-- **[Australia]**: Man convicted of sexually assaulting two girls at Canberra Reptile Zoo
-- **[Australia]**: British billionaire urged to accept $350 million for mothballed mine
-- **[Australia]**: How capital gains tax changes could impact you
-- **[Australia]**: From September 27 to now: How the Gus Lamont story has unfolded
-- **[Australia]**: 'Incredible pieces of real estate': Sale of Perth barracks draws huge interest
 - **[LATAM]**: Boletín: Primer ataque de EE.UU. y aliados árabes contra Estado Islámico en Siria y otras noticias
 - **[LATAM]**: Estrato 1, estrato 6: cómo los colombianos hablan de sí mismos divididos en clases sociales
 - **[LATAM]**: Las dos vidas de Cantinflas
@@ -70,7 +35,7 @@ draft: false
 - **[LATAM]**: Los inodoros que ayudan a los haitianos a cultivar sus alimentos
 - **[LATAM]**: Un inodoro para combatir enfermedades
 - **[LATAM]**: Maduro anuncia un plan de desarme de civiles en Venezuela
-- **[USA_NORTE]**: Trump says Pretti and Good were ‘not angels’ while signalling ‘softer touch’ on immigration crackdown – US politics live
+- **[USA_NORTE]**: Trump praises Tulsi Gabbard for joining FBI search on Georgia election offices – live
 - **[USA_NORTE]**: Michigan accuses big oil of being ‘cartel’ that fuels climate crisis and high energy costs
 - **[USA_NORTE]**: First Thing: Minnesota girl, 10, released from ICE custody after a month in detention
 - **[USA_NORTE]**: Calls to shut down Texas ICE facility for children grow amid measles outbreak
@@ -84,22 +49,37 @@ draft: false
 - **[USA_NORTE]**: California can use a new congressional map in November, supreme court rules
 - **[USA_NORTE]**: Minnesota girl, 10, released from ICE custody after a month in detention
 - **[USA_NORTE]**: Donald Trump is making China great again | Steven Greenhouse
-- **[USA_NORTE]**: Why haven’t business elites stood up for Minnesota? | Daniel Altschuler
-- **[Rusia_Eurasia]**: Ukraine, Russia to pore over memoranda exchanged at talks — Foreign Ministry
-- **[Rusia_Eurasia]**: Russia, Ukraine to agree on date of new round of talks after memorandums are studied
-- **[Rusia_Eurasia]**: Belarus’ defense ministry expects to strengthen cooperation with Pakistan significantly
-- **[Rusia_Eurasia]**: Frequency of meetings on Ukraine talks can’t be strictly standardized — Kremlin
-- **[Rusia_Eurasia]**: Pakistani PM asks Putin to help resolve conflict with India — aide
-- **[Rusia_Eurasia]**: Russia to take all measures to solve crime related to attacks on airfields — Kremlin
-- **[Rusia_Eurasia]**: France, Belgium oppose ban on gas imports from Russia to EU — Politico
-- **[Rusia_Eurasia]**: Putin’s stance on death penalty moratorium remains firm — Kremlin spokesman
-- **[Rusia_Eurasia]**: Europe’s gas stocks replenishment slower than usual, situation becomes tense
-- **[Rusia_Eurasia]**: Japan reports record-low birth rate in 2024, ministry reveals
-- **[Rusia_Eurasia]**: Russia takes measures proceeding from Kiev’s attacks on peaceful facilities — Kremlin
-- **[Rusia_Eurasia]**: Diamond prices mixed in May — industry agency
-- **[Rusia_Eurasia]**: Crimean bridge unaffected by Kiev’s attack, Kremlin spokesman says
-- **[Rusia_Eurasia]**: Poland's capacity to deliver arms to Ukraine heavily constrained — paper
-- **[Rusia_Eurasia]**: Russia not interested in arms race with Europe, European Parliament member says
+- **[USA_NORTE]**: Why haven’t American elites stood up for Minnesota? | Daniel Altschuler
+- **[Australia]**: Starmer says sorry to Epstein's victims for appointing Mandelson as US ambassador
+- **[Australia]**: Australia's netballers thrash Jamaica in first Test
+- **[Australia]**: Politicians protest David Connolly appointment with NT parliament walkout
+- **[Australia]**: Porsches, Maserati allegedly stolen from Melbourne homes overnight
+- **[Australia]**: Could this supported housing model for the homeless prevent a future tragedy?
+- **[Australia]**: Chaos returns to MCG after 'unsatisfactory' Boxing Day Test
+- **[Australia]**: Nationals issue Ley with reunion counteroffer as deadline looms
+- **[Australia]**: Alleged attempted murder victim tells of 'cat-and-mouse' chase around office
+- **[Australia]**: 'Hijacked by left-wing extremists': Calls for Mardi Gras funding review
+- **[Australia]**: 'Max should not have died': Teen's family react to coronial findings
+- **[Australia]**: Man convicted of sexually assaulting two girls at Canberra Reptile Zoo
+- **[Australia]**: British billionaire urged to accept $350 million for mothballed mine
+- **[Australia]**: How capital gains tax changes could impact you
+- **[Australia]**: From September 27 to now: How the Gus Lamont story has unfolded
+- **[Australia]**: 'Incredible pieces of real estate': Sale of Perth barracks draws huge interest
+- **[Rusia_Eurasia]**: Bank of Russia sets official dollar rate at 76.55 rubles for February 6
+- **[Rusia_Eurasia]**: Progress made: what we know about negotiations on Ukraine in Abu Dhabi
+- **[Rusia_Eurasia]**: Russian PM arrives on visit to Brazil
+- **[Rusia_Eurasia]**: Russia covers about a quarter of Brazil’s needs of mineral fertilizers — Russian PM
+- **[Rusia_Eurasia]**: Russian LNG share in EU gas imports reaches 18% in January
+- **[Rusia_Eurasia]**: Russia, US should maintain exchange of ICBM launch notifications — expert
+- **[Rusia_Eurasia]**: Russia sees Madagascar as ‘partner supporting a multipolar world order" — Deputy PM Novak
+- **[Rusia_Eurasia]**: Russia’s Geoscan to launch mass production of new AI-powered educational drone
+- **[Rusia_Eurasia]**: US and Russia agree to resume high-level military dialogue — EUCOM
+- **[Rusia_Eurasia]**: Szijjarto calls Paks II NPP project ‘flagship nuclear revival of Europe’
+- **[Rusia_Eurasia]**: Putin announces start of Year of Russian Peoples’ Unity
+- **[Rusia_Eurasia]**: WADA says RUSADA may be reinstated when special military operation ends
+- **[Rusia_Eurasia]**: Russian chemical exports to India gain 66.2% in 2025 — Industry Ministry
+- **[Rusia_Eurasia]**: Knife-wielding man attacks kindergarten in Orenburg Region: what we know
+- **[Rusia_Eurasia]**: IN BRIEF: What we know about new prisoner exchange between Russia, Ukraine
 - **[Medio_Oriente]**: ‘US’s critical minerals summit will burden Global South with most costs’
 - **[Medio_Oriente]**: Gaza returnee recalls her journey through the Rafah crossing
 - **[Medio_Oriente]**: US-Iran talks face ‘serious obstacles in the way of diplomacy’
@@ -115,21 +95,21 @@ draft: false
 - **[Medio_Oriente]**: One man killed, girl missing as Storm Leonardo hits Portugal and Spain
 - **[Medio_Oriente]**: Christian group says all abductees taken in Nigeria’s Kurmin Wali released
 - **[Medio_Oriente]**: Russia says will act responsibly despite New START nuclear treaty expiry
+- **[Europa_DW]**: Why Trump and his Republicans can't take over US elections
+- **[Europa_DW]**: South Korea stunned by Trump's latest tariff hike
+- **[Europa_DW]**: US-Iran talks: How far will Tehran go to make a deal?
 - **[Europa_DW]**: Russia expels German diplomat in tit-for-tat espionage row
 - **[Europa_DW]**: Uganda's anti-LGBTQ+ law exposes systemic failures
-- **[Europa_DW]**: Commercial startups move into risky solar geoengineering
+- **[Europa_DW]**: Why scientists warn of privately funded geoengineering
 - **[Europa_DW]**: Nigeria: President deploys troops after Kwara state attack
 - **[Europa_DW]**: Moltbook explained: Where AI bots meet to 'discuss' humans
 - **[Europa_DW]**: The fight for American football in Europe
 - **[Europa_DW]**: Trump to be exposed at Cologne Carnival's Rose Monday parade
 - **[Europa_DW]**: How US Project Vault challenges China's rare-earth dominance
 - **[Europa_DW]**: Germany: Icy rain halts departures at Berlin airport
-- **[Europa_DW]**: Germany news: Merz in Doha after talks in Saudi Arabia
+- **[Europa_DW]**: Germany news: Merz on Gulf tour talks arms deals in Doha
 - **[Europa_DW]**: China's Xi holds calls with Trump, and Putin, on same day
 - **[Europa_DW]**: Ukraine updates: POW swap deal reached at Abu Dhabi talks
-- **[Europa_DW]**: US wants to establish critical minerals trade bloc
-- **[Europa_DW]**: New START: Last US-Russia nuclear treaty expires, raising fears of new global arms race
-- **[Europa_DW]**: Winter Olympics begin quietly with curling
 - **[Asia_Nikkei]**: Japan's coalition could win more than 60% of lower house, Nikkei poll shows
 - **[Asia_Nikkei]**: Nikkei to launch index with Buffett-inspired moat concept
 - **[Asia_Nikkei]**: China's memory boost and Apple's iPhone shuffle
