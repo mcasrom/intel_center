@@ -3,7 +3,7 @@
         "name": "Asia_Nikkei",
         "lat": 35.0,
         "lon": 135.0,
-        "intensity": 76
+        "intensity": 78
     },
     {
         "name": "LATAM_Insight",
@@ -15,7 +15,7 @@
         "name": "Medio_Oriente",
         "lat": 25.0,
         "lon": 45.0,
-        "intensity": 79
+        "intensity": 83
     },
     {
         "name": "Rusia_Eurasia",
