@@ -3,7 +3,7 @@
         "name": "Asia_Nikkei",
         "lat": 35.0,
         "lon": 135.0,
-        "intensity": 78
+        "intensity": 15
     },
     {
         "name": "Europa_DW",
@@ -18,21 +18,21 @@
         "intensity": 15
     },
     {
-        "name": "MEXICO",
-        "lat": 23.0,
-        "lon": -102.0,
-        "intensity": 15
-    },
-    {
         "name": "Medio_Oriente",
         "lat": 25.0,
         "lon": 45.0,
-        "intensity": 85
+        "intensity": 15
     },
     {
         "name": "Rusia_Eurasia",
         "lat": 60.0,
         "lon": 90.0,
-        "intensity": 341
+        "intensity": 15
+    },
+    {
+        "name": "USA_NORTE",
+        "lat": 40.0,
+        "lon": -100.0,
+        "intensity": 15
     }
 ]

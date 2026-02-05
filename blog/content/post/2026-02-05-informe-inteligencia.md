@@ -5,6 +5,24 @@ type: "post"
 draft: false
 ---
 
+- **[USA_NORTE]**: Woody Allen, a Florida mansion rulebook and a Paris ‘wife hunt’: stories you may have missed from the Epstein files
+- **[USA_NORTE]**: Brad Karp: Wall Street law firm boss resigns after emails to Epstein released
+- **[USA_NORTE]**: New York City and Illinois join WHO network after Trump pulls US out of global health body
+- **[USA_NORTE]**: Savannah Guthrie releases video appealing for proof her missing mother is alive
+- **[USA_NORTE]**: Tulsi Gabbard reportedly oversaw probe of Puerto Rico voting machines last year – as it happened
+- **[USA_NORTE]**: Nancy Pelosi warns press freedom is ‘under siege’ after arrest of journalist
+- **[USA_NORTE]**: Trump news at a glance: president hints at ‘softer touch’ on immigration as federal drawdown planned in Minnesota
+- **[USA_NORTE]**: California can use a new congressional map in November, supreme court rules
+- **[USA_NORTE]**: Minnesota girl, 10, released from ICE custody after a month in detention
+- **[USA_NORTE]**: Thursday briefing: W​ill the Epstein ​files ​threaten ​Peter Mandelson’s ​legacy​?
+- **[USA_NORTE]**: US congressional report explores option of not delivering any Aukus nuclear submarines to Australia
+- **[USA_NORTE]**: Florida bill seeks to ban use of ‘West Bank’ in schools and state agencies
+- **[USA_NORTE]**: Steve Bannon calls for immigration agents at polling sites during midterms
+- **[USA_NORTE]**: The Guardian view on Epstein, power and accountability: full transparency is the least survivors deserve | Editorial
+- **[USA_NORTE]**: What is happening in Fulton county is a warning to America | Jamil Smith
+- **[Rusia_Eurasia]**: Almaz-Antey to showcase latest air defense systems at exhibition in Riyadh
+- **[Rusia_Eurasia]**: Russian stocks down as main trading session opens
+- **[Rusia_Eurasia]**: Russia believes agreement on Ukraine should include Donbass recognition — TASS source
 - **[Rusia_Eurasia]**: UAE talks discuss ceasefire, territories — source
 - **[Rusia_Eurasia]**: Ukraine’s military shells Russia’s borderline Kursk Region 16 times over past day
 - **[Rusia_Eurasia]**: End of Russia-US nuclear accords: on Feb 5 world left without New START Treaty
@@ -17,9 +35,21 @@ draft: false
 - **[Rusia_Eurasia]**: Trump to make decision on New START when deems appropriate — media
 - **[Rusia_Eurasia]**: Russian companies openly forced out of Venezuela after events in republic — Lavrov
 - **[Rusia_Eurasia]**: Zelensky says 55,000 Ukrainian troops killed since start of special military operation
-- **[Rusia_Eurasia]**: Macron wants to call Putin, conversation to be prepared several days — source
-- **[Rusia_Eurasia]**: Russia-US deal on arms control necessary for humanity’s survival — former US congressman
-- **[Rusia_Eurasia]**: Trump had to immediately accept Putin's New START proposal — US presidential candidate
+- **[Medio_Oriente]**: Epstein’s help sought in bid to meet Chuck Schumer, files reveal
+- **[Medio_Oriente]**: Here’s why Israel is allowing record murder rates in its Palestinian towns
+- **[Medio_Oriente]**: Boycotting India at T20 World Cup to support Bangladesh: Pakistan PM Sharif
+- **[Medio_Oriente]**: Russia-Ukraine war live: Second day of US-led war talks start in UAE
+- **[Medio_Oriente]**: South Sudan hospital hit by government air strike, MSF says
+- **[Medio_Oriente]**: Panama’s president hits back after China threat in canal ports row
+- **[Medio_Oriente]**: Bitcoin plunge continues, erasing gains since Trump’s election
+- **[Medio_Oriente]**: ‘We have to rebuild’: Mozambique flood victims persevere in face of loss
+- **[Medio_Oriente]**: LIVE: US, Iran set to hold talks in Oman after barrage of threats
+- **[Medio_Oriente]**: Who are the past winners, and what’s the history of the T20 World Cup?
+- **[Medio_Oriente]**: Italy probes suspect in Sarajevo ‘sniper tourism’ during Bosnia war: Report
+- **[Medio_Oriente]**: Questions after Iran’s government releases victim list in protest killings
+- **[Medio_Oriente]**: UN warns of humanitarian collapse in Cuba as US seeks to block oil supplies
+- **[Medio_Oriente]**: ‘Country of the blind’: How will Bangladesh remember Muhammad Yunus?
+- **[Medio_Oriente]**: Zelenskyy reveals 55,000 Ukrainian soldiers killed fighting against Russia
 - **[Europa_DW]**: How US Project Vault challenges China's rare-earth dominance
 - **[Europa_DW]**: Germany: Icy rain halts departures at Berlin airport
 - **[Europa_DW]**: Germany updates: Merz meets with Saudi crown prince
@@ -35,57 +65,6 @@ draft: false
 - **[Europa_DW]**: Italy says it has foiled Russian Olympic cyberattacks
 - **[Europa_DW]**: Nigeria: Extremists kill over 100 in western villages
 - **[Europa_DW]**: ICE to reduce numbers in Minnesota, but operations go on
-- **[NORTEAMERICA]**: Woody Allen, a Florida mansion rulebook and a Paris ‘wife hunt’: stories you may have missed from the Epstein files
-- **[NORTEAMERICA]**: Brad Karp: Wall Street law firm boss resigns after emails to Epstein released
-- **[NORTEAMERICA]**: New York City and Illinois join WHO network after Trump pulls US out of global health body
-- **[NORTEAMERICA]**: Savannah Guthrie releases video appealing for proof her missing mother is alive
-- **[NORTEAMERICA]**: Tulsi Gabbard reportedly oversaw probe of Puerto Rico voting machines last year – as it happened
-- **[NORTEAMERICA]**: Nancy Pelosi warns press freedom is ‘under siege’ after arrest of journalist
-- **[NORTEAMERICA]**: Trump news at a glance: president hints at ‘softer touch’ on immigration as federal drawdown planned in Minnesota
-- **[NORTEAMERICA]**: California can use a new congressional map in November, supreme court rules
-- **[NORTEAMERICA]**: Minnesota girl, 10, released from ICE custody after a month in detention
-- **[NORTEAMERICA]**: Thursday briefing: W​ill the Epstein ​files ​threaten ​Peter Mandelson’s ​legacy​?
-- **[NORTEAMERICA]**: US congressional report explores option of not delivering any Aukus nuclear submarines to Australia
-- **[NORTEAMERICA]**: Florida bill seeks to ban use of ‘West Bank’ in schools and state agencies
-- **[NORTEAMERICA]**: Steve Bannon calls for immigration agents at polling sites during midterms
-- **[NORTEAMERICA]**: The Guardian view on Epstein, power and accountability: full transparency is the least survivors deserve | Editorial
-- **[NORTEAMERICA]**: What is happening in Fulton county is a warning to America | Jamil Smith
-- **[LATAM]**: Boletín: Primer ataque de EE.UU. y aliados árabes contra Estado Islámico en Siria y otras noticias
-- **[LATAM]**: Estrato 1, estrato 6: cómo los colombianos hablan de sí mismos divididos en clases sociales
-- **[LATAM]**: Las dos vidas de Cantinflas
-- **[LATAM]**: Santos: "No le estoy dando el país a las FARC"
-- **[LATAM]**: Fernández denuncia que con caso "fondos buitres" quieren poner de rodillas a Argentina
-- **[LATAM]**: ¿Por qué internet en Venezuela es tan lento?
-- **[LATAM]**: Vuelven a posponer el juicio a Leopoldo López
-- **[LATAM]**: Chile: roban US$3,3 millones a la casa de empeño "Tía Rica"
-- **[LATAM]**: Los consejos del Nobel mexicano que descubrió gases del agujero de ozono
-- **[LATAM]**: Boletín: más de 130.000 sirios kurdos cruzan a Turquía huyendo de Estado Islámico y otras noticias
-- **[LATAM]**: ¿Cómo se convirtió Cuba en una potencia humanitaria?
-- **[LATAM]**: Cómo operan las mafias del multimillonario negocio de la madera ilegal en Perú
-- **[LATAM]**: Los inodoros que ayudan a los haitianos a cultivar sus alimentos
-- **[LATAM]**: Un inodoro para combatir enfermedades
-- **[LATAM]**: Maduro anuncia un plan de desarme de civiles en Venezuela
-- **[MEXICO]**: La 4T aporta evidencias para hundir a García Luna
-- **[MEXICO]**: Los cabos sueltos del caso Odebrecht
-- **[MEXICO]**: La Banda de la Riviera Maya, en la mira del FBI
-- **[MEXICO]**: Gobernadores se oponen al pacto fiscal que antes habían aprobado
-- **[MEXICO]**: El libro de Calderón: El oficio de omitir y justificar
-- **[MEXICO]**: Acuerdo OPEP: Una ayuda que Washington se cobrará
-- **[MEXICO]**: Rosario Robles perdió la batalla contra el juez Delgadillo Padierna
-- **[MEXICO]**: Las múltiples luchas de Francisco Toledo
-- **[MEXICO]**: Se difunde lista de pagos millonarios a periodistas; se dicen perseguidos por AMLO
-- **[MEXICO]**: La familia entró en fase de 'alto riesgo y desintegración”, dicen hermanos de Miroslava Breach
-- **[MEXICO]**: López Obrador: de la cancelación a los deslindes respecto a negocios de Salinas Pliego
-- **[MEXICO]**: Crece la controversia: Magistrado acusa a Yasmín Esquivel de dilatar la justicia
-- **[MEXICO]**: Compositoras mexicanas, entre el talento y la discriminación
-- **[MEXICO]**: EZLN, su desencuentro con AMLO y su divorcio con la izquierda europea
-- **[MEXICO]**: El juicio al 'Chapo”, el narcoespectáculo día por día
-- **[Medio_Oriente]**: Epstein’s help sought in bid to meet Chuck Schumer, files reveal
-- **[Medio_Oriente]**: Here’s why Israel is allowing record murder rates in its Palestinian towns
-- **[Medio_Oriente]**: Boycotting India at T20 World Cup to support Bangladesh: Pakistan PM Sharif
-- **[Medio_Oriente]**: Russia-Ukraine war live: Second day of US-led war talks start in UAE
-- **[Medio_Oriente]**: South Sudan hospital hit by government air strike, MSF says
-- **[Medio_Oriente]**: Panama’s president hits back after China threat in canal ports row
 - **[Asia_Nikkei]**: Thai election due on Sunday: Three key points to watch
 - **[Asia_Nikkei]**: China's provinces ease growth targets, fueling expectations of national cut
 - **[Asia_Nikkei]**: Indonesia logs 5.1% GDP growth in 2025 but outlook remains downcast
@@ -101,20 +80,18 @@ draft: false
 - **[Asia_Nikkei]**: Indonesia's stock market rout smokes out long-standing manipulation issues
 - **[Asia_Nikkei]**: Japan's DNP to sell photo printers, auto parts in India
 - **[Asia_Nikkei]**: US, China and Russia erode the rules-based order, says Human Rights Watch
-- **[Asia_Nikkei]**: Japan's Aisin to build two new Indian auto part plants
-- **[Asia_Nikkei]**: Chinese luxury goods spending lifted by rising stock market
-- **[Medio_Oriente]**: Bitcoin plunge continues, erasing gains since Trump’s election
-- **[Medio_Oriente]**: ‘We have to rebuild’: Mozambique flood victims persevere in face of loss
-- **[Medio_Oriente]**: LIVE: After barrage of threats, US and Iran set to hold talks on Friday
-- **[Medio_Oriente]**: Who are the past winners, and what’s the history of the T20 World Cup?
-- **[Medio_Oriente]**: Italy probes suspect in Sarajevo ‘sniper tourism’ during Bosnia war: Report
-- **[Medio_Oriente]**: Questions after Iran’s government releases victim list in protest killings
-- **[Medio_Oriente]**: UN warns of humanitarian collapse in Cuba as US seeks to block oil supplies
-- **[Medio_Oriente]**: ‘Country of the blind’: How will Bangladesh remember Muhammad Yunus?
-- **[Medio_Oriente]**: Zelenskyy reveals 55,000 Ukrainian soldiers killed fighting against Russia
-- **[Medio_Oriente]**: Australia charges teen over online threat as Israeli president due to visit
-- **[Medio_Oriente]**: Nike probed by Trump appointee over claims of bias against white workers
-- **[Medio_Oriente]**: Russia-Ukraine war: List of key events, day 1,442
-- **[Medio_Oriente]**: UN agency warns of ‘sharp increase’ in measles cases in the Americas
-- **[Medio_Oriente]**: Ukraine says first day of peace talks with Russia ‘productive’
-- **[Medio_Oriente]**: US Supreme Court rejects challenge to California redistricting map
+- **[LATAM]**: Boletín: Primer ataque de EE.UU. y aliados árabes contra Estado Islámico en Siria y otras noticias
+- **[LATAM]**: Estrato 1, estrato 6: cómo los colombianos hablan de sí mismos divididos en clases sociales
+- **[LATAM]**: Las dos vidas de Cantinflas
+- **[LATAM]**: Santos: "No le estoy dando el país a las FARC"
+- **[LATAM]**: Fernández denuncia que con caso "fondos buitres" quieren poner de rodillas a Argentina
+- **[LATAM]**: ¿Por qué internet en Venezuela es tan lento?
+- **[LATAM]**: Vuelven a posponer el juicio a Leopoldo López
+- **[LATAM]**: Chile: roban US$3,3 millones a la casa de empeño "Tía Rica"
+- **[LATAM]**: Los consejos del Nobel mexicano que descubrió gases del agujero de ozono
+- **[LATAM]**: Boletín: más de 130.000 sirios kurdos cruzan a Turquía huyendo de Estado Islámico y otras noticias
+- **[LATAM]**: ¿Cómo se convirtió Cuba en una potencia humanitaria?
+- **[LATAM]**: Cómo operan las mafias del multimillonario negocio de la madera ilegal en Perú
+- **[LATAM]**: Los inodoros que ayudan a los haitianos a cultivar sus alimentos
+- **[LATAM]**: Un inodoro para combatir enfermedades
+- **[LATAM]**: Maduro anuncia un plan de desarme de civiles en Venezuela

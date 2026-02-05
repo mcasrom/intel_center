@@ -4,18 +4,16 @@ from datetime import datetime, timedelta
 # --- OPTIMIZACIÓN DE RECURSOS ---
 TIMEOUT = 30 
 socket.setdefaulttimeout(TIMEOUT)
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-sys.path.append(BASE_DIR)
+BASE_DIR = "/home/miguelc/intel_center_test"
+DB_PATH = os.path.join(BASE_DIR, "data/news.db")
+JSON_OUTPUT = os.path.join(BASE_DIR, "blog/static/data/hotspots.json")
+POSTS_OUTPUT = os.path.join(BASE_DIR, "blog/content/post/")
 
-try:
-    from config.settings import DB_PATH
-except ImportError:
-    DB_PATH = os.path.join(BASE_DIR, "data", "news.db")
+
 
 JSON_OUTPUT = os.path.join(BASE_DIR, "blog/static/data/hotspots.json")
 POSTS_OUTPUT = os.path.join(BASE_DIR, "blog/content/post/")
 USER_AGENT = 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:120.0) Gecko/20100101 Firefox/120.0'
-
 
 FEEDS = {
     "Rusia_Eurasia": "https://tass.com/rss/v2.xml",
@@ -23,8 +21,8 @@ FEEDS = {
     "Europa_DW": "https://rss.dw.com/rdf/rss-en-top",
     "Asia_Nikkei": "https://asia.nikkei.com/rss/feed/nar",
     "LATAM": "https://www.bbc.com/mundo/temas/america_latina/index.xml",
-    "MEXICO": "https://noticieros.televisa.com/rss/ultimas-noticias/",
-    "USA_NORTE": "https://prensalatina.cu/seccion/ee-uu/feed/"
+    "MEXICO": "https://www.jornada.com.mx/rss/ultimas.xml?v=1",
+    "USA_NORTE": "https://www.theguardian.com/us-news/rss"
 }
 
 COORDENADAS = {
