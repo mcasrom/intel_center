@@ -27,13 +27,13 @@
         "name": "Medio_Oriente",
         "lat": 25.0,
         "lon": 45.0,
-        "intensity": 16
+        "intensity": 15
     },
     {
         "name": "Rusia_Eurasia",
         "lat": 60.0,
         "lon": 90.0,
-        "intensity": 17
+        "intensity": 30
     },
     {
         "name": "USA_NORTE",
