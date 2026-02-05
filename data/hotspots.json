@@ -30,12 +30,6 @@
         "intensity": 85
     },
     {
-        "name": "NORTEAMERICA",
-        "lat": 40.0,
-        "lon": -100.0,
-        "intensity": 15
-    },
-    {
         "name": "Rusia_Eurasia",
         "lat": 60.0,
         "lon": 90.0,
