@@ -23,6 +23,9 @@ FEEDS = {
     "LATAM": "https://www.bbc.com/mundo/temas/america_latina/index.xml",
     "MEXICO": "https://www.jornada.com.mx/rss/ultimas.xml?v=1",
     "USA_NORTE": "https://www.theguardian.com/us-news/rss",
+    "Australia": "https://www.abc.net.au/news/feed/51120/rss.xml",
+    "Canada": "https://www.cbc.ca/cxml/rss/news/world",
+    "Groenlandia": "https://www.arctictoday.com/feed/",
     "Africa_Sahel": "https://www.africanews.com/feed/"
 }
 
@@ -34,6 +37,9 @@ COORDENADAS = {
     "LATAM": [-15.0, -60.0], 
     "MEXICO": [23.0, -102.0],
     "USA_NORTE": [40.0, -100.0],
+    "Australia": [-25.0, 133.0],
+    "Canada": [60.0, -110.0],
+    "Groenlandia": [72.0, -40.0],
     "Africa_Sahel": [15.0, 15.0]
 }
 
