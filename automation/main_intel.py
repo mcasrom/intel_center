@@ -14,17 +14,17 @@ except ImportError:
 
 JSON_OUTPUT = os.path.join(BASE_DIR, "blog/static/data/hotspots.json")
 POSTS_OUTPUT = os.path.join(BASE_DIR, "blog/content/post/")
-USER_AGENT = 'Mozilla/5.0 (X11; Linux x86_64) Intel-Center-Bot/1.0'
+USER_AGENT = 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:120.0) Gecko/20100101 Firefox/120.0'
 
 
 FEEDS = {
     "Rusia_Eurasia": "https://tass.com/rss/v2.xml",
     "Medio_Oriente": "https://www.aljazeera.com/xml/rss/all.xml",
-    "Europa_DW": "https://www.dw.com/en/top-stories/s-9097/rss",
+    "Europa_DW": "https://rss.dw.com/rdf/rss-en-top",
     "Asia_Nikkei": "https://asia.nikkei.com/rss/feed/nar",
     "LATAM": "https://www.bbc.com/mundo/temas/america_latina/index.xml",
-    "MEXICO": "https://www.proceso.com.mx/rss/feed.html",
-    "NORTEAMERICA": "https://www.theguardian.com/us-news/rss"
+    "MEXICO": "https://noticieros.televisa.com/rss/ultimas-noticias/",
+    "USA_NORTE": "https://prensalatina.cu/seccion/ee-uu/feed/"
 }
 
 COORDENADAS = {

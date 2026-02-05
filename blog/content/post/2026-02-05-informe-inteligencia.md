@@ -5,6 +5,36 @@ type: "post"
 draft: false
 ---
 
+- **[Rusia_Eurasia]**: UAE talks discuss ceasefire, territories — source
+- **[Rusia_Eurasia]**: Ukraine’s military shells Russia’s borderline Kursk Region 16 times over past day
+- **[Rusia_Eurasia]**: End of Russia-US nuclear accords: on Feb 5 world left without New START Treaty
+- **[Rusia_Eurasia]**: Polish PM arrives in Kiev for talks with Zelensky
+- **[Rusia_Eurasia]**: Talks on Ukraine continue in Abu Dhabi in trilateral format — TASS source
+- **[Rusia_Eurasia]**: Nearly 100 drones attack Russian regions overnight: aftermath
+- **[Rusia_Eurasia]**: Power plant accident leaves eastern Cuba without electricity
+- **[Rusia_Eurasia]**: Russia surprised by US sanctions against oil companies after Anchorage
+- **[Rusia_Eurasia]**: Russia not imposing itself as mediator between Iran, US — Lavrov
+- **[Rusia_Eurasia]**: Trump to make decision on New START when deems appropriate — media
+- **[Rusia_Eurasia]**: Russian companies openly forced out of Venezuela after events in republic — Lavrov
+- **[Rusia_Eurasia]**: Zelensky says 55,000 Ukrainian troops killed since start of special military operation
+- **[Rusia_Eurasia]**: Macron wants to call Putin, conversation to be prepared several days — source
+- **[Rusia_Eurasia]**: Russia-US deal on arms control necessary for humanity’s survival — former US congressman
+- **[Rusia_Eurasia]**: Trump had to immediately accept Putin's New START proposal — US presidential candidate
+- **[Europa_DW]**: How US Project Vault challenges China's rare-earth dominance
+- **[Europa_DW]**: Germany: Icy rain halts departures at Berlin airport
+- **[Europa_DW]**: Germany updates: Merz meets with Saudi crown prince
+- **[Europa_DW]**: China’s Xi holds calls with Trump, and Putin, on same day
+- **[Europa_DW]**: Ukraine updates: Trilateral talks enter second day in UAE
+- **[Europa_DW]**: US wants to establish critical minerals trade bloc
+- **[Europa_DW]**: New START: Last US-Russia nuclear treaty expires, raising fears of new global arms race
+- **[Europa_DW]**: Winter Olympics begin quietly with curling
+- **[Europa_DW]**: US, Iran to hold talks in Oman on Friday
+- **[Europa_DW]**: 'Doomsday Clock': The US-Russia New START deal is ending
+- **[Europa_DW]**: US: Would-be Trump assassin gets life without parole
+- **[Europa_DW]**: Turkey's textile industry crushed by China and Bangladesh
+- **[Europa_DW]**: Italy says it has foiled Russian Olympic cyberattacks
+- **[Europa_DW]**: Nigeria: Extremists kill over 100 in western villages
+- **[Europa_DW]**: ICE to reduce numbers in Minnesota, but operations go on
 - **[NORTEAMERICA]**: Woody Allen, a Florida mansion rulebook and a Paris ‘wife hunt’: stories you may have missed from the Epstein files
 - **[NORTEAMERICA]**: Brad Karp: Wall Street law firm boss resigns after emails to Epstein released
 - **[NORTEAMERICA]**: New York City and Illinois join WHO network after Trump pulls US out of global health body
