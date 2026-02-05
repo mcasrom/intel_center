@@ -5,6 +5,53 @@ type: "post"
 draft: false
 ---
 
+- **[NORTEAMERICA]**: Woody Allen, a Florida mansion rulebook and a Paris ‘wife hunt’: stories you may have missed from the Epstein files
+- **[NORTEAMERICA]**: Brad Karp: Wall Street law firm boss resigns after emails to Epstein released
+- **[NORTEAMERICA]**: New York City and Illinois join WHO network after Trump pulls US out of global health body
+- **[NORTEAMERICA]**: Savannah Guthrie releases video appealing for proof her missing mother is alive
+- **[NORTEAMERICA]**: Tulsi Gabbard reportedly oversaw probe of Puerto Rico voting machines last year – as it happened
+- **[NORTEAMERICA]**: Nancy Pelosi warns press freedom is ‘under siege’ after arrest of journalist
+- **[NORTEAMERICA]**: Trump news at a glance: president hints at ‘softer touch’ on immigration as federal drawdown planned in Minnesota
+- **[NORTEAMERICA]**: California can use a new congressional map in November, supreme court rules
+- **[NORTEAMERICA]**: Minnesota girl, 10, released from ICE custody after a month in detention
+- **[NORTEAMERICA]**: Thursday briefing: W​ill the Epstein ​files ​threaten ​Peter Mandelson’s ​legacy​?
+- **[NORTEAMERICA]**: US congressional report explores option of not delivering any Aukus nuclear submarines to Australia
+- **[NORTEAMERICA]**: Florida bill seeks to ban use of ‘West Bank’ in schools and state agencies
+- **[NORTEAMERICA]**: Steve Bannon calls for immigration agents at polling sites during midterms
+- **[NORTEAMERICA]**: The Guardian view on Epstein, power and accountability: full transparency is the least survivors deserve | Editorial
+- **[NORTEAMERICA]**: What is happening in Fulton county is a warning to America | Jamil Smith
+- **[LATAM]**: Boletín: Primer ataque de EE.UU. y aliados árabes contra Estado Islámico en Siria y otras noticias
+- **[LATAM]**: Estrato 1, estrato 6: cómo los colombianos hablan de sí mismos divididos en clases sociales
+- **[LATAM]**: Las dos vidas de Cantinflas
+- **[LATAM]**: Santos: "No le estoy dando el país a las FARC"
+- **[LATAM]**: Fernández denuncia que con caso "fondos buitres" quieren poner de rodillas a Argentina
+- **[LATAM]**: ¿Por qué internet en Venezuela es tan lento?
+- **[LATAM]**: Vuelven a posponer el juicio a Leopoldo López
+- **[LATAM]**: Chile: roban US$3,3 millones a la casa de empeño "Tía Rica"
+- **[LATAM]**: Los consejos del Nobel mexicano que descubrió gases del agujero de ozono
+- **[LATAM]**: Boletín: más de 130.000 sirios kurdos cruzan a Turquía huyendo de Estado Islámico y otras noticias
+- **[LATAM]**: ¿Cómo se convirtió Cuba en una potencia humanitaria?
+- **[LATAM]**: Cómo operan las mafias del multimillonario negocio de la madera ilegal en Perú
+- **[LATAM]**: Los inodoros que ayudan a los haitianos a cultivar sus alimentos
+- **[LATAM]**: Un inodoro para combatir enfermedades
+- **[LATAM]**: Maduro anuncia un plan de desarme de civiles en Venezuela
+- **[MEXICO]**: La 4T aporta evidencias para hundir a García Luna
+- **[MEXICO]**: Los cabos sueltos del caso Odebrecht
+- **[MEXICO]**: La Banda de la Riviera Maya, en la mira del FBI
+- **[MEXICO]**: Gobernadores se oponen al pacto fiscal que antes habían aprobado
+- **[MEXICO]**: El libro de Calderón: El oficio de omitir y justificar
+- **[MEXICO]**: Acuerdo OPEP: Una ayuda que Washington se cobrará
+- **[MEXICO]**: Rosario Robles perdió la batalla contra el juez Delgadillo Padierna
+- **[MEXICO]**: Las múltiples luchas de Francisco Toledo
+- **[MEXICO]**: Se difunde lista de pagos millonarios a periodistas; se dicen perseguidos por AMLO
+- **[MEXICO]**: La familia entró en fase de 'alto riesgo y desintegración”, dicen hermanos de Miroslava Breach
+- **[MEXICO]**: López Obrador: de la cancelación a los deslindes respecto a negocios de Salinas Pliego
+- **[MEXICO]**: Crece la controversia: Magistrado acusa a Yasmín Esquivel de dilatar la justicia
+- **[MEXICO]**: Compositoras mexicanas, entre el talento y la discriminación
+- **[MEXICO]**: EZLN, su desencuentro con AMLO y su divorcio con la izquierda europea
+- **[MEXICO]**: El juicio al 'Chapo”, el narcoespectáculo día por día
+- **[Medio_Oriente]**: Epstein’s help sought in bid to meet Chuck Schumer, files reveal
+- **[Medio_Oriente]**: Here’s why Israel is allowing record murder rates in its Palestinian towns
 - **[Medio_Oriente]**: Boycotting India at T20 World Cup to support Bangladesh: Pakistan PM Sharif
 - **[Medio_Oriente]**: Russia-Ukraine war live: Second day of US-led war talks start in UAE
 - **[Medio_Oriente]**: South Sudan hospital hit by government air strike, MSF says

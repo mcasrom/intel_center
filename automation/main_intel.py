@@ -16,19 +16,25 @@ JSON_OUTPUT = os.path.join(BASE_DIR, "blog/static/data/hotspots.json")
 POSTS_OUTPUT = os.path.join(BASE_DIR, "blog/content/post/")
 USER_AGENT = 'Mozilla/5.0 (X11; Linux x86_64) Intel-Center-Bot/1.0'
 
+
 FEEDS = {
     "Rusia_Eurasia": "https://tass.com/rss/v2.xml",
     "Medio_Oriente": "https://www.aljazeera.com/xml/rss/all.xml",
     "Europa_DW": "https://www.dw.com/en/top-stories/s-9097/rss",
     "Asia_Nikkei": "https://asia.nikkei.com/rss/feed/nar",
-    "LATAM_Insight": "https://insightcrime.org/feed/",
-    "MEX_Universal": "https://www.eluniversal.com.mx/rss.xml"
+    "LATAM": "https://www.bbc.com/mundo/temas/america_latina/index.xml",
+    "MEXICO": "https://www.proceso.com.mx/rss/feed.html",
+    "NORTEAMERICA": "https://www.theguardian.com/us-news/rss"
 }
 
 COORDENADAS = {
-    "Rusia_Eurasia": [60.0, 90.0], "Medio_Oriente": [25.0, 45.0],
-    "Europa_DW": [50.0, 10.0], "Asia_Nikkei": [35.0, 135.0],
-    "LATAM_Insight": [-15.0, -60.0], "MEX_Universal": [19.43, -99.13]
+    "Rusia_Eurasia": [60.0, 90.0], 
+    "Medio_Oriente": [25.0, 45.0],
+    "Europa_DW": [50.0, 10.0], 
+    "Asia_Nikkei": [35.0, 135.0],
+    "LATAM": [-15.0, -60.0], 
+    "MEXICO": [23.0, -102.0],
+    "NORTEAMERICA": [40.0, -100.0]
 }
 
 def init_db():
