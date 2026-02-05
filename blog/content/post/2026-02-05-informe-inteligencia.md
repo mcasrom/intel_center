@@ -5,6 +5,8 @@ type: "post"
 draft: false
 ---
 
+- **[Europa_DW]**: Germany news: Merz meets with Saudi crown prince
+- **[Asia_Nikkei]**: Saudi Arabia opens stock market to all foreign investors
 - **[Rusia_Eurasia]**: Ukraine, Russia to pore over memoranda exchanged at talks — Foreign Ministry
 - **[Rusia_Eurasia]**: Russia, Ukraine to agree on date of new round of talks after memorandums are studied
 - **[Rusia_Eurasia]**: Belarus’ defense ministry expects to strengthen cooperation with Pakistan significantly

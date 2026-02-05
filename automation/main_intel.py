@@ -82,9 +82,27 @@ def fetch_data(conn):
 
 def export_map_json(conn):
     cur = conn.cursor()
-    cur.execute("SELECT region, COUNT(*) FROM news GROUP BY region")
-    hs = [{"name": r, "lat": COORDENADAS[r][0], "lon": COORDENADAS[r][1], "intensity": ct} for r, ct in cur.fetchall() if r in COORDENADAS]
-    with open(JSON_OUTPUT, 'w') as f: json.dump(hs, f, indent=4)
+    # Solo contamos noticias de las últimas 24 horas para que el mapa sea real
+    cur.execute("SELECT region, COUNT(*) FROM news WHERE timestamp > datetime('now', '-24 hours') GROUP BY region")
+    results = cur.fetchall()
+    
+    # Creamos la lista desde cero
+    hs = []
+    for r, ct in results:
+        if r in COORDENADAS:
+            hs.append({
+                "name": r,
+                "lat": COORDENADAS[r][0],
+                "lon": COORDENADAS[r][1],
+                "intensity": ct
+            })
+    
+    # Sobreescribimos el archivo JSON
+    with open(JSON_OUTPUT, 'w') as f:
+        json.dump(hs, f, indent=4)
+    print(f"📍 Mapa actualizado con {len(hs)} regiones activas.")
+
+
 
 def create_hugo_post(conn):
     date_str = datetime.now().strftime("%Y-%m-%d")

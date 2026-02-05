@@ -3,13 +3,13 @@
         "name": "Asia_Nikkei",
         "lat": 35.0,
         "lon": 135.0,
-        "intensity": 15
+        "intensity": 16
     },
     {
         "name": "Europa_DW",
         "lat": 50.0,
         "lon": 10.0,
-        "intensity": 15
+        "intensity": 16
     },
     {
         "name": "LATAM",
