@@ -5,54 +5,6 @@ type: "post"
 draft: false
 ---
 
-- **[Rusia_Eurasia]**: Expulsion of Russian firms from Venezuela, US sanctions after Anchorage: Lavrov statements
-- **[Europa_DW]**: Germany news: Merz meets with Saudi crown prince
-- **[Asia_Nikkei]**: Saudi Arabia opens stock market to all foreign investors
-- **[Rusia_Eurasia]**: Ukraine, Russia to pore over memoranda exchanged at talks — Foreign Ministry
-- **[Rusia_Eurasia]**: Russia, Ukraine to agree on date of new round of talks after memorandums are studied
-- **[Rusia_Eurasia]**: Belarus’ defense ministry expects to strengthen cooperation with Pakistan significantly
-- **[Rusia_Eurasia]**: Frequency of meetings on Ukraine talks can’t be strictly standardized — Kremlin
-- **[Rusia_Eurasia]**: Pakistani PM asks Putin to help resolve conflict with India — aide
-- **[Rusia_Eurasia]**: Russia to take all measures to solve crime related to attacks on airfields — Kremlin
-- **[Rusia_Eurasia]**: France, Belgium oppose ban on gas imports from Russia to EU — Politico
-- **[Rusia_Eurasia]**: Putin’s stance on death penalty moratorium remains firm — Kremlin spokesman
-- **[Rusia_Eurasia]**: Europe’s gas stocks replenishment slower than usual, situation becomes tense
-- **[Rusia_Eurasia]**: Japan reports record-low birth rate in 2024, ministry reveals
-- **[Rusia_Eurasia]**: Russia takes measures proceeding from Kiev’s attacks on peaceful facilities — Kremlin
-- **[Rusia_Eurasia]**: Diamond prices mixed in May — industry agency
-- **[Rusia_Eurasia]**: Crimean bridge unaffected by Kiev’s attack, Kremlin spokesman says
-- **[Rusia_Eurasia]**: Poland's capacity to deliver arms to Ukraine heavily constrained — paper
-- **[Rusia_Eurasia]**: Russia not interested in arms race with Europe, European Parliament member says
-- **[Asia_Nikkei]**: Thai election due on Sunday: Three key points to watch
-- **[Asia_Nikkei]**: China's provinces ease growth targets, fueling expectations of national cut
-- **[Asia_Nikkei]**: Indonesia logs 5.1% GDP growth in 2025 but outlook remains downcast
-- **[Asia_Nikkei]**: Family offices eye niche strategies, impact investing in emerging managers
-- **[Asia_Nikkei]**: Trump and Xi talk Taiwan at dicey time for Taipei's defense spending
-- **[Asia_Nikkei]**: Yum China aims to capture 'early signs' of improved consumer appetite
-- **[Asia_Nikkei]**: India's $166m bid to modernize critical mineral recycling takes shape
-- **[Asia_Nikkei]**: Sony lifts full-year profit outlook on chip demand, IP gain
-- **[Asia_Nikkei]**: TSMC to make advanced chips for AI at 2nd Japan plant
-- **[Asia_Nikkei]**: HP, Dell, Acer and Asus mull using Chinese memory chips amid supply crunch
-- **[Asia_Nikkei]**: Jailed Vietnam airline mogul is back to work with South Korean talks
-- **[Asia_Nikkei]**: Nepal polls test old guard as Gen Z protest reshapes political landscape
-- **[Asia_Nikkei]**: Indonesia's stock market rout smokes out long-standing manipulation issues
-- **[Asia_Nikkei]**: Japan's DNP to sell photo printers, auto parts in India
-- **[Asia_Nikkei]**: US, China and Russia erode the rules-based order, says Human Rights Watch
-- **[LATAM]**: Boletín: Primer ataque de EE.UU. y aliados árabes contra Estado Islámico en Siria y otras noticias
-- **[LATAM]**: Estrato 1, estrato 6: cómo los colombianos hablan de sí mismos divididos en clases sociales
-- **[LATAM]**: Las dos vidas de Cantinflas
-- **[LATAM]**: Santos: "No le estoy dando el país a las FARC"
-- **[LATAM]**: Fernández denuncia que con caso "fondos buitres" quieren poner de rodillas a Argentina
-- **[LATAM]**: ¿Por qué internet en Venezuela es tan lento?
-- **[LATAM]**: Vuelven a posponer el juicio a Leopoldo López
-- **[LATAM]**: Chile: roban US$3,3 millones a la casa de empeño "Tía Rica"
-- **[LATAM]**: Los consejos del Nobel mexicano que descubrió gases del agujero de ozono
-- **[LATAM]**: Boletín: más de 130.000 sirios kurdos cruzan a Turquía huyendo de Estado Islámico y otras noticias
-- **[LATAM]**: ¿Cómo se convirtió Cuba en una potencia humanitaria?
-- **[LATAM]**: Cómo operan las mafias del multimillonario negocio de la madera ilegal en Perú
-- **[LATAM]**: Los inodoros que ayudan a los haitianos a cultivar sus alimentos
-- **[LATAM]**: Un inodoro para combatir enfermedades
-- **[LATAM]**: Maduro anuncia un plan de desarme de civiles en Venezuela
 - **[USA_NORTE]**: Woody Allen, a Florida mansion rulebook and a Paris ‘wife hunt’: stories you may have missed from the Epstein files
 - **[USA_NORTE]**: Brad Karp: Wall Street law firm boss resigns after emails to Epstein released
 - **[USA_NORTE]**: New York City and Illinois join WHO network after Trump pulls US out of global health body
@@ -68,6 +20,68 @@ draft: false
 - **[USA_NORTE]**: Steve Bannon calls for immigration agents at polling sites during midterms
 - **[USA_NORTE]**: The Guardian view on Epstein, power and accountability: full transparency is the least survivors deserve | Editorial
 - **[USA_NORTE]**: What is happening in Fulton county is a warning to America | Jamil Smith
+- **[LATAM]**: Boletín: Primer ataque de EE.UU. y aliados árabes contra Estado Islámico en Siria y otras noticias
+- **[LATAM]**: Estrato 1, estrato 6: cómo los colombianos hablan de sí mismos divididos en clases sociales
+- **[LATAM]**: Las dos vidas de Cantinflas
+- **[LATAM]**: Santos: "No le estoy dando el país a las FARC"
+- **[LATAM]**: Fernández denuncia que con caso "fondos buitres" quieren poner de rodillas a Argentina
+- **[LATAM]**: ¿Por qué internet en Venezuela es tan lento?
+- **[LATAM]**: Vuelven a posponer el juicio a Leopoldo López
+- **[LATAM]**: Chile: roban US$3,3 millones a la casa de empeño "Tía Rica"
+- **[LATAM]**: Los consejos del Nobel mexicano que descubrió gases del agujero de ozono
+- **[LATAM]**: Boletín: más de 130.000 sirios kurdos cruzan a Turquía huyendo de Estado Islámico y otras noticias
+- **[LATAM]**: ¿Cómo se convirtió Cuba en una potencia humanitaria?
+- **[LATAM]**: Cómo operan las mafias del multimillonario negocio de la madera ilegal en Perú
+- **[LATAM]**: Los inodoros que ayudan a los haitianos a cultivar sus alimentos
+- **[LATAM]**: Un inodoro para combatir enfermedades
+- **[LATAM]**: Maduro anuncia un plan de desarme de civiles en Venezuela
+- **[Asia_Nikkei]**: Yum China aims to capture 'early signs' of improved consumer appetite
+- **[Asia_Nikkei]**: Saudi Arabia opens stock market to all foreign investors
+- **[Asia_Nikkei]**: Thai election due on Sunday: Three key points to watch
+- **[Asia_Nikkei]**: China's provinces ease growth targets, fueling expectations of national cut
+- **[Asia_Nikkei]**: Indonesia logs 5.1% GDP growth in 2025 but outlook remains downcast
+- **[Asia_Nikkei]**: Family offices eye niche strategies, impact investing in emerging managers
+- **[Asia_Nikkei]**: Trump and Xi talk Taiwan at dicey time for Taipei's defense spending
+- **[Asia_Nikkei]**: India's $166m bid to modernize critical mineral recycling takes shape
+- **[Asia_Nikkei]**: Sony lifts full-year profit outlook on chip demand, IP gain
+- **[Asia_Nikkei]**: TSMC to make advanced chips for AI at 2nd Japan plant
+- **[Asia_Nikkei]**: HP, Dell, Acer and Asus mull using Chinese memory chips amid supply crunch
+- **[Asia_Nikkei]**: Jailed Vietnam airline mogul is back to work with South Korean talks
+- **[Asia_Nikkei]**: Nepal polls test old guard as Gen Z protest reshapes political landscape
+- **[Asia_Nikkei]**: Indonesia's stock market rout smokes out long-standing manipulation issues
+- **[Asia_Nikkei]**: Japan's DNP to sell photo printers, auto parts in India
+- **[Africa_Sahel]**: Moroccan security forces carry out evacuations as floods hit north
+- **[Africa_Sahel]**: Spain on red alert as Storm Leonardo unleashes torrential rain and floods
+- **[Africa_Sahel]**: Rising rivers and deadly floods slam Portugal as Storm Leonardo hits
+- **[Africa_Sahel]**: Egypt's Sisi, Turkey's Erdogan discuss Gaza, Iran in Cairo
+- **[Africa_Sahel]**: Kenyan president announces tax relief measures to ease cost of living
+- **[Africa_Sahel]**: Governance, integrity and youth: African leaders set agenda in Dubai
+- **[Africa_Sahel]**: Niger military government to sue French uranium giant over environment
+- **[Africa_Sahel]**: Morocco orders mass evacuations as flood risk soars
+- **[Africa_Sahel]**: Snoop Dogg surprises Italy by joining Olympic torch relay in Gallarate
+- **[Africa_Sahel]**: Libyan prosecutors launch probe into killing of Seif al-Islam Gadhafi
+- **[Africa_Sahel]**: Moroccan football federation to appeal CAF sanctions imposed after AFCON final
+- **[Africa_Sahel]**: Leader of South Africa's second largest party says he will not stand for re-election
+- **[Africa_Sahel]**: Ghana consumer inflation sinks to five-year low
+- **[Africa_Sahel]**: Spain reels as Storm Leonardo batters Andalucía with floods and mass evacuations
+- **[Africa_Sahel]**: US President Donald Trump signs short-term extension of AGOA
+- **[Europa_DW]**: How US Project Vault challenges China's rare-earth dominance
+- **[Europa_DW]**: Germany: Icy rain halts departures at Berlin airport
+- **[Europa_DW]**: Germany news: Merz meets with Saudi crown prince
+- **[Europa_DW]**: China’s Xi holds calls with Trump, and Putin, on same day
+- **[Europa_DW]**: Ukraine updates: Trilateral talks enter second day in UAE
+- **[Europa_DW]**: US wants to establish critical minerals trade bloc
+- **[Europa_DW]**: New START: Last US-Russia nuclear treaty expires, raising fears of new global arms race
+- **[Europa_DW]**: Winter Olympics begin quietly with curling
+- **[Europa_DW]**: US, Iran to hold talks in Oman on Friday
+- **[Europa_DW]**: 'Doomsday Clock': The US-Russia New START deal is ending
+- **[Europa_DW]**: US: Would-be Trump assassin gets life without parole
+- **[Europa_DW]**: Turkey's textile industry crushed by China and Bangladesh
+- **[Europa_DW]**: Italy says it has foiled Russian Olympic cyberattacks
+- **[Europa_DW]**: Nigeria: Extremists kill over 100 in western villages
+- **[Europa_DW]**: ICE to reduce numbers in Minnesota, but operations go on
+- **[Rusia_Eurasia]**: Beijing has no plans to join nuclear disarmament talks at this stage — Chinese MFA
+- **[Rusia_Eurasia]**: Expulsion of Russian firms from Venezuela, US sanctions after Anchorage: Lavrov statements
 - **[Rusia_Eurasia]**: Silver futures price down over 11%
 - **[Rusia_Eurasia]**: Almaz-Antey to showcase latest air defense systems at exhibition in Riyadh
 - **[Rusia_Eurasia]**: Russian stocks down as main trading session opens
@@ -81,8 +95,6 @@ draft: false
 - **[Rusia_Eurasia]**: Power plant accident leaves eastern Cuba without electricity
 - **[Rusia_Eurasia]**: Russia surprised by US sanctions against oil companies after Anchorage
 - **[Rusia_Eurasia]**: Russia not imposing itself as mediator between Iran, US — Lavrov
-- **[Rusia_Eurasia]**: Trump to make decision on New START when deems appropriate — media
-- **[Rusia_Eurasia]**: Russian companies openly forced out of Venezuela after events in republic — Lavrov
 - **[Medio_Oriente]**: Epstein’s help sought in bid to meet Chuck Schumer, files reveal
 - **[Medio_Oriente]**: Here’s why Israel is allowing record murder rates in its Palestinian towns
 - **[Medio_Oriente]**: Boycotting India at T20 World Cup to support Bangladesh: Pakistan PM Sharif
@@ -98,18 +110,3 @@ draft: false
 - **[Medio_Oriente]**: UN warns of humanitarian collapse in Cuba as US seeks to block oil supplies
 - **[Medio_Oriente]**: ‘Country of the blind’: How will Bangladesh remember Muhammad Yunus?
 - **[Medio_Oriente]**: Zelenskyy reveals 55,000 Ukrainian soldiers killed fighting against Russia
-- **[Europa_DW]**: How US Project Vault challenges China's rare-earth dominance
-- **[Europa_DW]**: Germany: Icy rain halts departures at Berlin airport
-- **[Europa_DW]**: Germany updates: Merz meets with Saudi crown prince
-- **[Europa_DW]**: China’s Xi holds calls with Trump, and Putin, on same day
-- **[Europa_DW]**: Ukraine updates: Trilateral talks enter second day in UAE
-- **[Europa_DW]**: US wants to establish critical minerals trade bloc
-- **[Europa_DW]**: New START: Last US-Russia nuclear treaty expires, raising fears of new global arms race
-- **[Europa_DW]**: Winter Olympics begin quietly with curling
-- **[Europa_DW]**: US, Iran to hold talks in Oman on Friday
-- **[Europa_DW]**: 'Doomsday Clock': The US-Russia New START deal is ending
-- **[Europa_DW]**: US: Would-be Trump assassin gets life without parole
-- **[Europa_DW]**: Turkey's textile industry crushed by China and Bangladesh
-- **[Europa_DW]**: Italy says it has foiled Russian Olympic cyberattacks
-- **[Europa_DW]**: Nigeria: Extremists kill over 100 in western villages
-- **[Europa_DW]**: ICE to reduce numbers in Minnesota, but operations go on
