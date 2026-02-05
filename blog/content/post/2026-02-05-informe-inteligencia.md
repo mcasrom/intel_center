@@ -5,6 +5,66 @@ type: "post"
 draft: false
 ---
 
+- **[USA_NORTE]**: Trump says Pretti and Good were ‘not angels’ while signalling ‘softer touch’ on immigration crackdown – US politics live
+- **[USA_NORTE]**: Michigan accuses big oil of being ‘cartel’ that fuels climate crisis and high energy costs
+- **[USA_NORTE]**: First Thing: Minnesota girl, 10, released from ICE custody after a month in detention
+- **[USA_NORTE]**: Calls to shut down Texas ICE facility for children grow amid measles outbreak
+- **[USA_NORTE]**: Trump’s border-czar takeover does little to calm Minneapolis tensions: ‘The agenda is still the same’
+- **[USA_NORTE]**: All the world’s enraged: a new era of ‘resistance theater’ is rising as Trump attacks the arts
+- **[USA_NORTE]**: ‘Do you think you’re the devil himself?’: highlights from the bizarre, newly released Bannon-Epstein interview
+- **[USA_NORTE]**: Donald Trump is making China great again | Steven Greenhouse
+- **[USA_NORTE]**: Why haven’t business elites stood up for Minnesota? | Daniel Altschuler
+- **[Africa_Sahel]**: China to import some South African products duty-free
+- **[Africa_Sahel]**: Why Africa’s truth is falling behind in the digital race   (Africanews Debates)
+- **[Africa_Sahel]**: From stage to flame - Snoop Dogg joins Olympic torch relay
+- **[Africa_Sahel]**: Cameroon, Equatorial Guinea sign agreement for cross-border gas project
+- **[Africa_Sahel]**: UN warns Islamic State threat growing, situation urgent in West Africa, Sahel
+- **[Africa_Sahel]**: Ghana and Zambia sign visa-free travel agreement
+- **[Africa_Sahel]**: US and Iran reopen nuclear talks despite deep divisions and military threats
+- **[Africa_Sahel]**: Olympians turn runway models as IOC unveils teams' uniforms
+- **[Africa_Sahel]**: Education emerges as Africa’s top priority at World Government Summit
+- **[Africa_Sahel]**: N'Golo Kanté completes move to Turkey's Fenerbahce
+- **[Africa_Sahel]**: Russian drones strike Kyiv as capital battles power cuts and cold
+- **[Europa_DW]**: Uganda's anti-gay law exposes systemic failures
+- **[Europa_DW]**: Commercial startups move into risky solar geoengineering
+- **[Europa_DW]**: Nigeria: President deploys troops after Kwara state attack
+- **[Europa_DW]**: Moltbook explained: Where AI bots meet to 'discuss' humans
+- **[Europa_DW]**: The fight for American football in Europe
+- **[Europa_DW]**: Trump to be exposed at Cologne Carnival's Rose Monday parade
+- **[Europa_DW]**: Ukraine updates: POW swap deal reached at Abu Dhabi talks
+- **[Asia_Nikkei]**: Japan's coalition could win more than 60% of lower house, Nikkei poll shows
+- **[Asia_Nikkei]**: Nikkei to launch index with Buffett-inspired moat concept
+- **[Asia_Nikkei]**: China's memory boost and Apple's iPhone shuffle
+- **[Rusia_Eurasia]**: New fiberoptic drone and mothership boat system tested out for first time in Black Sea
+- **[Rusia_Eurasia]**: US continues to supply weapons to Ukraine amid ongoing talks — envoy to NATO
+- **[Rusia_Eurasia]**: Diplomatic process between US, Iran remains uninterrupted, active — Erdogan
+- **[Rusia_Eurasia]**: Bank of Russia to analyze, discuss monetary policy in coming years
+- **[Rusia_Eurasia]**: Russia’s international reserves set new record increasing to $826 bln — Central Bank
+- **[Rusia_Eurasia]**: First phygital center opened in Arkhangelsk
+- **[Rusia_Eurasia]**: FACTBOX: Russia’s nuclear power projects abroad
+- **[Rusia_Eurasia]**: Subcommittee chaired by Russian Deputy PM discuss automotive industry support
+- **[Rusia_Eurasia]**: Kolibri cargo drone successfully tested in St. Petersburg
+- **[Rusia_Eurasia]**: Russia, Iran have very good cooperation between intelligence services — SVR director
+- **[Rusia_Eurasia]**: Russian authorities anticipate production growth in car segment in 2026
+- **[Rusia_Eurasia]**: Armenian parliament speaker says Yerevan has no plans to leave EAEU
+- **[Rusia_Eurasia]**: Russia wants normal relations with EU, but ball is on Europe’s side — diplomat
+- **[Rusia_Eurasia]**: Incompatibility of EAEU and EU, respect for Armenia’s choice: statements by Lavrov
+- **[Rusia_Eurasia]**: Russia is doing its utmost to ensure negotiations on Ukraine continue — senior legislator
+- **[Medio_Oriente]**: Video: Bangladesh’s election and the return of banned Jamaat-e-Islami
+- **[Medio_Oriente]**: Israel sprays unknown chemical over land in south Lebanon
+- **[Medio_Oriente]**: Israeli air attacks on Lebanon reach highest level since ceasefire: Report
+- **[Medio_Oriente]**: One man killed, girl missing as Storm Leonardo hits Portugal and Spain
+- **[Medio_Oriente]**: Christian group says all abductees taken in Nigeria’s Kurmin Wali released
+- **[Medio_Oriente]**: Russia says will act responsibly despite New START nuclear treaty expiry
+- **[Medio_Oriente]**: Algerian boxer Khelif open to genetic testing by IOC for 2028 Olympics
+- **[Medio_Oriente]**: T20 World Cup: Can Pakistan face sanctions over India boycott?
+- **[Medio_Oriente]**: In Pakistan, gold price rollercoaster pushes buyers to silver
+- **[Medio_Oriente]**: Pakistan army says it killed 216 fighters in weeklong Balochistan campaign
+- **[Medio_Oriente]**: Video: US news host Savannah Guthrie pleads for return of abducted mother
+- **[Medio_Oriente]**: Gunmen kill nearly 200 people in Nigeria
+- **[Medio_Oriente]**: Why are gold prices soaring and the dollar in decline?
+- **[Medio_Oriente]**: Man charged with ‘terrorism’ for bomb at Indigenous protest in Australia
+- **[Medio_Oriente]**: Gaza patients head to Rafah crossing as people return amid Israeli attacks
 - **[Rusia_Eurasia]**: Saudi Arabia creates passports for camels
 - **[Rusia_Eurasia]**: ‘Positive progress:’ What we know about Abu Dhabi talks on Ukraine
 - **[Rusia_Eurasia]**: US starts new nuclear arms race to try to outpace Russia — expert
