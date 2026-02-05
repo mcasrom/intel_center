@@ -5,6 +5,9 @@ type: "post"
 draft: false
 ---
 
+- **[Rusia_Eurasia]**: Saudi Arabia creates passports for camels
+- **[Rusia_Eurasia]**: ‘Positive progress:’ What we know about Abu Dhabi talks on Ukraine
+- **[Rusia_Eurasia]**: US starts new nuclear arms race to try to outpace Russia — expert
 - **[Rusia_Eurasia]**: Almaz-Antey to showcase key air defense systems at Saudi Arabia exhibition
 - **[Rusia_Eurasia]**: New START Treaty’s expiration: reaction in Russia and around the world
 - **[Rusia_Eurasia]**: Beijing has no plans to join nuclear disarmament talks at this stage — Chinese MFA
