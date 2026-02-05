@@ -5,6 +5,9 @@ type: "post"
 draft: false
 ---
 
+- **[Rusia_Eurasia]**: Almaz-Antey to showcase key air defense systems at Saudi Arabia exhibition
+- **[Rusia_Eurasia]**: New START Treaty’s expiration: reaction in Russia and around the world
+- **[Medio_Oriente]**: The weapons the US has in place as it threatens to attack Iran
 - **[USA_NORTE]**: Woody Allen, a Florida mansion rulebook and a Paris ‘wife hunt’: stories you may have missed from the Epstein files
 - **[USA_NORTE]**: Brad Karp: Wall Street law firm boss resigns after emails to Epstein released
 - **[USA_NORTE]**: New York City and Illinois join WHO network after Trump pulls US out of global health body

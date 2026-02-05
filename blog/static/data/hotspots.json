@@ -1,8 +1,8 @@
 [
     {
         "name": "Africa_Sahel",
-        "lat": "h",
-        "lon": "t",
+        "lat": 15.0,
+        "lon": 15.0,
         "intensity": 15
     },
     {
@@ -27,13 +27,13 @@
         "name": "Medio_Oriente",
         "lat": 25.0,
         "lon": 45.0,
-        "intensity": 15
+        "intensity": 16
     },
     {
         "name": "Rusia_Eurasia",
         "lat": 60.0,
         "lon": 90.0,
-        "intensity": 15
+        "intensity": 17
     },
     {
         "name": "USA_NORTE",

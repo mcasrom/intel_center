@@ -30,7 +30,7 @@ COORDENADAS = {
     "Rusia_Eurasia": [60.0, 90.0], 
     "Medio_Oriente": [25.0, 45.0],
     "Europa_DW": [50.0, 10.0], 
-    "Africa_Sahel": "https://www.africanews.com/feed/",
+    "Africa_Sahel": [15.0, 15.0], 
     "Asia_Nikkei": [35.0, 135.0],
     "LATAM": [-15.0, -60.0], 
     "MEXICO": [23.0, -102.0],
