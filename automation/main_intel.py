@@ -19,22 +19,22 @@ FEEDS = {
     "Rusia_Eurasia": "https://tass.com/rss/v2.xml",
     "Medio_Oriente": "https://www.aljazeera.com/xml/rss/all.xml",
     "Europa_DW": "https://rss.dw.com/rdf/rss-en-top",
-    "Africa_Sahel": "https://www.africanews.com/feed/",
     "Asia_Nikkei": "https://asia.nikkei.com/rss/feed/nar",
     "LATAM": "https://www.bbc.com/mundo/temas/america_latina/index.xml",
     "MEXICO": "https://www.jornada.com.mx/rss/ultimas.xml?v=1",
-    "USA_NORTE": "https://www.theguardian.com/us-news/rss"
+    "USA_NORTE": "https://www.theguardian.com/us-news/rss",
+    "Africa_Sahel": "https://www.africanews.com/feed/"
 }
 
 COORDENADAS = {
     "Rusia_Eurasia": [60.0, 90.0], 
     "Medio_Oriente": [25.0, 45.0],
     "Europa_DW": [50.0, 10.0], 
-    "Africa_Sahel": [15.0, 15.0], 
     "Asia_Nikkei": [35.0, 135.0],
     "LATAM": [-15.0, -60.0], 
     "MEXICO": [23.0, -102.0],
-    "USA_NORTE": [40.0, -100.0]
+    "USA_NORTE": [40.0, -100.0],
+    "Africa_Sahel": [15.0, 15.0]
 }
 
 def init_db():
