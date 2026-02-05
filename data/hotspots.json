@@ -3,19 +3,25 @@
         "name": "Africa_Sahel",
         "lat": 15.0,
         "lon": 15.0,
-        "intensity": 26
+        "intensity": 15
     },
     {
         "name": "Asia_Nikkei",
         "lat": 35.0,
         "lon": 135.0,
-        "intensity": 18
+        "intensity": 15
+    },
+    {
+        "name": "Australia",
+        "lat": -25.0,
+        "lon": 133.0,
+        "intensity": 15
     },
     {
         "name": "Europa_DW",
         "lat": 50.0,
         "lon": 10.0,
-        "intensity": 22
+        "intensity": 15
     },
     {
         "name": "LATAM",
@@ -27,18 +33,18 @@
         "name": "Medio_Oriente",
         "lat": 25.0,
         "lon": 45.0,
-        "intensity": 30
+        "intensity": 15
     },
     {
         "name": "Rusia_Eurasia",
         "lat": 60.0,
         "lon": 90.0,
-        "intensity": 48
+        "intensity": 15
     },
     {
         "name": "USA_NORTE",
         "lat": 40.0,
         "lon": -100.0,
-        "intensity": 24
+        "intensity": 15
     }
 ]
