@@ -5,21 +5,6 @@ type: "post"
 draft: false
 ---
 
-- **[Africa_Sahel]**: Moroccan security forces carry out evacuations as floods hit north
-- **[Africa_Sahel]**: Spain on red alert as Storm Leonardo unleashes torrential rain and floods
-- **[Africa_Sahel]**: Rising rivers and deadly floods slam Portugal as Storm Leonardo hits
-- **[Africa_Sahel]**: Egypt's Sisi, Turkey's Erdogan discuss Gaza, Iran in Cairo
-- **[Africa_Sahel]**: Kenyan president announces tax relief measures to ease cost of living
-- **[Africa_Sahel]**: Governance, integrity and youth: African leaders set agenda in Dubai
-- **[Africa_Sahel]**: Niger military government to sue French uranium giant over environment
-- **[Africa_Sahel]**: Morocco orders mass evacuations as flood risk soars
-- **[Africa_Sahel]**: Snoop Dogg surprises Italy by joining Olympic torch relay in Gallarate
-- **[Africa_Sahel]**: Libyan prosecutors launch probe into killing of Seif al-Islam Gadhafi
-- **[Africa_Sahel]**: Moroccan football federation to appeal CAF sanctions imposed after AFCON final
-- **[Africa_Sahel]**: Leader of South Africa's second largest party says he will not stand for re-election
-- **[Africa_Sahel]**: Ghana consumer inflation sinks to five-year low
-- **[Africa_Sahel]**: Spain reels as Storm Leonardo batters Andalucía with floods and mass evacuations
-- **[Africa_Sahel]**: US President Donald Trump signs short-term extension of AGOA
 - **[Rusia_Eurasia]**: Almaz-Antey to showcase key air defense systems at Saudi Arabia exhibition
 - **[Rusia_Eurasia]**: New START Treaty’s expiration: reaction in Russia and around the world
 - **[Rusia_Eurasia]**: Beijing has no plans to join nuclear disarmament talks at this stage — Chinese MFA
@@ -95,21 +80,36 @@ draft: false
 - **[USA_NORTE]**: Steve Bannon calls for immigration agents at polling sites during midterms
 - **[USA_NORTE]**: The Guardian view on Epstein, power and accountability: full transparency is the least survivors deserve | Editorial
 - **[USA_NORTE]**: What is happening in Fulton county is a warning to America | Jamil Smith
-- **[Rusia_Eurasia]**: Ukraine, Russia to pore over memoranda exchanged at talks — Foreign Ministry
-- **[Rusia_Eurasia]**: Russia, Ukraine to agree on date of new round of talks after memorandums are studied
-- **[Rusia_Eurasia]**: Belarus’ defense ministry expects to strengthen cooperation with Pakistan significantly
-- **[Rusia_Eurasia]**: Frequency of meetings on Ukraine talks can’t be strictly standardized — Kremlin
-- **[Rusia_Eurasia]**: Pakistani PM asks Putin to help resolve conflict with India — aide
-- **[Rusia_Eurasia]**: Russia to take all measures to solve crime related to attacks on airfields — Kremlin
-- **[Rusia_Eurasia]**: France, Belgium oppose ban on gas imports from Russia to EU — Politico
-- **[Rusia_Eurasia]**: Putin’s stance on death penalty moratorium remains firm — Kremlin spokesman
-- **[Rusia_Eurasia]**: Europe’s gas stocks replenishment slower than usual, situation becomes tense
-- **[Rusia_Eurasia]**: Japan reports record-low birth rate in 2024, ministry reveals
-- **[Rusia_Eurasia]**: Russia takes measures proceeding from Kiev’s attacks on peaceful facilities — Kremlin
-- **[Rusia_Eurasia]**: Diamond prices mixed in May — industry agency
-- **[Rusia_Eurasia]**: Crimean bridge unaffected by Kiev’s attack, Kremlin spokesman says
-- **[Rusia_Eurasia]**: Poland's capacity to deliver arms to Ukraine heavily constrained — paper
-- **[Rusia_Eurasia]**: Russia not interested in arms race with Europe, European Parliament member says
+- **[Africa_Sahel]**: Moroccan security forces carry out evacuations as floods hit north
+- **[Africa_Sahel]**: Spain on red alert as Storm Leonardo unleashes torrential rain and floods
+- **[Africa_Sahel]**: Rising rivers and deadly floods slam Portugal as Storm Leonardo hits
+- **[Africa_Sahel]**: Egypt's Sisi, Turkey's Erdogan discuss Gaza, Iran in Cairo
+- **[Africa_Sahel]**: Kenyan president announces tax relief measures to ease cost of living
+- **[Africa_Sahel]**: Governance, integrity and youth: African leaders set agenda in Dubai
+- **[Africa_Sahel]**: Niger military government to sue French uranium giant over environment
+- **[Africa_Sahel]**: Morocco orders mass evacuations as flood risk soars
+- **[Africa_Sahel]**: Snoop Dogg surprises Italy by joining Olympic torch relay in Gallarate
+- **[Africa_Sahel]**: Libyan prosecutors launch probe into killing of Seif al-Islam Gadhafi
+- **[Africa_Sahel]**: Moroccan football federation to appeal CAF sanctions imposed after AFCON final
+- **[Africa_Sahel]**: Leader of South Africa's second largest party says he will not stand for re-election
+- **[Africa_Sahel]**: Ghana consumer inflation sinks to five-year low
+- **[Africa_Sahel]**: Spain reels as Storm Leonardo batters Andalucía with floods and mass evacuations
+- **[Africa_Sahel]**: US President Donald Trump signs short-term extension of AGOA
+- **[Rusia_Eurasia]**: German exports to Russia down 5.3% in April month-on-month
+- **[Rusia_Eurasia]**: Khrunichev Center begins production of three Angara-A5M rockets for launching ROS modules
+- **[Rusia_Eurasia]**: Gagauzia head faces court: recent developments
+- **[Rusia_Eurasia]**: Trump-Musk clash costs both hefty sums in one day — media
+- **[Rusia_Eurasia]**: Press review: Europe seeks to block US-Russia thaw as Russia eyes role in US-Iran talks
+- **[Rusia_Eurasia]**: Israel to continue striking Beirut until Lebanon disarms Hezbollah — defense minister
+- **[Rusia_Eurasia]**: WHO reports over 8,500 global attacks on health facilities since 2018 — director general
+- **[Rusia_Eurasia]**: Shadow of 'potential brutal divorce' between Trump-Musk looms over Republicans — TV
+- **[Rusia_Eurasia]**: EU must conclude arms limitation agreement with Russia, says Orban
+- **[Rusia_Eurasia]**: Bank of Russia sells yuan worth $83 mln with settlements on June 5
+- **[Rusia_Eurasia]**: Attacks ahead of meeting between IAEA, Rosatom chiefs 'pressure tool,' ZNPP believes
+- **[Rusia_Eurasia]**: Dodon calls on Sandu, Recean not to succumb to Western attempts to drag Moldova into war
+- **[Rusia_Eurasia]**: Zelensky’s regime bears all hallmarks of terrorist organization — Russian senator
+- **[Rusia_Eurasia]**: Russian stocks down as main trading session opens
+- **[Rusia_Eurasia]**: Rosatom CEO, IAEA chief meet in Kaliningrad
 - **[Medio_Oriente]**: The weapons the US has in place as it threatens to attack Iran
 - **[Medio_Oriente]**: Epstein’s help sought in bid to meet Chuck Schumer, files reveal
 - **[Medio_Oriente]**: Here’s why Israel is allowing record murder rates in its Palestinian towns
