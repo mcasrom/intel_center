@@ -9,6 +9,7 @@ DB_PATH = os.path.join(BASE_DIR, "data/news.db")
 JSON_OUTPUT = os.path.join(BASE_DIR, "blog/static/data/hotspots.json")
 POSTS_OUTPUT = os.path.join(BASE_DIR, "blog/content/post/")
 USA_LOG_CSV = os.path.join(BASE_DIR, "data/usa_trend.csv")
+SPAIN_LOG_CSV = os.path.join(BASE_DIR, "data/spain_trend.csv")
 USER_AGENT = 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36'
 
 # --- FUENTES Y PALABRAS CLAVE ---
@@ -20,15 +21,22 @@ DATOS_INTEL = {
     "LATAM": {"url": "https://www.bbc.com/mundo/temas/america_latina/index.xml", "coord": [-15.0, -60.0]},
     "MEXICO": {"url": "https://www.jornada.com.mx/rss/ultimas.xml?v=1", "coord": [23.0, -102.0]},
     "USA_NORTE": {"url": "https://www.theguardian.com/us-news/rss", "coord": [40.0, -100.0]},
+    "ESPAÑA": {"url": "https://elpais.com/rss/politica/portada.xml", "coord": [40.4, -3.7]},
     "Africa_Sahel": {"url": "https://www.africanews.com/feed/", "coord": [15.0, 15.0]}
 }
 
 KEYWORDS_CRITICAS = ["nuclear", "misil", "atentado", "ataque", "war", "coup", "militar", "threat"]
-KEYWORDS_ELECTORALES = ["election", "voters", "polling", "ballot", "elecciones", "comicios", "votación", "candidato", "president", "campaign"]
+KEYWORDS_ELECTORALES = ["election", "voters", "polling", "ballot", "elecciones", "comicios", "votación", "candidato", "campaña"]
 
 def obtener_sentimiento(texto):
     try: return TextBlob(texto).sentiment.polarity
     except: return 0.0
+
+def registrar_tendencia(path, valor, fecha):
+    if not os.path.exists(path):
+        with open(path, 'w') as f: f.write("timestamp,avg_sentiment\n")
+    with open(path, 'a') as f:
+        f.write(f"{fecha},{round(valor, 4)}\n")
 
 def ejecutar():
     os.makedirs(os.path.dirname(DB_PATH), exist_ok=True)
@@ -43,7 +51,9 @@ def ejecutar():
 
     cur.execute("DELETE FROM news WHERE timestamp < datetime('now', '-7 days')")
     
-    print("--- INICIANDO CAPTURA (VIGILANCIA ELECTORAL + RADAR USA) ---")
+    ahora = datetime.now()
+    fecha_str = ahora.strftime('%Y-%m-%d %H:%M')
+
     for reg, info in DATOS_INTEL.items():
         f = feedparser.parse(info["url"], agent=USER_AGENT)
         if f.entries:
@@ -53,30 +63,28 @@ def ejecutar():
                             (reg, e.title, e.link, pola))
     conn.commit()
 
+    # --- CÁLCULO DE RADARES (USA Y ESPAÑA) ---
+    def get_avg(region):
+        cur.execute("SELECT AVG(sentimiento) FROM news WHERE region=? AND timestamp > datetime('now', '-24 hours')", (region,))
+        return cur.fetchone()[0] or 0.0
+
+    avg_usa = get_avg('USA_NORTE')
+    avg_spain = get_avg('ESPAÑA')
+
+    registrar_tendencia(USA_LOG_CSV, avg_usa, fecha_str)
+    registrar_tendencia(SPAIN_LOG_CSV, avg_spain, fecha_str)
+
     # --- ANOMALÍAS Y PROCESO ELECTORAL ---
     regiones_anomalas, regiones_electorales = [], []
-    ahora = datetime.now()
-
     for reg in DATOS_INTEL:
         cur.execute("SELECT COUNT(*) FROM news WHERE region=? AND timestamp > datetime('now', '-1 day')", (reg,))
-        hoy = cur.fetchone()[0]
-        if hoy > 15: regiones_anomalas.append(reg)
-
+        if cur.fetchone()[0] > 15: regiones_anomalas.append(reg)
         cur.execute("SELECT title FROM news WHERE region=? AND timestamp > datetime('now', '-24 hours')", (reg,))
         titulos = [row[0].lower() for row in cur.fetchall()]
         if any(any(key in t for key in KEYWORDS_ELECTORALES) for t in titulos):
             regiones_electorales.append(reg)
 
-    # --- RADAR HISTÓRICO USA_NORTE (DELTA DE SENTIMIENTO) ---
-    cur.execute("SELECT AVG(sentimiento) FROM news WHERE region='USA_NORTE' AND timestamp > datetime('now', '-24 hours')")
-    avg_usa = cur.fetchone()[0] or 0.0
-    
-    if not os.path.exists(USA_LOG_CSV):
-        with open(USA_LOG_CSV, 'w') as f: f.write("timestamp,avg_sentiment\n")
-    with open(USA_LOG_CSV, 'a') as f:
-        f.write(f"{ahora.strftime('%Y-%m-%d %H:%M')},{round(avg_usa, 4)}\n")
-
-    # --- GENERAR JSON PARA MAPA ---
+    # --- GENERAR JSON ---
     cur.execute("SELECT region, COUNT(*), AVG(sentimiento) FROM news WHERE timestamp > datetime('now', '-24 hours') GROUP BY region")
     hotspots = []
     for r, ct, s in cur.fetchall():
@@ -84,7 +92,6 @@ def ejecutar():
             color = "#f1c40f"
             if r in regiones_electorales: color = "#3498db"
             elif s < -0.1: color = "#ff4b2b"
-            
             hotspots.append({
                 "name": r, "lat": DATOS_INTEL[r]["coord"][0], "lon": DATOS_INTEL[r]["coord"][1],
                 "intensity": ct, "color": color, "sentiment_index": round(s, 2),
@@ -92,10 +99,9 @@ def ejecutar():
                 "election_active": (r in regiones_electorales)
             })
     
-    with open(JSON_OUTPUT, 'w') as f:
-        json.dump(hotspots, f, indent=4)
+    with open(JSON_OUTPUT, 'w') as f: json.dump(hotspots, f, indent=4)
 
-    # --- GENERAR INFORME HUGO ---
+    # --- INFORME HUGO ---
     cur.execute("SELECT region, title, link FROM news WHERE timestamp > datetime('now', '-24 hours') ORDER BY timestamp DESC LIMIT 80")
     alertas, electoral, normales = [], [], []
     for reg, tit, link in cur.fetchall():
@@ -106,13 +112,13 @@ def ejecutar():
 
     with open(os.path.join(POSTS_OUTPUT, f"{ahora.strftime('%Y-%m-%d')}-informe.md"), 'w') as f:
         f.write(f"---\ntitle: \"Monitor Intel - {ahora.strftime('%Y-%m-%d %H:%M')}\"\ndate: {ahora.strftime('%Y-%m-%dT%H:%M:%S')}\n---\n")
-        f.write(f"\n> **Radar USA (Sentimiento 24h):** {round(avg_usa, 4)}\n")
+        f.write(f"\n| Radar | Sentimiento (24h) |\n| :--- | :--- |\n| 🇺🇸 USA | **{round(avg_usa, 4)}** |\n| 🇪🇸 ESPAÑA | **{round(avg_spain, 4)}** |\n")
         if electoral: f.write("\n## 🗳️ VIGILANCIA ELECTORAL\n" + "\n".join(electoral) + "\n")
         if alertas: f.write("\n## ⚡ ALERTAS CRÍTICAS\n" + "\n".join(alertas) + "\n")
         f.write("\n## 🌍 RESUMEN GLOBAL\n" + "\n".join(normales[:50]))
 
     conn.close()
-    print(f"[+] ÉXITO: Radar USA actualizado ({round(avg_usa, 4)})")
+    print(f"[+] DUAL RADAR OK: USA ({round(avg_usa, 4)}) | SPAIN ({round(avg_spain, 4)})")
 
 if __name__ == "__main__":
     ejecutar()
