@@ -8,6 +8,7 @@ BASE_DIR = os.path.dirname(SCRIPT_DIR)
 DB_PATH = os.path.join(BASE_DIR, "data/news.db")
 JSON_OUTPUT = os.path.join(BASE_DIR, "blog/static/data/hotspots.json")
 POSTS_OUTPUT = os.path.join(BASE_DIR, "blog/content/post/")
+USA_LOG_CSV = os.path.join(BASE_DIR, "data/usa_trend.csv")
 USER_AGENT = 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36'
 
 # --- FUENTES Y PALABRAS CLAVE ---
@@ -23,7 +24,7 @@ DATOS_INTEL = {
 }
 
 KEYWORDS_CRITICAS = ["nuclear", "misil", "atentado", "ataque", "war", "coup", "militar", "threat"]
-KEYWORDS_ELECTORALES = ["election", "voters", "polling", "ballot", "elecciones", "comicios", "votación", "candidato"]
+KEYWORDS_ELECTORALES = ["election", "voters", "polling", "ballot", "elecciones", "comicios", "votación", "candidato", "president", "campaign"]
 
 def obtener_sentimiento(texto):
     try: return TextBlob(texto).sentiment.polarity
@@ -42,7 +43,7 @@ def ejecutar():
 
     cur.execute("DELETE FROM news WHERE timestamp < datetime('now', '-7 days')")
     
-    print("--- INICIANDO CAPTURA CON VIGILANCIA ELECTORAL ---")
+    print("--- INICIANDO CAPTURA (VIGILANCIA ELECTORAL + RADAR USA) ---")
     for reg, info in DATOS_INTEL.items():
         f = feedparser.parse(info["url"], agent=USER_AGENT)
         if f.entries:
@@ -53,30 +54,36 @@ def ejecutar():
     conn.commit()
 
     # --- ANOMALÍAS Y PROCESO ELECTORAL ---
-    regiones_anomalas = []
-    regiones_electorales = []
+    regiones_anomalas, regiones_electorales = [], []
     ahora = datetime.now()
 
     for reg in DATOS_INTEL:
-        # Lógica de Anomalía (Volumen)
         cur.execute("SELECT COUNT(*) FROM news WHERE region=? AND timestamp > datetime('now', '-1 day')", (reg,))
         hoy = cur.fetchone()[0]
         if hoy > 15: regiones_anomalas.append(reg)
 
-        # Lógica Electoral (Contenido)
         cur.execute("SELECT title FROM news WHERE region=? AND timestamp > datetime('now', '-24 hours')", (reg,))
         titulos = [row[0].lower() for row in cur.fetchall()]
         if any(any(key in t for key in KEYWORDS_ELECTORALES) for t in titulos):
             regiones_electorales.append(reg)
+
+    # --- RADAR HISTÓRICO USA_NORTE (DELTA DE SENTIMIENTO) ---
+    cur.execute("SELECT AVG(sentimiento) FROM news WHERE region='USA_NORTE' AND timestamp > datetime('now', '-24 hours')")
+    avg_usa = cur.fetchone()[0] or 0.0
+    
+    if not os.path.exists(USA_LOG_CSV):
+        with open(USA_LOG_CSV, 'w') as f: f.write("timestamp,avg_sentiment\n")
+    with open(USA_LOG_CSV, 'a') as f:
+        f.write(f"{ahora.strftime('%Y-%m-%d %H:%M')},{round(avg_usa, 4)}\n")
 
     # --- GENERAR JSON PARA MAPA ---
     cur.execute("SELECT region, COUNT(*), AVG(sentimiento) FROM news WHERE timestamp > datetime('now', '-24 hours') GROUP BY region")
     hotspots = []
     for r, ct, s in cur.fetchall():
         if r in DATOS_INTEL:
-            color = "#f1c40f" # Amarillo base
-            if r in regiones_electorales: color = "#3498db" # Azul Electoral
-            elif s < -0.1: color = "#ff4b2b" # Rojo Conflicto
+            color = "#f1c40f"
+            if r in regiones_electorales: color = "#3498db"
+            elif s < -0.1: color = "#ff4b2b"
             
             hotspots.append({
                 "name": r, "lat": DATOS_INTEL[r]["coord"][0], "lon": DATOS_INTEL[r]["coord"][1],
@@ -99,12 +106,13 @@ def ejecutar():
 
     with open(os.path.join(POSTS_OUTPUT, f"{ahora.strftime('%Y-%m-%d')}-informe.md"), 'w') as f:
         f.write(f"---\ntitle: \"Monitor Intel - {ahora.strftime('%Y-%m-%d %H:%M')}\"\ndate: {ahora.strftime('%Y-%m-%dT%H:%M:%S')}\n---\n")
+        f.write(f"\n> **Radar USA (Sentimiento 24h):** {round(avg_usa, 4)}\n")
         if electoral: f.write("\n## 🗳️ VIGILANCIA ELECTORAL\n" + "\n".join(electoral) + "\n")
         if alertas: f.write("\n## ⚡ ALERTAS CRÍTICAS\n" + "\n".join(alertas) + "\n")
         f.write("\n## 🌍 RESUMEN GLOBAL\n" + "\n".join(normales[:50]))
 
     conn.close()
-    print(f"[+] ÉXITO: {len(regiones_anomalas)} anomalías, {len(regiones_electorales)} procesos electorales.")
+    print(f"[+] ÉXITO: Radar USA actualizado ({round(avg_usa, 4)})")
 
 if __name__ == "__main__":
     ejecutar()

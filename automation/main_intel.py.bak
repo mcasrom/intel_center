@@ -1,19 +1,16 @@
 import os, feedparser, sqlite3, json
-from datetime import datetime, timedelta
+from datetime import datetime
 from textblob import TextBlob
 
-
-# --- CONFIGURACIÓN DINÁMICA ---
-# Buscamos la carpeta raíz del proyecto basándonos en la ubicación de este script
+# --- CONFIGURACIÓN DE RUTAS ---
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
-BASE_DIR = os.path.dirname(SCRIPT_DIR)  # Esto sube un nivel (de automation/ a la raíz)
-
+BASE_DIR = os.path.dirname(SCRIPT_DIR)
 DB_PATH = os.path.join(BASE_DIR, "data/news.db")
 JSON_OUTPUT = os.path.join(BASE_DIR, "blog/static/data/hotspots.json")
 POSTS_OUTPUT = os.path.join(BASE_DIR, "blog/content/post/")
 USER_AGENT = 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36'
 
-
+# --- FUENTES Y PALABRAS CLAVE ---
 DATOS_INTEL = {
     "Rusia_Eurasia": {"url": "https://tass.com/rss/v2.xml", "coord": [60.0, 90.0]},
     "Medio_Oriente": {"url": "https://www.aljazeera.com/xml/rss/all.xml", "coord": [25.0, 45.0]},
@@ -22,18 +19,11 @@ DATOS_INTEL = {
     "LATAM": {"url": "https://www.bbc.com/mundo/temas/america_latina/index.xml", "coord": [-15.0, -60.0]},
     "MEXICO": {"url": "https://www.jornada.com.mx/rss/ultimas.xml?v=1", "coord": [23.0, -102.0]},
     "USA_NORTE": {"url": "https://www.theguardian.com/us-news/rss", "coord": [40.0, -100.0]},
-    "Australia": {"url": "https://www.abc.net.au/news/feed/51120/rss.xml", "coord": [-25.0, 133.0]},
-    "Canada": {"url": "https://www.cbc.ca/cxml/rss/news/world", "coord": [60.0, -110.0]},
-    "Groenlandia": {"url": "https://www.arctictoday.com/feed/", "coord": [72.0, -40.0]},
     "Africa_Sahel": {"url": "https://www.africanews.com/feed/", "coord": [15.0, 15.0]}
 }
 
-KEYWORDS_CRITICAS = [
-    "nuclear", "misil", "missile", "atentado", "ataque", "attack", "guerra", "war",
-    "golpe", "coup", "ciber", "cyber", "despliegue", "deployment", "frontera", "border",
-    "cartel", "sicario", "sahel", "yihad", "jihad", "bombard", "militar", "military",
-    "sancion", "sanction", "ultimatum", "amenaza", "threat"
-]
+KEYWORDS_CRITICAS = ["nuclear", "misil", "atentado", "ataque", "war", "coup", "militar", "threat"]
+KEYWORDS_ELECTORALES = ["election", "voters", "polling", "ballot", "elecciones", "comicios", "votación", "candidato"]
 
 def obtener_sentimiento(texto):
     try: return TextBlob(texto).sentiment.polarity
@@ -52,7 +42,7 @@ def ejecutar():
 
     cur.execute("DELETE FROM news WHERE timestamp < datetime('now', '-7 days')")
     
-    print("--- CAPTURA ANALÍTICA ---")
+    print("--- INICIANDO CAPTURA CON VIGILANCIA ELECTORAL ---")
     for reg, info in DATOS_INTEL.items():
         f = feedparser.parse(info["url"], agent=USER_AGENT)
         if f.entries:
@@ -62,64 +52,59 @@ def ejecutar():
                             (reg, e.title, e.link, pola))
     conn.commit()
 
-    ahora = datetime.now()
-    
-    # --- CÁLCULO DE ANOMALÍAS ---
+    # --- ANOMALÍAS Y PROCESO ELECTORAL ---
     regiones_anomalas = []
-    anomalias_texto = []
+    regiones_electorales = []
+    ahora = datetime.now()
+
     for reg in DATOS_INTEL:
-        cur.execute("SELECT COUNT(*) FROM news WHERE region=? AND timestamp BETWEEN datetime('now', '-7 days') AND datetime('now', '-1 day')", (reg,))
-        total_semana = cur.fetchone()[0] / 6.0 
+        # Lógica de Anomalía (Volumen)
         cur.execute("SELECT COUNT(*) FROM news WHERE region=? AND timestamp > datetime('now', '-1 day')", (reg,))
         hoy = cur.fetchone()[0]
-        
-        es_anomalo = False
-        if total_semana > 0 and hoy > (total_semana * 1.5) and hoy > 5:
-            es_anomalo = True
-        elif total_semana == 0 and hoy > 15:
-            es_anomalo = True
-            
-        if es_anomalo:
-            regiones_anomalas.append(reg)
-            anomalias_texto.append(f"⚠️ **ANOMALÍA EN {reg}**: Actividad inusualmente alta.")
+        if hoy > 15: regiones_anomalas.append(reg)
 
-    # --- GENERAR JSON PARA MAPA (CON CAMPO ANOMALY) ---
+        # Lógica Electoral (Contenido)
+        cur.execute("SELECT title FROM news WHERE region=? AND timestamp > datetime('now', '-24 hours')", (reg,))
+        titulos = [row[0].lower() for row in cur.fetchall()]
+        if any(any(key in t for key in KEYWORDS_ELECTORALES) for t in titulos):
+            regiones_electorales.append(reg)
+
+    # --- GENERAR JSON PARA MAPA ---
     cur.execute("SELECT region, COUNT(*), AVG(sentimiento) FROM news WHERE timestamp > datetime('now', '-24 hours') GROUP BY region")
     hotspots = []
     for r, ct, s in cur.fetchall():
         if r in DATOS_INTEL:
-            color = "#f1c40f"
-            if s < -0.1: color = "#ff4b2b"
-            elif s > 0.1: color = "#2ecc71"
+            color = "#f1c40f" # Amarillo base
+            if r in regiones_electorales: color = "#3498db" # Azul Electoral
+            elif s < -0.1: color = "#ff4b2b" # Rojo Conflicto
             
             hotspots.append({
                 "name": r, "lat": DATOS_INTEL[r]["coord"][0], "lon": DATOS_INTEL[r]["coord"][1],
                 "intensity": ct, "color": color, "sentiment_index": round(s, 2),
-                "anomaly": (r in regiones_anomalas) # <--- NUEVO CAMPO
+                "anomaly": (r in regiones_anomalas),
+                "election_active": (r in regiones_electorales)
             })
     
     with open(JSON_OUTPUT, 'w') as f:
         json.dump(hotspots, f, indent=4)
 
     # --- GENERAR INFORME HUGO ---
-    cur.execute("SELECT region, title, link FROM news WHERE timestamp > datetime('now', '-24 hours') ORDER BY timestamp DESC LIMIT 100")
-    records = cur.fetchall()
-    alertas, normales = [], []
-    for reg, tit, link in records:
-        if any(key in tit.lower() for key in KEYWORDS_CRITICAS):
-            alertas.append(f"- 🚩 **[ALERTA] {reg}**: {tit} ([Link]({link}))")
-        else: normales.append(f"- **[{reg}]**: {tit} ([Link]({link}))")
+    cur.execute("SELECT region, title, link FROM news WHERE timestamp > datetime('now', '-24 hours') ORDER BY timestamp DESC LIMIT 80")
+    alertas, electoral, normales = [], [], []
+    for reg, tit, link in cur.fetchall():
+        txt = f"- **[{reg}]**: {tit} ([Link]({link}))"
+        if any(key in tit.lower() for key in KEYWORDS_CRITICAS): alertas.append(txt.replace("**[", "🚩 **[ALERTA] "))
+        elif any(key in tit.lower() for key in KEYWORDS_ELECTORALES): electoral.append(txt.replace("**[", "🗳️ **[ELECTORAL] "))
+        else: normales.append(txt)
 
     with open(os.path.join(POSTS_OUTPUT, f"{ahora.strftime('%Y-%m-%d')}-informe.md"), 'w') as f:
-        f.write(f"---\ntitle: \"Monitor Intel - {ahora.strftime('%Y-%m-%d %H:%M')}\"\ndate: {ahora.strftime('%Y-%m-%dT%H:%M:%S')}\n---\n\n")
-        if anomalias_texto:
-            f.write("## 📈 ALERTAS DE VOLUMEN\n" + "\n".join(anomalias_texto) + "\n\n---\n\n")
-        if alertas:
-            f.write("## ⚡ ALERTAS CRÍTICAS\n" + "\n".join(alertas) + "\n\n---\n\n")
-        f.write("## 🌍 Resumen\n" + "\n".join(normales[:70]))
+        f.write(f"---\ntitle: \"Monitor Intel - {ahora.strftime('%Y-%m-%d %H:%M')}\"\ndate: {ahora.strftime('%Y-%m-%dT%H:%M:%S')}\n---\n")
+        if electoral: f.write("\n## 🗳️ VIGILANCIA ELECTORAL\n" + "\n".join(electoral) + "\n")
+        if alertas: f.write("\n## ⚡ ALERTAS CRÍTICAS\n" + "\n".join(alertas) + "\n")
+        f.write("\n## 🌍 RESUMEN GLOBAL\n" + "\n".join(normales[:50]))
 
     conn.close()
-    print(f"--- ÉXITO: {len(regiones_anomalas)} anomalías y {len(alertas)} alertas ---")
+    print(f"[+] ÉXITO: {len(regiones_anomalas)} anomalías, {len(regiones_electorales)} procesos electorales.")
 
 if __name__ == "__main__":
     ejecutar()
