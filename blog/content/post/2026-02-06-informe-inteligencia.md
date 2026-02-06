@@ -1,11 +1,13 @@
 ---
 title: "Informe de Inteligencia - 2026-02-06"
-date: 2026-02-06T08:14:10
+date: 2026-02-06T08:19:19
 type: "post"
 ---
 
-### 🕒 Corte de datos: 08:14:10
+### 🕒 Corte de datos: 08:19:19
 
+- **[USA_NORTE]**: ‘I am always on your team!!’: how Andrew’s aide kept close ties with Epstein right to the end ([Link](https://www.theguardian.com/us-news/2026/feb/06/david-stern-prince-andrew-aide-epstein))
+- **[Medio_Oriente]**: Iran foreign minister arrives in Oman for talks with US ([Link](https://www.aljazeera.com/video/newsfeed/2026/2/6/iran-foreign-minister-arrives-in-oman-for-talks-with-us?traffic_source=rss))
 - **[Australia]**: Light plane crashes into ocean on South Australia's south coast ([Link](https://www.abc.net.au/news/2026-02-06/light-plane-crash-at-goolwa-south/106316008))
 - **[Australia]**: Patrol boats out of action as illegal foreign fishers reach Australian shores ([Link](https://www.abc.net.au/news/2026-02-06/patrol-boats-out-of-water-amid-illegal-foreign-fishing-influx/106309428))
 - **[Australia]**: Perth council in 'respectful' disagreement over spending choices ([Link](https://www.abc.net.au/news/2026-02-06/serpentine-jarrahdale-council-spending-questioned/106315816))
@@ -64,5 +66,3 @@ type: "post"
 - **[USA_NORTE]**: Democrats’ 10 demands to ‘rein in’ ICE – the full list of proposed reforms ([Link](https://www.theguardian.com/us-news/2026/feb/05/democrats-ice-reforms-funding-bill))
 - **[USA_NORTE]**: Trump administration issues rule that makes it easier to fire federal workers ([Link](https://www.theguardian.com/us-news/2026/feb/05/trump-administration-federal-workers))
 - **[USA_NORTE]**: We can reverse America’s decline | Bernie Sanders ([Link](https://www.theguardian.com/commentisfree/2026/feb/05/we-can-reverse-americas-decline-heres-how))
-- **[Africa_Sahel]**: Remaining 89 kidnapped Nigerian Christians return home ([Link](http://www.africanews.com/2026/02/05/remaining-89-kidnapped-nigerian-christians-return-home/))
-- **[Africa_Sahel]**: Activists announce a new aid flotilla for Gaza of over 100 boats ([Link](http://www.africanews.com/2026/02/05/activists-announce-a-new-aid-flotilla-for-gaza-of-over-100-boats/))

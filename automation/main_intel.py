@@ -2,7 +2,7 @@ import os, feedparser, sqlite3, json, socket
 from datetime import datetime
 from textblob import TextBlob
 
-# --- CONFIGURACIÓN ---
+# --- CONFIGURACIÓN DE RUTAS ---
 BASE_DIR = os.path.expanduser("~/intel_center_test")
 DB_PATH = os.path.join(BASE_DIR, "data/news.db")
 JSON_OUTPUT = os.path.join(BASE_DIR, "blog/static/data/hotspots.json")
@@ -49,7 +49,7 @@ def ejecutar():
                    timestamp DATETIME DEFAULT CURRENT_TIMESTAMP, 
                    region TEXT, title TEXT, link TEXT UNIQUE, sentimiento REAL)''')
 
-    print("--- INICIANDO CAPTURA OPTIMIZADA ---")
+    print("--- INICIANDO CAPTURA ---")
     for reg, url in FEEDS.items():
         print(f"📡 {reg}...", end=" ", flush=True)
         f = feedparser.parse(url, agent=USER_AGENT)
@@ -68,7 +68,7 @@ def ejecutar():
     ahora = datetime.now()
     fecha_str = ahora.strftime("%Y-%m-%d")
     
-    # GENERAR JSON PARA EL MAPA
+    # --- GENERAR JSON (LISTA PURA PARA JAVASCRIPT) ---
     cur.execute("SELECT region, COUNT(*), AVG(sentimiento) FROM news WHERE timestamp > datetime('now', '-24 hours') GROUP BY region")
     resultados = cur.fetchall()
     
@@ -78,15 +78,21 @@ def ejecutar():
             color = "#f1c40f"
             if s < -0.1: color = "#ff4b2b"
             elif s > 0.1: color = "#2ecc71"
+            
             hotspots.append({
-                "name": r, "lat": COORDENADAS[r][0], "lon": COORDENADAS[r][1],
-                "intensity": ct, "color": color, "sentiment_index": round(s, 2)
+                "name": r,
+                "lat": COORDENADAS[r][0],
+                "lon": COORDENADAS[r][1],
+                "intensity": ct,
+                "color": color,
+                "sentiment_index": round(s, 2)
             })
 
+    # IMPORTANTE: Escribe la lista directamente (sin diccionario exterior)
     with open(JSON_OUTPUT, 'w') as f:
-        json.dump({"last_update": ahora.strftime("%Y-%m-%d %H:%M:%S"), "hotspots": hotspots}, f, indent=4)
+        json.dump(hotspots, f, indent=4)
 
-    # GENERAR POST HUGO
+    # --- GENERAR INFORME HUGO ---
     filename = os.path.join(POSTS_OUTPUT, f"{fecha_str}-informe-inteligencia.md")
     cur.execute("SELECT region, title, link FROM news WHERE timestamp > datetime('now', '-24 hours') ORDER BY timestamp DESC LIMIT 60")
     records = cur.fetchall()
