@@ -43,7 +43,12 @@
                 // Cálculo dinámico del radio basado en volumen de noticias
                 var radius = Math.max(spot.intensity * 18000, 120000); 
                 
-                // Color extraído del análisis de sentimiento (Rojo/Amarillo/Verde)
+                // LÓGICA DE ANOMALÍA: Si existe el flag, duplicamos tamaño y resaltamos borde
+                var finalRadius = spot.anomaly ? radius * 2 : radius;
+                var strokeWidth = spot.anomaly ? 5 : 2;
+                var dashPattern = spot.anomaly ? "5, 10" : null;
+
+                // Color extraído del análisis de sentimiento
                 var nodeColor = spot.color || '#00ff00'; 
 
                 // Dibujado del área de influencia (Círculo)
@@ -51,23 +56,29 @@
                     color: nodeColor, 
                     fillColor: nodeColor,
                     fillOpacity: 0.25, 
-                    weight: 2,
-                    radius: radius
+                    weight: strokeWidth,
+                    dashArray: dashPattern,
+                    radius: finalRadius
                 }).addTo(map);
 
                 // Icono con el número de noticias y color de tensión
                 var numberIcon = L.divIcon({
                     className: 'number-label',
-                    html: `<div style="color: ${nodeColor};">${spot.intensity}</div>`,
-                    iconSize: [40, 40]
+                    html: `<div style="color: ${nodeColor};">${spot.intensity}${spot.anomaly ? '⚠️' : ''}</div>`,
+                    iconSize: [60, 40]
                 });
 
-                // Marcador invisible con etiqueta numérica
+                // Marcador con etiqueta numérica
                 L.marker([spot.lat, spot.lon], { icon: numberIcon }).addTo(map);
                 
-                // Popup informativo al hacer clic
+                // Popup informativo detallado
+                var popupText = `<b>Nodo: ${spot.name}</b><br>Intensidad: ${spot.intensity}<br>Tensión: ${spot.sentiment_index}`;
+                if (spot.anomaly) {
+                    popupText += `<br><span style="color:#ff4b2b;">⚠️ <b>ANOMALÍA DETECTADA</b></span>`;
+                }
+
                 L.marker([spot.lat, spot.lon], { opacity: 0 })
-                 .bindPopup(`<b>Nodo: ${spot.name}</b><br>Intensidad: ${spot.intensity}<br>Tensión: ${spot.sentiment_index}`)
+                 .bindPopup(popupText)
                  .addTo(map);
             });
         })
