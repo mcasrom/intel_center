@@ -6,7 +6,7 @@
         "intensity": 20,
         "color": "#f1c40f",
         "sentiment_index": -0.06,
-        "anomaly": true,
+        "anomaly": false,
         "election_active": false
     },
     {
@@ -16,7 +16,7 @@
         "intensity": 16,
         "color": "#3498db",
         "sentiment_index": -0.06,
-        "anomaly": true,
+        "anomaly": false,
         "election_active": true
     },
     {
@@ -36,7 +36,7 @@
         "intensity": 19,
         "color": "#3498db",
         "sentiment_index": 0.01,
-        "anomaly": true,
+        "anomaly": false,
         "election_active": true
     },
     {
@@ -56,7 +56,7 @@
         "intensity": 20,
         "color": "#f1c40f",
         "sentiment_index": 0.05,
-        "anomaly": true,
+        "anomaly": false,
         "election_active": false
     },
     {
@@ -76,7 +76,7 @@
         "intensity": 19,
         "color": "#3498db",
         "sentiment_index": -0.03,
-        "anomaly": true,
+        "anomaly": false,
         "election_active": true
     }
 ]
