@@ -1,10 +1,23 @@
 ---
-title: "Monitor Global - 2026-02-06"
-date: 2026-02-06T14:41:00
+title: "Monitor Intel - 2026-02-06"
+date: 2026-02-06T14:44:55
 type: "post"
 ---
 
-## ⚡ ALERTAS DETECTADAS
+## 📈 ALERTAS DE VOLUMEN (ANOMALÍAS)
+⚠️ **ACTIVIDAD INICIAL ELEVADA EN Rusia_Eurasia**: 79 reportes detectados.
+⚠️ **ACTIVIDAD INICIAL ELEVADA EN Medio_Oriente**: 53 reportes detectados.
+⚠️ **ACTIVIDAD INICIAL ELEVADA EN Europa_DW**: 40 reportes detectados.
+⚠️ **ACTIVIDAD INICIAL ELEVADA EN Asia_Nikkei**: 39 reportes detectados.
+⚠️ **ACTIVIDAD INICIAL ELEVADA EN USA_NORTE**: 35 reportes detectados.
+⚠️ **ACTIVIDAD INICIAL ELEVADA EN Australia**: 43 reportes detectados.
+⚠️ **ACTIVIDAD INICIAL ELEVADA EN Africa_Sahel**: 38 reportes detectados.
+
+---
+
+## ⚡ ALERTAS CRÍTICAS
+- 🚩 **[ALERTA] Rusia_Eurasia**: Russia to oppose deployment of British-French troops in Ukraine — ambassador ([Link](https://tass.com/politics/2083077))
+- 🚩 **[ALERTA] Rusia_Eurasia**: Ukraine’s military attacks Russia’s Belgorod Region with over 120 UAVs in past day ([Link](https://tass.com/politics/2083071))
 - 🚩 **[ALERTA] Medio_Oriente**: Canada, France to open consulates in Greenland amid ongoing US threats ([Link](https://www.aljazeera.com/news/2026/2/6/canada-france-to-open-consulates-in-greenland-amid-ongoing-us-threats?traffic_source=rss))
 - 🚩 **[ALERTA] Africa_Sahel**: Kagame criticises international "threats" against Rwanda as US sanctions loom ([Link](http://www.africanews.com/2026/02/06/kagame-criticises-international-threats-against-rwanda-as-us-sanctions-loom/))
 - 🚩 **[ALERTA] Australia**: Sarah Snook, The Newsreader and Bring Her Back triumph at AACTA Awards — as it happened ([Link](https://www.abc.net.au/news/2026-02-06/aacta-awards-2026-live-blog-winners-sarah-snook-celeste-barber/106295178))
@@ -19,7 +32,9 @@ type: "post"
 
 ---
 
-## 🌍 Actividad Reciente
+## 🌍 Resumen Global
+- **[Australia]**: Plane crash in Normanton starts grass fire and knocks out power ([Link](https://www.abc.net.au/news/2026-02-07/plane-crash-normanton-gulf-of-carpentaria/106316536))
+- **[Rusia_Eurasia]**: Rus-PE munition can be integrated into fire control systems — Russian arms exporter ([Link](https://tass.com/defense/2083067))
 - **[Australia]**: Breaking: Wild weather expected as Tropical Cyclone Mitchell forms off WA coast ([Link](https://www.abc.net.au/news/2026-02-07/wa-pilbara-warnings-cyclone-mitchell/106314534))
 - **[Medio_Oriente]**: India vs United States: T20 World Cup – teams, start time, lineups ([Link](https://www.aljazeera.com/sports/2026/2/6/india-vs-united-states-t20-world-cup-teams-start-time-lineups?traffic_source=rss))
 - **[Medio_Oriente]**: Manchester United vs Tottenham: Premier League – team news, start, lineups ([Link](https://www.aljazeera.com/sports/2026/2/6/manchester-united-vs-tottenham-premier-league-team-news-start?traffic_source=rss))
@@ -88,5 +103,3 @@ type: "post"
 - **[Africa_Sahel]**: Egypt's inflation expected to slow in January as food prices fall ([Link](http://www.africanews.com/2026/02/06/egypts-inflation-expected-to-slow-in-january-as-food-prices-fall/))
 - **[Australia]**: Why the Invasion Day attempted bombing response differed to that of Bondi ([Link](https://www.abc.net.au/news/2026-02-06/process-to-declare-invasion-day-alleged-attack-terrorism-/106314916))
 - **[Medio_Oriente]**: Super Bowl 2026: Patriots vs Seahawks – Start time, halftime show, players ([Link](https://www.aljazeera.com/sports/2026/2/6/super-bowl-2026-patriots-vs-seahawks-start-time-halftime-show-players?traffic_source=rss))
-- **[Medio_Oriente]**: Hong Kong to sentence media mogul Jimmy Lai on national security conviction ([Link](https://www.aljazeera.com/news/2026/2/6/hong-kong-to-sentence-media-mogul-jimmy-lai-on-national-security-conviction?traffic_source=rss))
-- **[Medio_Oriente]**: Demonstrators arrested over ICE protest at Columbia University ([Link](https://www.aljazeera.com/video/newsfeed/2026/2/6/demonstrators-arrested-over-ice-protest-at-columbia-university?traffic_source=rss))

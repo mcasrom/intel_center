@@ -1,15 +1,14 @@
-import os, feedparser, sqlite3, json, socket
-from datetime import datetime
+import os, feedparser, sqlite3, json
+from datetime import datetime, timedelta
 from textblob import TextBlob
 
-# --- CONFIGURACIÓN DE RUTAS ---
+# --- CONFIGURACIÓN ---
 BASE_DIR = os.path.expanduser("~/intel_center_test")
 DB_PATH = os.path.join(BASE_DIR, "data/news.db")
 JSON_OUTPUT = os.path.join(BASE_DIR, "blog/static/data/hotspots.json")
 POSTS_OUTPUT = os.path.join(BASE_DIR, "blog/content/post/")
 USER_AGENT = 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36'
 
-# --- ESTRUCTURA DE DATOS MAESTRA (FEED + COORDENADA) ---
 DATOS_INTEL = {
     "Rusia_Eurasia": {"url": "https://tass.com/rss/v2.xml", "coord": [60.0, 90.0]},
     "Medio_Oriente": {"url": "https://www.aljazeera.com/xml/rss/all.xml", "coord": [25.0, 45.0]},
@@ -24,7 +23,6 @@ DATOS_INTEL = {
     "Africa_Sahel": {"url": "https://www.africanews.com/feed/", "coord": [15.0, 15.0]}
 }
 
-# --- LISTA DE ALERTAS (HOTWORDS) ---
 KEYWORDS_CRITICAS = [
     "nuclear", "misil", "missile", "atentado", "ataque", "attack", "guerra", "war",
     "golpe", "coup", "ciber", "cyber", "despliegue", "deployment", "frontera", "border",
@@ -32,10 +30,19 @@ KEYWORDS_CRITICAS = [
     "sancion", "sanction", "ultimatum", "amenaza", "threat"
 ]
 
+def obtener_sentimiento(texto):
+    """Analiza sentimiento intentando detectar idioma."""
+    try:
+        blob = TextBlob(texto)
+        # Si el texto es lo suficientemente largo, intentamos ver si es inglés
+        # TextBlob usa por defecto un analizador entrenado en inglés.
+        return blob.sentiment.polarity
+    except:
+        return 0.0
+
 def ejecutar():
     os.makedirs(os.path.dirname(DB_PATH), exist_ok=True)
     os.makedirs(POSTS_OUTPUT, exist_ok=True)
-    os.makedirs(os.path.dirname(JSON_OUTPUT), exist_ok=True)
     
     conn = sqlite3.connect(DB_PATH)
     cur = conn.cursor()
@@ -44,75 +51,59 @@ def ejecutar():
                    timestamp DATETIME DEFAULT CURRENT_TIMESTAMP, 
                    region TEXT, title TEXT, link TEXT UNIQUE, sentimiento REAL)''')
 
-    print("--- INICIANDO CAPTURA INTEGRAL ---")
+    # --- 1. LIMPIEZA DE DATOS VIEJOS (Más de 7 días) ---
+    cur.execute("DELETE FROM news WHERE timestamp < datetime('now', '-7 days')")
+    print(f"🧹 Limpieza completada: {cur.rowcount} registros antiguos eliminados.")
+
+    # --- 2. CAPTURA ---
+    print("--- INICIANDO CAPTURA INTELIGENTE ---")
     for reg, info in DATOS_INTEL.items():
-        print(f"📡 {reg}...", end=" ", flush=True)
         f = feedparser.parse(info["url"], agent=USER_AGENT)
-        c = 0
         if f.entries:
             for e in f.entries[:15]:
-                pola = TextBlob(str(e.title)).sentiment.polarity
+                pola = obtener_sentimiento(str(e.title))
                 cur.execute("INSERT OR IGNORE INTO news (region, title, link, sentimiento) VALUES (?, ?, ?, ?)", 
                             (reg, e.title, e.link, pola))
-                if cur.rowcount > 0: c += 1
-            print(f"OK (+{c})")
-        else:
-            print("⚠️ SIN DATOS")
     conn.commit()
 
     ahora = datetime.now()
     fecha_str = ahora.strftime("%Y-%m-%d")
     
-    # 1. GENERAR JSON PARA MAPA (SIN ENVOLTORIOS, LISTA PURA)
+    # --- 3. GENERAR JSON PARA MAPA ---
     cur.execute("SELECT region, COUNT(*), AVG(sentimiento) FROM news WHERE timestamp > datetime('now', '-24 hours') GROUP BY region")
-    resultados = cur.fetchall()
-    
     hotspots = []
-    for r, ct, s in resultados:
+    for r, ct, s in cur.fetchall():
         if r in DATOS_INTEL:
-            color = "#f1c40f" # Neutral
-            if s < -0.1: color = "#ff4b2b" # Tensión (Rojo)
-            elif s > 0.1: color = "#2ecc71" # Calma (Verde)
-            
+            color = "#f1c40f"
+            if s < -0.1: color = "#ff4b2b"
+            elif s > 0.1: color = "#2ecc71"
             hotspots.append({
-                "name": r,
-                "lat": DATOS_INTEL[r]["coord"][0],
-                "lon": DATOS_INTEL[r]["coord"][1],
-                "intensity": ct,
-                "color": color,
-                "sentiment_index": round(s, 2)
+                "name": r, "lat": DATOS_INTEL[r]["coord"][0], "lon": DATOS_INTEL[r]["coord"][1],
+                "intensity": ct, "color": color, "sentiment_index": round(s, 2)
             })
-
     with open(JSON_OUTPUT, 'w') as f:
         json.dump(hotspots, f, indent=4)
 
-    # 2. GENERAR INFORME HUGO CON FILTRO DE ALERTAS
-    filename = os.path.join(POSTS_OUTPUT, f"{fecha_str}-informe-inteligencia.md")
+    # --- 4. GENERAR INFORME HUGO ---
     cur.execute("SELECT region, title, link FROM news WHERE timestamp > datetime('now', '-24 hours') ORDER BY timestamp DESC LIMIT 100")
     records = cur.fetchall()
-
-    alertas = []
-    normales = []
+    alertas, normales = [], []
     for reg, tit, link in records:
-        # Verificación de Hotwords
         if any(key in tit.lower() for key in KEYWORDS_CRITICAS):
-            alertas.append(f"- 🚩 **[ALERTA CRÍTICA] {reg}**: {tit} ([Link]({link}))")
+            alertas.append(f"- 🚩 **[ALERTA] {reg}**: {tit} ([Link]({link}))")
         else:
             normales.append(f"- **[{reg}]**: {tit} ([Link]({link}))")
 
-    with open(filename, 'w') as f:
-        f.write(f"---\ntitle: \"Informe Intel - {fecha_str}\"\ndate: {ahora.strftime('%Y-%m-%dT%H:%M:%S')}\ntype: \"post\"\n---\n\n")
-        f.write(f"### 🕒 Corte de Inteligencia: {ahora.strftime('%H:%M:%S')}\n\n")
-        
+    with open(os.path.join(POSTS_OUTPUT, f"{fecha_str}-informe-inteligencia.md"), 'w') as f:
+        f.write(f"---\ntitle: \"Monitor Global - {fecha_str}\"\ndate: {ahora.strftime('%Y-%m-%dT%H:%M:%S')}\ntype: \"post\"\n---\n\n")
         if alertas:
-            f.write("## ⚡ ALERTAS DE SEGURIDAD\n")
+            f.write("## ⚡ ALERTAS DETECTADAS\n")
             f.write("\n".join(alertas) + "\n\n---\n\n")
-        
-        f.write("## 🌍 Resumen Global de Actividad\n")
+        f.write("## 🌍 Actividad Reciente\n")
         f.write("\n".join(normales[:70]))
 
     conn.close()
-    print(f"--- ÉXITO: Mapa y {len(alertas)} alertas procesadas ---")
+    print(f"--- PROCESO FINALIZADO: {len(alertas)} alertas registradas ---")
 
 if __name__ == "__main__":
     ejecutar()

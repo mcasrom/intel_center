@@ -31,12 +31,8 @@ KEYWORDS_CRITICAS = [
 ]
 
 def obtener_sentimiento(texto):
-    """Analiza sentimiento intentando detectar idioma."""
     try:
-        blob = TextBlob(texto)
-        # Si el texto es lo suficientemente largo, intentamos ver si es inglés
-        # TextBlob usa por defecto un analizador entrenado en inglés.
-        return blob.sentiment.polarity
+        return TextBlob(texto).sentiment.polarity
     except:
         return 0.0
 
@@ -51,12 +47,11 @@ def ejecutar():
                    timestamp DATETIME DEFAULT CURRENT_TIMESTAMP, 
                    region TEXT, title TEXT, link TEXT UNIQUE, sentimiento REAL)''')
 
-    # --- 1. LIMPIEZA DE DATOS VIEJOS (Más de 7 días) ---
+    # 1. LIMPIEZA
     cur.execute("DELETE FROM news WHERE timestamp < datetime('now', '-7 days')")
-    print(f"🧹 Limpieza completada: {cur.rowcount} registros antiguos eliminados.")
-
-    # --- 2. CAPTURA ---
-    print("--- INICIANDO CAPTURA INTELIGENTE ---")
+    
+    # 2. CAPTURA
+    print("--- CAPTURA Y ANÁLISIS DE TENDENCIAS ---")
     for reg, info in DATOS_INTEL.items():
         f = feedparser.parse(info["url"], agent=USER_AGENT)
         if f.entries:
@@ -67,9 +62,28 @@ def ejecutar():
     conn.commit()
 
     ahora = datetime.now()
-    fecha_str = ahora.strftime("%Y-%m-%d")
     
-    # --- 3. GENERAR JSON PARA MAPA ---
+    # --- 3. CÁLCULO DE ANOMALÍAS (Blindado contra ZeroDivision) ---
+    anomalias = []
+    for reg in DATOS_INTEL:
+        # Media de los últimos 7 días (excluyendo hoy)
+        cur.execute("SELECT COUNT(*) FROM news WHERE region=? AND timestamp BETWEEN datetime('now', '-7 days') AND datetime('now', '-1 day')", (reg,))
+        raw_semana = cur.fetchone()[0]
+        total_semana = raw_semana / 6.0 
+        
+        # Volumen hoy (últimas 24h)
+        cur.execute("SELECT COUNT(*) FROM news WHERE region=? AND timestamp > datetime('now', '-1 day')", (reg,))
+        hoy = cur.fetchone()[0]
+        
+        # Solo calculamos si hay base histórica para comparar
+        if total_semana > 0:
+            if hoy > (total_semana * 1.5) and hoy > 5:
+                porcentaje = round(((hoy/total_semana)-1)*100)
+                anomalias.append(f"⚠️ **ANOMALÍA EN {reg}**: Actividad {porcentaje}% superior al promedio.")
+        elif hoy > 15: # Si no hay historia pero hay un estallido súbito hoy
+            anomalias.append(f"⚠️ **ACTIVIDAD INICIAL ELEVADA EN {reg}**: {hoy} reportes detectados.")
+
+    # 4. GENERAR JSON PARA MAPA
     cur.execute("SELECT region, COUNT(*), AVG(sentimiento) FROM news WHERE timestamp > datetime('now', '-24 hours') GROUP BY region")
     hotspots = []
     for r, ct, s in cur.fetchall():
@@ -77,14 +91,12 @@ def ejecutar():
             color = "#f1c40f"
             if s < -0.1: color = "#ff4b2b"
             elif s > 0.1: color = "#2ecc71"
-            hotspots.append({
-                "name": r, "lat": DATOS_INTEL[r]["coord"][0], "lon": DATOS_INTEL[r]["coord"][1],
-                "intensity": ct, "color": color, "sentiment_index": round(s, 2)
-            })
+            hotspots.append({"name": r, "lat": DATOS_INTEL[r]["coord"][0], "lon": DATOS_INTEL[r]["coord"][1], "intensity": ct, "color": color, "sentiment_index": round(s, 2)})
+    
     with open(JSON_OUTPUT, 'w') as f:
         json.dump(hotspots, f, indent=4)
 
-    # --- 4. GENERAR INFORME HUGO ---
+    # 5. GENERAR INFORME HUGO
     cur.execute("SELECT region, title, link FROM news WHERE timestamp > datetime('now', '-24 hours') ORDER BY timestamp DESC LIMIT 100")
     records = cur.fetchall()
     alertas, normales = [], []
@@ -94,16 +106,22 @@ def ejecutar():
         else:
             normales.append(f"- **[{reg}]**: {tit} ([Link]({link}))")
 
-    with open(os.path.join(POSTS_OUTPUT, f"{fecha_str}-informe-inteligencia.md"), 'w') as f:
-        f.write(f"---\ntitle: \"Monitor Global - {fecha_str}\"\ndate: {ahora.strftime('%Y-%m-%dT%H:%M:%S')}\ntype: \"post\"\n---\n\n")
+    with open(os.path.join(POSTS_OUTPUT, f"{ahora.strftime('%Y-%m-%d')}-informe-inteligencia.md"), 'w') as f:
+        f.write(f"---\ntitle: \"Monitor Intel - {ahora.strftime('%Y-%m-%d')}\"\ndate: {ahora.strftime('%Y-%m-%dT%H:%M:%S')}\ntype: \"post\"\n---\n\n")
+        
+        if anomalias:
+            f.write("## 📈 ALERTAS DE VOLUMEN (ANOMALÍAS)\n")
+            f.write("\n".join(anomalias) + "\n\n---\n\n")
+
         if alertas:
-            f.write("## ⚡ ALERTAS DETECTADAS\n")
+            f.write("## ⚡ ALERTAS CRÍTICAS\n")
             f.write("\n".join(alertas) + "\n\n---\n\n")
-        f.write("## 🌍 Actividad Reciente\n")
+            
+        f.write("## 🌍 Resumen Global\n")
         f.write("\n".join(normales[:70]))
 
     conn.close()
-    print(f"--- PROCESO FINALIZADO: {len(alertas)} alertas registradas ---")
+    print(f"--- ÉXITO: {len(anomalias)} anomalías y {len(alertas)} alertas registradas ---")
 
 if __name__ == "__main__":
     ejecutar()
