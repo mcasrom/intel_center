@@ -19,7 +19,7 @@
         "name": "Australia",
         "lat": -25.0,
         "lon": 133.0,
-        "intensity": 42,
+        "intensity": 43,
         "color": "#f1c40f",
         "sentiment_index": -0.0
     },
@@ -51,7 +51,7 @@
         "name": "Rusia_Eurasia",
         "lat": 60.0,
         "lon": 90.0,
-        "intensity": 76,
+        "intensity": 79,
         "color": "#f1c40f",
         "sentiment_index": 0.01
     },
