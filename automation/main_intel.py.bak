@@ -1,5 +1,6 @@
 import sys, os, feedparser, sqlite3, json, socket, time
 from datetime import datetime, timedelta
+from textblob import TextBlob
 
 # --- OPTIMIZACIÓN DE RECURSOS ---
 TIMEOUT = 30 
@@ -8,12 +9,8 @@ BASE_DIR = "/home/miguelc/intel_center_test"
 DB_PATH = os.path.join(BASE_DIR, "data/news.db")
 JSON_OUTPUT = os.path.join(BASE_DIR, "blog/static/data/hotspots.json")
 POSTS_OUTPUT = os.path.join(BASE_DIR, "blog/content/post/")
-
-
-
-JSON_OUTPUT = os.path.join(BASE_DIR, "blog/static/data/hotspots.json")
-POSTS_OUTPUT = os.path.join(BASE_DIR, "blog/content/post/")
-USER_AGENT = 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:120.0) Gecko/20100101 Firefox/120.0'
+# USER_AGENT = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'
+USER_AGENT = 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36'
 
 FEEDS = {
     "Rusia_Eurasia": "https://tass.com/rss/v2.xml",
@@ -43,94 +40,134 @@ COORDENADAS = {
     "Africa_Sahel": [15.0, 15.0]
 }
 
+def analizar_sentimiento(texto):
+    """Retorna polaridad (-1 a 1) y color hexadecimal."""
+    blob = TextBlob(str(texto))
+    pola = blob.sentiment.polarity
+    if pola < -0.1: return pola, "#ff4b2b" # Rojo (Tensión)
+    if pola > 0.1:  return pola, "#2ecc71" # Verde (Calma)
+    return pola, "#f1c40f"                 # Amarillo (Neutral)
+
 def init_db():
     os.makedirs(os.path.dirname(DB_PATH), exist_ok=True)
     conn = sqlite3.connect(str(DB_PATH), timeout=30)
     cur = conn.cursor()
-    # MODO WAL: Vital para resiliencia ante cortes de luz en Odroid
     try: cur.execute('PRAGMA journal_mode=WAL;')
     except: pass
-    cur.execute('CREATE TABLE IF NOT EXISTS news (id INTEGER PRIMARY KEY AUTOINCREMENT, timestamp DATETIME DEFAULT CURRENT_TIMESTAMP, region TEXT, title TEXT, link TEXT UNIQUE)')
+    # AÑADIDA COLUMNA 'sentimiento'
+    cur.execute('''CREATE TABLE IF NOT EXISTS news 
+                  (id INTEGER PRIMARY KEY AUTOINCREMENT, 
+                   timestamp DATETIME DEFAULT CURRENT_TIMESTAMP, 
+                   region TEXT, title TEXT, link TEXT UNIQUE, sentimiento REAL)''')
     conn.commit()
     return conn
 
-
 def housekeeping(conn):
     print("🧹 Iniciando autolimpieza y rotación (30 días)...")
-    # 1. Limpieza de Base de Datos (opcional, para no engordar el .db)
     cur = conn.cursor()
     cur.execute("DELETE FROM news WHERE timestamp < date('now', '-30 days')")
     conn.commit()
-
-    # 2. Rotación de archivos Markdown en la carpeta posts
-    import time
     now = time.time()
     for f in os.listdir(POSTS_OUTPUT):
         f_path = os.path.join(POSTS_OUTPUT, f)
-        # Si el archivo es un .md y tiene más de 30 días (30 * 24 * 60 * 60 segundos)
         if f.endswith(".md") and f != "_index.md":
             if os.stat(f_path).st_mtime < now - (30 * 86400):
                 os.remove(f_path)
-                print(f"🗑️ Eliminado informe antiguo: {f}")
-
 
 def fetch_data(conn):
     cur = conn.cursor()
+    total = 0
     for reg, url in FEEDS.items():
-        print(f"📥 {reg}...", end=" ", flush=True)
-        try:
-            f = feedparser.parse(url, agent=USER_AGENT)
-            c = 0
-            for e in f.entries[:15]:
-                cur.execute("INSERT OR IGNORE INTO news (region, title, link) VALUES (?, ?, ?)", (reg, e.title, e.link))
-                if cur.rowcount > 0: c += 1
-            print(f"✅ {c}")
-        except: print("❌")
+        print(f"📡 Intentando {reg}...", end=" ", flush=True)
+        # Forzamos el User-Agent en la petición
+        f = feedparser.parse(url, agent=USER_AGENT)
+        
+        if not f.entries:
+            print("⚠️ Vacío (Posible bloqueo)")
+            continue
+            
+        c = 0
+        for e in f.entries[:15]:
+            pola, _ = analizar_sentimiento(e.title)
+            cur.execute("INSERT OR IGNORE INTO news (region, title, link, sentimiento) VALUES (?, ?, ?, ?)", 
+                        (reg, e.title, e.link, pola))
+            if cur.rowcount > 0: c += 1
+        print(f"✅ {c} nuevas.")
+        total += c
     conn.commit()
+    print(f"\n🚀 Total capturadas en este ciclo: {total}")
+
 
 def export_map_json(conn):
     cur = conn.cursor()
-    # Solo contamos noticias de las últimas 24 horas para que el mapa sea real
-    cur.execute("SELECT region, COUNT(*) FROM news WHERE timestamp > datetime('now', '-24 hours') GROUP BY region")
+    # Promediamos sentimiento y contamos noticias
+    cur.execute("""SELECT region, COUNT(*), AVG(sentimiento) FROM news 
+                   WHERE timestamp > datetime('now', '-24 hours') GROUP BY region""")
     results = cur.fetchall()
     
-    # Creamos la lista desde cero
     hs = []
-    for r, ct in results:
+    for r, ct, sent_avg in results:
         if r in COORDENADAS:
+            # Asignar color según el promedio de la región
+            color = "#f1c40f" # Default amarillo
+            if sent_avg < -0.1: color = "#ff4b2b" # Rojo
+            elif sent_avg > 0.1: color = "#2ecc71" # Verde
+            
             hs.append({
                 "name": r,
                 "lat": COORDENADAS[r][0],
                 "lon": COORDENADAS[r][1],
-                "intensity": ct
+                "intensity": ct,
+                "color": color,
+                "sentiment_index": round(sent_avg, 2)
             })
     
-    # Sobreescribimos el archivo JSON
     with open(JSON_OUTPUT, 'w') as f:
         json.dump(hs, f, indent=4)
-    print(f"📍 Mapa actualizado con {len(hs)} regiones activas.")
-
-
+    print(f"📍 Mapa actualizado con {len(hs)} regiones y análisis de tensión.")
 
 def create_hugo_post(conn):
     date_str = datetime.now().strftime("%Y-%m-%d")
     date_iso = datetime.now().strftime('%Y-%m-%d')    
     filename = os.path.join(POSTS_OUTPUT, f"{date_str}-informe-inteligencia.md")    
     cur = conn.cursor()
-    cur.execute("SELECT region, title FROM news WHERE date(timestamp) = date('now') ORDER BY timestamp DESC")
+    
+    # Obtenemos noticias de hoy
+    cur.execute("SELECT region, title, sentimiento, link FROM news WHERE date(timestamp) = date('now') ORDER BY timestamp DESC")
     news_today = cur.fetchall()
 
-    content = f"---\ntitle: \"Resumen Inteligencia {date_str}\"\ndate: \"{date_iso}\"\ntype: \"post\"\ndraft: false\n---\n\n"
-    for reg, tit in news_today:
-        content += f"- **[{reg}]**: {tit}\n"
+    # --- WATCHLIST DE INTELIGENCIA ---
+    watchlist = ["golpe", "coup", "nuclear", "ataque", "attack", "crisis", "misil", "missile", "dictator", "muertos", "dead", "emergencia"]
+    alertas_criticas = []
+    reporte_normal = []
 
-    with open(filename, 'w') as f: f.write(content)
+    for reg, tit, sent, link in news_today:
+        # Verificamos si el título contiene alguna palabra de la watchlist
+        es_critica = any(word in tit.lower() for word in watchlist)
+        
+        linea = f"- **[{reg}]**: {tit} ([Link]({link}))"
+        
+        if es_critica or sent < -0.4:  # Si es crítica por palabra o por tensión extrema
+            alertas_criticas.append(f"⚠️ **CRÍTICO**: {linea}")
+        else:
+            marca = "🔴" if sent < -0.1 else "🔹"
+            reporte_normal.append(f"{marca} {linea}")
 
-if __name__ == "__main__":
-    db = init_db()
-    housekeeping(db) # Limpia antes de procesar
-    fetch_data(db)
-    export_map_json(db)
-    create_hugo_post(db)
-    db.close()
-    print("🚀 Nodo Optimizado y Sincronizado.")
+    # --- CONSTRUCCIÓN DEL DOCUMENTO MD ---
+    content = f"---\ntitle: \"Informe de Inteligencia OSINT - {date_str}\"\ndate: \"{date_iso}\"\ntype: \"post\"\n# Imagen de cabecera automática para el post\nfeatured_image: \"images/header_intel.jpg\"\n---\n\n"
+    
+    if alertas_criticas:
+        content += "## 🚨 ALERTAS DE ALTA PRIORIDAD\n"
+        content += "> **Aviso**: El sistema ha detectado eventos de potencial inestabilidad global.\n\n"
+        content += "\n".join(alertas_criticas) + "\n\n---\n\n"
+
+    content += "### 📡 Monitorización Global Diaria\n"
+    if reporte_normal:
+        content += "\n".join(reporte_normal)
+    else:
+        content += "No se registraron eventos significativos adicionales."
+
+    with open(filename, 'w') as f: 
+        f.write(content)
+    print(f"📄 Reporte generado con {len(alertas_criticas)} alertas críticas.")
+
