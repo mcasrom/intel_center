@@ -30,7 +30,7 @@
         "name": "Europa_DW",
         "lat": 50.0,
         "lon": 10.0,
-        "intensity": 41,
+        "intensity": 44,
         "color": "#f1c40f",
         "sentiment_index": 0.03,
         "anomaly": true
@@ -48,7 +48,7 @@
         "name": "Medio_Oriente",
         "lat": 25.0,
         "lon": 45.0,
-        "intensity": 53,
+        "intensity": 55,
         "color": "#f1c40f",
         "sentiment_index": 0.03,
         "anomaly": true
@@ -57,7 +57,7 @@
         "name": "Rusia_Eurasia",
         "lat": 60.0,
         "lon": 90.0,
-        "intensity": 84,
+        "intensity": 86,
         "color": "#f1c40f",
         "sentiment_index": 0.01,
         "anomaly": true
