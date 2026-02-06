@@ -5,7 +5,11 @@ const localStandardVersion = {
     {
       filename: "package.json",
       type: "json",
-    }
+    },
+    {
+      filename: "exampleSite/data/ananke/build.json",
+      type: "json",
+    },
   ],
   header: "# Changelog",
   types: [
