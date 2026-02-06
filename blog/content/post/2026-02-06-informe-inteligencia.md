@@ -1,11 +1,27 @@
 ---
 title: "Informe de Inteligencia - 2026-02-06"
-date: 2026-02-06T08:06:50
+date: 2026-02-06T08:14:10
 type: "post"
 ---
 
-### 🕒 Corte de datos: 08:06:50
+### 🕒 Corte de datos: 08:14:10
 
+- **[Australia]**: Light plane crashes into ocean on South Australia's south coast ([Link](https://www.abc.net.au/news/2026-02-06/light-plane-crash-at-goolwa-south/106316008))
+- **[Australia]**: Patrol boats out of action as illegal foreign fishers reach Australian shores ([Link](https://www.abc.net.au/news/2026-02-06/patrol-boats-out-of-water-amid-illegal-foreign-fishing-influx/106309428))
+- **[Australia]**: Perth council in 'respectful' disagreement over spending choices ([Link](https://www.abc.net.au/news/2026-02-06/serpentine-jarrahdale-council-spending-questioned/106315816))
+- **[Australia]**: Hazlewood out of T20 World Cup in further blow to Australia's hopes ([Link](https://www.abc.net.au/news/2026-02-06/josh-hazlewood-out-of-t20-world-cup-injury-australia/106315684))
+- **[Australia]**: RBA refuses to blame Albanese government for rising inflation ([Link](https://www.abc.net.au/news/2026-02-06/rba-governor-refuses-to-blame-government-for-rising-inflation/106313266))
+- **[Australia]**: Man appears in court charged with possessing violent extremist material ([Link](https://www.abc.net.au/news/2026-02-06/extremist-material-charge-after-phone-search-brisbane-airport/106315576))
+- **[Australia]**: Nagi is normalising taking time for our pets. Here's why that's important ([Link](https://www.abc.net.au/news/2026-02-06/recipetineats-nagi-maehashi-time-off-work-care-for-dog-dozer/106313752))
+- **[Australia]**: Trump's would-be assassin had one goal: 'up-end American democracy' ([Link](https://www.abc.net.au/news/2026-02-06/ryan-wesley-routh-life-sentence-assassination-attempt/106310824))
+- **[Australia]**: Japan's cherry blossom festival cancelled due to fear of overtourism ([Link](https://www.abc.net.au/news/2026-02-06/japan-cherry-blossom-festival-cancelled-due-to-overtourism/106314678))
+- **[Australia]**: Government extends free flu jab program including nasal spray for young children ([Link](https://www.abc.net.au/news/2026-02-06/free-flu-vaccine-program-with-nasal-spray-for-children/106314974))
+- **[Australia]**: Handful of Daly River residents stay behind amid impending major flooding ([Link](https://www.abc.net.au/news/2026-02-06/nt-daly-river-flood-handful-of-residents-stay-after-evacuation/106313380))
+- **[Australia]**: Police to resume searching for Celine Cremer items in wilderness ([Link](https://www.abc.net.au/news/2026-02-06/police-to-resume-searching-celine-cremer-waratah-tasmania/106314944))
+- **[Australia]**: 'The women just want to play footy': Premier backs shunned country club ([Link](https://www.abc.net.au/news/2026-02-06/kyneton-women-football-controversy-footy-premier-jacinta-allan/106300624))
+- **[Australia]**: Author Craig Silvey has bail conditions changed after 'media attention' ([Link](https://www.abc.net.au/news/2026-02-06/craig-silvey-court-appearance-bail-conditions-altered/106312848))
+- **[Australia]**: Writers festival 'crazy' to invite Randa Abdel-Fattah, NSW premier says ([Link](https://www.abc.net.au/news/2026-02-06/randa-abdel-fattah-author-to-attend-newcastle-writers-festival/106312828))
+- **[Rusia_Eurasia]**: Four IAEA experts get to work at Zaporozhye nuke plant after scheduled rotation ([Link](https://tass.com/economy/2082797))
 - **[Rusia_Eurasia]**: Supercam S350 reconnaissance and strike drone to be presented at World Defense Show ([Link](https://tass.com/defense/2082793))
 - **[Rusia_Eurasia]**: US-Iran talks in Oman to be limited to nuclear program — newspaper ([Link](https://tass.com/world/2082789))
 - **[Rusia_Eurasia]**: Ukrainian army carries out combined strike on energy sites in Russia’s Bryansk Region ([Link](https://tass.com/politics/2082787))
@@ -50,19 +66,3 @@ type: "post"
 - **[USA_NORTE]**: We can reverse America’s decline | Bernie Sanders ([Link](https://www.theguardian.com/commentisfree/2026/feb/05/we-can-reverse-americas-decline-heres-how))
 - **[Africa_Sahel]**: Remaining 89 kidnapped Nigerian Christians return home ([Link](http://www.africanews.com/2026/02/05/remaining-89-kidnapped-nigerian-christians-return-home/))
 - **[Africa_Sahel]**: Activists announce a new aid flotilla for Gaza of over 100 boats ([Link](http://www.africanews.com/2026/02/05/activists-announce-a-new-aid-flotilla-for-gaza-of-over-100-boats/))
-- **[Africa_Sahel]**: African students win global prize for AI education system without internet ([Link](http://www.africanews.com/2026/02/05/african-students-win-global-prize-for-ai-education-system-without-internet/))
-- **[Africa_Sahel]**: African manufacturers warn short-term AGOA extension offers a brief respite ([Link](http://www.africanews.com/2026/02/05/african-manufacturers-warn-short-term-agoa-extension-offers-a-brief-respite/))
-- **[Africa_Sahel]**: Spain floods: Storm Leonardo forces 4,000 evacuations in Andalusia ([Link](http://www.africanews.com/2026/02/05/spain-floods-storm-leonardo-forces-4000-evacuations-in-andalusia/))
-- **[Africa_Sahel]**: Portugal on edge as Storm Leonardo triggers new flooding ([Link](http://www.africanews.com/2026/02/05/portugal-on-edge-as-storm-leonardo-triggers-new-flooding/))
-- **[Africa_Sahel]**: Nigeria: Kwara state massacre survivors terrorised, death toll at 162 ([Link](http://www.africanews.com/2026/02/05/nigeria-kwara-state-massacre-survivors-terrorised-death-toll-at-162/))
-- **[Africa_Sahel]**: Turkey to boost its anti-terrorism support to Somalia ([Link](http://www.africanews.com/2026/02/05/turkey-to-boost-its-anti-terrorism-support-to-somalia/))
-- **[Rusia_Eurasia]**: Ukraine, Russia to pore over memoranda exchanged at talks — Foreign Ministry ([Link](https://tass.com/politics/1968329))
-- **[Rusia_Eurasia]**: Russia, Ukraine to agree on date of new round of talks after memorandums are studied ([Link](https://tass.com/politics/1968333))
-- **[Rusia_Eurasia]**: Belarus’ defense ministry expects to strengthen cooperation with Pakistan significantly ([Link](https://tass.com/world/1968325))
-- **[Rusia_Eurasia]**: Frequency of meetings on Ukraine talks can’t be strictly standardized — Kremlin ([Link](https://tass.com/politics/1968321))
-- **[Rusia_Eurasia]**: Pakistani PM asks Putin to help resolve conflict with India — aide ([Link](https://tass.com/world/1968319))
-- **[Rusia_Eurasia]**: Russia to take all measures to solve crime related to attacks on airfields — Kremlin ([Link](https://tass.com/politics/1968317))
-- **[Rusia_Eurasia]**: France, Belgium oppose ban on gas imports from Russia to EU — Politico ([Link](https://tass.com/economy/1968311))
-- **[Rusia_Eurasia]**: Putin’s stance on death penalty moratorium remains firm — Kremlin spokesman ([Link](https://tass.com/politics/1968307))
-- **[Rusia_Eurasia]**: Europe’s gas stocks replenishment slower than usual, situation becomes tense ([Link](https://tass.com/economy/1968299))
-- **[Rusia_Eurasia]**: Japan reports record-low birth rate in 2024, ministry reveals ([Link](https://tass.com/society/1968297))
