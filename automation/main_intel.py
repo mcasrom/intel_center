@@ -24,18 +24,14 @@ FEEDS = {
 }
 
 COORDENADAS = {
-    "Rusia_Eurasia": [60.0, 90.0],
-    "Medio_Oriente": [25.0, 45.0],
-    "Europa_DW": [50.0, 10.0],
-    "Asia_Nikkei": [35.0, 135.0],
-    "LATAM": [-15.0, -60.0],
-    "MEXICO": [23.0, -102.0],
-    "USA_NORTE": [40.0, -100.0],
-    "Australia": [-25.0, 133.0],
-    "Canada": [60.0, -110.0],
-    "Groenlandia": [72.0, -40.0],
-    "Africa_Sahel": [15.0, 15.0]
+    "Rusia_Eurasia": [60.0, 90.0], "Medio_Oriente": [25.0, 45.0], "Europa_DW": [50.0, 10.0],
+    "Asia_Nikkei": [35.0, 135.0], "LATAM": [-15.0, -60.0], "MEXICO": [23.0, -102.0],
+    "USA_NORTE": [40.0, -100.0], "Australia": [-25.0, 133.0], "Canada": [60.0, -110.0],
+    "Groenlandia": [72.0, -40.0], "Africa_Sahel": [15.0, 15.0]
 }
+
+# Palabras que activan el resaltado de seguridad
+KEYWORDS_CRITICAS = ["nuclear", "misil", "atentado", "ataque", "guerra", "golpe", "ciber", "despliegue", "frontera", "alerta"]
 
 def ejecutar():
     os.makedirs(os.path.dirname(DB_PATH), exist_ok=True)
@@ -49,62 +45,59 @@ def ejecutar():
                    timestamp DATETIME DEFAULT CURRENT_TIMESTAMP, 
                    region TEXT, title TEXT, link TEXT UNIQUE, sentimiento REAL)''')
 
-    print("--- INICIANDO CAPTURA ---")
+    print("--- CAPTURA DE INTELIGENCIA ---")
     for reg, url in FEEDS.items():
-        print(f"📡 {reg}...", end=" ", flush=True)
         f = feedparser.parse(url, agent=USER_AGENT)
-        c = 0
         if f.entries:
             for e in f.entries[:15]:
                 pola = TextBlob(str(e.title)).sentiment.polarity
                 cur.execute("INSERT OR IGNORE INTO news (region, title, link, sentimiento) VALUES (?, ?, ?, ?)", 
                             (reg, e.title, e.link, pola))
-                if cur.rowcount > 0: c += 1
-            print(f"OK (+{c})")
-        else:
-            print("⚠️ ERROR")
     conn.commit()
 
     ahora = datetime.now()
     fecha_str = ahora.strftime("%Y-%m-%d")
     
-    # --- GENERAR JSON (LISTA PURA PARA JAVASCRIPT) ---
+    # 1. GENERAR JSON (LISTA PLANA)
     cur.execute("SELECT region, COUNT(*), AVG(sentimiento) FROM news WHERE timestamp > datetime('now', '-24 hours') GROUP BY region")
     resultados = cur.fetchall()
-    
     hotspots = []
     for r, ct, s in resultados:
         if r in COORDENADAS:
             color = "#f1c40f"
             if s < -0.1: color = "#ff4b2b"
             elif s > 0.1: color = "#2ecc71"
-            
-            hotspots.append({
-                "name": r,
-                "lat": COORDENADAS[r][0],
-                "lon": COORDENADAS[r][1],
-                "intensity": ct,
-                "color": color,
-                "sentiment_index": round(s, 2)
-            })
+            hotspots.append({"name": r, "lat": COORDENADAS[r][0], "lon": COORDENADAS[r][1], "intensity": ct, "color": color, "sentiment_index": round(s, 2)})
 
-    # IMPORTANTE: Escribe la lista directamente (sin diccionario exterior)
     with open(JSON_OUTPUT, 'w') as f:
         json.dump(hotspots, f, indent=4)
 
-    # --- GENERAR INFORME HUGO ---
+    # 2. GENERAR INFORME HUGO CON ALERTAS
     filename = os.path.join(POSTS_OUTPUT, f"{fecha_str}-informe-inteligencia.md")
-    cur.execute("SELECT region, title, link FROM news WHERE timestamp > datetime('now', '-24 hours') ORDER BY timestamp DESC LIMIT 60")
+    cur.execute("SELECT region, title, link FROM news WHERE timestamp > datetime('now', '-24 hours') ORDER BY timestamp DESC LIMIT 100")
     records = cur.fetchall()
 
+    alertas = []
+    normales = []
+    for reg, tit, link in records:
+        if any(key in tit.lower() for key in KEYWORDS_CRITICAS):
+            alertas.append(f"- 🚩 **[ALERTA] {reg}**: {tit} ([Link]({link}))")
+        else:
+            normales.append(f"- **[{reg}]**: {tit} ([Link]({link}))")
+
     with open(filename, 'w') as f:
-        f.write(f"---\ntitle: \"Informe de Inteligencia - {fecha_str}\"\ndate: {ahora.strftime('%Y-%m-%dT%H:%M:%S')}\ntype: \"post\"\n---\n\n")
-        f.write(f"### 🕒 Corte de datos: {ahora.strftime('%H:%M:%S')}\n\n")
-        for reg, tit, link in records:
-            f.write(f"- **[{reg}]**: {tit} ([Link]({link}))\n")
+        f.write(f"---\ntitle: \"Informe Intel - {fecha_str}\"\ndate: {ahora.strftime('%Y-%m-%dT%H:%M:%S')}\ntype: \"post\"\n---\n\n")
+        f.write(f"### 🕒 Actualización: {ahora.strftime('%H:%M:%S')}\n\n")
+        
+        if alertas:
+            f.write("## 🔥 ALERTAS CRÍTICAS DETECTADAS\n")
+            f.write("\n".join(alertas[:15]) + "\n\n---\n\n")
+        
+        f.write("## 🌍 Actividad Global Reciente\n")
+        f.write("\n".join(normales[:60]))
 
     conn.close()
-    print(f"--- ÉXITO: Mapa y Post actualizados ---")
+    print(f"--- ÉXITO: {len(alertas)} alertas encontradas ---")
 
 if __name__ == "__main__":
     ejecutar()

@@ -1,11 +1,33 @@
 ---
-title: "Informe de Inteligencia - 2026-02-06"
-date: 2026-02-06T08:19:19
+title: "Informe Intel - 2026-02-06"
+date: 2026-02-06T09:16:13
 type: "post"
 ---
 
-### 🕒 Corte de datos: 08:19:19
+### 🕒 Actualización: 09:16:13
 
+## 🔥 ALERTAS CRÍTICAS DETECTADAS
+- 🚩 **[ALERTA] Rusia_Eurasia**: US-Iran talks in Oman to be limited to nuclear program — newspaper ([Link](https://tass.com/world/2082789))
+
+---
+
+## 🌍 Actividad Global Reciente
+- **[Africa_Sahel]**: Iran, US prepare for talks in Oman ([Link](http://www.africanews.com/2026/02/06/iran-us-prepare-for-talks-in-oman/))
+- **[Africa_Sahel]**: Egypt's inflation expected to slow in January as food prices fall ([Link](http://www.africanews.com/2026/02/06/egypts-inflation-expected-to-slow-in-january-as-food-prices-fall/))
+- **[Australia]**: Perth hills residents warned as emergency bushfire bears down ([Link](https://www.abc.net.au/news/2026-02-06/emergency-warning-issued-for-bushfire-in-perth-hills/106315940))
+- **[Australia]**: Live: Sarah Snook and Yerin Ha strut the red carpet at AACTA Awards 2026 ([Link](https://www.abc.net.au/news/2026-02-06/aacta-awards-2026-live-blog-winners-red-carpet-sarah-snook/106295178))
+- **[Australia]**: Why the Invasion Day attempted bombing response differed to that of Bondi ([Link](https://www.abc.net.au/news/2026-02-06/process-to-declare-invasion-day-alleged-attack-terrorism-/106314916))
+- **[Medio_Oriente]**: Super Bowl 2026: Patriots vs Seahawks – Start time, halftime show, players ([Link](https://www.aljazeera.com/sports/2026/2/6/super-bowl-2026-patriots-vs-seahawks-start-time-halftime-show-players?traffic_source=rss))
+- **[Medio_Oriente]**: Hong Kong to sentence media mogul Jimmy Lai on national security conviction ([Link](https://www.aljazeera.com/news/2026/2/6/hong-kong-to-sentence-media-mogul-jimmy-lai-on-national-security-conviction?traffic_source=rss))
+- **[Medio_Oriente]**: Demonstrators arrested over ICE protest at Columbia University ([Link](https://www.aljazeera.com/video/newsfeed/2026/2/6/demonstrators-arrested-over-ice-protest-at-columbia-university?traffic_source=rss))
+- **[Medio_Oriente]**: Gold fluctuations baffle Lebanese jewellers, gold market ([Link](https://www.aljazeera.com/features/2026/2/6/gold-fluctuations-baffle-lebanese-jewellers-gold-market?traffic_source=rss))
+- **[Europa_DW]**: Russian general hospitalized in shooting, officials say ([Link](https://www.dw.com/en/russian-general-hospitalized-in-shooting-officials-say/a-75833448?maca=en-rss-en-top-1022-rdf))
+- **[Europa_DW]**: Iran urges 'mutual respect' ahead of talks with US in Oman ([Link](https://www.dw.com/en/iran-urges-mutual-respect-ahead-of-talks-with-us-in-oman/live-75832688?maca=en-rss-en-top-1022-rdf))
+- **[Asia_Nikkei]**: Cuba scrambles to build Asian ties beyond China under US pressure ([Link](https://asia.nikkei.com/politics/international-relations/cuba-scrambles-to-build-asian-ties-beyond-china-under-us-pressure))
+- **[Asia_Nikkei]**: Japan's trading houses bet on natural resources amid AI boom ([Link](https://asia.nikkei.com/business/business-trends/japan-s-trading-houses-bet-on-natural-resources-amid-ai-boom))
+- **[Asia_Nikkei]**: France's Macron to visit Japan in late March for first time since 2021 ([Link](https://asia.nikkei.com/politics/international-relations/france-s-macron-to-visit-japan-in-late-march-for-first-time-since-2021))
+- **[Asia_Nikkei]**: Editor's Choice: Dual elections in Asia and our live blogs ([Link](https://asia.nikkei.com/editor-s-picks/editor-in-chief-s-picks/editor-s-choice-dual-elections-in-asia-and-our-live-blogs))
+- **[Asia_Nikkei]**: Balochistan strikes test Pakistan's bid to market minerals globally ([Link](https://asia.nikkei.com/business/materials/balochistan-strikes-test-pakistan-s-bid-to-market-minerals-globally))
 - **[USA_NORTE]**: ‘I am always on your team!!’: how Andrew’s aide kept close ties with Epstein right to the end ([Link](https://www.theguardian.com/us-news/2026/feb/06/david-stern-prince-andrew-aide-epstein))
 - **[Medio_Oriente]**: Iran foreign minister arrives in Oman for talks with US ([Link](https://www.aljazeera.com/video/newsfeed/2026/2/6/iran-foreign-minister-arrives-in-oman-for-talks-with-us?traffic_source=rss))
 - **[Australia]**: Light plane crashes into ocean on South Australia's south coast ([Link](https://www.abc.net.au/news/2026-02-06/light-plane-crash-at-goolwa-south/106316008))
@@ -25,7 +47,6 @@ type: "post"
 - **[Australia]**: Writers festival 'crazy' to invite Randa Abdel-Fattah, NSW premier says ([Link](https://www.abc.net.au/news/2026-02-06/randa-abdel-fattah-author-to-attend-newcastle-writers-festival/106312828))
 - **[Rusia_Eurasia]**: Four IAEA experts get to work at Zaporozhye nuke plant after scheduled rotation ([Link](https://tass.com/economy/2082797))
 - **[Rusia_Eurasia]**: Supercam S350 reconnaissance and strike drone to be presented at World Defense Show ([Link](https://tass.com/defense/2082793))
-- **[Rusia_Eurasia]**: US-Iran talks in Oman to be limited to nuclear program — newspaper ([Link](https://tass.com/world/2082789))
 - **[Rusia_Eurasia]**: Ukrainian army carries out combined strike on energy sites in Russia’s Bryansk Region ([Link](https://tass.com/politics/2082787))
 - **[Rusia_Eurasia]**: Western intel agencies seek to obstruct Russia’s activities in Africa, lawmaker says ([Link](https://tass.com/politics/2082785))
 - **[Rusia_Eurasia]**: Russian civilians return to Kursk from Ukrainian captivity ([Link](https://tass.com/society/2082783))
@@ -51,18 +72,3 @@ type: "post"
 - **[Asia_Nikkei]**: Kikkoman bets on organic growth in 'most critical' Indian market ([Link](https://asia.nikkei.com/editor-s-picks/interview/kikkoman-bets-on-organic-growth-in-most-critical-indian-market))
 - **[Asia_Nikkei]**: Kirin to sell Four Roses bourbon to US winemaker in deal worth up to $775m ([Link](https://asia.nikkei.com/business/business-deals/kirin-to-sell-four-roses-bourbon-to-us-winemaker-in-deal-worth-up-to-775m))
 - **[Asia_Nikkei]**: The next Nvidia will be found by the market, not by government policy ([Link](https://asia.nikkei.com/spotlight/comment/the-next-nvidia-will-be-found-by-the-market-not-by-government-policy))
-- **[Asia_Nikkei]**: Japan plant engineering peers eye merger to join ranks of industry leaders ([Link](https://asia.nikkei.com/business/business-deals/japan-plant-engineering-peers-eye-merger-to-join-ranks-of-industry-leaders))
-- **[Asia_Nikkei]**: Warsh pick for Fed chair shows regard for independence: ex-BOJ official ([Link](https://asia.nikkei.com/editor-s-picks/interview/warsh-pick-for-fed-chair-shows-regard-for-independence-ex-boj-official))
-- **[Asia_Nikkei]**: Japan's Aisin to make aluminum EV parts in Canada via tie-up ([Link](https://asia.nikkei.com/business/automobiles/japan-s-aisin-to-make-aluminum-ev-parts-in-canada-via-tie-up))
-- **[USA_NORTE]**: ‘Grind the country to a halt’: Democrat urges national strike if Trump meddles in midterms ([Link](https://www.theguardian.com/us-news/2026/feb/06/donald-trump-voting-midterms-democrat-national-strike))
-- **[USA_NORTE]**: US military says two killed in strike on alleged drug boat in Pacific ([Link](https://www.theguardian.com/us-news/2026/feb/06/two-killed-us-strike-alleged-drug-boat-pacific-trump))
-- **[USA_NORTE]**: Savannah Guthrie’s brother pleads for mother’s kidnapper to contact family ([Link](https://www.theguardian.com/us-news/2026/feb/05/savannah-nancy-guthrie-mom-blood-home))
-- **[USA_NORTE]**: Three dead and six hurt after driver hits cyclist and crashes car into LA store ([Link](https://www.theguardian.com/us-news/2026/feb/05/los-angeles-car-crash-grocery-store))
-- **[USA_NORTE]**: Trump news at a glance: ICE chartered Palestinian deportation flights on Trump family friend’s jet ([Link](https://www.theguardian.com/us-news/2026/feb/05/trump-administration-news-updates-today))
-- **[USA_NORTE]**: Victims of Colorado funeral home scam prepare to testify: ‘Justice is missing’ ([Link](https://www.theguardian.com/us-news/2026/feb/05/colorado-funeral-home-scam-sentencing))
-- **[USA_NORTE]**: Oregon must dismiss more than 1,400 criminal cases due to attorney shortage, court rules ([Link](https://www.theguardian.com/us-news/2026/feb/05/oregon-supreme-court-ruling-attorney-shortage))
-- **[USA_NORTE]**: Republicans dismiss whistleblower complaint against Tulsi Gabbard ([Link](https://www.theguardian.com/us-news/2026/feb/05/republicans-tulsi-gabbard-whistleblower-complaint))
-- **[USA_NORTE]**: Trump offers contradictory account of Tulsi Gabbard presence at FBI raid in Georgia ([Link](https://www.theguardian.com/us-news/2026/feb/05/trump-tulsi-gabbard-fbi-raid))
-- **[USA_NORTE]**: Democrats’ 10 demands to ‘rein in’ ICE – the full list of proposed reforms ([Link](https://www.theguardian.com/us-news/2026/feb/05/democrats-ice-reforms-funding-bill))
-- **[USA_NORTE]**: Trump administration issues rule that makes it easier to fire federal workers ([Link](https://www.theguardian.com/us-news/2026/feb/05/trump-administration-federal-workers))
-- **[USA_NORTE]**: We can reverse America’s decline | Bernie Sanders ([Link](https://www.theguardian.com/commentisfree/2026/feb/05/we-can-reverse-americas-decline-heres-how))
