@@ -1,0 +1,12 @@
+[32m[+] [odroid-c2] Iniciando ciclo de inteligencia...[0m
+Traceback (most recent call last):
+  File "/home/dietpi/intel_center_odroid/automation/main_intel.py", line 1, in <module>
+    import os, feedparser, sqlite3, json
+ModuleNotFoundError: No module named 'feedparser'
+[31m[-] Error en Python. Abortando.[0m
+[32m[+] [odroid-c2] Iniciando ciclo de inteligencia...[0m
+Traceback (most recent call last):
+  File "/home/dietpi/intel_center_odroid/automation/main_intel.py", line 1, in <module>
+    import os, feedparser, sqlite3, json
+ModuleNotFoundError: No module named 'feedparser'
+[31m[-] Error en Python. Abortando.[0m
