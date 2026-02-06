@@ -1,26 +1,28 @@
 ---
-title: "Informe Intel - 2026-02-06"
-date: 2026-02-06T14:20:29
+title: "Monitor Global - 2026-02-06"
+date: 2026-02-06T14:41:00
 type: "post"
 ---
 
-### 🕒 Corte de Inteligencia: 14:20:29
-
-## ⚡ ALERTAS DE SEGURIDAD
-- 🚩 **[ALERTA CRÍTICA] Africa_Sahel**: Kagame criticises international "threats" against Rwanda as US sanctions loom ([Link](http://www.africanews.com/2026/02/06/kagame-criticises-international-threats-against-rwanda-as-us-sanctions-loom/))
-- 🚩 **[ALERTA CRÍTICA] Australia**: Sarah Snook, The Newsreader and Bring Her Back triumph at AACTA Awards — as it happened ([Link](https://www.abc.net.au/news/2026-02-06/aacta-awards-2026-live-blog-winners-sarah-snook-celeste-barber/106295178))
-- 🚩 **[ALERTA CRÍTICA] Rusia_Eurasia**: Russia strikes only military, dual-purpose facilities in Ukraine — Lavrov ([Link](https://tass.com/politics/2083055))
-- 🚩 **[ALERTA CRÍTICA] Rusia_Eurasia**: West forced OSCE to serve interests of hybrid war against Russia — Lavrov ([Link](https://tass.com/politics/2083037))
-- 🚩 **[ALERTA CRÍTICA] Rusia_Eurasia**: Lavrov reads NATO chief's remarks as plans for military intervention in Ukraine ([Link](https://tass.com/politics/2083035))
-- 🚩 **[ALERTA CRÍTICA] Medio_Oriente**: Israel’s war on Gaza’s healthcare continues in full force under ‘ceasefire’ ([Link](https://www.aljazeera.com/opinions/2026/2/6/israels-war-on-gazas-healthcare-continues-in-full-force-under-ceasefire?traffic_source=rss))
-- 🚩 **[ALERTA CRÍTICA] Medio_Oriente**: Dozens killed in suicide bomb attack at Pakistan mosque ([Link](https://www.aljazeera.com/video/newsfeed/2026/2/6/dozens-killed-in-suicide-bomb-attack-at-pakistan-mosque?traffic_source=rss))
-- 🚩 **[ALERTA CRÍTICA] Medio_Oriente**: What are Iranians saying about the threat of war? ([Link](https://www.aljazeera.com/video/newsfeed/2026/2/6/what-are-iranians-saying-about-the-threat-of-war?traffic_source=rss))
-- 🚩 **[ALERTA CRÍTICA] Australia**: Perth hills residents warned as emergency bushfire bears down ([Link](https://www.abc.net.au/news/2026-02-06/emergency-warning-issued-for-bushfire-in-perth-hills/106315940))
-- 🚩 **[ALERTA CRÍTICA] Australia**: Live: Sarah Snook and Yerin Ha strut the red carpet at AACTA Awards 2026 ([Link](https://www.abc.net.au/news/2026-02-06/aacta-awards-2026-live-blog-winners-red-carpet-sarah-snook/106295178))
+## ⚡ ALERTAS DETECTADAS
+- 🚩 **[ALERTA] Medio_Oriente**: Canada, France to open consulates in Greenland amid ongoing US threats ([Link](https://www.aljazeera.com/news/2026/2/6/canada-france-to-open-consulates-in-greenland-amid-ongoing-us-threats?traffic_source=rss))
+- 🚩 **[ALERTA] Africa_Sahel**: Kagame criticises international "threats" against Rwanda as US sanctions loom ([Link](http://www.africanews.com/2026/02/06/kagame-criticises-international-threats-against-rwanda-as-us-sanctions-loom/))
+- 🚩 **[ALERTA] Australia**: Sarah Snook, The Newsreader and Bring Her Back triumph at AACTA Awards — as it happened ([Link](https://www.abc.net.au/news/2026-02-06/aacta-awards-2026-live-blog-winners-sarah-snook-celeste-barber/106295178))
+- 🚩 **[ALERTA] Rusia_Eurasia**: Russia strikes only military, dual-purpose facilities in Ukraine — Lavrov ([Link](https://tass.com/politics/2083055))
+- 🚩 **[ALERTA] Rusia_Eurasia**: West forced OSCE to serve interests of hybrid war against Russia — Lavrov ([Link](https://tass.com/politics/2083037))
+- 🚩 **[ALERTA] Rusia_Eurasia**: Lavrov reads NATO chief's remarks as plans for military intervention in Ukraine ([Link](https://tass.com/politics/2083035))
+- 🚩 **[ALERTA] Medio_Oriente**: Israel’s war on Gaza’s healthcare continues in full force under ‘ceasefire’ ([Link](https://www.aljazeera.com/opinions/2026/2/6/israels-war-on-gazas-healthcare-continues-in-full-force-under-ceasefire?traffic_source=rss))
+- 🚩 **[ALERTA] Medio_Oriente**: Dozens killed in suicide bomb attack at Pakistan mosque ([Link](https://www.aljazeera.com/video/newsfeed/2026/2/6/dozens-killed-in-suicide-bomb-attack-at-pakistan-mosque?traffic_source=rss))
+- 🚩 **[ALERTA] Medio_Oriente**: What are Iranians saying about the threat of war? ([Link](https://www.aljazeera.com/video/newsfeed/2026/2/6/what-are-iranians-saying-about-the-threat-of-war?traffic_source=rss))
+- 🚩 **[ALERTA] Australia**: Perth hills residents warned as emergency bushfire bears down ([Link](https://www.abc.net.au/news/2026-02-06/emergency-warning-issued-for-bushfire-in-perth-hills/106315940))
+- 🚩 **[ALERTA] Australia**: Live: Sarah Snook and Yerin Ha strut the red carpet at AACTA Awards 2026 ([Link](https://www.abc.net.au/news/2026-02-06/aacta-awards-2026-live-blog-winners-red-carpet-sarah-snook/106295178))
 
 ---
 
-## 🌍 Resumen Global de Actividad
+## 🌍 Actividad Reciente
+- **[Australia]**: Breaking: Wild weather expected as Tropical Cyclone Mitchell forms off WA coast ([Link](https://www.abc.net.au/news/2026-02-07/wa-pilbara-warnings-cyclone-mitchell/106314534))
+- **[Medio_Oriente]**: India vs United States: T20 World Cup – teams, start time, lineups ([Link](https://www.aljazeera.com/sports/2026/2/6/india-vs-united-states-t20-world-cup-teams-start-time-lineups?traffic_source=rss))
+- **[Medio_Oriente]**: Manchester United vs Tottenham: Premier League – team news, start, lineups ([Link](https://www.aljazeera.com/sports/2026/2/6/manchester-united-vs-tottenham-premier-league-team-news-start?traffic_source=rss))
 - **[Africa_Sahel]**: Spain searches for missing woman as Storm Leonardo floods south ([Link](http://www.africanews.com/2026/02/06/spain-searches-for-missing-woman-as-storm-leonardo-floods-south/))
 - **[Africa_Sahel]**: Protests in Minneapolis as immigration crackdown continues ([Link](http://www.africanews.com/2026/02/06/protests-continue-in-minneapolis-as-immigration-crackdown-continues/))
 - **[Africa_Sahel]**: Portugal hit by worst floods in decades as Storm Marta looms ([Link](http://www.africanews.com/2026/02/06/portugal-hit-by-worst-floods-in-decades-as-storm-marta-looms/))
@@ -88,6 +90,3 @@ type: "post"
 - **[Medio_Oriente]**: Super Bowl 2026: Patriots vs Seahawks – Start time, halftime show, players ([Link](https://www.aljazeera.com/sports/2026/2/6/super-bowl-2026-patriots-vs-seahawks-start-time-halftime-show-players?traffic_source=rss))
 - **[Medio_Oriente]**: Hong Kong to sentence media mogul Jimmy Lai on national security conviction ([Link](https://www.aljazeera.com/news/2026/2/6/hong-kong-to-sentence-media-mogul-jimmy-lai-on-national-security-conviction?traffic_source=rss))
 - **[Medio_Oriente]**: Demonstrators arrested over ICE protest at Columbia University ([Link](https://www.aljazeera.com/video/newsfeed/2026/2/6/demonstrators-arrested-over-ice-protest-at-columbia-university?traffic_source=rss))
-- **[Medio_Oriente]**: Gold fluctuations baffle Lebanese jewellers, gold market ([Link](https://www.aljazeera.com/features/2026/2/6/gold-fluctuations-baffle-lebanese-jewellers-gold-market?traffic_source=rss))
-- **[Europa_DW]**: Russian general hospitalized in shooting, officials say ([Link](https://www.dw.com/en/russian-general-hospitalized-in-shooting-officials-say/a-75833448?maca=en-rss-en-top-1022-rdf))
-- **[Europa_DW]**: Iran urges 'mutual respect' ahead of talks with US in Oman ([Link](https://www.dw.com/en/iran-urges-mutual-respect-ahead-of-talks-with-us-in-oman/live-75832688?maca=en-rss-en-top-1022-rdf))
