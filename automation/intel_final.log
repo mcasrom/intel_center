@@ -10,3 +10,7 @@ Traceback (most recent call last):
     import os, feedparser, sqlite3, json
 ModuleNotFoundError: No module named 'feedparser'
 [31m[-] Error en Python. Abortando.[0m
+[+] [odroid-c2] Iniciando ciclo de inteligencia...
+--- INICIANDO CAPTURA (MIX EQUILIBRADO ESPAÑA) ---
+[+] DUAL RADAR OK: Balanceando España con fuentes cruzadas.
+[+] Captura exitosa. Sincronizando con GitHub...
