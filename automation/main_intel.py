@@ -9,7 +9,8 @@ BASE_DIR = "/home/miguelc/intel_center_test"
 DB_PATH = os.path.join(BASE_DIR, "data/news.db")
 JSON_OUTPUT = os.path.join(BASE_DIR, "blog/static/data/hotspots.json")
 POSTS_OUTPUT = os.path.join(BASE_DIR, "blog/content/post/")
-USER_AGENT = 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:120.0) Gecko/20100101 Firefox/120.0'
+# USER_AGENT = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'
+USER_AGENT = 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36'
 
 FEEDS = {
     "Rusia_Eurasia": "https://tass.com/rss/v2.xml",
@@ -75,19 +76,27 @@ def housekeeping(conn):
 
 def fetch_data(conn):
     cur = conn.cursor()
+    total = 0
     for reg, url in FEEDS.items():
-        print(f"📥 {reg}...", end=" ", flush=True)
-        try:
-            f = feedparser.parse(url, agent=USER_AGENT)
-            c = 0
-            for e in f.entries[:15]:
-                pola, _ = analizar_sentimiento(e.title)
-                cur.execute("INSERT OR IGNORE INTO news (region, title, link, sentimiento) VALUES (?, ?, ?, ?)", 
-                            (reg, e.title, e.link, pola))
-                if cur.rowcount > 0: c += 1
-            print(f"✅ {c}")
-        except: print("❌")
+        print(f"📡 Intentando {reg}...", end=" ", flush=True)
+        # Forzamos el User-Agent en la petición
+        f = feedparser.parse(url, agent=USER_AGENT)
+        
+        if not f.entries:
+            print("⚠️ Vacío (Posible bloqueo)")
+            continue
+            
+        c = 0
+        for e in f.entries[:15]:
+            pola, _ = analizar_sentimiento(e.title)
+            cur.execute("INSERT OR IGNORE INTO news (region, title, link, sentimiento) VALUES (?, ?, ?, ?)", 
+                        (reg, e.title, e.link, pola))
+            if cur.rowcount > 0: c += 1
+        print(f"✅ {c} nuevas.")
+        total += c
     conn.commit()
+    print(f"\n🚀 Total capturadas en este ciclo: {total}")
+
 
 def export_map_json(conn):
     cur = conn.cursor()
