@@ -3,28 +3,28 @@
         "name": "Africa_Sahel",
         "lat": 15.0,
         "lon": 15.0,
-        "intensity": 15,
+        "intensity": 20,
         "color": "#f1c40f",
-        "sentiment_index": -0.1,
-        "anomaly": false
+        "sentiment_index": -0.06,
+        "anomaly": true
     },
     {
         "name": "Asia_Nikkei",
         "lat": 35.0,
         "lon": 135.0,
-        "intensity": 15,
+        "intensity": 16,
         "color": "#f1c40f",
-        "sentiment_index": -0.07,
-        "anomaly": false
+        "sentiment_index": -0.06,
+        "anomaly": true
     },
     {
         "name": "Australia",
         "lat": -25.0,
         "lon": 133.0,
-        "intensity": 15,
+        "intensity": 17,
         "color": "#f1c40f",
-        "sentiment_index": 0.03,
-        "anomaly": false
+        "sentiment_index": 0.0,
+        "anomaly": true
     },
     {
         "name": "Europa_DW",
@@ -48,9 +48,9 @@
         "name": "Medio_Oriente",
         "lat": 25.0,
         "lon": 45.0,
-        "intensity": 16,
+        "intensity": 20,
         "color": "#f1c40f",
-        "sentiment_index": 0.07,
+        "sentiment_index": 0.05,
         "anomaly": true
     },
     {
@@ -66,7 +66,7 @@
         "name": "USA_NORTE",
         "lat": 40.0,
         "lon": -100.0,
-        "intensity": 16,
+        "intensity": 19,
         "color": "#f1c40f",
         "sentiment_index": -0.03,
         "anomaly": true
