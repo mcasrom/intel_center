@@ -31,10 +31,8 @@ KEYWORDS_CRITICAS = [
 ]
 
 def obtener_sentimiento(texto):
-    try:
-        return TextBlob(texto).sentiment.polarity
-    except:
-        return 0.0
+    try: return TextBlob(texto).sentiment.polarity
+    except: return 0.0
 
 def ejecutar():
     os.makedirs(os.path.dirname(DB_PATH), exist_ok=True)
@@ -47,11 +45,9 @@ def ejecutar():
                    timestamp DATETIME DEFAULT CURRENT_TIMESTAMP, 
                    region TEXT, title TEXT, link TEXT UNIQUE, sentimiento REAL)''')
 
-    # 1. LIMPIEZA
     cur.execute("DELETE FROM news WHERE timestamp < datetime('now', '-7 days')")
     
-    # 2. CAPTURA
-    print("--- CAPTURA Y ANÁLISIS DE TENDENCIAS ---")
+    print("--- CAPTURA ANALÍTICA ---")
     for reg, info in DATOS_INTEL.items():
         f = feedparser.parse(info["url"], agent=USER_AGENT)
         if f.entries:
@@ -63,27 +59,26 @@ def ejecutar():
 
     ahora = datetime.now()
     
-    # --- 3. CÁLCULO DE ANOMALÍAS (Blindado contra ZeroDivision) ---
-    anomalias = []
+    # --- CÁLCULO DE ANOMALÍAS ---
+    regiones_anomalas = []
+    anomalias_texto = []
     for reg in DATOS_INTEL:
-        # Media de los últimos 7 días (excluyendo hoy)
         cur.execute("SELECT COUNT(*) FROM news WHERE region=? AND timestamp BETWEEN datetime('now', '-7 days') AND datetime('now', '-1 day')", (reg,))
-        raw_semana = cur.fetchone()[0]
-        total_semana = raw_semana / 6.0 
-        
-        # Volumen hoy (últimas 24h)
+        total_semana = cur.fetchone()[0] / 6.0 
         cur.execute("SELECT COUNT(*) FROM news WHERE region=? AND timestamp > datetime('now', '-1 day')", (reg,))
         hoy = cur.fetchone()[0]
         
-        # Solo calculamos si hay base histórica para comparar
-        if total_semana > 0:
-            if hoy > (total_semana * 1.5) and hoy > 5:
-                porcentaje = round(((hoy/total_semana)-1)*100)
-                anomalias.append(f"⚠️ **ANOMALÍA EN {reg}**: Actividad {porcentaje}% superior al promedio.")
-        elif hoy > 15: # Si no hay historia pero hay un estallido súbito hoy
-            anomalias.append(f"⚠️ **ACTIVIDAD INICIAL ELEVADA EN {reg}**: {hoy} reportes detectados.")
+        es_anomalo = False
+        if total_semana > 0 and hoy > (total_semana * 1.5) and hoy > 5:
+            es_anomalo = True
+        elif total_semana == 0 and hoy > 15:
+            es_anomalo = True
+            
+        if es_anomalo:
+            regiones_anomalas.append(reg)
+            anomalias_texto.append(f"⚠️ **ANOMALÍA EN {reg}**: Actividad inusualmente alta.")
 
-    # 4. GENERAR JSON PARA MAPA
+    # --- GENERAR JSON PARA MAPA (CON CAMPO ANOMALY) ---
     cur.execute("SELECT region, COUNT(*), AVG(sentimiento) FROM news WHERE timestamp > datetime('now', '-24 hours') GROUP BY region")
     hotspots = []
     for r, ct, s in cur.fetchall():
@@ -91,37 +86,35 @@ def ejecutar():
             color = "#f1c40f"
             if s < -0.1: color = "#ff4b2b"
             elif s > 0.1: color = "#2ecc71"
-            hotspots.append({"name": r, "lat": DATOS_INTEL[r]["coord"][0], "lon": DATOS_INTEL[r]["coord"][1], "intensity": ct, "color": color, "sentiment_index": round(s, 2)})
+            
+            hotspots.append({
+                "name": r, "lat": DATOS_INTEL[r]["coord"][0], "lon": DATOS_INTEL[r]["coord"][1],
+                "intensity": ct, "color": color, "sentiment_index": round(s, 2),
+                "anomaly": (r in regiones_anomalas) # <--- NUEVO CAMPO
+            })
     
     with open(JSON_OUTPUT, 'w') as f:
         json.dump(hotspots, f, indent=4)
 
-    # 5. GENERAR INFORME HUGO
+    # --- GENERAR INFORME HUGO ---
     cur.execute("SELECT region, title, link FROM news WHERE timestamp > datetime('now', '-24 hours') ORDER BY timestamp DESC LIMIT 100")
     records = cur.fetchall()
     alertas, normales = [], []
     for reg, tit, link in records:
         if any(key in tit.lower() for key in KEYWORDS_CRITICAS):
             alertas.append(f"- 🚩 **[ALERTA] {reg}**: {tit} ([Link]({link}))")
-        else:
-            normales.append(f"- **[{reg}]**: {tit} ([Link]({link}))")
+        else: normales.append(f"- **[{reg}]**: {tit} ([Link]({link}))")
 
-    with open(os.path.join(POSTS_OUTPUT, f"{ahora.strftime('%Y-%m-%d')}-informe-inteligencia.md"), 'w') as f:
-        f.write(f"---\ntitle: \"Monitor Intel - {ahora.strftime('%Y-%m-%d')}\"\ndate: {ahora.strftime('%Y-%m-%dT%H:%M:%S')}\ntype: \"post\"\n---\n\n")
-        
-        if anomalias:
-            f.write("## 📈 ALERTAS DE VOLUMEN (ANOMALÍAS)\n")
-            f.write("\n".join(anomalias) + "\n\n---\n\n")
-
+    with open(os.path.join(POSTS_OUTPUT, f"{ahora.strftime('%Y-%m-%d')}-informe.md"), 'w') as f:
+        f.write(f"---\ntitle: \"Monitor Intel - {ahora.strftime('%Y-%m-%d %H:%M')}\"\ndate: {ahora.strftime('%Y-%m-%dT%H:%M:%S')}\n---\n\n")
+        if anomalias_texto:
+            f.write("## 📈 ALERTAS DE VOLUMEN\n" + "\n".join(anomalias_texto) + "\n\n---\n\n")
         if alertas:
-            f.write("## ⚡ ALERTAS CRÍTICAS\n")
-            f.write("\n".join(alertas) + "\n\n---\n\n")
-            
-        f.write("## 🌍 Resumen Global\n")
-        f.write("\n".join(normales[:70]))
+            f.write("## ⚡ ALERTAS CRÍTICAS\n" + "\n".join(alertas) + "\n\n---\n\n")
+        f.write("## 🌍 Resumen\n" + "\n".join(normales[:70]))
 
     conn.close()
-    print(f"--- ÉXITO: {len(anomalias)} anomalías y {len(alertas)} alertas registradas ---")
+    print(f"--- ÉXITO: {len(regiones_anomalas)} anomalías y {len(alertas)} alertas ---")
 
 if __name__ == "__main__":
     ejecutar()
