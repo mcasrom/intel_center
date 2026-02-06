@@ -5,7 +5,7 @@ date: 2026-02-04
 ### Canal de Comunicación
 Para reportes de fallos en los feeds o sugerencias de nuevas fuentes:
 
-- **Terminal:** `miguelc@vivobook`
+- **Terminal:** `mybloggingnotes@gmail.com`
 - **Nodo:** Intel-Center-Alpha
 - **Estado:** Operativo
 
