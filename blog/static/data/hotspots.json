@@ -6,34 +6,28 @@
         "intensity": 20,
         "color": "#f1c40f",
         "sentiment_index": -0.06,
-        "anomaly": true
+        "anomaly": true,
+        "election_active": false
     },
     {
         "name": "Asia_Nikkei",
         "lat": 35.0,
         "lon": 135.0,
         "intensity": 16,
-        "color": "#f1c40f",
+        "color": "#3498db",
         "sentiment_index": -0.06,
-        "anomaly": true
-    },
-    {
-        "name": "Australia",
-        "lat": -25.0,
-        "lon": 133.0,
-        "intensity": 17,
-        "color": "#f1c40f",
-        "sentiment_index": 0.0,
-        "anomaly": true
+        "anomaly": true,
+        "election_active": true
     },
     {
         "name": "Europa_DW",
         "lat": 50.0,
         "lon": 10.0,
-        "intensity": 17,
-        "color": "#f1c40f",
+        "intensity": 18,
+        "color": "#3498db",
         "sentiment_index": 0.01,
-        "anomaly": true
+        "anomaly": true,
+        "election_active": true
     },
     {
         "name": "LATAM",
@@ -42,7 +36,8 @@
         "intensity": 15,
         "color": "#f1c40f",
         "sentiment_index": 0.0,
-        "anomaly": false
+        "anomaly": false,
+        "election_active": false
     },
     {
         "name": "Medio_Oriente",
@@ -51,24 +46,27 @@
         "intensity": 20,
         "color": "#f1c40f",
         "sentiment_index": 0.05,
-        "anomaly": true
+        "anomaly": true,
+        "election_active": false
     },
     {
         "name": "Rusia_Eurasia",
         "lat": 60.0,
         "lon": 90.0,
-        "intensity": 33,
+        "intensity": 47,
         "color": "#f1c40f",
-        "sentiment_index": -0.01,
-        "anomaly": true
+        "sentiment_index": -0.0,
+        "anomaly": true,
+        "election_active": false
     },
     {
         "name": "USA_NORTE",
         "lat": 40.0,
         "lon": -100.0,
         "intensity": 19,
-        "color": "#f1c40f",
+        "color": "#3498db",
         "sentiment_index": -0.03,
-        "anomaly": true
+        "anomaly": true,
+        "election_active": true
     }
 ]
