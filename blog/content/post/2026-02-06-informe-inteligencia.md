@@ -1,21 +1,32 @@
 ---
 title: "Informe Intel - 2026-02-06"
-date: 2026-02-06T09:16:13
+date: 2026-02-06T09:22:20
 type: "post"
 ---
 
-### 🕒 Actualización: 09:16:13
+### 🕒 Corte de Inteligencia: 09:22:20
 
-## 🔥 ALERTAS CRÍTICAS DETECTADAS
-- 🚩 **[ALERTA] Rusia_Eurasia**: US-Iran talks in Oman to be limited to nuclear program — newspaper ([Link](https://tass.com/world/2082789))
+## ⚡ ALERTAS DE SEGURIDAD
+- 🚩 **[ALERTA CRÍTICA] Australia**: Perth hills residents warned as emergency bushfire bears down ([Link](https://www.abc.net.au/news/2026-02-06/emergency-warning-issued-for-bushfire-in-perth-hills/106315940))
+- 🚩 **[ALERTA CRÍTICA] Australia**: Live: Sarah Snook and Yerin Ha strut the red carpet at AACTA Awards 2026 ([Link](https://www.abc.net.au/news/2026-02-06/aacta-awards-2026-live-blog-winners-red-carpet-sarah-snook/106295178))
+- 🚩 **[ALERTA CRÍTICA] Rusia_Eurasia**: US-Iran talks in Oman to be limited to nuclear program — newspaper ([Link](https://tass.com/world/2082789))
+- 🚩 **[ALERTA CRÍTICA] Rusia_Eurasia**: Infrastructure damaged as Belgorod comes under another missile attack — mayor ([Link](https://tass.com/emergencies/2082775))
+- 🚩 **[ALERTA CRÍTICA] Rusia_Eurasia**: Hungary’s top diplomat welcomes restored Russia-US military dialogue as 'fantastic news’ ([Link](https://tass.com/world/2082773))
+- 🚩 **[ALERTA CRÍTICA] Rusia_Eurasia**: US finance chief says new sanctions on Russia depend on Ukraine talks ([Link](https://tass.com/world/2082765))
+- 🚩 **[ALERTA CRÍTICA] Rusia_Eurasia**: Two Russian women arrested at military base in California were in US illegally — ICE ([Link](https://tass.com/world/2082763))
+- 🚩 **[ALERTA CRÍTICA] Asia_Nikkei**: Warsh pick for Fed chair shows regard for independence: ex-BOJ official ([Link](https://asia.nikkei.com/editor-s-picks/interview/warsh-pick-for-fed-chair-shows-regard-for-independence-ex-boj-official))
+- 🚩 **[ALERTA CRÍTICA] USA_NORTE**: US military says two killed in strike on alleged drug boat in Pacific ([Link](https://www.theguardian.com/us-news/2026/feb/06/two-killed-us-strike-alleged-drug-boat-pacific-trump))
+- 🚩 **[ALERTA CRÍTICA] Africa_Sahel**: African manufacturers warn short-term AGOA extension offers a brief respite ([Link](http://www.africanews.com/2026/02/05/african-manufacturers-warn-short-term-agoa-extension-offers-a-brief-respite/))
+- 🚩 **[ALERTA CRÍTICA] Africa_Sahel**: Nigeria: Kwara state massacre survivors terrorised, death toll at 162 ([Link](http://www.africanews.com/2026/02/05/nigeria-kwara-state-massacre-survivors-terrorised-death-toll-at-162/))
+- 🚩 **[ALERTA CRÍTICA] Rusia_Eurasia**: Russia to take all measures to solve crime related to attacks on airfields — Kremlin ([Link](https://tass.com/politics/1968317))
+- 🚩 **[ALERTA CRÍTICA] Rusia_Eurasia**: Russia takes measures proceeding from Kiev’s attacks on peaceful facilities — Kremlin ([Link](https://tass.com/politics/1968289))
+- 🚩 **[ALERTA CRÍTICA] Rusia_Eurasia**: Crimean bridge unaffected by Kiev’s attack, Kremlin spokesman says ([Link](https://tass.com/politics/1968275))
 
 ---
 
-## 🌍 Actividad Global Reciente
+## 🌍 Resumen Global de Actividad
 - **[Africa_Sahel]**: Iran, US prepare for talks in Oman ([Link](http://www.africanews.com/2026/02/06/iran-us-prepare-for-talks-in-oman/))
 - **[Africa_Sahel]**: Egypt's inflation expected to slow in January as food prices fall ([Link](http://www.africanews.com/2026/02/06/egypts-inflation-expected-to-slow-in-january-as-food-prices-fall/))
-- **[Australia]**: Perth hills residents warned as emergency bushfire bears down ([Link](https://www.abc.net.au/news/2026-02-06/emergency-warning-issued-for-bushfire-in-perth-hills/106315940))
-- **[Australia]**: Live: Sarah Snook and Yerin Ha strut the red carpet at AACTA Awards 2026 ([Link](https://www.abc.net.au/news/2026-02-06/aacta-awards-2026-live-blog-winners-red-carpet-sarah-snook/106295178))
 - **[Australia]**: Why the Invasion Day attempted bombing response differed to that of Bondi ([Link](https://www.abc.net.au/news/2026-02-06/process-to-declare-invasion-day-alleged-attack-terrorism-/106314916))
 - **[Medio_Oriente]**: Super Bowl 2026: Patriots vs Seahawks – Start time, halftime show, players ([Link](https://www.aljazeera.com/sports/2026/2/6/super-bowl-2026-patriots-vs-seahawks-start-time-halftime-show-players?traffic_source=rss))
 - **[Medio_Oriente]**: Hong Kong to sentence media mogul Jimmy Lai on national security conviction ([Link](https://www.aljazeera.com/news/2026/2/6/hong-kong-to-sentence-media-mogul-jimmy-lai-on-national-security-conviction?traffic_source=rss))
@@ -51,11 +62,7 @@ type: "post"
 - **[Rusia_Eurasia]**: Western intel agencies seek to obstruct Russia’s activities in Africa, lawmaker says ([Link](https://tass.com/politics/2082785))
 - **[Rusia_Eurasia]**: Russian civilians return to Kursk from Ukrainian captivity ([Link](https://tass.com/society/2082783))
 - **[Rusia_Eurasia]**: Russia downs 38 Ukrainian drones over 3 regions, Black Sea in past night — top brass ([Link](https://tass.com/politics/2082779))
-- **[Rusia_Eurasia]**: Infrastructure damaged as Belgorod comes under another missile attack — mayor ([Link](https://tass.com/emergencies/2082775))
-- **[Rusia_Eurasia]**: Hungary’s top diplomat welcomes restored Russia-US military dialogue as 'fantastic news’ ([Link](https://tass.com/world/2082773))
 - **[Rusia_Eurasia]**: Work on Ukraine peace document may take at least 1.5 months, source tells TASS ([Link](https://tass.com/world/2082771))
-- **[Rusia_Eurasia]**: US finance chief says new sanctions on Russia depend on Ukraine talks ([Link](https://tass.com/world/2082765))
-- **[Rusia_Eurasia]**: Two Russian women arrested at military base in California were in US illegally — ICE ([Link](https://tass.com/world/2082763))
 - **[Rusia_Eurasia]**: Russian fighters consolidate in northwestern Tatyanovka in Donetsk region — expert ([Link](https://tass.com/politics/2082761))
 - **[Rusia_Eurasia]**: Ukraine wants security guarantees for Odessa, source tells TASS ([Link](https://tass.com/world/2082759))
 - **[Rusia_Eurasia]**: Russian Defense Ministry’s spacecraft put into target orbit ([Link](https://tass.com/science/2082757))
@@ -72,3 +79,19 @@ type: "post"
 - **[Asia_Nikkei]**: Kikkoman bets on organic growth in 'most critical' Indian market ([Link](https://asia.nikkei.com/editor-s-picks/interview/kikkoman-bets-on-organic-growth-in-most-critical-indian-market))
 - **[Asia_Nikkei]**: Kirin to sell Four Roses bourbon to US winemaker in deal worth up to $775m ([Link](https://asia.nikkei.com/business/business-deals/kirin-to-sell-four-roses-bourbon-to-us-winemaker-in-deal-worth-up-to-775m))
 - **[Asia_Nikkei]**: The next Nvidia will be found by the market, not by government policy ([Link](https://asia.nikkei.com/spotlight/comment/the-next-nvidia-will-be-found-by-the-market-not-by-government-policy))
+- **[Asia_Nikkei]**: Japan plant engineering peers eye merger to join ranks of industry leaders ([Link](https://asia.nikkei.com/business/business-deals/japan-plant-engineering-peers-eye-merger-to-join-ranks-of-industry-leaders))
+- **[Asia_Nikkei]**: Japan's Aisin to make aluminum EV parts in Canada via tie-up ([Link](https://asia.nikkei.com/business/automobiles/japan-s-aisin-to-make-aluminum-ev-parts-in-canada-via-tie-up))
+- **[USA_NORTE]**: ‘Grind the country to a halt’: Democrat urges national strike if Trump meddles in midterms ([Link](https://www.theguardian.com/us-news/2026/feb/06/donald-trump-voting-midterms-democrat-national-strike))
+- **[USA_NORTE]**: Savannah Guthrie’s brother pleads for mother’s kidnapper to contact family ([Link](https://www.theguardian.com/us-news/2026/feb/05/savannah-nancy-guthrie-mom-blood-home))
+- **[USA_NORTE]**: Three dead and six hurt after driver hits cyclist and crashes car into LA store ([Link](https://www.theguardian.com/us-news/2026/feb/05/los-angeles-car-crash-grocery-store))
+- **[USA_NORTE]**: Trump news at a glance: ICE chartered Palestinian deportation flights on Trump family friend’s jet ([Link](https://www.theguardian.com/us-news/2026/feb/05/trump-administration-news-updates-today))
+- **[USA_NORTE]**: Victims of Colorado funeral home scam prepare to testify: ‘Justice is missing’ ([Link](https://www.theguardian.com/us-news/2026/feb/05/colorado-funeral-home-scam-sentencing))
+- **[USA_NORTE]**: Oregon must dismiss more than 1,400 criminal cases due to attorney shortage, court rules ([Link](https://www.theguardian.com/us-news/2026/feb/05/oregon-supreme-court-ruling-attorney-shortage))
+- **[USA_NORTE]**: Republicans dismiss whistleblower complaint against Tulsi Gabbard ([Link](https://www.theguardian.com/us-news/2026/feb/05/republicans-tulsi-gabbard-whistleblower-complaint))
+- **[USA_NORTE]**: Trump offers contradictory account of Tulsi Gabbard presence at FBI raid in Georgia ([Link](https://www.theguardian.com/us-news/2026/feb/05/trump-tulsi-gabbard-fbi-raid))
+- **[USA_NORTE]**: Democrats’ 10 demands to ‘rein in’ ICE – the full list of proposed reforms ([Link](https://www.theguardian.com/us-news/2026/feb/05/democrats-ice-reforms-funding-bill))
+- **[USA_NORTE]**: Trump administration issues rule that makes it easier to fire federal workers ([Link](https://www.theguardian.com/us-news/2026/feb/05/trump-administration-federal-workers))
+- **[USA_NORTE]**: We can reverse America’s decline | Bernie Sanders ([Link](https://www.theguardian.com/commentisfree/2026/feb/05/we-can-reverse-americas-decline-heres-how))
+- **[Africa_Sahel]**: Remaining 89 kidnapped Nigerian Christians return home ([Link](http://www.africanews.com/2026/02/05/remaining-89-kidnapped-nigerian-christians-return-home/))
+- **[Africa_Sahel]**: Activists announce a new aid flotilla for Gaza of over 100 boats ([Link](http://www.africanews.com/2026/02/05/activists-announce-a-new-aid-flotilla-for-gaza-of-over-100-boats/))
+- **[Africa_Sahel]**: African students win global prize for AI education system without internet ([Link](http://www.africanews.com/2026/02/05/african-students-win-global-prize-for-ai-education-system-without-internet/))
