@@ -2,12 +2,17 @@ import os, feedparser, sqlite3, json
 from datetime import datetime, timedelta
 from textblob import TextBlob
 
-# --- CONFIGURACIÓN ---
-BASE_DIR = os.path.expanduser("~/intel_center_test")
+
+# --- CONFIGURACIÓN DINÁMICA ---
+# Buscamos la carpeta raíz del proyecto basándonos en la ubicación de este script
+SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
+BASE_DIR = os.path.dirname(SCRIPT_DIR)  # Esto sube un nivel (de automation/ a la raíz)
+
 DB_PATH = os.path.join(BASE_DIR, "data/news.db")
 JSON_OUTPUT = os.path.join(BASE_DIR, "blog/static/data/hotspots.json")
 POSTS_OUTPUT = os.path.join(BASE_DIR, "blog/content/post/")
 USER_AGENT = 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36'
+
 
 DATOS_INTEL = {
     "Rusia_Eurasia": {"url": "https://tass.com/rss/v2.xml", "coord": [60.0, 90.0]},
