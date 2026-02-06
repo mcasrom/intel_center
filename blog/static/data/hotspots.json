@@ -3,33 +3,33 @@
         "name": "Africa_Sahel",
         "lat": 15.0,
         "lon": 15.0,
-        "intensity": 25,
+        "intensity": 38,
         "color": "#f1c40f",
-        "sentiment_index": 0.02
+        "sentiment_index": -0.02
     },
     {
         "name": "Asia_Nikkei",
         "lat": 35.0,
         "lon": 135.0,
-        "intensity": 35,
+        "intensity": 39,
         "color": "#f1c40f",
-        "sentiment_index": 0.02
+        "sentiment_index": 0.01
     },
     {
         "name": "Australia",
         "lat": -25.0,
         "lon": 133.0,
-        "intensity": 33,
+        "intensity": 41,
         "color": "#f1c40f",
-        "sentiment_index": 0.01
+        "sentiment_index": -0.0
     },
     {
         "name": "Europa_DW",
         "lat": 50.0,
         "lon": 10.0,
-        "intensity": 32,
+        "intensity": 40,
         "color": "#f1c40f",
-        "sentiment_index": 0.02
+        "sentiment_index": 0.03
     },
     {
         "name": "LATAM",
@@ -43,24 +43,24 @@
         "name": "Medio_Oriente",
         "lat": 25.0,
         "lon": 45.0,
-        "intensity": 35,
+        "intensity": 50,
         "color": "#f1c40f",
-        "sentiment_index": 0.01
+        "sentiment_index": 0.03
     },
     {
         "name": "Rusia_Eurasia",
         "lat": 60.0,
         "lon": 90.0,
-        "intensity": 61,
+        "intensity": 76,
         "color": "#f1c40f",
-        "sentiment_index": 0.0
+        "sentiment_index": 0.01
     },
     {
         "name": "USA_NORTE",
         "lat": 40.0,
         "lon": -100.0,
-        "intensity": 29,
+        "intensity": 35,
         "color": "#f1c40f",
-        "sentiment_index": 0.06
+        "sentiment_index": 0.03
     }
 ]
