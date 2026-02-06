@@ -20,6 +20,16 @@
         "election_active": true
     },
     {
+        "name": "ESPA\u00d1A",
+        "lat": 40.4,
+        "lon": -3.7,
+        "intensity": 15,
+        "color": "#3498db",
+        "sentiment_index": 0.0,
+        "anomaly": false,
+        "election_active": true
+    },
+    {
         "name": "Europa_DW",
         "lat": 50.0,
         "lon": 10.0,
@@ -53,7 +63,7 @@
         "name": "Rusia_Eurasia",
         "lat": 60.0,
         "lon": 90.0,
-        "intensity": 47,
+        "intensity": 49,
         "color": "#f1c40f",
         "sentiment_index": -0.0,
         "anomaly": true,
