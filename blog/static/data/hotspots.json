@@ -23,7 +23,7 @@
         "name": "Europa_DW",
         "lat": 50.0,
         "lon": 10.0,
-        "intensity": 18,
+        "intensity": 19,
         "color": "#3498db",
         "sentiment_index": 0.01,
         "anomaly": true,
