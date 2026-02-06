@@ -48,10 +48,10 @@
         "name": "Medio_Oriente",
         "lat": 25.0,
         "lon": 45.0,
-        "intensity": 15,
+        "intensity": 16,
         "color": "#f1c40f",
         "sentiment_index": 0.07,
-        "anomaly": false
+        "anomaly": true
     },
     {
         "name": "Rusia_Eurasia",
