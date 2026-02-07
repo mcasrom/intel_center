@@ -13,7 +13,6 @@ SPAIN_LOG_CSV = os.path.join(BASE_DIR, "data/spain_trend.csv")
 USER_AGENT = 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36'
 
 # --- FUENTES Y PALABRAS CLAVE ---
-# Para España usamos un combo (Mix B) para neutralizar sesgos
 FEEDS_SPAIN = [
     "https://elpais.com/rss/politica/portada.xml",
     "https://www.elmundo.es/e/rss/espana.xml"
@@ -60,15 +59,16 @@ def ejecutar():
     fecha_str = ahora.strftime('%Y-%m-%d %H:%M')
 
     print("--- INICIANDO CAPTURA (MIX EQUILIBRADO ESPAÑA) ---")
+    total_articulos = 0
     for reg, info in DATOS_INTEL.items():
         feeds_a_procesar = FEEDS_SPAIN if info["url"] == "COMBO" else [info["url"]]
-        
         for url in feeds_a_procesar:
             f = feedparser.parse(url, agent=USER_AGENT)
-            for e in f.entries[:10]: # 10 por fuente para balancear
+            for e in f.entries[:10]:
                 pola = obtener_sentimiento(str(e.title))
                 cur.execute("INSERT OR IGNORE INTO news (region, title, link, sentimiento) VALUES (?, ?, ?, ?)", 
                             (reg, e.title, e.link, pola))
+                total_articulos += 1
     conn.commit()
 
     # --- CÁLCULO DE RADARES DUALES ---
@@ -78,7 +78,6 @@ def ejecutar():
 
     avg_usa = get_avg('USA_NORTE')
     avg_spain = get_avg('ESPAÑA')
-
     registrar_tendencia(USA_LOG_CSV, avg_usa, fecha_str)
     registrar_tendencia(SPAIN_LOG_CSV, avg_spain, fecha_str)
 
@@ -86,13 +85,14 @@ def ejecutar():
     regiones_anomalas, regiones_electorales = [], []
     for reg in DATOS_INTEL:
         cur.execute("SELECT COUNT(*) FROM news WHERE region=? AND timestamp > datetime('now', '-1 day')", (reg,))
-        if cur.fetchone()[0] > 20: regiones_anomalas.append(reg)
+        count = cur.fetchone()[0]
+        if count > 20: regiones_anomalas.append(reg)
         cur.execute("SELECT title FROM news WHERE region=? AND timestamp > datetime('now', '-24 hours')", (reg,))
         titulos = [row[0].lower() for row in cur.fetchall()]
         if any(any(key in t for key in KEYWORDS_ELECTORALES) for t in titulos):
             regiones_electorales.append(reg)
 
-    # --- GENERAR JSON ---
+    # --- GENERAR JSON PARA MAPA ---
     cur.execute("SELECT region, COUNT(*), AVG(sentimiento) FROM news WHERE timestamp > datetime('now', '-24 hours') GROUP BY region")
     hotspots = []
     for r, ct, s in cur.fetchall():
@@ -106,13 +106,24 @@ def ejecutar():
                 "anomaly": (r in regiones_anomalas),
                 "election_active": (r in regiones_electorales)
             })
-    
     with open(JSON_OUTPUT, 'w') as f: json.dump(hotspots, f, indent=4)
 
-    # --- INFORME HUGO ---
+    # --- INFORME HUGO (CON MEJORAS PUNTO 1) ---
     with open(os.path.join(POSTS_OUTPUT, f"{ahora.strftime('%Y-%m-%d')}-informe.md"), 'w') as f:
-        f.write(f"---\ntitle: \"Monitor Intel - {ahora.strftime('%Y-%m-%d %H:%M')}\"\ndate: {ahora.strftime('%Y-%m-%dT%H:%M:%S')}\n---\n")
-        f.write(f"\n| Radar Geopolítico | Sentimiento (24h) |\n| :--- | :--- |\n| 🇺🇸 USA | **{round(avg_usa, 4)}** |\n| 🇪🇸 ESPAÑA (Balanceado) | **{round(avg_spain, 4)}** |\n")
+        # Frontmatter
+        f.write(f"---\ntitle: \"Monitor Intel - {ahora.strftime('%Y-%m-%d %H:%M')}\"\n")
+        f.write(f"date: {ahora.strftime('%Y-%m-%dT%H:%M:%S')}\n")
+        f.write(f"status: \"🟢 OPERATIVO\"\n")
+        f.write(f"node: \"Odroid-C2-Madrid\"\n---\n\n")
+
+        # Dashboard de Cabecera (Punto 1 del Análisis)
+        f.write(f"> **ESTADO DEL NODO:** 🟢 OPERATIVO\n")
+        f.write(f"> **ÚLTIMA SINCRONIZACIÓN:** `{fecha_str}` (Hora Local)\n")
+        f.write(f"> **ARTÍCULOS PROCESADOS (24h):** {total_articulos}\n")
+        f.write(f"> **PRÓXIMA CAPTURA:** +3 Horas\n\n")
+
+        f.write(f"### 📊 Radares de Tendencia\n")
+        f.write(f"| Región | Sentimiento (24h) |\n| :--- | :--- |\n| 🇺🇸 USA | **{round(avg_usa, 4)}** |\n| 🇪🇸 ESPAÑA (Balanceado) | **{round(avg_spain, 4)}** |\n")
         
         cur.execute("SELECT region, title, link FROM news WHERE timestamp > datetime('now', '-24 hours') ORDER BY timestamp DESC LIMIT 80")
         alertas, electoral, normales = [], [], []
@@ -122,12 +133,12 @@ def ejecutar():
             elif any(key in tit.lower() for key in KEYWORDS_ELECTORALES): electoral.append(txt.replace("**[", "🗳️ **[ELECTORAL] "))
             else: normales.append(txt)
 
-        if electoral: f.write("\n## 🗳️ VIGILANCIA ELECTORAL\n" + "\n".join(electoral) + "\n")
-        if alertas: f.write("\n## ⚡ ALERTAS CRÍTICAS\n" + "\n".join(alertas) + "\n")
-        f.write("\n## 🌍 RESUMEN GLOBAL\n" + "\n".join(normales[:50]))
+        if electoral: f.write("\n## 🗳️ Vigilancia Electoral\n" + "\n".join(electoral) + "\n")
+        if alertas: f.write("\n## ⚡ Alertas Críticas\n" + "\n".join(alertas) + "\n")
+        f.write("\n## 🌍 Resumen Global\n" + "\n".join(normales[:50]))
 
     conn.close()
-    print(f"[+] DUAL RADAR OK: Balanceando España con fuentes cruzadas.")
+    print(f"[+] INFORME GENERADO CON BADGES Y METADATOS.")
 
 if __name__ == "__main__":
     ejecutar()
