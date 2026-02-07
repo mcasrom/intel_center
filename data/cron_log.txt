@@ -123,3 +123,9 @@ To https://github.com/mcasrom/intel_center.git
  6 files changed, 50 insertions(+), 36 deletions(-)
 To https://github.com/mcasrom/intel_center.git
    998564f..d68bac5  main -> main
+[+] [odroid-c2] Iniciando ciclo de inteligencia...
+--- INICIANDO CAPTURA (MODO ANANKE) ---
+[+] INFORME GENERADO: 2026-02-08-informe.md
+[+] Generando HTML con Hugo...
+/home/dietpi/intel_center_odroid/automation/run_intel.sh: line 20: hugo: command not found
+[+] Sincronizando con GitHub...
