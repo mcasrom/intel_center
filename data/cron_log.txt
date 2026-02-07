@@ -70,3 +70,11 @@ To https://github.com/mcasrom/intel_center.git
 --- INICIANDO CAPTURA (MIX EQUILIBRADO ESPAÑA) ---
 [+] DUAL RADAR OK: Balanceando España con fuentes cruzadas.
 [+] Captura exitosa. Sincronizando con GitHub...
+[main d615954] Intel Update: 2026-02-07 17:20
+ 6 files changed, 24 insertions(+), 17 deletions(-)
+To https://github.com/mcasrom/intel_center.git
+   5325646..d615954  main -> main
+[+] [odroid-c2] Iniciando ciclo de inteligencia...
+--- INICIANDO CAPTURA (MIX EQUILIBRADO ESPAÑA) ---
+[+] DUAL RADAR OK: Balanceando España con fuentes cruzadas.
+[+] Captura exitosa. Sincronizando con GitHub...
