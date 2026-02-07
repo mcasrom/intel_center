@@ -51,3 +51,17 @@ sqlite3.OperationalError: database is locked
 --- INICIANDO CAPTURA (MIX EQUILIBRADO ESPAÑA) ---
 [+] DUAL RADAR OK: Balanceando España con fuentes cruzadas.
 [+] Captura exitosa. Sincronizando con GitHub...
+[main 78bf2e2] Intel Update: 2026-02-07 12:00
+ 6 files changed, 51 insertions(+), 31 deletions(-)
+To https://github.com/mcasrom/intel_center.git
+   aed0f4a..78bf2e2  main -> main
+[+] [odroid-c2] Iniciando ciclo de inteligencia...
+Traceback (most recent call last):
+  File "/home/dietpi/intel_center_odroid/automation/main_intel.py", line 133, in <module>
+    ejecutar()
+    ~~~~~~~~^^
+  File "/home/dietpi/intel_center_odroid/automation/main_intel.py", line 57, in ejecutar
+    cur.execute("DELETE FROM news WHERE timestamp < datetime('now', '-7 days')")
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+sqlite3.OperationalError: database is locked
+[-] Error en Python. Abortando.
