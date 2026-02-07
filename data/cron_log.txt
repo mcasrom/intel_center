@@ -119,3 +119,7 @@ To https://github.com/mcasrom/intel_center.git
 --- INICIANDO CAPTURA (MIX EQUILIBRADO ESPAÑA) ---
 [+] DUAL RADAR OK: Balanceando España con fuentes cruzadas.
 [+] Captura exitosa. Sincronizando con GitHub...
+[main d68bac5] Intel Update: 2026-02-07 21:00
+ 6 files changed, 50 insertions(+), 36 deletions(-)
+To https://github.com/mcasrom/intel_center.git
+   998564f..d68bac5  main -> main
