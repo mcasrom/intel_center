@@ -3,20 +3,20 @@
         "name": "Africa_Sahel",
         "lat": 15.0,
         "lon": 15.0,
-        "intensity": 31,
+        "intensity": 13,
         "color": "#f1c40f",
-        "sentiment_index": -0.02,
-        "anomaly": true,
+        "sentiment_index": 0.06,
+        "anomaly": false,
         "election_active": false
     },
     {
         "name": "Asia_Nikkei",
         "lat": 35.0,
         "lon": 135.0,
-        "intensity": 33,
+        "intensity": 18,
         "color": "#3498db",
-        "sentiment_index": -0.02,
-        "anomaly": true,
+        "sentiment_index": 0.02,
+        "anomaly": false,
         "election_active": true
     },
     {
@@ -33,29 +33,19 @@
         "name": "Europa_DW",
         "lat": 50.0,
         "lon": 10.0,
-        "intensity": 40,
-        "color": "#3498db",
-        "sentiment_index": 0.01,
-        "anomaly": true,
-        "election_active": true
-    },
-    {
-        "name": "LATAM",
-        "lat": -15.0,
-        "lon": -60.0,
-        "intensity": 15,
+        "intensity": 23,
         "color": "#f1c40f",
         "sentiment_index": 0.0,
-        "anomaly": false,
+        "anomaly": true,
         "election_active": false
     },
     {
         "name": "Medio_Oriente",
         "lat": 25.0,
         "lon": 45.0,
-        "intensity": 66,
+        "intensity": 50,
         "color": "#3498db",
-        "sentiment_index": 0.05,
+        "sentiment_index": 0.06,
         "anomaly": true,
         "election_active": true
     },
@@ -63,7 +53,7 @@
         "name": "Rusia_Eurasia",
         "lat": 60.0,
         "lon": 90.0,
-        "intensity": 104,
+        "intensity": 61,
         "color": "#3498db",
         "sentiment_index": -0.01,
         "anomaly": true,
@@ -73,10 +63,10 @@
         "name": "USA_NORTE",
         "lat": 40.0,
         "lon": -100.0,
-        "intensity": 48,
-        "color": "#3498db",
-        "sentiment_index": -0.0,
+        "intensity": 33,
+        "color": "#f1c40f",
+        "sentiment_index": 0.02,
         "anomaly": true,
-        "election_active": true
+        "election_active": false
     }
 ]
