@@ -131,10 +131,12 @@ def ejecutar():
 # ... (línea 131)
             else: normales.append(txt)
 
-        # --- SECCIÓN DE GRÁFICA (AQUÍ VA EL BLOQUE) ---
+
+# --- SECCIÓN DE GRÁFICA (CORREGIDA) ---
         f.write(f"## 📈 Evolución de Tendencia\n\n")
-        f.write(f"![Gráfica de Tendencia](/images/trend.png)\n\n")
-        f.write(f"---\n\n") 
+        # Usamos la ruta sin el primer slash o con el path absoluto del sitio
+        f.write(f"![Gráfica de Sentimiento](https://mcasrom.github.io/intel_center/images/trend.png)\n\n")
+        f.write(f"---\n\n")
 
         if alertas:
             f.write(f"### ⚡ ALERTAS CRÍTICAS\n\n")
