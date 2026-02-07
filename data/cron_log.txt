@@ -62,3 +62,7 @@ sqlite3.OperationalError: database is locked
 --- INICIANDO CAPTURA (MIX EQUILIBRADO ESPAÑA) ---
 [+] DUAL RADAR OK: Balanceando España con fuentes cruzadas.
 [+] Captura exitosa. Sincronizando con GitHub...
+[main 3171ae4] Intel Update: 2026-02-07 15:00
+ 6 files changed, 58 insertions(+), 42 deletions(-)
+To https://github.com/mcasrom/intel_center.git
+   78bf2e2..3171ae4  main -> main

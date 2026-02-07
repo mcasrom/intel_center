@@ -1,23 +1,11 @@
 <footer class="footer">
   <div class="footer__inner">
-    {{ if $.Site.Copyright }}
-      <div class="copyright copyright--user">
-        <span>{{ $.Site.Copyright | safeHTML }}</span>
-    {{ else }}
-      <div class="copyright">
-        <span>© {{ now.Year }} Powered by <a href="https://gohugo.io">Hugo</a></span>
-    {{ end }}
-      <span>:: <a href="https://github.com/panr/hugo-theme-terminal" target="_blank">Theme</a> made by <a href="https://github.com/panr" target="_blank">panr</a></span>
-      </div>
+    <div class="copyright">
+      <span>© Intel Center 2026 M.Castillo | Monitor Global de Inteligencia</span>
+      <br>
+      <small style="font-size: 0.7em; opacity: 0.6; display: block; margin-top: 5px;">
+        Monitor OSINT automatizado. Los datos se presentan "tal cual" de fuentes externas. No se asume responsabilidad por la veracidad de la información capturada.
+      </small>
+    </div>
   </div>
 </footer>
-
-{{ $menu := resources.Get "js/menu.js" | js.Build }}
-{{ $cp := resources.Get "js/code.js" | js.Build }}
-
-{{ $bundle := slice $menu $cp | resources.Concat "bundle.js" | resources.Minify }}
-
-<script type="text/javascript" src="{{ $bundle.RelPermalink }}"></script>
-
-<!-- Extended footer section-->
-{{ partial "extended_footer.html" . }}
