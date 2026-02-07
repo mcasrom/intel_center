@@ -65,3 +65,4 @@ Traceback (most recent call last):
     ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 sqlite3.OperationalError: database is locked
 [-] Error en Python. Abortando.
+[+] [odroid-c2] Iniciando ciclo de inteligencia...
