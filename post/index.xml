@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Informes de Inteligencia on Intel Center</title><link>https://mcasrom.github.io/intel_center/post/</link><description>Recent content in Informes de Inteligencia on Intel Center</description><generator>Hugo</generator><language>es</language><lastBuildDate>Sat, 07 Feb 2026 16:55:03 +0000</lastBuildDate><atom:link href="https://mcasrom.github.io/intel_center/post/index.xml" rel="self" type="application/rss+xml"/><item><title>📌 MANUAL: Operaciones e Interpretación de Inteligencia</title><link>https://mcasrom.github.io/intel_center/post/guia-interpretacion-nodos/</link><pubDate>Fri, 06 Feb 2026 17:00:00 +0000</pubDate><guid>https://mcasrom.github.io/intel_center/post/guia-interpretacion-nodos/</guid><description>&lt;h3 id="protocolo-de-inteligencia-consolidado-v20"&gt;Protocolo de Inteligencia Consolidado (v2.0)&lt;/h3&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Informes de Inteligencia on Intel Center</title><link>https://mcasrom.github.io/intel_center/post/</link><description>Recent content in Informes de Inteligencia on Intel Center</description><generator>Hugo</generator><language>es</language><lastBuildDate>Sat, 07 Feb 2026 17:20:35 +0000</lastBuildDate><atom:link href="https://mcasrom.github.io/intel_center/post/index.xml" rel="self" type="application/rss+xml"/><item><title>📌 MANUAL: Operaciones e Interpretación de Inteligencia</title><link>https://mcasrom.github.io/intel_center/post/guia-interpretacion-nodos/</link><pubDate>Fri, 06 Feb 2026 17:00:00 +0000</pubDate><guid>https://mcasrom.github.io/intel_center/post/guia-interpretacion-nodos/</guid><description>&lt;h3 id="protocolo-de-inteligencia-consolidado-v20"&gt;Protocolo de Inteligencia Consolidado (v2.0)&lt;/h3&gt;
 &lt;p&gt;Este documento define la metodología de análisis aplicada por el motor OSINT de la Odroid C2 para transformar datos masivos en indicadores tácticos.&lt;/p&gt;
 &lt;h4 id="1-semáforo-de-tensión-y-dinámica-política"&gt;1. Semáforo de Tensión y Dinámica Política&lt;/h4&gt;
 &lt;p&gt;El color de cada nodo es un indicador calculado mediante Procesamiento de Lenguaje Natural (NLP) y detección de contextos específicos:&lt;/p&gt;
@@ -9,7 +9,7 @@
 &lt;li&gt;🔴 &lt;strong&gt;Nivel 3 (Crisis/Hostilidad):&lt;/strong&gt; Polaridad &amp;lt; -0.1. Detección de lenguaje agresivo, conflictos o inestabilidad grave.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h4 id="2-clasificación-de-alertas-en-el-informe"&gt;2. Clasificación de Alertas en el Informe&lt;/h4&gt;
-&lt;p&gt;El sistema segrega la información en tres niveles de prioridad para optimizar el tiempo del analista:&lt;/p&gt;</description></item><item><title>Monitor Intel - 2026-02-07 16:55</title><link>https://mcasrom.github.io/intel_center/post/2026-02-07-informe/</link><pubDate>Sat, 07 Feb 2026 16:55:03 +0000</pubDate><guid>https://mcasrom.github.io/intel_center/post/2026-02-07-informe/</guid><description>&lt;table&gt;
+&lt;p&gt;El sistema segrega la información en tres niveles de prioridad para optimizar el tiempo del analista:&lt;/p&gt;</description></item><item><title>Monitor Intel - 2026-02-07 17:20</title><link>https://mcasrom.github.io/intel_center/post/2026-02-07-informe/</link><pubDate>Sat, 07 Feb 2026 17:20:35 +0000</pubDate><guid>https://mcasrom.github.io/intel_center/post/2026-02-07-informe/</guid><description>&lt;table&gt;
  &lt;thead&gt;
  &lt;tr&gt;
  &lt;th style="text-align: left"&gt;Radar Geopolítico&lt;/th&gt;
@@ -19,11 +19,11 @@
  &lt;tbody&gt;
  &lt;tr&gt;
  &lt;td style="text-align: left"&gt;🇺🇸 USA&lt;/td&gt;
- &lt;td style="text-align: left"&gt;&lt;strong&gt;0.0191&lt;/strong&gt;&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;&lt;strong&gt;0.0185&lt;/strong&gt;&lt;/td&gt;
  &lt;/tr&gt;
  &lt;tr&gt;
  &lt;td style="text-align: left"&gt;🇪🇸 ESPAÑA (Balanceado)&lt;/td&gt;
- &lt;td style="text-align: left"&gt;&lt;strong&gt;0.0244&lt;/strong&gt;&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;&lt;strong&gt;0.0545&lt;/strong&gt;&lt;/td&gt;
  &lt;/tr&gt;
  &lt;/tbody&gt;
 &lt;/table&gt;
@@ -40,10 +40,12 @@
 &lt;li&gt;🚩 &lt;strong&gt;[ALERTA] Europa_DW]&lt;/strong&gt;: Ukraine updates: Russia strikes war-hit nation’s power grid (&lt;a href="https://www.dw.com/en/ukraine-updates-russia-strikes-war-hit-nation-s-power-grid/live-75852955?maca=en-rss-en-top-1022-rdf"&gt;Link&lt;/a&gt;)&lt;/li&gt;
 &lt;li&gt;🚩 &lt;strong&gt;[ALERTA] Medio_Oriente]&lt;/strong&gt;: Israel’s Gaza genocide risks global order, leaders warn at Al Jazeera Forum (&lt;a href="https://www.aljazeera.com/news/2026/2/7/israels-gaza-genocide-risks-global-order-leaders-warn-at-al-jazeera-forum?traffic_source=rss"&gt;Link&lt;/a&gt;)&lt;/li&gt;
 &lt;li&gt;🚩 &lt;strong&gt;[ALERTA] Medio_Oriente]&lt;/strong&gt;: Trump hails ‘very good’ Iran talks but maintains threat of military action (&lt;a href="https://www.aljazeera.com/video/newsfeed/2026/2/7/trump-hails-very-good-iran-talks-but-maintains-threat-of-military-action?traffic_source=rss"&gt;Link&lt;/a&gt;)&lt;/li&gt;
-&lt;li&gt;🚩 &lt;strong&gt;[ALERTA] Rusia_Eurasia]&lt;/strong&gt;: Slovakia overcame threats of destabilization — deputy speaker of parliament (&lt;a href="https://tass.com/world/2083377"&gt;Link&lt;/a&gt;)&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id="-resumen-global"&gt;🌍 RESUMEN GLOBAL&lt;/h2&gt;
 &lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;[USA_NORTE]&lt;/strong&gt;: Rage against the machine: a California community rallied against a datacenter – and won (&lt;a href="https://www.theguardian.com/us-news/2026/feb/07/california-monterey-park-stop-datacenter-construction"&gt;Link&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;[Rusia_Eurasia]&lt;/strong&gt;: Organizer of terrorist attack that killed over 30 arrested in Pakistan — newspaper (&lt;a href="https://tass.com/emergencies/2083437"&gt;Link&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;[Medio_Oriente]&lt;/strong&gt;: England vs Nepal: T20 World Cup – teams, start time, lineups (&lt;a href="https://www.aljazeera.com/sports/2026/2/7/england-vs-nepal-t20-world-cup-teams-start-time-lineups?traffic_source=rss"&gt;Link&lt;/a&gt;)&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;[Africa_Sahel]&lt;/strong&gt;: 2026 edition of Africa Eco Race comes to an end in Dakar (&lt;a href="http://www.africanews.com/2026/02/07/2026-edition-of-africa-eco-race-comes-to-an-end-in-dakar/"&gt;Link&lt;/a&gt;)&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;[Africa_Sahel]&lt;/strong&gt;: Somali president slams Israeli recognition of Somaliland at Doha forum (&lt;a href="http://www.africanews.com/2026/02/07/somali-president-slams-israeli-recognition-of-somaliland-at-doha-forum/"&gt;Link&lt;/a&gt;)&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;[USA_NORTE]&lt;/strong&gt;: Federal judge reverses Trump’s freeze on $16bn for NY-NJ tunnel project (&lt;a href="https://www.theguardian.com/us-news/2026/feb/07/federal-judge-reverses-trump-freeze-ny-nj-tunnel"&gt;Link&lt;/a&gt;)&lt;/li&gt;
@@ -91,9 +93,6 @@
 &lt;li&gt;&lt;strong&gt;[Europa_DW]&lt;/strong&gt;: Germany news: COVID, Russia and Trump hit economy hard (&lt;a href="https://www.dw.com/en/germany-news-covid-russia-and-trump-hit-economy-hard/live-75853354?maca=en-rss-en-top-1022-rdf"&gt;Link&lt;/a&gt;)&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;[Europa_DW]&lt;/strong&gt;: Germans increasingly concerned over social inequality (&lt;a href="https://www.dw.com/en/germans-increasingly-concerned-over-social-inequality/a-75836870?maca=en-rss-en-top-1022-rdf"&gt;Link&lt;/a&gt;)&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;[Asia_Nikkei]&lt;/strong&gt;: Why Trump&amp;rsquo;s solo Yalta is so sinister (&lt;a href="https://asia.nikkei.com/spotlight/comment/why-trump-s-solo-yalta-is-so-sinister"&gt;Link&lt;/a&gt;)&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;[Asia_Nikkei]&lt;/strong&gt;: Japanese onsen resort boosts local geisha and snack bar cultures (&lt;a href="https://asia.nikkei.com/business/travel-leisure/japanese-onsen-resort-boosts-local-geisha-and-snack-bar-cultures"&gt;Link&lt;/a&gt;)&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;[Medio_Oriente]&lt;/strong&gt;: Deadly Islamabad bombing sharpens focus on cross-border attacks in Pakistan (&lt;a href="https://www.aljazeera.com/news/2026/2/7/deadly-islamabad-bombing-sharpens-focus-on-cross-border-attacks-in-pakistan?traffic_source=rss"&gt;Link&lt;/a&gt;)&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;[Medio_Oriente]&lt;/strong&gt;: Chairman of Al Jazeera board highlights ‘new reality’ in the Middle East (&lt;a href="https://www.aljazeera.com/video/newsfeed/2026/2/7/chairman-of-al-jazeera-board-highlights-new-reality-in-the-middle-east?traffic_source=rss"&gt;Link&lt;/a&gt;)&lt;/li&gt;
 &lt;/ul&gt;</description></item><item><title>Monitor Intel - 2026-02-06 22:25</title><link>https://mcasrom.github.io/intel_center/post/2026-02-06-informe/</link><pubDate>Fri, 06 Feb 2026 22:25:43 +0000</pubDate><guid>https://mcasrom.github.io/intel_center/post/2026-02-06-informe/</guid><description>&lt;table&gt;
  &lt;thead&gt;
  &lt;tr&gt;
