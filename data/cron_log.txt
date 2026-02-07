@@ -66,3 +66,7 @@ sqlite3.OperationalError: database is locked
  6 files changed, 58 insertions(+), 42 deletions(-)
 To https://github.com/mcasrom/intel_center.git
    78bf2e2..3171ae4  main -> main
+[+] [odroid-c2] Iniciando ciclo de inteligencia...
+--- INICIANDO CAPTURA (MIX EQUILIBRADO ESPAÑA) ---
+[+] DUAL RADAR OK: Balanceando España con fuentes cruzadas.
+[+] Captura exitosa. Sincronizando con GitHub...
