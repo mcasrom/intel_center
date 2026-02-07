@@ -58,7 +58,7 @@ def ejecutar():
     ahora = datetime.now()
     fecha_str = ahora.strftime('%Y-%m-%d %H:%M')
 
-    print("--- INICIANDO CAPTURA (MIX EQUILIBRADO ESPAÑA) ---")
+    print("--- INICIANDO CAPTURA (MODO ANANKE) ---")
     total_articulos = 0
     for reg, info in DATOS_INTEL.items():
         feeds_a_procesar = FEEDS_SPAIN if info["url"] == "COMBO" else [info["url"]]
@@ -81,50 +81,47 @@ def ejecutar():
     registrar_tendencia(USA_LOG_CSV, avg_usa, fecha_str)
     registrar_tendencia(SPAIN_LOG_CSV, avg_spain, fecha_str)
 
-    # --- ANOMALÍAS Y PROCESO ELECTORAL ---
-    regiones_anomalas, regiones_electorales = [], []
-    for reg in DATOS_INTEL:
-        cur.execute("SELECT COUNT(*) FROM news WHERE region=? AND timestamp > datetime('now', '-1 day')", (reg,))
-        count = cur.fetchone()[0]
-        if count > 20: regiones_anomalas.append(reg)
-        cur.execute("SELECT title FROM news WHERE region=? AND timestamp > datetime('now', '-24 hours')", (reg,))
-        titulos = [row[0].lower() for row in cur.fetchall()]
-        if any(any(key in t for key in KEYWORDS_ELECTORALES) for t in titulos):
-            regiones_electorales.append(reg)
-
     # --- GENERAR JSON PARA MAPA ---
     cur.execute("SELECT region, COUNT(*), AVG(sentimiento) FROM news WHERE timestamp > datetime('now', '-24 hours') GROUP BY region")
     hotspots = []
     for r, ct, s in cur.fetchall():
         if r in DATOS_INTEL:
             color = "#f1c40f"
-            if r in regiones_electorales: color = "#3498db"
-            elif s < -0.1: color = "#ff4b2b"
+            # Lógica simple de colores para el mapa
+            if s < -0.05: color = "#ff4b2b"
             hotspots.append({
                 "name": r, "lat": DATOS_INTEL[r]["coord"][0], "lon": DATOS_INTEL[r]["coord"][1],
-                "intensity": ct, "color": color, "sentiment_index": round(s, 2),
-                "anomaly": (r in regiones_anomalas),
-                "election_active": (r in regiones_electorales)
+                "intensity": ct, "color": color, "sentiment_index": round(s, 2)
             })
     with open(JSON_OUTPUT, 'w') as f: json.dump(hotspots, f, indent=4)
 
-    # --- INFORME HUGO (CON MEJORAS PUNTO 1) ---
-    with open(os.path.join(POSTS_OUTPUT, f"{ahora.strftime('%Y-%m-%d')}-informe.md"), 'w') as f:
-        # Frontmatter
-        f.write(f"---\ntitle: \"Monitor Intel - {ahora.strftime('%Y-%m-%d %H:%M')}\"\n")
+    # --- INFORME HUGO (AJUSTADO PARA VISIBILIDAD EN ANANKE) ---
+    filename = f"{ahora.strftime('%Y-%m-%d')}-informe.md"
+    with open(os.path.join(POSTS_OUTPUT, filename), 'w') as f:
+        # Frontmatter claro
+        f.write(f"---\ntitle: \"Monitor Intel: {ahora.strftime('%H:%M')} (UTC)\"\n")
         f.write(f"date: {ahora.strftime('%Y-%m-%dT%H:%M:%S')}\n")
-        f.write(f"status: \"🟢 OPERATIVO\"\n")
-        f.write(f"node: \"Odroid-C2-Madrid\"\n---\n\n")
+        f.write(f"description: \"Estado del nodo y análisis de sentimiento global.\"\n")
+        f.write(f"---\n\n")
 
-        # Dashboard de Cabecera (Punto 1 del Análisis)
-        f.write(f"> **ESTADO DEL NODO:** 🟢 OPERATIVO\n")
-        f.write(f"> **ÚLTIMA SINCRONIZACIÓN:** `{fecha_str}` (Hora Local)\n")
-        f.write(f"> **ARTÍCULOS PROCESADOS (24h):** {total_articulos}\n")
-        f.write(f"> **PRÓXIMA CAPTURA:** +3 Horas\n\n")
+        # Dashboard de Estado (Usamos Tabla para forzar el renderizado en blanco/gris de Ananke)
+        f.write(f"## 🛡️ ESTADO DEL NODO\n\n")
+        f.write(f"| Indicador | Valor |\n")
+        f.write(f"| :--- | :--- |\n")
+        f.write(f"| **STATUS** | 🟢 **OPERATIVO** |\n")
+        f.write(f"| **ÚLTIMA SYNC** | `{fecha_str}` |\n")
+        f.write(f"| **ARTÍCULOS 24H** | {total_articulos} |\n")
+        f.write(f"| **HARDWARE** | `Odroid-C2-Madrid` |\n\n")
 
-        f.write(f"### 📊 Radares de Tendencia\n")
-        f.write(f"| Región | Sentimiento (24h) |\n| :--- | :--- |\n| 🇺🇸 USA | **{round(avg_usa, 4)}** |\n| 🇪🇸 ESPAÑA (Balanceado) | **{round(avg_spain, 4)}** |\n")
+        f.write(f"---\n\n") 
         
+        f.write(f"## 📊 RADARES DE TENDENCIA\n\n")
+        f.write(f"| Región | Sentimiento (Polaridad) |\n")
+        f.write(f"| :--- | :--- |\n")
+        f.write(f"| 🇺🇸 USA | **{round(avg_usa, 4)}** |\n")
+        f.write(f"| 🇪🇸 ESPAÑA | **{round(avg_spain, 4)}** |\n\n")
+
+        # Clasificación de noticias
         cur.execute("SELECT region, title, link FROM news WHERE timestamp > datetime('now', '-24 hours') ORDER BY timestamp DESC LIMIT 80")
         alertas, electoral, normales = [], [], []
         for reg, tit, link in cur.fetchall():
@@ -133,12 +130,19 @@ def ejecutar():
             elif any(key in tit.lower() for key in KEYWORDS_ELECTORALES): electoral.append(txt.replace("**[", "🗳️ **[ELECTORAL] "))
             else: normales.append(txt)
 
-        if electoral: f.write("\n## 🗳️ Vigilancia Electoral\n" + "\n".join(electoral) + "\n")
-        if alertas: f.write("\n## ⚡ Alertas Críticas\n" + "\n".join(alertas) + "\n")
-        f.write("\n## 🌍 Resumen Global\n" + "\n".join(normales[:50]))
+        if alertas:
+            f.write(f"### ⚡ ALERTAS CRÍTICAS\n\n")
+            f.write("\n".join(alertas) + "\n\n")
+
+        if electoral:
+            f.write(f"### 🗳️ VIGILANCIA ELECTORAL\n\n")
+            f.write("\n".join(electoral) + "\n\n")
+
+        f.write(f"### 🌍 RESUMEN GLOBAL\n\n")
+        f.write("\n".join(normales[:50]))
 
     conn.close()
-    print(f"[+] INFORME GENERADO CON BADGES Y METADATOS.")
+    print(f"[+] INFORME GENERADO: {filename}")
 
 if __name__ == "__main__":
     ejecutar()
