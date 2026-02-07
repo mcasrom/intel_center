@@ -128,12 +128,18 @@ def ejecutar():
             txt = f"- **[{reg}]**: {tit} ([Link]({link}))"
             if any(key in tit.lower() for key in KEYWORDS_CRITICAS): alertas.append(txt.replace("**[", "🚩 **[ALERTA] "))
             elif any(key in tit.lower() for key in KEYWORDS_ELECTORALES): electoral.append(txt.replace("**[", "🗳️ **[ELECTORAL] "))
+# ... (línea 131)
             else: normales.append(txt)
+
+        # --- SECCIÓN DE GRÁFICA (AQUÍ VA EL BLOQUE) ---
+        f.write(f"## 📈 Evolución de Tendencia\n\n")
+        f.write(f"![Gráfica de Tendencia](/images/trend.png)\n\n")
+        f.write(f"---\n\n") 
 
         if alertas:
             f.write(f"### ⚡ ALERTAS CRÍTICAS\n\n")
             f.write("\n".join(alertas) + "\n\n")
-
+# ... (sigue con el resto de ifs)
         if electoral:
             f.write(f"### 🗳️ VIGILANCIA ELECTORAL\n\n")
             f.write("\n".join(electoral) + "\n\n")

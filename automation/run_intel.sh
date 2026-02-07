@@ -29,3 +29,14 @@ else
     echo "[-] Error en Python. Abortando."
     exit 1
 fi
+
+# ... (después de ejecutar main_intel.py) ...
+$PYTHON_BIN $SCRIPT_PY
+
+# NUEVA LÍNEA: Generar la gráfica
+$PYTHON_BIN $BASE_DIR/automation/plotter_intel.py
+
+# ... (luego sigue el bloque de Hugo que ya teníamos) ...
+cd $BLOG_DIR
+hugo --buildFuture
+# ...
