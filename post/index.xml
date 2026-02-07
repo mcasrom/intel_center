@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Informes de Inteligencia on Intel Center</title><link>https://mcasrom.github.io/intel_center/post/</link><description>Recent content in Informes de Inteligencia on Intel Center</description><generator>Hugo</generator><language>es</language><lastBuildDate>Sat, 07 Feb 2026 21:46:33 +0000</lastBuildDate><atom:link href="https://mcasrom.github.io/intel_center/post/index.xml" rel="self" type="application/rss+xml"/><item><title>📌 MANUAL: Operaciones e Interpretación de Inteligencia</title><link>https://mcasrom.github.io/intel_center/post/guia-interpretacion-nodos/</link><pubDate>Fri, 06 Feb 2026 17:00:00 +0000</pubDate><guid>https://mcasrom.github.io/intel_center/post/guia-interpretacion-nodos/</guid><description>&lt;h3 id="protocolo-de-inteligencia-consolidado-v20"&gt;Protocolo de Inteligencia Consolidado (v2.0)&lt;/h3&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Informes de Inteligencia on Intel Center</title><link>https://mcasrom.github.io/intel_center/post/</link><description>Recent content in Informes de Inteligencia on Intel Center</description><generator>Hugo</generator><language>es</language><lastBuildDate>Sat, 07 Feb 2026 22:04:01 +0000</lastBuildDate><atom:link href="https://mcasrom.github.io/intel_center/post/index.xml" rel="self" type="application/rss+xml"/><item><title>📌 MANUAL: Operaciones e Interpretación de Inteligencia</title><link>https://mcasrom.github.io/intel_center/post/guia-interpretacion-nodos/</link><pubDate>Fri, 06 Feb 2026 17:00:00 +0000</pubDate><guid>https://mcasrom.github.io/intel_center/post/guia-interpretacion-nodos/</guid><description>&lt;h3 id="protocolo-de-inteligencia-consolidado-v20"&gt;Protocolo de Inteligencia Consolidado (v2.0)&lt;/h3&gt;
 &lt;p&gt;Este documento define la metodología de análisis aplicada por el motor OSINT de la Odroid C2 para transformar datos masivos en indicadores tácticos.&lt;/p&gt;
 &lt;h4 id="1-semáforo-de-tensión-y-dinámica-política"&gt;1. Semáforo de Tensión y Dinámica Política&lt;/h4&gt;
 &lt;p&gt;El color de cada nodo es un indicador calculado mediante Procesamiento de Lenguaje Natural (NLP) y detección de contextos específicos:&lt;/p&gt;
@@ -9,7 +9,7 @@
 &lt;li&gt;🔴 &lt;strong&gt;Nivel 3 (Crisis/Hostilidad):&lt;/strong&gt; Polaridad &amp;lt; -0.1. Detección de lenguaje agresivo, conflictos o inestabilidad grave.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h4 id="2-clasificación-de-alertas-en-el-informe"&gt;2. Clasificación de Alertas en el Informe&lt;/h4&gt;
-&lt;p&gt;El sistema segrega la información en tres niveles de prioridad para optimizar el tiempo del analista:&lt;/p&gt;</description></item><item><title>Monitor Intel: 21:46 (UTC)</title><link>https://mcasrom.github.io/intel_center/post/2026-02-07-informe/</link><pubDate>Sat, 07 Feb 2026 21:46:33 +0000</pubDate><guid>https://mcasrom.github.io/intel_center/post/2026-02-07-informe/</guid><description>&lt;h2 id="-estado-del-nodo"&gt;🛡️ ESTADO DEL NODO&lt;/h2&gt;
+&lt;p&gt;El sistema segrega la información en tres niveles de prioridad para optimizar el tiempo del analista:&lt;/p&gt;</description></item><item><title>Monitor Intel: 22:04 (UTC)</title><link>https://mcasrom.github.io/intel_center/post/2026-02-07-informe/</link><pubDate>Sat, 07 Feb 2026 22:04:01 +0000</pubDate><guid>https://mcasrom.github.io/intel_center/post/2026-02-07-informe/</guid><description>&lt;h2 id="-estado-del-nodo"&gt;🛡️ ESTADO DEL NODO&lt;/h2&gt;
 &lt;table&gt;
  &lt;thead&gt;
  &lt;tr&gt;
@@ -24,7 +24,7 @@
  &lt;/tr&gt;
  &lt;tr&gt;
  &lt;td style="text-align: left"&gt;&lt;strong&gt;ÚLTIMA SYNC&lt;/strong&gt;&lt;/td&gt;
- &lt;td style="text-align: left"&gt;&lt;code&gt;2026-02-07 21:46&lt;/code&gt;&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;&lt;code&gt;2026-02-07 22:04&lt;/code&gt;&lt;/td&gt;
  &lt;/tr&gt;
  &lt;tr&gt;
  &lt;td style="text-align: left"&gt;&lt;strong&gt;ARTÍCULOS 24H&lt;/strong&gt;&lt;/td&gt;
@@ -48,7 +48,7 @@
  &lt;tbody&gt;
  &lt;tr&gt;
  &lt;td style="text-align: left"&gt;🇺🇸 USA&lt;/td&gt;
- &lt;td style="text-align: left"&gt;&lt;strong&gt;0.014&lt;/strong&gt;&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;&lt;strong&gt;0.0136&lt;/strong&gt;&lt;/td&gt;
  &lt;/tr&gt;
  &lt;tr&gt;
  &lt;td style="text-align: left"&gt;🇪🇸 ESPAÑA&lt;/td&gt;
@@ -56,6 +56,9 @@
  &lt;/tr&gt;
  &lt;/tbody&gt;
 &lt;/table&gt;
+&lt;h2 id="-evolución-de-tendencia"&gt;📈 Evolución de Tendencia&lt;/h2&gt;
+&lt;p&gt;&lt;img src="https://mcasrom.github.io/intel_center/images/trend.png" alt="Gráfica de Tendencia"&gt;&lt;/p&gt;
+&lt;hr&gt;
 &lt;h3 id="-alertas-críticas"&gt;⚡ ALERTAS CRÍTICAS&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;🚩 &lt;strong&gt;[ALERTA] Europa_DW]&lt;/strong&gt;: Families call for truth on Kosovo War&amp;rsquo;s missing people (&lt;a href="https://www.dw.com/en/families-call-for-truth-on-kosovo-war-s-missing-people/a-75855214?maca=en-rss-en-top-1022-rdf"&gt;Link&lt;/a&gt;)&lt;/li&gt;
@@ -73,6 +76,8 @@
 &lt;/ul&gt;
 &lt;h3 id="-resumen-global"&gt;🌍 RESUMEN GLOBAL&lt;/h3&gt;
 &lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;[USA_NORTE]&lt;/strong&gt;: Los Angeles city council member Nithya Raman enters mayoral race (&lt;a href="https://www.theguardian.com/us-news/2026/feb/07/los-angeles-city-council-member-nithya-raman-mayor-race"&gt;Link&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;[Rusia_Eurasia]&lt;/strong&gt;: Trump genuinely desires to settle conflict with Iran peacefully — US ambassador to Israel (&lt;a href="https://tass.com/world/2083469"&gt;Link&lt;/a&gt;)&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;[Rusia_Eurasia]&lt;/strong&gt;: Belgorod Region governor comes under Ukrainian shelling while inspecting infrastructure (&lt;a href="https://tass.com/emergencies/2083467"&gt;Link&lt;/a&gt;)&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;[Europa_DW]&lt;/strong&gt;: How the Epstein-Barr virus triggers MS in some people (&lt;a href="https://www.dw.com/en/how-the-epstein-barr-virus-triggers-ms-in-some-people/a-75790721?maca=en-rss-en-top-1022-rdf"&gt;Link&lt;/a&gt;)&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;[Rusia_Eurasia]&lt;/strong&gt;: Figure skater Gumennik changes music for short program at Olympics (&lt;a href="https://tass.com/sports/2083465"&gt;Link&lt;/a&gt;)&lt;/li&gt;
@@ -121,8 +126,6 @@
 &lt;li&gt;&lt;strong&gt;[Medio_Oriente]&lt;/strong&gt;: Spain, Portugal brace for new storm after floods kill 2, displace 11,000 (&lt;a href="https://www.aljazeera.com/news/2026/2/7/spain-portugal-brace-for-new-storm-after-floods-kill-2-displace-11000?traffic_source=rss"&gt;Link&lt;/a&gt;)&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;[Europa_DW]&lt;/strong&gt;: Article 42.7: Are EU states compelled to collective defense? (&lt;a href="https://www.dw.com/en/article-42-7-are-eu-states-compelled-to-collective-defense/a-75848009?maca=en-rss-en-top-1022-rdf"&gt;Link&lt;/a&gt;)&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;[Europa_DW]&lt;/strong&gt;: Pakistan: IS affiliate group claims Islamabad mosque bombing (&lt;a href="https://www.dw.com/en/pakistan-is-affiliate-group-claims-islamabad-mosque-bombing/a-75853782?maca=en-rss-en-top-1022-rdf"&gt;Link&lt;/a&gt;)&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;[Africa_Sahel]&lt;/strong&gt;: South Africa produces first local vaccine to combat foot-and-mouth disease (&lt;a href="http://www.africanews.com/2026/02/07/south-africa-produces-first-local-vaccine-to-combat-foot-and-mouth-disease/"&gt;Link&lt;/a&gt;)&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;[USA_NORTE]&lt;/strong&gt;: Deadly cold tests New York’s ability to protect its homeless communities (&lt;a href="https://www.theguardian.com/us-news/2026/feb/07/homelessness-new-york-cold-winter"&gt;Link&lt;/a&gt;)&lt;/li&gt;
 &lt;/ul&gt;</description></item><item><title>Monitor Intel - 2026-02-06 22:25</title><link>https://mcasrom.github.io/intel_center/post/2026-02-06-informe/</link><pubDate>Fri, 06 Feb 2026 22:25:43 +0000</pubDate><guid>https://mcasrom.github.io/intel_center/post/2026-02-06-informe/</guid><description>&lt;table&gt;
  &lt;thead&gt;
  &lt;tr&gt;
