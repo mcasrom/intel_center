@@ -43,7 +43,7 @@
         "name": "Rusia_Eurasia",
         "lat": 60.0,
         "lon": 90.0,
-        "intensity": 70,
+        "intensity": 71,
         "color": "#f1c40f",
         "sentiment_index": -0.02
     },
