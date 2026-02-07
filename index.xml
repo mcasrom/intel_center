@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Monitor Global de Inteligencia on Intel Center</title><link>https://mcasrom.github.io/intel_center/</link><description>Recent content in Monitor Global de Inteligencia on Intel Center</description><generator>Hugo</generator><language>es</language><lastBuildDate>Sat, 07 Feb 2026 17:43:39 +0000</lastBuildDate><atom:link href="https://mcasrom.github.io/intel_center/index.xml" rel="self" type="application/rss+xml"/><item><title>📌 MANUAL: Operaciones e Interpretación de Inteligencia</title><link>https://mcasrom.github.io/intel_center/post/guia-interpretacion-nodos/</link><pubDate>Fri, 06 Feb 2026 17:00:00 +0000</pubDate><guid>https://mcasrom.github.io/intel_center/post/guia-interpretacion-nodos/</guid><description>&lt;h3 id="protocolo-de-inteligencia-consolidado-v20"&gt;Protocolo de Inteligencia Consolidado (v2.0)&lt;/h3&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Monitor Global de Inteligencia on Intel Center</title><link>https://mcasrom.github.io/intel_center/</link><description>Recent content in Monitor Global de Inteligencia on Intel Center</description><generator>Hugo</generator><language>es</language><lastBuildDate>Sat, 07 Feb 2026 17:48:48 +0000</lastBuildDate><atom:link href="https://mcasrom.github.io/intel_center/index.xml" rel="self" type="application/rss+xml"/><item><title>📌 MANUAL: Operaciones e Interpretación de Inteligencia</title><link>https://mcasrom.github.io/intel_center/post/guia-interpretacion-nodos/</link><pubDate>Fri, 06 Feb 2026 17:00:00 +0000</pubDate><guid>https://mcasrom.github.io/intel_center/post/guia-interpretacion-nodos/</guid><description>&lt;h3 id="protocolo-de-inteligencia-consolidado-v20"&gt;Protocolo de Inteligencia Consolidado (v2.0)&lt;/h3&gt;
 &lt;p&gt;Este documento define la metodología de análisis aplicada por el motor OSINT de la Odroid C2 para transformar datos masivos en indicadores tácticos.&lt;/p&gt;
 &lt;h4 id="1-semáforo-de-tensión-y-dinámica-política"&gt;1. Semáforo de Tensión y Dinámica Política&lt;/h4&gt;
 &lt;p&gt;El color de cada nodo es un indicador calculado mediante Procesamiento de Lenguaje Natural (NLP) y detección de contextos específicos:&lt;/p&gt;
@@ -9,7 +9,7 @@
 &lt;li&gt;🔴 &lt;strong&gt;Nivel 3 (Crisis/Hostilidad):&lt;/strong&gt; Polaridad &amp;lt; -0.1. Detección de lenguaje agresivo, conflictos o inestabilidad grave.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h4 id="2-clasificación-de-alertas-en-el-informe"&gt;2. Clasificación de Alertas en el Informe&lt;/h4&gt;
-&lt;p&gt;El sistema segrega la información en tres niveles de prioridad para optimizar el tiempo del analista:&lt;/p&gt;</description></item><item><title>Monitor Intel - 2026-02-07 17:43</title><link>https://mcasrom.github.io/intel_center/post/2026-02-07-informe/</link><pubDate>Sat, 07 Feb 2026 17:43:39 +0000</pubDate><guid>https://mcasrom.github.io/intel_center/post/2026-02-07-informe/</guid><description>&lt;table&gt;
+&lt;p&gt;El sistema segrega la información en tres niveles de prioridad para optimizar el tiempo del analista:&lt;/p&gt;</description></item><item><title>Monitor Intel - 2026-02-07 17:48</title><link>https://mcasrom.github.io/intel_center/post/2026-02-07-informe/</link><pubDate>Sat, 07 Feb 2026 17:48:48 +0000</pubDate><guid>https://mcasrom.github.io/intel_center/post/2026-02-07-informe/</guid><description>&lt;table&gt;
  &lt;thead&gt;
  &lt;tr&gt;
  &lt;th style="text-align: left"&gt;Radar Geopolítico&lt;/th&gt;
@@ -19,7 +19,7 @@
  &lt;tbody&gt;
  &lt;tr&gt;
  &lt;td style="text-align: left"&gt;🇺🇸 USA&lt;/td&gt;
- &lt;td style="text-align: left"&gt;&lt;strong&gt;0.0185&lt;/strong&gt;&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;&lt;strong&gt;0.0144&lt;/strong&gt;&lt;/td&gt;
  &lt;/tr&gt;
  &lt;tr&gt;
  &lt;td style="text-align: left"&gt;🇪🇸 ESPAÑA (Balanceado)&lt;/td&gt;
@@ -43,6 +43,8 @@
 &lt;/ul&gt;
 &lt;h2 id="-resumen-global"&gt;🌍 RESUMEN GLOBAL&lt;/h2&gt;
 &lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;[Africa_Sahel]&lt;/strong&gt;: Morocco still battling disastrous floods, rescue efforts underway (&lt;a href="http://www.africanews.com/2026/02/07/morocco-still-battling-disastrous-floods-rescue-efforts-underway/"&gt;Link&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;[USA_NORTE]&lt;/strong&gt;: NSA detected phone call between foreign intelligence and a person close to Trump (&lt;a href="https://www.theguardian.com/us-news/2026/feb/07/nsa-foreign-intelligence-trump-whistleblower"&gt;Link&lt;/a&gt;)&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;[USA_NORTE]&lt;/strong&gt;: Rage against the machine: a California community rallied against a datacenter – and won (&lt;a href="https://www.theguardian.com/us-news/2026/feb/07/california-monterey-park-stop-datacenter-construction"&gt;Link&lt;/a&gt;)&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;[Rusia_Eurasia]&lt;/strong&gt;: Organizer of terrorist attack that killed over 30 arrested in Pakistan — newspaper (&lt;a href="https://tass.com/emergencies/2083437"&gt;Link&lt;/a&gt;)&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;[Medio_Oriente]&lt;/strong&gt;: England vs Nepal: T20 World Cup – teams, start time, lineups (&lt;a href="https://www.aljazeera.com/sports/2026/2/7/england-vs-nepal-t20-world-cup-teams-start-time-lineups?traffic_source=rss"&gt;Link&lt;/a&gt;)&lt;/li&gt;
@@ -91,8 +93,6 @@
 &lt;li&gt;&lt;strong&gt;[Africa_Sahel]&lt;/strong&gt;: Drought in Kenya spreads beyond arid north (&lt;a href="http://www.africanews.com/2026/02/07/drought-in-kenya-spreads-beyond-arid-north/"&gt;Link&lt;/a&gt;)&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;[USA_NORTE]&lt;/strong&gt;: Rembrandt lion drawing raises $18m for big cat conservation at US auction (&lt;a href="https://www.theguardian.com/us-news/2026/feb/07/rembrandt-lion-auction-big-cat-conservation"&gt;Link&lt;/a&gt;)&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;[Europa_DW]&lt;/strong&gt;: Germany news: COVID, Russia and Trump hit economy hard (&lt;a href="https://www.dw.com/en/germany-news-covid-russia-and-trump-hit-economy-hard/live-75853354?maca=en-rss-en-top-1022-rdf"&gt;Link&lt;/a&gt;)&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;[Europa_DW]&lt;/strong&gt;: Germans increasingly concerned over social inequality (&lt;a href="https://www.dw.com/en/germans-increasingly-concerned-over-social-inequality/a-75836870?maca=en-rss-en-top-1022-rdf"&gt;Link&lt;/a&gt;)&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;[Asia_Nikkei]&lt;/strong&gt;: Why Trump&amp;rsquo;s solo Yalta is so sinister (&lt;a href="https://asia.nikkei.com/spotlight/comment/why-trump-s-solo-yalta-is-so-sinister"&gt;Link&lt;/a&gt;)&lt;/li&gt;
 &lt;/ul&gt;</description></item><item><title>Monitor Intel - 2026-02-06 22:25</title><link>https://mcasrom.github.io/intel_center/post/2026-02-06-informe/</link><pubDate>Fri, 06 Feb 2026 22:25:43 +0000</pubDate><guid>https://mcasrom.github.io/intel_center/post/2026-02-06-informe/</guid><description>&lt;table&gt;
  &lt;thead&gt;
  &lt;tr&gt;
@@ -444,7 +444,23 @@
 &lt;blockquote&gt;
 &lt;p&gt;&amp;ldquo;La información es el activo más valioso, pero solo si es procesable.&amp;rdquo;&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;hr&gt;</description></item><item><title>Resumen Inteligencia 2026-02-04</title><link>https://mcasrom.github.io/intel_center/post/2026-02-04-informe-inteligencia/</link><pubDate>Wed, 04 Feb 2026 00:00:00 +0000</pubDate><guid>https://mcasrom.github.io/intel_center/post/2026-02-04-informe-inteligencia/</guid><description>&lt;ul&gt;
+&lt;hr&gt;
+&lt;div style="background-color:#f5f5f5; color:#000000; padding:15px; border-radius:8px; font-family: sans-serif;"&gt;
+ &lt;form action="https://formspree.io/f/mgozkprk" method="POST"&gt;
+ &lt;label for="name"&gt;Nombre:&lt;/label&gt;&lt;br&gt;
+ &lt;input type="text" id="name" name="name" required style="color:#000000; background-color:#ffffff; width:100%; padding:6px; border:1px solid #ccc; margin-top:5px;"&gt;&lt;br&gt;&lt;br&gt;
+
+ &lt;label for="email"&gt;Email:&lt;/label&gt;&lt;br&gt;
+ &lt;input type="email" id="email" name="email" required style="color:#000000; background-color:#ffffff; width:100%; padding:6px; border:1px solid #ccc; margin-top:5px;"&gt;&lt;br&gt;&lt;br&gt;
+
+ &lt;label for="message"&gt;Mensaje:&lt;/label&gt;&lt;br&gt;
+ &lt;textarea id="message" name="message" rows="5" required style="color:#000000; background-color:#ffffff; width:100%; padding:6px; border:1px solid #ccc; margin-top:5px;"&gt;&lt;/textarea&gt;&lt;br&gt;&lt;br&gt;
+
+ &lt;button type="submit" style="color:#ffffff; background-color:#007BFF; border:none; padding:10px 20px; border-radius:4px; cursor:pointer; font-weight:bold;"&gt;
+ Enviar
+ &lt;/button&gt;
+ &lt;/form&gt;
+&lt;/div&gt;</description></item><item><title>Resumen Inteligencia 2026-02-04</title><link>https://mcasrom.github.io/intel_center/post/2026-02-04-informe-inteligencia/</link><pubDate>Wed, 04 Feb 2026 00:00:00 +0000</pubDate><guid>https://mcasrom.github.io/intel_center/post/2026-02-04-informe-inteligencia/</guid><description>&lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;[Medio_Oriente]&lt;/strong&gt;: Russia jails stand-up comic Artemy Ostani over war joke&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;[Medio_Oriente]&lt;/strong&gt;: Russia’s Putin holds video call with China’s Xi&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;[Medio_Oriente]&lt;/strong&gt;: Israeli strikes kill more than 20 in Gaza, shatter ‘ceasefire’ myth&lt;/li&gt;
