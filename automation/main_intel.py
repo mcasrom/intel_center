@@ -81,7 +81,7 @@ def ejecutar():
         f.write(f"| 🇺🇸 USA | {s_usa} |\n| 🇪🇸 ESPAÑA | {s_esp} |\n\n")
 
         f.write("📈 Evolución de Tendencia\n\n")
-        f.write("![Gráfica de Tendencias](/images/trend.png)\n\n")
+        f.write("![Gráfica de Tendencias](/intel_center/images/trend.png)\n\n")
 
         f.write("⚡ ALERTAS CRÍTICAS\n\n")
         if alertas:
