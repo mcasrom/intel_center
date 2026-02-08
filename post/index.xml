@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Informes de Inteligencia on Intel Center</title><link>https://mcasrom.github.io/intel_center/post/</link><description>Recent content in Informes de Inteligencia on Intel Center</description><generator>Hugo</generator><language>es</language><lastBuildDate>Sun, 08 Feb 2026 22:09:15 +0100</lastBuildDate><atom:link href="https://mcasrom.github.io/intel_center/post/index.xml" rel="self" type="application/rss+xml"/><item><title>📌 MANUAL: Operaciones e Interpretación de Inteligencia</title><link>https://mcasrom.github.io/intel_center/post/guia-interpretacion-nodos/</link><pubDate>Fri, 06 Feb 2026 17:00:00 +0000</pubDate><guid>https://mcasrom.github.io/intel_center/post/guia-interpretacion-nodos/</guid><description>&lt;h3 id="protocolo-de-inteligencia-consolidado-v20"&gt;Protocolo de Inteligencia Consolidado (v2.0)&lt;/h3&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Informes de Inteligencia on Intel Center</title><link>https://mcasrom.github.io/intel_center/post/</link><description>Recent content in Informes de Inteligencia on Intel Center</description><generator>Hugo</generator><language>es</language><lastBuildDate>Sun, 08 Feb 2026 22:22:08 +0100</lastBuildDate><atom:link href="https://mcasrom.github.io/intel_center/post/index.xml" rel="self" type="application/rss+xml"/><item><title>📌 MANUAL: Operaciones e Interpretación de Inteligencia</title><link>https://mcasrom.github.io/intel_center/post/guia-interpretacion-nodos/</link><pubDate>Fri, 06 Feb 2026 17:00:00 +0000</pubDate><guid>https://mcasrom.github.io/intel_center/post/guia-interpretacion-nodos/</guid><description>&lt;h3 id="protocolo-de-inteligencia-consolidado-v20"&gt;Protocolo de Inteligencia Consolidado (v2.0)&lt;/h3&gt;
 &lt;p&gt;Este documento define la metodología de análisis aplicada por el motor OSINT de la Odroid C2 para transformar datos masivos en indicadores tácticos.&lt;/p&gt;
 &lt;h4 id="1-semáforo-de-tensión-y-dinámica-política"&gt;1. Semáforo de Tensión y Dinámica Política&lt;/h4&gt;
 &lt;p&gt;El color de cada nodo es un indicador calculado mediante Procesamiento de Lenguaje Natural (NLP) y detección de contextos específicos:&lt;/p&gt;
@@ -9,7 +9,7 @@
 &lt;li&gt;🔴 &lt;strong&gt;Nivel 3 (Crisis/Hostilidad):&lt;/strong&gt; Polaridad &amp;lt; -0.1. Detección de lenguaje agresivo, conflictos o inestabilidad grave.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h4 id="2-clasificación-de-alertas-en-el-informe"&gt;2. Clasificación de Alertas en el Informe&lt;/h4&gt;
-&lt;p&gt;El sistema segrega la información en tres niveles de prioridad para optimizar el tiempo del analista:&lt;/p&gt;</description></item><item><title>Monitor Intel: 2026-02-08 22:09</title><link>https://mcasrom.github.io/intel_center/post/2026-02-08-informe/</link><pubDate>Sun, 08 Feb 2026 22:09:15 +0100</pubDate><guid>https://mcasrom.github.io/intel_center/post/2026-02-08-informe/</guid><description>&lt;p&gt;🛡️ ESTADO DEL NODO&lt;/p&gt;
+&lt;p&gt;El sistema segrega la información en tres niveles de prioridad para optimizar el tiempo del analista:&lt;/p&gt;</description></item><item><title>Monitor Intel: 2026-02-08 22:22</title><link>https://mcasrom.github.io/intel_center/post/2026-02-08-informe/</link><pubDate>Sun, 08 Feb 2026 22:22:08 +0100</pubDate><guid>https://mcasrom.github.io/intel_center/post/2026-02-08-informe/</guid><description>&lt;p&gt;🛡️ ESTADO DEL NODO&lt;/p&gt;
 &lt;table&gt;
  &lt;thead&gt;
  &lt;tr&gt;
@@ -24,7 +24,7 @@
  &lt;/tr&gt;
  &lt;tr&gt;
  &lt;td style="text-align: left"&gt;ÚLTIMA SYNC&lt;/td&gt;
- &lt;td style="text-align: left"&gt;2026-02-08 22:09&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;2026-02-08 22:22&lt;/td&gt;
  &lt;/tr&gt;
  &lt;tr&gt;
  &lt;td style="text-align: left"&gt;HARDWARE&lt;/td&gt;
@@ -55,11 +55,11 @@
 &lt;p&gt;&lt;img src="https://mcasrom.github.io/intel_center/images/trend.png" alt="Gráfica de Tendencias"&gt;&lt;/p&gt;
 &lt;p&gt;⚡ ALERTAS CRÍTICAS&lt;/p&gt;
 &lt;p&gt;🚩 [ALERTA] Europa_DW]: Why scientists warn of privately funded geoengineering (&lt;a href="https://www.dw.com/en/why-scientists-warn-of-privately-funded-geoengineering/a-75716067?maca=en-rss-en-top-1022-rdf"&gt;Link&lt;/a&gt;)&lt;br&gt;
-🚩 [ALERTA] Rusia_Eurasia]: Russia not going to attack Europe, but ready to retaliate — Lavrov (&lt;a href="https://tass.com/politics/2083653"&gt;Link&lt;/a&gt;)&lt;br&gt;
-🚩 [ALERTA] Rusia_Eurasia]: Israeli military strikes armed radicals in northern Gaza Strip (&lt;a href="https://tass.com/world/2083619"&gt;Link&lt;/a&gt;)&lt;br&gt;
+🚩 [ALERTA] Rusia_Eurasia]: WHO reports over 8,500 global attacks on health facilities since 2018 — director general (&lt;a href="https://tass.com/society/1969643"&gt;Link&lt;/a&gt;)&lt;br&gt;
+🚩 [ALERTA] Rusia_Eurasia]: Attacks ahead of meeting between IAEA, Rosatom chiefs &amp;lsquo;pressure tool,&amp;rsquo; ZNPP believes (&lt;a href="https://tass.com/world/1969633"&gt;Link&lt;/a&gt;)&lt;br&gt;
+🚩 [ALERTA] Rusia_Eurasia]: Dodon calls on Sandu, Recean not to succumb to Western attempts to drag Moldova into war (&lt;a href="https://tass.com/world/1969631"&gt;Link&lt;/a&gt;)&lt;br&gt;
 🚩 [ALERTA] Medio_Oriente]: Iran FM says Tehran ready for deal with US with peaceful nuclear enrichment (&lt;a href="https://www.aljazeera.com/video/newsfeed/2026/2/8/iran-fm-says-tehran-ready-for-deal-with-us-with-peaceful-nuclear-enrichment?traffic_source=rss"&gt;Link&lt;/a&gt;)&lt;br&gt;
-🚩 [ALERTA] Medio_Oriente]: Who is Leqaa Kordia, the Columbia protester still in ICE detention? (&lt;a href="https://www.aljazeera.com/news/2026/2/8/who-is-leqaa-kordia-the-columbia-protester-still-in-ice-detention?traffic_source=rss"&gt;Link&lt;/a&gt;)&lt;br&gt;
-🚩 [ALERTA] Medio_Oriente]: Iran ready for nuclear-focused talks, rejects US military build-up (&lt;a href="https://www.aljazeera.com/news/2026/2/8/iran-ready-for-nuclear-focused-talks-rejects-us-military-build-up?traffic_source=rss"&gt;Link&lt;/a&gt;)&lt;/p&gt;</description></item><item><title>Monitor Intel: 22:08 (UTC)</title><link>https://mcasrom.github.io/intel_center/post/2026-02-07-informe/</link><pubDate>Sat, 07 Feb 2026 22:08:19 +0000</pubDate><guid>https://mcasrom.github.io/intel_center/post/2026-02-07-informe/</guid><description>&lt;h2 id="-estado-del-nodo"&gt;🛡️ ESTADO DEL NODO&lt;/h2&gt;
+🚩 [ALERTA] Medio_Oriente]: Who is Leqaa Kordia, the Columbia protester still in ICE detention? (&lt;a href="https://www.aljazeera.com/news/2026/2/8/who-is-leqaa-kordia-the-columbia-protester-still-in-ice-detention?traffic_source=rss"&gt;Link&lt;/a&gt;)&lt;/p&gt;</description></item><item><title>Monitor Intel: 22:08 (UTC)</title><link>https://mcasrom.github.io/intel_center/post/2026-02-07-informe/</link><pubDate>Sat, 07 Feb 2026 22:08:19 +0000</pubDate><guid>https://mcasrom.github.io/intel_center/post/2026-02-07-informe/</guid><description>&lt;h2 id="-estado-del-nodo"&gt;🛡️ ESTADO DEL NODO&lt;/h2&gt;
 &lt;table&gt;
  &lt;thead&gt;
  &lt;tr&gt;
