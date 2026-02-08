@@ -11,14 +11,13 @@ echo "[+] [odroid-c2] Iniciando ciclo de inteligencia..."
 # 2. Ejecutar captura de datos
 $PYTHON_BIN $SCRIPT_PY
 
-# 3. CONSTRUIR LA WEB CON HUGO (Paso crítico que faltaba)
+# 3. CONSTRUIR LA WEB CON HUGO (aunque en Odroid no se ve, lo dejamos)
 if [ $? -eq 0 ]; then
     echo "[+] Generando HTML con Hugo..."
     cd $BLOG_DIR
-    # Borramos la web vieja y generamos la nueva forzando posts futuros
     rm -rf public/
     hugo --buildFuture
-    
+
     # 4. Sincronizar con GitHub
     echo "[+] Sincronizando con GitHub..."
     cd $BASE_DIR
@@ -30,13 +29,14 @@ else
     exit 1
 fi
 
-# ... (después de ejecutar main_intel.py) ...
+# 5. Ejecutar de nuevo main_intel.py (por si algo quedó pendiente)
 $PYTHON_BIN $SCRIPT_PY
 
-# NUEVA LÍNEA: Generar la gráfica
+# 6. Generar gráfica
 $PYTHON_BIN $BASE_DIR/automation/plotter_intel.py
 
-# ... (luego sigue el bloque de Hugo que ya teníamos) ...
+# 7. Reconstruir Hugo (lo dejamos para consistencia)
 cd $BLOG_DIR
 hugo --buildFuture
-# ...
+
+echo "[+] Ciclo completo. JSON, posts y gráficas subidos a GitHub."
