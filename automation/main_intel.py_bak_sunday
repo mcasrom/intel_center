@@ -6,6 +6,7 @@ import feedparser
 import sqlite3
 import json
 from datetime import datetime, timezone
+import pytz  # moved here to avoid ModuleNotFoundError
 
 # ===============================
 # SENTIMIENTO (robusto)
@@ -124,7 +125,6 @@ def registrar_tendencia(path: str, valor: float, fecha: str):
 # MAIN
 # ===============================
 def ejecutar():
-    import pytz  # pip install pytz si no lo tienes
     print("=" * 60)
     print(f"INTEL CENTER | MODE={INTEL_MODE} | TEST={TEST_MODE}")
     print(f"Sentiment engine: {'VADER' if VADER_OK else 'NEUTRAL'}")
@@ -153,9 +153,9 @@ def ejecutar():
     else:
         cur.execute("DELETE FROM news WHERE timestamp < datetime('now','-7 days')")
 
-    # -----------------------------
+    # ===============================
     # FECHA / HORA LOCAL (Madrid)
-    # -----------------------------
+    # ===============================
     ZONA_LOCAL = pytz.timezone("Europe/Madrid")
     ahora = datetime.now(ZONA_LOCAL)
     fecha_str = ahora.strftime("%Y-%m-%d %H:%M")
