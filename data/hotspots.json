@@ -21,7 +21,7 @@
         "lon": 135.0,
         "intensity": 10,
         "color": "#f1c40f",
-        "sentiment_index": 0.07
+        "sentiment_index": 0.09
     },
     {
         "name": "BRASIL",
@@ -45,7 +45,7 @@
         "lon": 10.0,
         "intensity": 10,
         "color": "#f1c40f",
-        "sentiment_index": 0.05
+        "sentiment_index": 0.03
     },
     {
         "name": "Medio_Oriente",
