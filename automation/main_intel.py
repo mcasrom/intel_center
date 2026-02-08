@@ -102,7 +102,7 @@ def ejecutar():
     # --- INFORME HUGO ---
     filename = f"{ahora.strftime('%Y-%m-%d')}-informe.md"
     with open(os.path.join(POSTS_OUTPUT, filename), 'w') as f:
-        # Frontmatter con Categorías dinámicas
+        # Frontmatter
         f.write(f"---\n")
         f.write(f"title: \"Monitor Intel: {ahora.strftime('%H:%M')} (UTC)\"\n")
         f.write(f"date: {ahora.strftime('%Y-%m-%dT%H:%M:%S')}\n")
@@ -126,7 +126,7 @@ def ejecutar():
         f.write(f"| 🇺🇸 USA | **{round(avg_usa, 4)}** |\n")
         f.write(f"| 🇪🇸 ESPAÑA | **{round(avg_spain, 4)}** |\n\n")
 
-        # Clasificación de noticias con filtro de duplicados
+        # Clasificación de noticias
         cur.execute("SELECT region, title, link FROM news WHERE timestamp > datetime('now', '-24 hours') ORDER BY timestamp DESC LIMIT 80")
         alertas, electoral, normales = [], [], []
         vistas = set()
@@ -144,7 +144,7 @@ def ejecutar():
             else:
                 normales.append(txt)
 
-        # Gráfica de Tendencia (Ruta Relativa para Hugo)
+        # Gráfica
         f.write(f"## 📈 Evolución de Tendencia\n\n")
         f.write(f"![Gráfica de Sentimiento](../../images/trend.png)\n\n")
         f.write(f"---\n\n")
@@ -159,6 +159,14 @@ def ejecutar():
 
         f.write(f"### 🌍 RESUMEN GLOBAL\n\n")
         f.write("\n".join(normales[:50]))
+
+        # --- RESUMEN DE TENDENCIA (AHORA DENTRO DEL ARCHIVO) ---
+        f.write(f"\n---\n")
+        f.write(f"### 🧠 ANÁLISIS DEL ANALISTA\n\n")
+        if avg_usa < -0.1 or avg_spain < -0.1:
+            f.write(f"⚠️ **ALERTA DE CLIMA:** Se detecta una caída significativa en el sentimiento. Revisar fuentes primarias.\n")
+        else:
+            f.write(f"✅ **ESTABILIDAD:** Los niveles de sentimiento se mantienen dentro de los parámetros nominales.\n")
 
     conn.close()
     print(f"[+] INFORME GENERADO: {filename}")

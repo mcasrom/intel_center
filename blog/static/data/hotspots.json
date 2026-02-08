@@ -35,7 +35,7 @@
         "name": "Medio_Oriente",
         "lat": 25.0,
         "lon": 45.0,
-        "intensity": 43,
+        "intensity": 44,
         "color": "#f1c40f",
         "sentiment_index": 0.04
     },
@@ -43,9 +43,9 @@
         "name": "Rusia_Eurasia",
         "lat": 60.0,
         "lon": 90.0,
-        "intensity": 43,
+        "intensity": 48,
         "color": "#f1c40f",
-        "sentiment_index": 0.0
+        "sentiment_index": 0.01
     },
     {
         "name": "USA_NORTE",
