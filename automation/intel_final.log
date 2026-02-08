@@ -135,3 +135,28 @@ To https://github.com/mcasrom/intel_center.git
 [+] INFORME GENERADO: 2026-02-08-informe.md
 [+] Gráfica generada en: /home/dietpi/intel_center_odroid/blog/static/images/trend.png
 /home/dietpi/intel_center_odroid/automation/run_intel.sh: line 41: hugo: command not found
+[+] [odroid-c2] Iniciando ciclo de inteligencia...
+============================================================
+INTEL CENTER | MODE=LOW | TEST=False
+Sentiment engine: VADER
+============================================================
+[INFO] Fecha/Hora local usada en informes: 2026-02-08 17:00
+[OK] JSON hotspots generado con 7 regiones
+[OK] Artículos procesados: 40
+[+] Generando HTML con Hugo...
+Start building sites … 
+hugo v0.146.0-5d1b9d39858bb0b2e505af9f649bfb55295ecca1+extended linux/arm64 BuildDate=2025-04-10T14:57:56Z VendorInfo=gohugoio
+
+
+                   | EN  
+-------------------+-----
+  Pages            | 39  
+  Paginator pages  |  1  
+  Non-page files   |  0  
+  Static files     |  8  
+  Processed images |  0  
+  Aliases          |  2  
+  Cleaned          |  0  
+
+Total in 988 ms
+[+] Sincronizando con GitHub...
