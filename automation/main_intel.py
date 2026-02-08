@@ -30,7 +30,7 @@ DATOS_INTEL = {
     "Africa_Sahel": {"url": "https://www.africanews.com/feed/", "coord": [15.0, 15.0]}
 }
 
-KEYWORDS_CRITICAS = ["nuclear", "misil", "atentado", "ataque", "war", "coup", "militar", "threat"]
+KEYWORDS_CRITICAS = ["nuclear", "misil", "atentado", "ataque", "war", "coup", "militar", "threat", "sanción", "tensión"]
 KEYWORDS_ELECTORALES = ["election", "voters", "polling", "ballot", "elecciones", "comicios", "votación", "candidato", "campaña"]
 
 def obtener_sentimiento(texto):
@@ -63,8 +63,8 @@ def ejecutar():
     for reg, info in DATOS_INTEL.items():
         feeds_a_procesar = FEEDS_SPAIN if info["url"] == "COMBO" else [info["url"]]
         for url in feeds_a_procesar:
-            f = feedparser.parse(url, agent=USER_AGENT)
-            for e in f.entries[:10]:
+            f_parse = feedparser.parse(url, agent=USER_AGENT)
+            for e in f_parse.entries[:10]:
                 pola = obtener_sentimiento(str(e.title))
                 cur.execute("INSERT OR IGNORE INTO news (region, title, link, sentimiento) VALUES (?, ?, ?, ?)", 
                             (reg, e.title, e.link, pola))
@@ -81,30 +81,36 @@ def ejecutar():
     registrar_tendencia(USA_LOG_CSV, avg_usa, fecha_str)
     registrar_tendencia(SPAIN_LOG_CSV, avg_spain, fecha_str)
 
+    # --- CATEGORÍAS PARA HUGO ---
+    cur.execute("SELECT DISTINCT region FROM news WHERE timestamp > datetime('now', '-24 hours')")
+    regiones_presentes = [row[0] for row in cur.fetchall()]
+    categorias_str = ", ".join([f'"{r}"' for r in regiones_presentes])
+
     # --- GENERAR JSON PARA MAPA ---
     cur.execute("SELECT region, COUNT(*), AVG(sentimiento) FROM news WHERE timestamp > datetime('now', '-24 hours') GROUP BY region")
     hotspots = []
     for r, ct, s in cur.fetchall():
         if r in DATOS_INTEL:
             color = "#f1c40f"
-            # Lógica simple de colores para el mapa
             if s < -0.05: color = "#ff4b2b"
             hotspots.append({
                 "name": r, "lat": DATOS_INTEL[r]["coord"][0], "lon": DATOS_INTEL[r]["coord"][1],
                 "intensity": ct, "color": color, "sentiment_index": round(s, 2)
             })
-    with open(JSON_OUTPUT, 'w') as f: json.dump(hotspots, f, indent=4)
+    with open(JSON_OUTPUT, 'w') as f_json: json.dump(hotspots, f_json, indent=4)
 
-    # --- INFORME HUGO (AJUSTADO PARA VISIBILIDAD EN ANANKE) ---
+    # --- INFORME HUGO ---
     filename = f"{ahora.strftime('%Y-%m-%d')}-informe.md"
     with open(os.path.join(POSTS_OUTPUT, filename), 'w') as f:
-        # Frontmatter claro
-        f.write(f"---\ntitle: \"Monitor Intel: {ahora.strftime('%H:%M')} (UTC)\"\n")
+        # Frontmatter con Categorías dinámicas
+        f.write(f"---\n")
+        f.write(f"title: \"Monitor Intel: {ahora.strftime('%H:%M')} (UTC)\"\n")
         f.write(f"date: {ahora.strftime('%Y-%m-%dT%H:%M:%S')}\n")
+        f.write(f"categories: [{categorias_str}]\n")
         f.write(f"description: \"Estado del nodo y análisis de sentimiento global.\"\n")
         f.write(f"---\n\n")
 
-        # Dashboard de Estado (Usamos Tabla para forzar el renderizado en blanco/gris de Ananke)
+        # Dashboard de Estado
         f.write(f"## 🛡️ ESTADO DEL NODO\n\n")
         f.write(f"| Indicador | Valor |\n")
         f.write(f"| :--- | :--- |\n")
@@ -112,7 +118,6 @@ def ejecutar():
         f.write(f"| **ÚLTIMA SYNC** | `{fecha_str}` |\n")
         f.write(f"| **ARTÍCULOS 24H** | {total_articulos} |\n")
         f.write(f"| **HARDWARE** | `Odroid-C2-Madrid` |\n\n")
-
         f.write(f"---\n\n") 
         
         f.write(f"## 📊 RADARES DE TENDENCIA\n\n")
@@ -121,27 +126,33 @@ def ejecutar():
         f.write(f"| 🇺🇸 USA | **{round(avg_usa, 4)}** |\n")
         f.write(f"| 🇪🇸 ESPAÑA | **{round(avg_spain, 4)}** |\n\n")
 
-        # Clasificación de noticias
+        # Clasificación de noticias con filtro de duplicados
         cur.execute("SELECT region, title, link FROM news WHERE timestamp > datetime('now', '-24 hours') ORDER BY timestamp DESC LIMIT 80")
         alertas, electoral, normales = [], [], []
+        vistas = set()
+
         for reg, tit, link in cur.fetchall():
+            if tit in vistas: continue
+            vistas.add(tit)
+            
             txt = f"- **[{reg}]**: {tit} ([Link]({link}))"
-            if any(key in tit.lower() for key in KEYWORDS_CRITICAS): alertas.append(txt.replace("**[", "🚩 **[ALERTA] "))
-            elif any(key in tit.lower() for key in KEYWORDS_ELECTORALES): electoral.append(txt.replace("**[", "🗳️ **[ELECTORAL] "))
-# ... (línea 131)
-            else: normales.append(txt)
+            tit_l = tit.lower()
+            if any(key in tit_l for key in KEYWORDS_CRITICAS):
+                alertas.append(txt.replace("**[", "🚩 **[ALERTA] "))
+            elif any(key in tit_l for key in KEYWORDS_ELECTORALES):
+                electoral.append(txt.replace("**[", "🗳️ **[ELECTORAL] "))
+            else:
+                normales.append(txt)
 
-
-# --- SECCIÓN DE GRÁFICA (CORREGIDA) ---
+        # Gráfica de Tendencia (Ruta Relativa para Hugo)
         f.write(f"## 📈 Evolución de Tendencia\n\n")
-        # Usamos la ruta sin el primer slash o con el path absoluto del sitio
-        f.write(f"![Gráfica de Sentimiento](https://mcasrom.github.io/intel_center/images/trend.png)\n\n")
+        f.write(f"![Gráfica de Sentimiento](../../images/trend.png)\n\n")
         f.write(f"---\n\n")
 
         if alertas:
             f.write(f"### ⚡ ALERTAS CRÍTICAS\n\n")
             f.write("\n".join(alertas) + "\n\n")
-# ... (sigue con el resto de ifs)
+
         if electoral:
             f.write(f"### 🗳️ VIGILANCIA ELECTORAL\n\n")
             f.write("\n".join(electoral) + "\n\n")
