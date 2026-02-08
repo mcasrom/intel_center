@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Informes de Inteligencia on Intel Center</title><link>https://mcasrom.github.io/intel_center/post/</link><description>Recent content in Informes de Inteligencia on Intel Center</description><generator>Hugo</generator><language>es</language><lastBuildDate>Sun, 08 Feb 2026 06:00:03 +0000</lastBuildDate><atom:link href="https://mcasrom.github.io/intel_center/post/index.xml" rel="self" type="application/rss+xml"/><item><title>📌 MANUAL: Operaciones e Interpretación de Inteligencia</title><link>https://mcasrom.github.io/intel_center/post/guia-interpretacion-nodos/</link><pubDate>Fri, 06 Feb 2026 17:00:00 +0000</pubDate><guid>https://mcasrom.github.io/intel_center/post/guia-interpretacion-nodos/</guid><description>&lt;h3 id="protocolo-de-inteligencia-consolidado-v20"&gt;Protocolo de Inteligencia Consolidado (v2.0)&lt;/h3&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Informes de Inteligencia on Intel Center</title><link>https://mcasrom.github.io/intel_center/post/</link><description>Recent content in Informes de Inteligencia on Intel Center</description><generator>Hugo</generator><language>es</language><lastBuildDate>Sun, 08 Feb 2026 07:38:19 +0000</lastBuildDate><atom:link href="https://mcasrom.github.io/intel_center/post/index.xml" rel="self" type="application/rss+xml"/><item><title>📌 MANUAL: Operaciones e Interpretación de Inteligencia</title><link>https://mcasrom.github.io/intel_center/post/guia-interpretacion-nodos/</link><pubDate>Fri, 06 Feb 2026 17:00:00 +0000</pubDate><guid>https://mcasrom.github.io/intel_center/post/guia-interpretacion-nodos/</guid><description>&lt;h3 id="protocolo-de-inteligencia-consolidado-v20"&gt;Protocolo de Inteligencia Consolidado (v2.0)&lt;/h3&gt;
 &lt;p&gt;Este documento define la metodología de análisis aplicada por el motor OSINT de la Odroid C2 para transformar datos masivos en indicadores tácticos.&lt;/p&gt;
 &lt;h4 id="1-semáforo-de-tensión-y-dinámica-política"&gt;1. Semáforo de Tensión y Dinámica Política&lt;/h4&gt;
 &lt;p&gt;El color de cada nodo es un indicador calculado mediante Procesamiento de Lenguaje Natural (NLP) y detección de contextos específicos:&lt;/p&gt;
@@ -9,7 +9,7 @@
 &lt;li&gt;🔴 &lt;strong&gt;Nivel 3 (Crisis/Hostilidad):&lt;/strong&gt; Polaridad &amp;lt; -0.1. Detección de lenguaje agresivo, conflictos o inestabilidad grave.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h4 id="2-clasificación-de-alertas-en-el-informe"&gt;2. Clasificación de Alertas en el Informe&lt;/h4&gt;
-&lt;p&gt;El sistema segrega la información en tres niveles de prioridad para optimizar el tiempo del analista:&lt;/p&gt;</description></item><item><title>Monitor Intel: 06:00 (UTC)</title><link>https://mcasrom.github.io/intel_center/post/2026-02-08-informe/</link><pubDate>Sun, 08 Feb 2026 06:00:03 +0000</pubDate><guid>https://mcasrom.github.io/intel_center/post/2026-02-08-informe/</guid><description>&lt;h2 id="-estado-del-nodo"&gt;🛡️ ESTADO DEL NODO&lt;/h2&gt;
+&lt;p&gt;El sistema segrega la información en tres niveles de prioridad para optimizar el tiempo del analista:&lt;/p&gt;</description></item><item><title>Monitor Intel: 07:38 (UTC)</title><link>https://mcasrom.github.io/intel_center/post/2026-02-08-informe/</link><pubDate>Sun, 08 Feb 2026 07:38:19 +0000</pubDate><guid>https://mcasrom.github.io/intel_center/post/2026-02-08-informe/</guid><description>&lt;h2 id="-estado-del-nodo"&gt;🛡️ ESTADO DEL NODO&lt;/h2&gt;
 &lt;table&gt;
  &lt;thead&gt;
  &lt;tr&gt;
@@ -24,7 +24,7 @@
  &lt;/tr&gt;
  &lt;tr&gt;
  &lt;td style="text-align: left"&gt;&lt;strong&gt;ÚLTIMA SYNC&lt;/strong&gt;&lt;/td&gt;
- &lt;td style="text-align: left"&gt;&lt;code&gt;2026-02-08 06:00&lt;/code&gt;&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;&lt;code&gt;2026-02-08 07:38&lt;/code&gt;&lt;/td&gt;
  &lt;/tr&gt;
  &lt;tr&gt;
  &lt;td style="text-align: left"&gt;&lt;strong&gt;ARTÍCULOS 24H&lt;/strong&gt;&lt;/td&gt;
@@ -57,7 +57,7 @@
  &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;h2 id="-evolución-de-tendencia"&gt;📈 Evolución de Tendencia&lt;/h2&gt;
-&lt;p&gt;&lt;img src="https://mcasrom.github.io/intel_center/images/trend.png" alt="Gráfica de Sentimiento"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="../../images/trend.png" alt="Gráfica de Sentimiento"&gt;&lt;/p&gt;
 &lt;hr&gt;
 &lt;h3 id="-alertas-críticas"&gt;⚡ ALERTAS CRÍTICAS&lt;/h3&gt;
 &lt;ul&gt;
@@ -68,6 +68,8 @@
 &lt;/ul&gt;
 &lt;h3 id="-vigilancia-electoral"&gt;🗳️ VIGILANCIA ELECTORAL&lt;/h3&gt;
 &lt;ul&gt;
+&lt;li&gt;🗳️ &lt;strong&gt;[ELECTORAL] Asia_Nikkei]&lt;/strong&gt;: Bangladesh election, Jimmy Lai sentencing, SoftBank earnings (&lt;a href="https://asia.nikkei.com/spotlight/your-week-in-asia/bangladesh-election-jimmy-lai-sentencing-softbank-earnings"&gt;Link&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;🗳️ &lt;strong&gt;[ELECTORAL] Medio_Oriente]&lt;/strong&gt;: Timeline of past Bangladesh elections and the country’s leaders (&lt;a href="https://www.aljazeera.com/news/2026/2/8/timeline-of-past-bangladesh-elections-and-the-countrys-leaders?traffic_source=rss"&gt;Link&lt;/a&gt;)&lt;/li&gt;
 &lt;li&gt;🗳️ &lt;strong&gt;[ELECTORAL] Europa_DW]&lt;/strong&gt;: Thailand election pits reformists against conservative PM (&lt;a href="https://www.dw.com/en/thailand-election-pits-reformists-against-conservative-pm/a-75858485?maca=en-rss-en-top-1022-rdf"&gt;Link&lt;/a&gt;)&lt;/li&gt;
 &lt;li&gt;🗳️ &lt;strong&gt;[ELECTORAL] Europa_DW]&lt;/strong&gt;: Japan election: Sanae Takaichi set for big win as polls open (&lt;a href="https://www.dw.com/en/japan-election-sanae-takaichi-set-for-big-win-as-polls-open/a-75858163?maca=en-rss-en-top-1022-rdf"&gt;Link&lt;/a&gt;)&lt;/li&gt;
 &lt;li&gt;🗳️ &lt;strong&gt;[ELECTORAL] Rusia_Eurasia]&lt;/strong&gt;: Second tour of presidential election to take place in Portugal (&lt;a href="https://tass.com/world/2083485"&gt;Link&lt;/a&gt;)&lt;/li&gt;
@@ -77,6 +79,9 @@
 &lt;/ul&gt;
 &lt;h3 id="-resumen-global"&gt;🌍 RESUMEN GLOBAL&lt;/h3&gt;
 &lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;[Europa_DW]&lt;/strong&gt;: US, Russia vie for influence in Mali, Niger and Burkina Faso (&lt;a href="https://www.dw.com/en/us-russia-vie-for-influence-in-mali-niger-and-burkina-faso/a-75789462?maca=en-rss-en-top-1022-rdf"&gt;Link&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;[Asia_Nikkei]&lt;/strong&gt;: Guangzhou eyes restaurant certification for dim sum to protect tradition (&lt;a href="https://asia.nikkei.com/business/food-beverage/guangzhou-eyes-restaurant-certification-for-dim-sum-to-protect-tradition"&gt;Link&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;[Medio_Oriente]&lt;/strong&gt;: Somalia’s Mohamud slams Israel’s interference, rejects base on Somaliland (&lt;a href="https://www.aljazeera.com/news/2026/2/8/somalias-mohamud-slams-israels-interference-rejects-base-on-somaliland?traffic_source=rss"&gt;Link&lt;/a&gt;)&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;[ESPAÑA]&lt;/strong&gt;: Historia en tres actos del acoso y derribo de una concejala popular de Móstoles (&lt;a href="https://elpais.com/espana/2026-02-08/historia-en-tres-actos-del-acoso-y-derribo-de-una-concejala-popular-de-mostoles.html"&gt;Link&lt;/a&gt;)&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;[ESPAÑA]&lt;/strong&gt;: El protocolo antiacoso del PP no existe: es el único partido con representación parlamentaria que no lo tiene (&lt;a href="https://elpais.com/sociedad/2026-02-08/el-protocolo-antiacoso-del-pp-no-existe-es-el-unico-partido-con-representacion-parlamentaria-que-no-lo-tiene.html"&gt;Link&lt;/a&gt;)&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;[ESPAÑA]&lt;/strong&gt;: De Ponferrada a Móstoles: atacar a la denunciante o investigar al denunciado (&lt;a href="https://elpais.com/espana/2026-02-08/de-ponferrada-a-mostoles-atacar-a-la-denunciante-o-investigar-al-denunciado.html"&gt;Link&lt;/a&gt;)&lt;/li&gt;
@@ -124,9 +129,6 @@
 &lt;li&gt;&lt;strong&gt;[ESPAÑA]&lt;/strong&gt;: ¿Qué dicen las encuestas en Aragón? La mayoría absoluta del PP y otras posibles sorpresas (&lt;a href="https://elpais.com/actualidad/newsletter-kiko-llaneras/2026-02-07/que-dicen-las-encuestas-en-aragon-la-mayoria-absoluta-del-pp-y-otras-posibles-sorpresas.html"&gt;Link&lt;/a&gt;)&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;[ESPAÑA]&lt;/strong&gt;: Cuando el agua brota hasta de los enchufes: ¿por qué estas lluvias que inundan España son tan extraordinarias? (&lt;a href="https://elpais.com/clima-y-medio-ambiente/2026-02-07/cuando-el-agua-brota-hasta-de-los-enchufes-por-que-estas-lluvias-que-inundan-espana-son-tan-extraordinarias.html"&gt;Link&lt;/a&gt;)&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;[ESPAÑA]&lt;/strong&gt;: EE UU reactiva en Madrid el diálogo sobre el Sáhara entre Marruecos y el Polisario (&lt;a href="https://elpais.com/espana/2026-02-07/ee-uu-reactiva-en-madrid-el-dialogo-sobre-el-sahara-entre-marruecos-y-el-polisario.html"&gt;Link&lt;/a&gt;)&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;[ESPAÑA]&lt;/strong&gt;: La condena del timón: decenas de jóvenes migrantes llenan las cárceles acusados de manejar el cayuco hacia Europa (&lt;a href="https://elpais.com/espana/2026-02-07/la-condena-del-timon-decenas-de-jovenes-migrantes-llenan-las-carceles-acusados-de-manejar-el-cayuco-hacia-europa.html"&gt;Link&lt;/a&gt;)&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;[Europa_DW]&lt;/strong&gt;: How nonviolent protest can break autocratic rule (&lt;a href="https://www.dw.com/en/how-nonviolent-protest-can-break-autocratic-rule/a-75831436?maca=en-rss-en-top-1022-rdf"&gt;Link&lt;/a&gt;)&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;[Europa_DW]&lt;/strong&gt;: France: Ex-minister Jack Lang resigns amid Epstein probe (&lt;a href="https://www.dw.com/en/france-ex-minister-jack-lang-resigns-amid-epstein-probe/a-75856210?maca=en-rss-en-top-1022-rdf"&gt;Link&lt;/a&gt;)&lt;/li&gt;
 &lt;/ul&gt;</description></item><item><title>Monitor Intel: 22:08 (UTC)</title><link>https://mcasrom.github.io/intel_center/post/2026-02-07-informe/</link><pubDate>Sat, 07 Feb 2026 22:08:19 +0000</pubDate><guid>https://mcasrom.github.io/intel_center/post/2026-02-07-informe/</guid><description>&lt;h2 id="-estado-del-nodo"&gt;🛡️ ESTADO DEL NODO&lt;/h2&gt;
 &lt;table&gt;
  &lt;thead&gt;
