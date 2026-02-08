@@ -1,26 +1,17 @@
 #!/bin/bash
-BASE_DIR="/home/dietpi/intel_center_odroid"
-PYTHON_BIN="$BASE_DIR/venv/bin/python3"
-BLOG_DIR="$BASE_DIR/blog"
+# 1. Generar datos y actualizar CSVs
+/usr/bin/python3 /home/dietpi/intel_center_odroid/automation/main_intel.py
 
-echo "[+] Iniciando ciclo de inteligencia..."
+# 2. Generar la gráfica Matplotlib (ESTO DEBE IR ANTES DEL COMMIT)
+/usr/bin/python3 /home/dietpi/intel_center_odroid/automation/plotter_intel.py
 
-# 1. Generar datos e Informe
-$PYTHON_BIN $BASE_DIR/automation/main_intel.py
-
-# 2. Generar la GRÁFICA (Ahora antes de subir nada)
-$PYTHON_BIN $BASE_DIR/automation/plotter_intel.py
-
-# 3. Construir la web estática
-cd $BLOG_DIR
+# 3. Construir la web con Hugo
+cd /home/dietpi/intel_center_odroid/blog
 rm -rf public/
-hugo --buildFuture
+/usr/local/bin/hugo --buildFuture
 
-# 4. Sincronizar TODO a la vez con GitHub
-echo "[+] Enviando informe + gráfica a GitHub..."
-cd $BASE_DIR
+# 4. Sincronizar todo el paquete con GitHub
+cd /home/dietpi/intel_center_odroid/
 git add .
-git commit -m "Intel Update: Complete Report & Graphs $(date +'%H:%M')"
+git commit -m "Intel Update: Informe completo con Gráficas y Separadores"
 git push origin main
-
-echo "[+] Proceso finalizado."

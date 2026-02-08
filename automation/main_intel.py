@@ -4,7 +4,7 @@
 import os, feedparser, sqlite3, json, pytz
 from datetime import datetime
 
-# --- CONFIGURACIÓN ---
+# --- CONFIGURACIÓN DE RUTAS ---
 BASE_DIR = "/home/dietpi/intel_center_odroid"
 DB_PATH = os.path.join(BASE_DIR, "data/news.db")
 JSON_OUTPUT = os.path.join(BASE_DIR, "blog/data/hotspots.json")
@@ -41,7 +41,7 @@ def ejecutar():
 
     alertas, electoral, resumen = [], [], []
 
-    # 1. FETCH Y CLASIFICACIÓN (MÁS SENSIBLE)
+    # 1. FETCH Y CLASIFICACIÓN
     for reg, url in FEEDS.items():
         feed = feedparser.parse(url)
         for e in feed.entries[:12]:
@@ -49,10 +49,10 @@ def ejecutar():
             link = e.link
             low_title = title.lower()
             
-            # Clasificación agresiva para llenar secciones
-            if any(x in low_title for x in ["war", "military", "conflict", "missing", "attack", "detention", "nuclear", "bomb", "crisis"]):
+            # Clasificación por palabras clave
+            if any(x in low_title for x in ["war", "military", "conflict", "missing", "attack", "detention", "nuclear", "bomb", "missile"]):
                 alertas.append(f"🚩 [ALERTA] {reg}]: {title} ([Link]({link}))")
-            elif any(x in low_title for x in ["election", "voto", "campaña", "parliament", "electoral", "voter", "sanchez", "trump", "biden"]):
+            elif any(x in low_title for x in ["election", "voto", "campaña", "parliament", "electoral", "voter", "sanchez", "trump", "pp", "psoe"]):
                 electoral.append(f"🗳️ [ELECTORAL] {reg}]: {title} ([Link]({link}))")
             else:
                 resumen.append(f"[{reg}]: {title} ([Link]({link}))")
@@ -61,7 +61,7 @@ def ejecutar():
 
     conn.commit()
 
-    # 2. SENTIMIENTOS PARA CSV
+    # 2. SENTIMIENTOS DINÁMICOS
     def get_avg(region):
         cur.execute("SELECT AVG(sentimiento) FROM news WHERE region=? AND timestamp > datetime('now','-24 hours')", (region,))
         return round(cur.fetchone()[0] or 0.0, 4)
@@ -70,9 +70,10 @@ def ejecutar():
     for csv_path, val in [(USA_CSV, s_usa), (SPAIN_CSV, s_esp)]:
         with open(csv_path, "a") as f: f.write(f"{fecha_s},{val}\n")
 
-    # 3. INFORME MD (CON GRÁFICA Y TODAS LAS SECCIONES)
+    # 3. GENERAR INFORME MD (CON TODOS LOS SEPARADORES)
     with open(INFORME_MD, "w") as f:
         f.write(f'---\ntitle: "Monitor Intel: {fecha_s}"\ndate: {ahora.isoformat()}\n---\n\n')
+        
         f.write("🛡️ ESTADO DEL NODO\n\n| Indicador | Valor |\n| :--- | :--- |\n")
         f.write(f"| STATUS | 🟢 OPERATIVO |\n| ÚLTIMA SYNC | {fecha_s} |\n| HARDWARE | Odroid-C2-Madrid |\n\n")
         
@@ -80,17 +81,22 @@ def ejecutar():
         f.write(f"| 🇺🇸 USA | {s_usa} |\n| 🇪🇸 ESPAÑA | {s_esp} |\n\n")
 
         f.write("📈 Evolución de Tendencia\n\n")
-        # ESTA LÍNEA ES LA QUE PINTA LA GRÁFICA EN LA WEB
-        f.write("![Tendencia Geopolítica](/images/trend.png)\n\n")
+        f.write("![Gráfica de Tendencias](/images/trend.png)\n\n")
 
-        f.write("⚡ ALERTAS CRÍTICAS\n")
-        for a in (alertas if alertas else ["No hay alertas críticas en este ciclo."]): f.write(f"{a}  \n")
+        f.write("⚡ ALERTAS CRÍTICAS\n\n")
+        if alertas:
+            for a in alertas[:6]: f.write(f"{a}  \n")
+        else:
+            f.write("No se han detectado eventos críticos en las últimas horas.  \n")
         
-        f.write("\n🗳️ VIGILANCIA ELECTORAL\n")
-        for e in (electoral if electoral else ["Sin novedades electorales destacables."]): f.write(f"{e}  \n")
+        f.write("\n🗳️ VIGILANCIA ELECTORAL\n\n")
+        if electoral:
+            for e in electoral[:5]: f.write(f"{e}  \n")
+        else:
+            f.write("Sin novedades electorales en el radar actual.  \n")
         
-        f.write("\n🌍 RESUMEN GLOBAL\n")
-        for r in resumen[:10]: f.write(f"{r}  \n")
+        f.write("\n🌍 RESUMEN GLOBAL\n\n")
+        for r in resumen[:12]: f.write(f"{r}  \n")
 
     conn.close()
 
