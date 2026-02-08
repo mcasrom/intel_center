@@ -3,9 +3,9 @@
         "name": "Africa_Sahel",
         "lat": 15.0,
         "lon": 15.0,
-        "intensity": 10,
+        "intensity": 7,
         "color": "#ff4b2b",
-        "sentiment_index": -0.07
+        "sentiment_index": -0.1
     },
     {
         "name": "Asia_Nikkei",
