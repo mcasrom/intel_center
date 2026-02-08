@@ -3,7 +3,7 @@
         "name": "ARGENTINA",
         "lat": -34.6,
         "lon": -58.4,
-        "intensity": 20,
+        "intensity": 21,
         "color": "#f1c40f",
         "sentiment_index": -0.04
     },
@@ -19,7 +19,7 @@
         "name": "Asia_Nikkei",
         "lat": 35.0,
         "lon": 135.0,
-        "intensity": 16,
+        "intensity": 17,
         "color": "#f1c40f",
         "sentiment_index": 0.04
     },
@@ -43,9 +43,9 @@
         "name": "Europa_DW",
         "lat": 50.0,
         "lon": 10.0,
-        "intensity": 24,
+        "intensity": 28,
         "color": "#f1c40f",
-        "sentiment_index": 0.06
+        "sentiment_index": 0.05
     },
     {
         "name": "Medio_Oriente",
