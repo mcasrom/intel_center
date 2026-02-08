@@ -1,11 +1,19 @@
 [
     {
+        "name": "ARGENTINA",
+        "lat": -34.0,
+        "lon": -64.0,
+        "intensity": 10,
+        "color": "#f1c40f",
+        "sentiment_index": -0.04
+    },
+    {
         "name": "Africa_Sahel",
         "lat": 15.0,
         "lon": 15.0,
-        "intensity": 9,
+        "intensity": 6,
         "color": "#ff4b2b",
-        "sentiment_index": -0.23
+        "sentiment_index": -0.15
     },
     {
         "name": "Asia_Nikkei",
@@ -14,6 +22,14 @@
         "intensity": 10,
         "color": "#f1c40f",
         "sentiment_index": 0.16
+    },
+    {
+        "name": "BRASIL",
+        "lat": -10.0,
+        "lon": -55.0,
+        "intensity": 10,
+        "color": "#f1c40f",
+        "sentiment_index": 0.0
     },
     {
         "name": "ESPA\u00d1A",
@@ -37,7 +53,7 @@
         "lon": 45.0,
         "intensity": 10,
         "color": "#f1c40f",
-        "sentiment_index": 0.03
+        "sentiment_index": 0.04
     },
     {
         "name": "Rusia_Eurasia",
@@ -45,7 +61,7 @@
         "lon": 90.0,
         "intensity": 10,
         "color": "#f1c40f",
-        "sentiment_index": 0.01
+        "sentiment_index": 0.0
     },
     {
         "name": "USA_NORTE",
@@ -53,6 +69,6 @@
         "lon": -100.0,
         "intensity": 10,
         "color": "#f1c40f",
-        "sentiment_index": -0.01
+        "sentiment_index": -0.02
     }
 ]
