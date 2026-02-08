@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Informes de Inteligencia on Intel Center</title><link>https://mcasrom.github.io/intel_center/post/</link><description>Recent content in Informes de Inteligencia on Intel Center</description><generator>Hugo</generator><language>es</language><lastBuildDate>Sun, 08 Feb 2026 23:12:00 +0100</lastBuildDate><atom:link href="https://mcasrom.github.io/intel_center/post/index.xml" rel="self" type="application/rss+xml"/><item><title>📌 MANUAL: Operaciones e Interpretación de Inteligencia</title><link>https://mcasrom.github.io/intel_center/post/guia-interpretacion-nodos/</link><pubDate>Fri, 06 Feb 2026 17:00:00 +0000</pubDate><guid>https://mcasrom.github.io/intel_center/post/guia-interpretacion-nodos/</guid><description>&lt;h3 id="protocolo-de-inteligencia-consolidado-v20"&gt;Protocolo de Inteligencia Consolidado (v2.0)&lt;/h3&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Informes de Inteligencia on Intel Center</title><link>https://mcasrom.github.io/intel_center/post/</link><description>Recent content in Informes de Inteligencia on Intel Center</description><generator>Hugo</generator><language>es</language><lastBuildDate>Mon, 09 Feb 2026 00:00:02 +0100</lastBuildDate><atom:link href="https://mcasrom.github.io/intel_center/post/index.xml" rel="self" type="application/rss+xml"/><item><title>📌 MANUAL: Operaciones e Interpretación de Inteligencia</title><link>https://mcasrom.github.io/intel_center/post/guia-interpretacion-nodos/</link><pubDate>Fri, 06 Feb 2026 17:00:00 +0000</pubDate><guid>https://mcasrom.github.io/intel_center/post/guia-interpretacion-nodos/</guid><description>&lt;h3 id="protocolo-de-inteligencia-consolidado-v20"&gt;Protocolo de Inteligencia Consolidado (v2.0)&lt;/h3&gt;
 &lt;p&gt;Este documento define la metodología de análisis aplicada por el motor OSINT de la Odroid C2 para transformar datos masivos en indicadores tácticos.&lt;/p&gt;
 &lt;h4 id="1-semáforo-de-tensión-y-dinámica-política"&gt;1. Semáforo de Tensión y Dinámica Política&lt;/h4&gt;
 &lt;p&gt;El color de cada nodo es un indicador calculado mediante Procesamiento de Lenguaje Natural (NLP) y detección de contextos específicos:&lt;/p&gt;
@@ -9,7 +9,7 @@
 &lt;li&gt;🔴 &lt;strong&gt;Nivel 3 (Crisis/Hostilidad):&lt;/strong&gt; Polaridad &amp;lt; -0.1. Detección de lenguaje agresivo, conflictos o inestabilidad grave.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h4 id="2-clasificación-de-alertas-en-el-informe"&gt;2. Clasificación de Alertas en el Informe&lt;/h4&gt;
-&lt;p&gt;El sistema segrega la información en tres niveles de prioridad para optimizar el tiempo del analista:&lt;/p&gt;</description></item><item><title>Monitor Intel: 2026-02-08 23:12</title><link>https://mcasrom.github.io/intel_center/post/2026-02-08-informe/</link><pubDate>Sun, 08 Feb 2026 23:12:00 +0100</pubDate><guid>https://mcasrom.github.io/intel_center/post/2026-02-08-informe/</guid><description>&lt;p&gt;🛡️ ESTADO DEL NODO&lt;/p&gt;
+&lt;p&gt;El sistema segrega la información en tres niveles de prioridad para optimizar el tiempo del analista:&lt;/p&gt;</description></item><item><title>Monitor Intel: 2026-02-09 00:00</title><link>https://mcasrom.github.io/intel_center/post/2026-02-08-informe/</link><pubDate>Mon, 09 Feb 2026 00:00:02 +0100</pubDate><guid>https://mcasrom.github.io/intel_center/post/2026-02-08-informe/</guid><description>&lt;p&gt;🛡️ ESTADO DEL NODO&lt;/p&gt;
 &lt;table&gt;
  &lt;thead&gt;
  &lt;tr&gt;
@@ -24,7 +24,7 @@
  &lt;/tr&gt;
  &lt;tr&gt;
  &lt;td style="text-align: left"&gt;ÚLTIMA SYNC&lt;/td&gt;
- &lt;td style="text-align: left"&gt;2026-02-08 23:12&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;2026-02-09 00:00&lt;/td&gt;
  &lt;/tr&gt;
  &lt;tr&gt;
  &lt;td style="text-align: left"&gt;HARDWARE&lt;/td&gt;
@@ -47,7 +47,7 @@
  &lt;/tr&gt;
  &lt;tr&gt;
  &lt;td style="text-align: left"&gt;🇪🇸 ESPAÑA&lt;/td&gt;
- &lt;td style="text-align: left"&gt;0.05&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;0.0316&lt;/td&gt;
  &lt;/tr&gt;
  &lt;/tbody&gt;
 &lt;/table&gt;
@@ -59,11 +59,11 @@
 👤 &lt;strong&gt;Donald Trump&lt;/strong&gt;: Seized, subverted, shuttered: a year in Trump’s assault on the Kennedy Center (&lt;a href="https://www.theguardian.com/us-news/2026/feb/08/trump-kennedy-center-washington-dc"&gt;Link&lt;/a&gt;)&lt;br&gt;
 👤 &lt;strong&gt;Donald Trump&lt;/strong&gt;: Bad Bunny to meet political moment as Maga fumes over Super Bowl show (&lt;a href="https://www.theguardian.com/us-news/2026/feb/08/bad-bunny-super-bowl-trump-maga"&gt;Link&lt;/a&gt;)&lt;br&gt;
 👤 &lt;strong&gt;Donald Trump&lt;/strong&gt;: Trump calls Hunter Hess ‘a real loser’ for skier’s ambivalence about representing US (&lt;a href="https://www.theguardian.com/sport/2026/feb/08/donald-trump-hunter-hess-olympics"&gt;Link&lt;/a&gt;)&lt;br&gt;
+👤 &lt;strong&gt;Javier Milei&lt;/strong&gt;: La relación con EE.UU.: Milei irá a Washington el 19 y canceló el viaje a Miami de esta semana (&lt;a href="https://www.clarin.com/politica/relacion-eeuu-milei-ira-washington-19-cancelo-viaje-miami-semana_0_2T6Wakhx40.html"&gt;Link&lt;/a&gt;)&lt;br&gt;
 👤 &lt;strong&gt;Javier Milei&lt;/strong&gt;: Mariano Cúneo Libarona recordó el día que Karina Milei le frenó la renuncia y defendió la baja de la edad de imputabilidad (&lt;a href="https://www.clarin.com/politica/mariano-cuneo-libarona-recordo-dia-karina-milei-freno-renuncia-defendio-baja-edad-imputabilidad_0_paShd5LVgY.html"&gt;Link&lt;/a&gt;)&lt;br&gt;
 👤 &lt;strong&gt;Javier Milei&lt;/strong&gt;: Pichetto criticó la &amp;ldquo;disparatada&amp;rdquo; pelea de Milei contra Paolo Rocca y dijo que Sturzenegger tiene una &amp;ldquo;mirada estúpida del libre mercado&amp;rdquo; (&lt;a href="https://www.clarin.com/politica/pichetto-critico-disparatada-pelea-milei-paolo-rocca-dijo-sturzenegger-mirada-estupida-libre-mercado_0_FLLmrauTsg.html"&gt;Link&lt;/a&gt;)&lt;br&gt;
 👤 &lt;strong&gt;Javier Milei&lt;/strong&gt;: Javier Milei y sus medidas, EN VIVO: el Presidente fue invitado a una reunión de la Junta de la Paz y suspendió un viaje a Miami (&lt;a href="https://www.clarin.com/politica/javier-milei-medidas-vivo-frenesi-mango-loco-dejo-presencia-presidente-traslado-sable-corvo-san-martin_0_Ig1s6IaAYc.html"&gt;Link&lt;/a&gt;)&lt;br&gt;
-👤 &lt;strong&gt;Javier Milei&lt;/strong&gt;: Los días de broncas, festejos y aires de venganza en la Casa Rosada (&lt;a href="https://www.clarin.com/politica/dias-broncas-festejos-aires-venganza-casa-rosada_0_YxHPufIlcb.html"&gt;Link&lt;/a&gt;)&lt;br&gt;
-👤 &lt;strong&gt;Javier Milei&lt;/strong&gt;: Javier Milei quiere que la reforma laboral se sancione antes del 1 de marzo y podría abrir una negociación (&lt;a href="https://www.clarin.com/politica/javier-milei-quiere-reforma-laboral-sancione-1-marzo-podria-abrir-negociacion_0_W9yA1POB1p.html"&gt;Link&lt;/a&gt;)&lt;/p&gt;</description></item><item><title>Monitor Intel: 22:08 (UTC)</title><link>https://mcasrom.github.io/intel_center/post/2026-02-07-informe/</link><pubDate>Sat, 07 Feb 2026 22:08:19 +0000</pubDate><guid>https://mcasrom.github.io/intel_center/post/2026-02-07-informe/</guid><description>&lt;h2 id="-estado-del-nodo"&gt;🛡️ ESTADO DEL NODO&lt;/h2&gt;
+👤 &lt;strong&gt;Javier Milei&lt;/strong&gt;: Los días de broncas, festejos y aires de venganza en la Casa Rosada (&lt;a href="https://www.clarin.com/politica/dias-broncas-festejos-aires-venganza-casa-rosada_0_YxHPufIlcb.html"&gt;Link&lt;/a&gt;)&lt;/p&gt;</description></item><item><title>Monitor Intel: 22:08 (UTC)</title><link>https://mcasrom.github.io/intel_center/post/2026-02-07-informe/</link><pubDate>Sat, 07 Feb 2026 22:08:19 +0000</pubDate><guid>https://mcasrom.github.io/intel_center/post/2026-02-07-informe/</guid><description>&lt;h2 id="-estado-del-nodo"&gt;🛡️ ESTADO DEL NODO&lt;/h2&gt;
 &lt;table&gt;
  &lt;thead&gt;
  &lt;tr&gt;
