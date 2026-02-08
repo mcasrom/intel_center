@@ -1,5 +1,13 @@
 [
     {
+        "name": "ARGENTINA",
+        "lat": -34.6,
+        "lon": -58.4,
+        "intensity": 20,
+        "color": "#f1c40f",
+        "sentiment_index": -0.04
+    },
+    {
         "name": "Africa_Sahel",
         "lat": 15.0,
         "lon": 15.0,
@@ -11,9 +19,9 @@
         "name": "Asia_Nikkei",
         "lat": 35.0,
         "lon": 135.0,
-        "intensity": 15,
+        "intensity": 16,
         "color": "#f1c40f",
-        "sentiment_index": 0.03
+        "sentiment_index": 0.04
     },
     {
         "name": "ESPA\u00d1A",
@@ -51,8 +59,8 @@
         "name": "USA_NORTE",
         "lat": 40.0,
         "lon": -100.0,
-        "intensity": 20,
+        "intensity": 21,
         "color": "#f1c40f",
-        "sentiment_index": 0.02
+        "sentiment_index": 0.01
     }
 ]
