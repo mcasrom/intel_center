@@ -34,12 +34,21 @@ COORDS = {
     "Medio_Oriente": [25.0, 45.0], "Asia_Nikkei": [35.0, 135.0], "Africa_Sahel": [15.0, 15.0]
 }
 
+# --- DICCIONARIO DE LÍDERES ---
+BUSQUEDA_LIDERES = {
+    "Donald Trump": ["trump", "potus", "maga"],
+    "Vladimir Putin": ["putin", "kremlin"],
+    "Xi Jinping": ["xi jinping", "jinping", "beijing"],
+    "Pedro Sánchez": ["sánchez", "moncloa"],
+    "Javier Milei": ["milei", "casa rosada"]
+}
+
 def ejecutar():
     conn = sqlite3.connect(DB_PATH)
     cur = conn.cursor()
     cur.execute("CREATE TABLE IF NOT EXISTS news (region TEXT, title TEXT, link TEXT UNIQUE, sentimiento REAL, timestamp DATETIME DEFAULT CURRENT_TIMESTAMP)")
 
-    alertas, electoral, resumen = [], [], []
+    alertas, electoral, resumen, lideres = [], [], [], []
 
     # 1. FETCH Y CLASIFICACIÓN
     for reg, url in FEEDS.items():
@@ -49,13 +58,24 @@ def ejecutar():
             link = e.link
             low_title = title.lower()
             
-            # Clasificación por palabras clave
-            if any(x in low_title for x in ["war", "military", "conflict", "missing", "attack", "detention", "nuclear", "bomb", "missile"]):
-                alertas.append(f"🚩 [ALERTA] {reg}]: {title} ([Link]({link}))")
-            elif any(x in low_title for x in ["election", "voto", "campaña", "parliament", "electoral", "voter", "sanchez", "trump", "pp", "psoe"]):
-                electoral.append(f"🗳️ [ELECTORAL] {reg}]: {title} ([Link]({link}))")
-            else:
-                resumen.append(f"[{reg}]: {title} ([Link]({link}))")
+            # A. Detección de Líderes (Prioridad 1)
+            encontrado_lider = False
+            for nombre, claves in BUSQUEDA_LIDERES.items():
+                if any(x in low_title for x in claves):
+                    lideres.append(f"👤 **{nombre}**: {title} ([Link]({link}))")
+                    encontrado_lider = True
+                    break
+
+            if not encontrado_lider:
+                # B. Alertas Críticas (Prioridad 2)
+                if any(x in low_title for x in ["war", "military", "conflict", "missing", "attack", "detention", "nuclear", "bomb", "missile"]):
+                    alertas.append(f"🚩 [ALERTA] {reg}]: {title} ([Link]({link}))")
+                # C. Electoral (Prioridad 3)
+                elif any(x in low_title for x in ["election", "voto", "campaña", "parliament", "electoral", "voter", "pp", "psoe"]):
+                    electoral.append(f"🗳️ [ELECTORAL] {reg}]: {title} ([Link]({link}))")
+                # D. Resumen Global
+                else:
+                    resumen.append(f"[{reg}]: {title} ([Link]({link}))")
 
             cur.execute("INSERT OR IGNORE INTO news (region, title, link, sentimiento) VALUES (?,?,?,?)", (reg, title, link, 0.0))
 
@@ -76,7 +96,6 @@ def ejecutar():
     
     for r, sent, count in cur.fetchall():
         if r in COORDS:
-            # Lógica de colores dinámicos
             if sent < -0.05:
                 color_nodo = "#e74c3c"  # Rojo
             elif sent > 0.05:
@@ -85,11 +104,8 @@ def ejecutar():
                 color_nodo = "#f1c40f"  # Amarillo/Dorado
 
             hotspots.append({
-                "name": r,
-                "lat": COORDS[r][0],
-                "lon": COORDS[r][1],
-                "intensity": min(count, 15),
-                "color": color_nodo,
+                "name": r, "lat": COORDS[r][0], "lon": COORDS[r][1],
+                "intensity": min(count, 15), "color": color_nodo,
                 "sentiment_index": round(sent, 4)
             })
     
@@ -101,28 +117,38 @@ def ejecutar():
         f.write(f'---\ntitle: "Monitor Intel: {fecha_s}"\ndate: {ahora.isoformat()}\n---\n\n')
         f.write("🛡️ ESTADO DEL NODO\n\n| Indicador | Valor |\n| :--- | :--- |\n")
         f.write(f"| STATUS | 🟢 OPERATIVO |\n| ÚLTIMA SYNC | {fecha_s} |\n| HARDWARE | Odroid-C2-Madrid |\n\n")
+        
         f.write("📊 RADARES DE TENDENCIA\n\n| Región | Sentimiento |\n| :--- | :--- |\n")
         f.write(f"| 🇺🇸 USA | {s_usa} |\n| 🇪🇸 ESPAÑA | {s_esp} |\n\n")
+        
         f.write("📈 Evolución de Tendencia\n\n")
         f.write("![Gráfica de Tendencias](/intel_center/images/trend.png)\n\n")
-        f.write("⚡ ALERTAS CRÍTICAS\n\n")
+
+        f.write("👤 MOVIMIENTOS DE LÍDERES MUNDIALES\n\n")
+        if lideres:
+            for l in lideres[:10]: f.write(f"{l}  \n")
+        else:
+            f.write("No se detectan movimientos directos de mandatarios clave.  \n")
+
+        f.write("\n⚡ ALERTAS CRÍTICAS\n\n")
         if alertas:
             for a in alertas[:6]: f.write(f"{a}  \n")
         else:
-            f.write("No se han detectado eventos críticos en las últimas horas.  \n")
+            f.write("No se han detectado eventos críticos.  \n")
+
         f.write("\n🗳️ VIGILANCIA ELECTORAL\n\n")
         if electoral:
             for e in electoral[:5]: f.write(f"{e}  \n")
         else:
-            f.write("Sin novedades electorales en el radar actual.  \n")
+            f.write("Sin novedades electorales en el radar.  \n")
+
         f.write("\n🌍 RESUMEN GLOBAL\n\n")
         for r in resumen[:12]: f.write(f"{r}  \n")
 
-    # --- MANTENIMIENTO DE BASE DE DATOS (NUEVO) ---
+    # --- MANTENIMIENTO ---
     cur.execute("DELETE FROM news WHERE timestamp < datetime('now','-15 days')")
     conn.commit()
     conn.execute("VACUUM")
-    
     conn.close()
 
 if __name__ == "__main__": ejecutar()

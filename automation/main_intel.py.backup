@@ -61,7 +61,7 @@ def ejecutar():
 
     conn.commit()
 
-    # 2. SENTIMIENTOS DINÁMICOS
+    # 2. SENTIMIENTOS DINÁMICOS Y CSV
     def get_avg(region):
         cur.execute("SELECT AVG(sentimiento) FROM news WHERE region=? AND timestamp > datetime('now','-24 hours')", (region,))
         return round(cur.fetchone()[0] or 0.0, 4)
@@ -70,34 +70,59 @@ def ejecutar():
     for csv_path, val in [(USA_CSV, s_usa), (SPAIN_CSV, s_esp)]:
         with open(csv_path, "a") as f: f.write(f"{fecha_s},{val}\n")
 
-    # 3. GENERAR INFORME MD (CON TODOS LOS SEPARADORES)
+    # 3. GENERAR HOTSPOTS (JSON PARA EL MAPA)
+    hotspots = []
+    cur.execute("SELECT region, AVG(sentimiento), COUNT(*) FROM news WHERE timestamp > datetime('now','-24 hours') GROUP BY region")
+    
+    for r, sent, count in cur.fetchall():
+        if r in COORDS:
+            # Lógica de colores dinámicos
+            if sent < -0.05:
+                color_nodo = "#e74c3c"  # Rojo
+            elif sent > 0.05:
+                color_nodo = "#2ecc71"  # Verde
+            else:
+                color_nodo = "#f1c40f"  # Amarillo/Dorado
+
+            hotspots.append({
+                "name": r,
+                "lat": COORDS[r][0],
+                "lon": COORDS[r][1],
+                "intensity": min(count, 15),
+                "color": color_nodo,
+                "sentiment_index": round(sent, 4)
+            })
+    
+    with open(JSON_OUTPUT, "w") as j:
+        json.dump(hotspots, j, indent=4)
+
+    # 4. GENERAR INFORME MD
     with open(INFORME_MD, "w") as f:
         f.write(f'---\ntitle: "Monitor Intel: {fecha_s}"\ndate: {ahora.isoformat()}\n---\n\n')
-        
         f.write("🛡️ ESTADO DEL NODO\n\n| Indicador | Valor |\n| :--- | :--- |\n")
         f.write(f"| STATUS | 🟢 OPERATIVO |\n| ÚLTIMA SYNC | {fecha_s} |\n| HARDWARE | Odroid-C2-Madrid |\n\n")
-        
         f.write("📊 RADARES DE TENDENCIA\n\n| Región | Sentimiento |\n| :--- | :--- |\n")
         f.write(f"| 🇺🇸 USA | {s_usa} |\n| 🇪🇸 ESPAÑA | {s_esp} |\n\n")
-
         f.write("📈 Evolución de Tendencia\n\n")
         f.write("![Gráfica de Tendencias](/intel_center/images/trend.png)\n\n")
-
         f.write("⚡ ALERTAS CRÍTICAS\n\n")
         if alertas:
             for a in alertas[:6]: f.write(f"{a}  \n")
         else:
             f.write("No se han detectado eventos críticos en las últimas horas.  \n")
-        
         f.write("\n🗳️ VIGILANCIA ELECTORAL\n\n")
         if electoral:
             for e in electoral[:5]: f.write(f"{e}  \n")
         else:
             f.write("Sin novedades electorales en el radar actual.  \n")
-        
         f.write("\n🌍 RESUMEN GLOBAL\n\n")
         for r in resumen[:12]: f.write(f"{r}  \n")
 
+    # --- MANTENIMIENTO DE BASE DE DATOS (NUEVO) ---
+    cur.execute("DELETE FROM news WHERE timestamp < datetime('now','-15 days')")
+    conn.commit()
+    conn.execute("VACUUM")
+    
     conn.close()
 
 if __name__ == "__main__": ejecutar()
