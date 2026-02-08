@@ -388,3 +388,24 @@ hugo v0.146.0-5d1b9d39858bb0b2e505af9f649bfb55295ecca1+extended linux/arm64 Buil
 
 Total in 883 ms
 [+] Sincronizando con GitHub...
+[main 6b9b4e8] Intel Update: 2026-02-08 22:00
+ 6 files changed, 26 insertions(+), 4 deletions(-)
+To https://github.com/mcasrom/intel_center.git
+   4179b5b..6b9b4e8  main -> main
+[+] Gráfica generada en: /home/dietpi/intel_center_odroid/blog/static/images/trend.png
+Start building sites … 
+hugo v0.146.0-5d1b9d39858bb0b2e505af9f649bfb55295ecca1+extended linux/arm64 BuildDate=2025-04-10T14:57:56Z VendorInfo=gohugoio
+
+
+                   | EN  
+-------------------+-----
+  Pages            | 21  
+  Paginator pages  |  1  
+  Non-page files   |  0  
+  Static files     |  8  
+  Processed images |  0  
+  Aliases          |  2  
+  Cleaned          |  0  
+
+Total in 886 ms
+[+] Ciclo completo. JSON, posts y gráficas subidos a GitHub.

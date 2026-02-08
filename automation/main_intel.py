@@ -37,11 +37,11 @@ COORDS = {
 def ejecutar():
     conn = sqlite3.connect(DB_PATH)
     cur = conn.cursor()
-    cur.execute("CREATE TABLE IF NOT EXISTS news (region TEXT, title TEXT, link TEXT UNIQUE, sentimiento REAL, score REAL, timestamp DATETIME DEFAULT CURRENT_TIMESTAMP)")
+    cur.execute("CREATE TABLE IF NOT EXISTS news (region TEXT, title TEXT, link TEXT UNIQUE, sentimiento REAL, timestamp DATETIME DEFAULT CURRENT_TIMESTAMP)")
 
     alertas, electoral, resumen = [], [], []
 
-    # 1. FETCH Y PROCESAMIENTO
+    # 1. FETCH Y CLASIFICACIÓN (MÁS SENSIBLE)
     for reg, url in FEEDS.items():
         feed = feedparser.parse(url)
         for e in feed.entries[:12]:
@@ -49,44 +49,28 @@ def ejecutar():
             link = e.link
             low_title = title.lower()
             
-            # Cálculo de sentimiento simplificado (puedes meter VADER aquí)
-            sent = 0.0
-            if any(x in low_title for x in ["war", "conflict", "crisis", "attack"]): sent = -0.6
-            if any(x in low_title for x in ["growth", "agreement", "peace"]): sent = 0.5
-
-            if any(x in low_title for x in ["war", "military", "conflict", "missing", "attack", "detention"]):
+            # Clasificación agresiva para llenar secciones
+            if any(x in low_title for x in ["war", "military", "conflict", "missing", "attack", "detention", "nuclear", "bomb", "crisis"]):
                 alertas.append(f"🚩 [ALERTA] {reg}]: {title} ([Link]({link}))")
-            elif any(x in low_title for x in ["election", "voto", "campaña", "parliament", "electoral"]):
+            elif any(x in low_title for x in ["election", "voto", "campaña", "parliament", "electoral", "voter", "sanchez", "trump", "biden"]):
                 electoral.append(f"🗳️ [ELECTORAL] {reg}]: {title} ([Link]({link}))")
             else:
                 resumen.append(f"[{reg}]: {title} ([Link]({link}))")
 
-            cur.execute("INSERT OR IGNORE INTO news (region, title, link, sentimiento) VALUES (?,?,?,?)", (reg, title, link, sent))
+            cur.execute("INSERT OR IGNORE INTO news (region, title, link, sentimiento) VALUES (?,?,?,?)", (reg, title, link, 0.0))
 
     conn.commit()
 
-    # 2. OBTENER SENTIMIENTOS REALES PARA GRÁFICAS E INFORME
+    # 2. SENTIMIENTOS PARA CSV
     def get_avg(region):
         cur.execute("SELECT AVG(sentimiento) FROM news WHERE region=? AND timestamp > datetime('now','-24 hours')", (region,))
         return round(cur.fetchone()[0] or 0.0, 4)
 
-    s_usa = get_avg("USA_NORTE")
-    s_esp = get_avg("ESPAÑA")
-
-    # Guardar en CSV para el Plotter
+    s_usa, s_esp = get_avg("USA_NORTE"), get_avg("ESPAÑA")
     for csv_path, val in [(USA_CSV, s_usa), (SPAIN_CSV, s_esp)]:
-        with open(csv_path, "a") as f:
-            f.write(f"{fecha_s},{val}\n")
+        with open(csv_path, "a") as f: f.write(f"{fecha_s},{val}\n")
 
-    # 3. GENERAR JSON MAPA
-    hotspots = []
-    cur.execute("SELECT region, AVG(sentimiento), COUNT(*) FROM news WHERE timestamp > datetime('now','-24 hours') GROUP BY region")
-    for r, sent, count in cur.fetchall():
-        if r in COORDS:
-            hotspots.append({"name": r, "lat": COORDS[r][0], "lon": COORDS[r][1], "intensity": min(count,10), "color": "#f1c40f", "sentiment_index": round(sent,4)})
-    with open(JSON_OUTPUT, "w") as j: json.dump(hotspots, j, indent=4)
-
-    # 4. GENERAR EL INFORME MD (CON DATOS DINÁMICOS)
+    # 3. INFORME MD (CON GRÁFICA Y TODAS LAS SECCIONES)
     with open(INFORME_MD, "w") as f:
         f.write(f'---\ntitle: "Monitor Intel: {fecha_s}"\ndate: {ahora.isoformat()}\n---\n\n')
         f.write("🛡️ ESTADO DEL NODO\n\n| Indicador | Valor |\n| :--- | :--- |\n")
@@ -95,12 +79,18 @@ def ejecutar():
         f.write("📊 RADARES DE TENDENCIA\n\n| Región | Sentimiento |\n| :--- | :--- |\n")
         f.write(f"| 🇺🇸 USA | {s_usa} |\n| 🇪🇸 ESPAÑA | {s_esp} |\n\n")
 
+        f.write("📈 Evolución de Tendencia\n\n")
+        # ESTA LÍNEA ES LA QUE PINTA LA GRÁFICA EN LA WEB
+        f.write("![Tendencia Geopolítica](/images/trend.png)\n\n")
+
         f.write("⚡ ALERTAS CRÍTICAS\n")
-        for a in alertas[:6]: f.write(f"{a}  \n")
+        for a in (alertas if alertas else ["No hay alertas críticas en este ciclo."]): f.write(f"{a}  \n")
+        
         f.write("\n🗳️ VIGILANCIA ELECTORAL\n")
-        for e in electoral[:5]: f.write(f"{e}  \n")
+        for e in (electoral if electoral else ["Sin novedades electorales destacables."]): f.write(f"{e}  \n")
+        
         f.write("\n🌍 RESUMEN GLOBAL\n")
-        for r in resumen[:8]: f.write(f"{r}  \n")
+        for r in resumen[:10]: f.write(f"{r}  \n")
 
     conn.close()
 
