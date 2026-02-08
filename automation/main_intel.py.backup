@@ -4,7 +4,7 @@
 import os, feedparser, sqlite3, json, pytz
 from datetime import datetime
 
-# --- CONFIGURACIÓN ---
+# --- CONFIGURACIÓN DE RUTAS ---
 BASE_DIR = "/home/dietpi/intel_center_odroid"
 DB_PATH = os.path.join(BASE_DIR, "data/news.db")
 JSON_OUTPUT = os.path.join(BASE_DIR, "blog/data/hotspots.json")
@@ -37,61 +37,67 @@ COORDS = {
 def ejecutar():
     conn = sqlite3.connect(DB_PATH)
     cur = conn.cursor()
-    cur.execute("CREATE TABLE IF NOT EXISTS news (region TEXT, title TEXT, link TEXT UNIQUE, sentimiento REAL, score REAL, timestamp DATETIME DEFAULT CURRENT_TIMESTAMP)")
+    cur.execute("CREATE TABLE IF NOT EXISTS news (region TEXT, title TEXT, link TEXT UNIQUE, sentimiento REAL, timestamp DATETIME DEFAULT CURRENT_TIMESTAMP)")
+
+    alertas, electoral, resumen = [], [], []
 
     # 1. FETCH Y CLASIFICACIÓN
-    alertas = []
-    electoral = []
-    resumen = []
-
     for reg, url in FEEDS.items():
         feed = feedparser.parse(url)
         for e in feed.entries[:12]:
             title = e.title
             link = e.link
-            # Lógica simple de detección (sustituye a VADER si no está)
-            score = 0.0
             low_title = title.lower()
             
-            # Clasificación
-            if any(x in low_title for x in ["war", "military", "conflict", "missing", "attack", "detention"]):
+            # Clasificación por palabras clave
+            if any(x in low_title for x in ["war", "military", "conflict", "missing", "attack", "detention", "nuclear", "bomb", "missile"]):
                 alertas.append(f"🚩 [ALERTA] {reg}]: {title} ([Link]({link}))")
-            elif any(x in low_title for x in ["election", "voto", "campaña", "parliament", "electoral"]):
+            elif any(x in low_title for x in ["election", "voto", "campaña", "parliament", "electoral", "voter", "sanchez", "trump", "pp", "psoe"]):
                 electoral.append(f"🗳️ [ELECTORAL] {reg}]: {title} ([Link]({link}))")
             else:
                 resumen.append(f"[{reg}]: {title} ([Link]({link}))")
 
             cur.execute("INSERT OR IGNORE INTO news (region, title, link, sentimiento) VALUES (?,?,?,?)", (reg, title, link, 0.0))
 
-    # 2. PROCESAR JSON Y CSVs
-    hotspots = []
-    cur.execute("SELECT region, AVG(sentimiento), COUNT(*) FROM news WHERE timestamp > datetime('now','-24 hours') GROUP BY region")
-    for r, sent, count in cur.fetchall():
-        if r in COORDS:
-            hotspots.append({"name": r, "lat": COORDS[r][0], "lon": COORDS[r][1], "intensity": min(count,10), "color": "#f1c40f", "sentiment_index": round(sent,4)})
-    
-    with open(JSON_OUTPUT, "w") as j: json.dump(hotspots, j, indent=4)
-    
-    # 3. GENERAR EL INFORME MD COMPLETO (ESTILO DÍA 7)
+    conn.commit()
+
+    # 2. SENTIMIENTOS DINÁMICOS
+    def get_avg(region):
+        cur.execute("SELECT AVG(sentimiento) FROM news WHERE region=? AND timestamp > datetime('now','-24 hours')", (region,))
+        return round(cur.fetchone()[0] or 0.0, 4)
+
+    s_usa, s_esp = get_avg("USA_NORTE"), get_avg("ESPAÑA")
+    for csv_path, val in [(USA_CSV, s_usa), (SPAIN_CSV, s_esp)]:
+        with open(csv_path, "a") as f: f.write(f"{fecha_s},{val}\n")
+
+    # 3. GENERAR INFORME MD (CON TODOS LOS SEPARADORES)
     with open(INFORME_MD, "w") as f:
         f.write(f'---\ntitle: "Monitor Intel: {fecha_s}"\ndate: {ahora.isoformat()}\n---\n\n')
+        
         f.write("🛡️ ESTADO DEL NODO\n\n| Indicador | Valor |\n| :--- | :--- |\n")
         f.write(f"| STATUS | 🟢 OPERATIVO |\n| ÚLTIMA SYNC | {fecha_s} |\n| HARDWARE | Odroid-C2-Madrid |\n\n")
         
         f.write("📊 RADARES DE TENDENCIA\n\n| Región | Sentimiento |\n| :--- | :--- |\n")
-        # Aquí simulamos el cálculo que tenías para USA/Spain
-        f.write(f"| 🇺🇸 USA | 0.0136 |\n| 🇪🇸 ESPAÑA | 0.0375 |\n\n")
+        f.write(f"| 🇺🇸 USA | {s_usa} |\n| 🇪🇸 ESPAÑA | {s_esp} |\n\n")
 
-        f.write("⚡ ALERTAS CRÍTICAS\n")
-        for a in alertas[:6]: f.write(f"{a}  \n")
-        
-        f.write("\n🗳️ VIGILANCIA ELECTORAL\n")
-        for e in electoral[:5]: f.write(f"{e}  \n")
-        
-        f.write("\n🌍 RESUMEN GLOBAL\n")
-        for r in resumen[:8]: f.write(f"{r}  \n")
+        f.write("📈 Evolución de Tendencia\n\n")
+        f.write("![Gráfica de Tendencias](/intel_center/images/trend.png)\n\n")
 
-    conn.commit()
+        f.write("⚡ ALERTAS CRÍTICAS\n\n")
+        if alertas:
+            for a in alertas[:6]: f.write(f"{a}  \n")
+        else:
+            f.write("No se han detectado eventos críticos en las últimas horas.  \n")
+        
+        f.write("\n🗳️ VIGILANCIA ELECTORAL\n\n")
+        if electoral:
+            for e in electoral[:5]: f.write(f"{e}  \n")
+        else:
+            f.write("Sin novedades electorales en el radar actual.  \n")
+        
+        f.write("\n🌍 RESUMEN GLOBAL\n\n")
+        for r in resumen[:12]: f.write(f"{r}  \n")
+
     conn.close()
 
 if __name__ == "__main__": ejecutar()
