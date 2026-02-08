@@ -129,3 +129,18 @@ To https://github.com/mcasrom/intel_center.git
 [+] Generando HTML con Hugo...
 /home/dietpi/intel_center_odroid/automation/run_intel.sh: line 20: hugo: command not found
 [+] Sincronizando con GitHub...
+[main 5116504] Intel Update: 2026-02-08 00:00
+ 8 files changed, 132 insertions(+), 15 deletions(-)
+ create mode 100644 blog/content/post/2026-02-08-informe.md
+To https://github.com/mcasrom/intel_center.git
+   f7bdcd4..5116504  main -> main
+--- INICIANDO CAPTURA (MODO ANANKE) ---
+[+] INFORME GENERADO: 2026-02-08-informe.md
+[+] Gráfica generada en: /home/dietpi/intel_center_odroid/blog/static/images/trend.png
+/home/dietpi/intel_center_odroid/automation/run_intel.sh: line 41: hugo: command not found
+[+] [odroid-c2] Iniciando ciclo de inteligencia...
+--- INICIANDO CAPTURA (MODO ANANKE) ---
+[+] INFORME GENERADO: 2026-02-08-informe.md
+[+] Generando HTML con Hugo...
+/home/dietpi/intel_center_odroid/automation/run_intel.sh: line 20: hugo: command not found
+[+] Sincronizando con GitHub...
