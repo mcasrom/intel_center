@@ -3,9 +3,9 @@
         "name": "Africa_Sahel",
         "lat": 15.0,
         "lon": 15.0,
-        "intensity": 7,
+        "intensity": 9,
         "color": "#ff4b2b",
-        "sentiment_index": -0.16
+        "sentiment_index": -0.23
     },
     {
         "name": "Asia_Nikkei",
@@ -13,7 +13,7 @@
         "lon": 135.0,
         "intensity": 10,
         "color": "#f1c40f",
-        "sentiment_index": 0.12
+        "sentiment_index": 0.16
     },
     {
         "name": "ESPA\u00d1A",
