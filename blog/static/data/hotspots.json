@@ -24,6 +24,14 @@
         "sentiment_index": 0.04
     },
     {
+        "name": "BRASIL",
+        "lat": -15.7,
+        "lon": -47.8,
+        "intensity": 20,
+        "color": "#f1c40f",
+        "sentiment_index": 0.0
+    },
+    {
         "name": "ESPA\u00d1A",
         "lat": 40.4,
         "lon": -3.7,

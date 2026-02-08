@@ -22,7 +22,8 @@ FEEDS_ARGENTINA = [
     "https://www.clarin.com/rss/politica/"
 ]
 FEEDS_BRASIL = [
-    "https://g1.globo.com/index/feed/pagina-1/rss.xml",
+    "https://feeds.folha.uol.com.br/poder/rss091.xml",
+    "https://agenciabrasil.ebc.com.br/rss/politica/feed.xml",
     "https://noticias.uol.com.br/politica/index.xml"
 ]
 
