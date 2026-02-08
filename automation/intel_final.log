@@ -208,3 +208,66 @@ hugo v0.146.0-5d1b9d39858bb0b2e505af9f649bfb55295ecca1+extended linux/arm64 Buil
 
 Total in 880 ms
 [+] Sincronizando con GitHub...
+[main bc00b1f] Intel Update: 2026-02-08 18:00
+ 29 files changed, 113 insertions(+), 4111 deletions(-)
+ create mode 120000 blog/data/hotspots.json
+ delete mode 100644 blog/docs/.nojekyll
+ delete mode 100644 blog/docs/404.html
+ delete mode 100644 blog/docs/about/index.html
+ delete mode 100644 blog/docs/assets/css/stylesheet.da3211e5ef867bf2b75fd5a6515cfed7195c011e8ab735694e203810a827097b.css
+ delete mode 100644 blog/docs/categories/index.html
+ delete mode 100644 blog/docs/categories/index.xml
+ delete mode 100644 blog/docs/contact/index.html
+ delete mode 100644 blog/docs/css/custom.css
+ delete mode 100644 blog/docs/data/hotspots.json
+ delete mode 100644 blog/docs/index.html
+ delete mode 100644 blog/docs/index.json
+ delete mode 100644 blog/docs/index.xml
+ delete mode 100644 blog/docs/mapa/index.html
+ delete mode 100644 blog/docs/page/1/index.html
+ delete mode 100644 blog/docs/posts/index.html
+ delete mode 100644 blog/docs/posts/index.xml
+ delete mode 100644 blog/docs/posts/intel-2026-02-04/index.html
+ delete mode 100644 blog/docs/posts/page/1/index.html
+ delete mode 100644 blog/docs/sitemap.xml
+ delete mode 100644 blog/docs/tags/index.html
+ delete mode 100644 blog/docs/tags/index.xml
+To https://github.com/mcasrom/intel_center.git
+   2ef7dba..bc00b1f  main -> main
+[*] Procesando feeds en modo HIGH...
+✅ Sincronización completa a las 2026-02-08 18:00
+[+] Gráfica generada en: /home/dietpi/intel_center_odroid/blog/static/images/trend.png
+Start building sites … 
+hugo v0.146.0-5d1b9d39858bb0b2e505af9f649bfb55295ecca1+extended linux/arm64 BuildDate=2025-04-10T14:57:56Z VendorInfo=gohugoio
+
+
+                   | EN  
+-------------------+-----
+  Pages            | 21  
+  Paginator pages  |  1  
+  Non-page files   |  0  
+  Static files     |  8  
+  Processed images |  0  
+  Aliases          |  2  
+  Cleaned          |  0  
+
+Total in 972 ms
+[+] Ciclo completo. JSON, posts y gráficas subidos a GitHub.
+[+] [odroid-c2] Iniciando ciclo de inteligencia...
+[+] Generando HTML con Hugo...
+Start building sites … 
+hugo v0.146.0-5d1b9d39858bb0b2e505af9f649bfb55295ecca1+extended linux/arm64 BuildDate=2025-04-10T14:57:56Z VendorInfo=gohugoio
+
+
+                   | EN  
+-------------------+-----
+  Pages            | 21  
+  Paginator pages  |  1  
+  Non-page files   |  0  
+  Static files     |  8  
+  Processed images |  0  
+  Aliases          |  2  
+  Cleaned          |  0  
+
+Total in 923 ms
+[+] Sincronizando con GitHub...
