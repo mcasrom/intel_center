@@ -168,3 +168,11 @@ sqlite3.OperationalError: database is locked
 [+] Generando HTML con Hugo...
 /home/dietpi/intel_center_odroid/automation/run_intel.sh: line 20: hugo: command not found
 [+] Sincronizando con GitHub...
+[main debbcd6] Intel Update: 2026-02-08 09:00
+ 9 files changed, 57 insertions(+), 25 deletions(-)
+To https://github.com/mcasrom/intel_center.git
+   c58d1c7..debbcd6  main -> main
+--- INICIANDO CAPTURA (MODO ANANKE) ---
+[+] INFORME GENERADO: 2026-02-08-informe.md
+[+] Gráfica generada en: /home/dietpi/intel_center_odroid/blog/static/images/trend.png
+/home/dietpi/intel_center_odroid/automation/run_intel.sh: line 41: hugo: command not found
