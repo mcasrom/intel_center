@@ -1,58 +1,74 @@
 [
-  {
-    "name": "Africa_Sahel",
-    "lat": 15.0,
-    "lon": 15.0,
-    "intensity": 7.675000000000001,
-    "sentiment_index": -0.1,
-    "color": "#ff4b2b"
-  },
-  {
-    "name": "Asia_Nikkei",
-    "lat": 35.0,
-    "lon": 135.0,
-    "intensity": 10,
-    "sentiment_index": 0.07,
-    "color": "#f1c40f"
-  },
-  {
-    "name": "ESPA\u00d1A",
-    "lat": 40.4,
-    "lon": -3.7,
-    "intensity": 10,
-    "sentiment_index": 0.05,
-    "color": "#f1c40f"
-  },
-  {
-    "name": "Europa_DW",
-    "lat": 50.0,
-    "lon": 10.0,
-    "intensity": 10,
-    "sentiment_index": 0.05,
-    "color": "#f1c40f"
-  },
-  {
-    "name": "Medio_Oriente",
-    "lat": 25.0,
-    "lon": 45.0,
-    "intensity": 10,
-    "sentiment_index": 0.04,
-    "color": "#f1c40f"
-  },
-  {
-    "name": "Rusia_Eurasia",
-    "lat": 60.0,
-    "lon": 90.0,
-    "intensity": 10,
-    "sentiment_index": 0.03,
-    "color": "#f1c40f"
-  },
-  {
-    "name": "USA_NORTE",
-    "lat": 40.0,
-    "lon": -100.0,
-    "intensity": 10,
-    "sentiment_index": 0.01,
-    "color": "#f1c40f"
-  }
+    {
+        "name": "ARGENTINA",
+        "lat": -34.0,
+        "lon": -64.0,
+        "intensity": 10,
+        "color": "#f1c40f",
+        "sentiment_index": -0.04
+    },
+    {
+        "name": "Africa_Sahel",
+        "lat": 15.0,
+        "lon": 15.0,
+        "intensity": 8,
+        "color": "#ff4b2b",
+        "sentiment_index": -0.1
+    },
+    {
+        "name": "Asia_Nikkei",
+        "lat": 35.0,
+        "lon": 135.0,
+        "intensity": 10,
+        "color": "#f1c40f",
+        "sentiment_index": 0.07
+    },
+    {
+        "name": "BRASIL",
+        "lat": -10.0,
+        "lon": -55.0,
+        "intensity": 10,
+        "color": "#f1c40f",
+        "sentiment_index": 0.0
+    },
+    {
+        "name": "ESPA\u00d1A",
+        "lat": 40.4,
+        "lon": -3.7,
+        "intensity": 10,
+        "color": "#f1c40f",
+        "sentiment_index": 0.05
+    },
+    {
+        "name": "Europa_DW",
+        "lat": 50.0,
+        "lon": 10.0,
+        "intensity": 10,
+        "color": "#f1c40f",
+        "sentiment_index": 0.05
+    },
+    {
+        "name": "Medio_Oriente",
+        "lat": 25.0,
+        "lon": 45.0,
+        "intensity": 10,
+        "color": "#f1c40f",
+        "sentiment_index": 0.04
+    },
+    {
+        "name": "Rusia_Eurasia",
+        "lat": 60.0,
+        "lon": 90.0,
+        "intensity": 10,
+        "color": "#f1c40f",
+        "sentiment_index": 0.03
+    },
+    {
+        "name": "USA_NORTE",
+        "lat": 40.0,
+        "lon": -100.0,
+        "intensity": 10,
+        "color": "#f1c40f",
+        "sentiment_index": 0.01
+    }
 ]
