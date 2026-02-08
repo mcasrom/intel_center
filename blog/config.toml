@@ -22,6 +22,11 @@ buildDrafts = true
     name = "Contacto"
     url = "/contact/"
     weight = 40
+  [[menu.main]]
+    name = "Metodología"
+    url = "/metodologia/"
+    weight = 50
+
 
 [params]
   description = "Nodo de inteligencia OSINT - Monitorización global en tiempo real"
