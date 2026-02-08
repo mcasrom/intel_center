@@ -5,7 +5,7 @@
         "lon": -64.0,
         "intensity": 10,
         "color": "#f1c40f",
-        "sentiment_index": -0.0346
+        "sentiment_index": -0.0321
     },
     {
         "name": "Africa_Sahel",
@@ -21,7 +21,7 @@
         "lon": 135.0,
         "intensity": 10,
         "color": "#f1c40f",
-        "sentiment_index": 0.1647
+        "sentiment_index": 0.1594
     },
     {
         "name": "BRASIL",
@@ -45,7 +45,7 @@
         "lon": 10.0,
         "intensity": 10,
         "color": "#f1c40f",
-        "sentiment_index": 0.0332
+        "sentiment_index": 0.0315
     },
     {
         "name": "Medio_Oriente",
@@ -61,7 +61,7 @@
         "lon": 90.0,
         "intensity": 10,
         "color": "#f1c40f",
-        "sentiment_index": 0.0138
+        "sentiment_index": 0.0143
     },
     {
         "name": "USA_NORTE",
@@ -69,6 +69,6 @@
         "lon": -100.0,
         "intensity": 10,
         "color": "#f1c40f",
-        "sentiment_index": -0.0218
+        "sentiment_index": -0.0232
     }
 ]

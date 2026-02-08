@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Informes de Inteligencia on Intel Center</title><link>https://mcasrom.github.io/intel_center/post/</link><description>Recent content in Informes de Inteligencia on Intel Center</description><generator>Hugo</generator><language>es</language><lastBuildDate>Sun, 08 Feb 2026 21:00:01 +0100</lastBuildDate><atom:link href="https://mcasrom.github.io/intel_center/post/index.xml" rel="self" type="application/rss+xml"/><item><title>📌 MANUAL: Operaciones e Interpretación de Inteligencia</title><link>https://mcasrom.github.io/intel_center/post/guia-interpretacion-nodos/</link><pubDate>Fri, 06 Feb 2026 17:00:00 +0000</pubDate><guid>https://mcasrom.github.io/intel_center/post/guia-interpretacion-nodos/</guid><description>&lt;h3 id="protocolo-de-inteligencia-consolidado-v20"&gt;Protocolo de Inteligencia Consolidado (v2.0)&lt;/h3&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Informes de Inteligencia on Intel Center</title><link>https://mcasrom.github.io/intel_center/post/</link><description>Recent content in Informes de Inteligencia on Intel Center</description><generator>Hugo</generator><language>es</language><lastBuildDate>Sun, 08 Feb 2026 21:56:06 +0100</lastBuildDate><atom:link href="https://mcasrom.github.io/intel_center/post/index.xml" rel="self" type="application/rss+xml"/><item><title>📌 MANUAL: Operaciones e Interpretación de Inteligencia</title><link>https://mcasrom.github.io/intel_center/post/guia-interpretacion-nodos/</link><pubDate>Fri, 06 Feb 2026 17:00:00 +0000</pubDate><guid>https://mcasrom.github.io/intel_center/post/guia-interpretacion-nodos/</guid><description>&lt;h3 id="protocolo-de-inteligencia-consolidado-v20"&gt;Protocolo de Inteligencia Consolidado (v2.0)&lt;/h3&gt;
 &lt;p&gt;Este documento define la metodología de análisis aplicada por el motor OSINT de la Odroid C2 para transformar datos masivos en indicadores tácticos.&lt;/p&gt;
 &lt;h4 id="1-semáforo-de-tensión-y-dinámica-política"&gt;1. Semáforo de Tensión y Dinámica Política&lt;/h4&gt;
 &lt;p&gt;El color de cada nodo es un indicador calculado mediante Procesamiento de Lenguaje Natural (NLP) y detección de contextos específicos:&lt;/p&gt;
@@ -9,7 +9,7 @@
 &lt;li&gt;🔴 &lt;strong&gt;Nivel 3 (Crisis/Hostilidad):&lt;/strong&gt; Polaridad &amp;lt; -0.1. Detección de lenguaje agresivo, conflictos o inestabilidad grave.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h4 id="2-clasificación-de-alertas-en-el-informe"&gt;2. Clasificación de Alertas en el Informe&lt;/h4&gt;
-&lt;p&gt;El sistema segrega la información en tres niveles de prioridad para optimizar el tiempo del analista:&lt;/p&gt;</description></item><item><title>Monitor Intel: 2026-02-08 21:00</title><link>https://mcasrom.github.io/intel_center/post/2026-02-08-informe/</link><pubDate>Sun, 08 Feb 2026 21:00:01 +0100</pubDate><guid>https://mcasrom.github.io/intel_center/post/2026-02-08-informe/</guid><description>&lt;p&gt;🛡️ ESTADO DEL NODO&lt;/p&gt;
+&lt;p&gt;El sistema segrega la información en tres niveles de prioridad para optimizar el tiempo del analista:&lt;/p&gt;</description></item><item><title>Monitor Intel: 2026-02-08 21:56</title><link>https://mcasrom.github.io/intel_center/post/2026-02-08-informe/</link><pubDate>Sun, 08 Feb 2026 21:56:06 +0100</pubDate><guid>https://mcasrom.github.io/intel_center/post/2026-02-08-informe/</guid><description>&lt;p&gt;🛡️ ESTADO DEL NODO&lt;/p&gt;
 &lt;table&gt;
  &lt;thead&gt;
  &lt;tr&gt;
@@ -24,7 +24,7 @@
  &lt;/tr&gt;
  &lt;tr&gt;
  &lt;td style="text-align: left"&gt;ÚLTIMA SYNC&lt;/td&gt;
- &lt;td style="text-align: left"&gt;2026-02-08 21:00&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;2026-02-08 21:56&lt;/td&gt;
  &lt;/tr&gt;
  &lt;tr&gt;
  &lt;td style="text-align: left"&gt;HARDWARE&lt;/td&gt;
@@ -43,11 +43,11 @@
  &lt;tbody&gt;
  &lt;tr&gt;
  &lt;td style="text-align: left"&gt;🇺🇸 USA&lt;/td&gt;
- &lt;td style="text-align: left"&gt;0.0136&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;-0.0232&lt;/td&gt;
  &lt;/tr&gt;
  &lt;tr&gt;
  &lt;td style="text-align: left"&gt;🇪🇸 ESPAÑA&lt;/td&gt;
- &lt;td style="text-align: left"&gt;0.0375&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;0.05&lt;/td&gt;
  &lt;/tr&gt;
  &lt;/tbody&gt;
 &lt;/table&gt;
