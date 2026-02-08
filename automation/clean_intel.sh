@@ -18,3 +18,4 @@ if [ -f "$LOG_FILE" ]; then
 fi
 
 echo "[+] Mantenimiento completado: $(date)"
+/home/dietpi/intel_center_odroid/automation/backup_configs.sh

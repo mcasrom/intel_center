@@ -17,13 +17,24 @@ FEEDS_SPAIN = [
     "https://elpais.com/rss/politica/portada.xml",
     "https://www.elmundo.es/e/rss/espana.xml"
 ]
+# (Añade estos feeds específicos para mayor profundidad)
+FEEDS_ARGENTINA = [
+    "https://www.lanacion.com.ar/arc/outboundfeeds/rss/?outputType=xml",
+    "https://www.clarin.com/rss/politica/"
+]
+FEEDS_BRASIL = [
+    "https://g1.globo.com/index/feed/pagina-1/rss.xml",
+    "https://noticias.uol.com.br/politica/index.xml"
+]
 
 DATOS_INTEL = {
     "Rusia_Eurasia": {"url": "https://tass.com/rss/v2.xml", "coord": [60.0, 90.0]},
     "Medio_Oriente": {"url": "https://www.aljazeera.com/xml/rss/all.xml", "coord": [25.0, 45.0]},
     "Europa_DW": {"url": "https://rss.dw.com/rdf/rss-en-top", "coord": [50.0, 10.0]},
     "Asia_Nikkei": {"url": "https://asia.nikkei.com/rss/feed/nar", "coord": [35.0, 135.0]},
-    "LATAM": {"url": "https://www.bbc.com/mundo/temas/america_latina/index.xml", "coord": [-15.0, -60.0]},
+    "LATAM_General": {"url": "https://www.bbc.com/mundo/temas/america_latina/index.xml", "coord": [5.0, -70.0]},
+    "ARGENTINA": {"url": "COMBO_ARG", "coord": [-34.6, -58.4]},
+    "BRASIL": {"url": "COMBO_BR", "coord": [-15.7, -47.8]},
     "MEXICO": {"url": "https://www.jornada.com.mx/rss/ultimas.xml?v=1", "coord": [23.0, -102.0]},
     "USA_NORTE": {"url": "https://www.theguardian.com/us-news/rss", "coord": [40.0, -100.0]},
     "ESPAÑA": {"url": "COMBO", "coord": [40.4, -3.7]},
