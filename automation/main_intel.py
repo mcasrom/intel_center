@@ -118,6 +118,11 @@ def ejecutar():
         f.write("\n🌍 RESUMEN GLOBAL\n\n")
         for r in resumen[:12]: f.write(f"{r}  \n")
 
+    # --- MANTENIMIENTO DE BASE DE DATOS (NUEVO) ---
+    cur.execute("DELETE FROM news WHERE timestamp < datetime('now','-15 days')")
+    conn.commit()
+    conn.execute("VACUUM")
+    
     conn.close()
 
 if __name__ == "__main__": ejecutar()
