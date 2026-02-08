@@ -186,3 +186,7 @@ To https://github.com/mcasrom/intel_center.git
  12 files changed, 102 insertions(+), 58 deletions(-)
 To https://github.com/mcasrom/intel_center.git
    4dcd2e3..5865f9c  main -> main
+--- INICIANDO CAPTURA (MODO ANANKE) ---
+[+] INFORME GENERADO: 2026-02-08-informe.md
+[+] Gráfica generada en: /home/dietpi/intel_center_odroid/blog/static/images/trend.png
+/home/dietpi/intel_center_odroid/automation/run_intel.sh: line 41: hugo: command not found

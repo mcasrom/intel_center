@@ -17,7 +17,6 @@ FEEDS_SPAIN = [
     "https://elpais.com/rss/politica/portada.xml",
     "https://www.elmundo.es/e/rss/espana.xml"
 ]
-# (Añade estos feeds específicos para mayor profundidad)
 FEEDS_ARGENTINA = [
     "https://www.lanacion.com.ar/arc/outboundfeeds/rss/?outputType=xml",
     "https://www.clarin.com/rss/politica/"
@@ -69,10 +68,19 @@ def ejecutar():
     ahora = datetime.now()
     fecha_str = ahora.strftime('%Y-%m-%d %H:%M')
 
-    print("--- INICIANDO CAPTURA (MODO ANANKE) ---")
+    print("--- INICIANDO CAPTURA (MODO MULTI-REGIONAL) ---")
     total_articulos = 0
     for reg, info in DATOS_INTEL.items():
-        feeds_a_procesar = FEEDS_SPAIN if info["url"] == "COMBO" else [info["url"]]
+        # Lógica de selección de feeds corregida
+        if info["url"] == "COMBO":
+            feeds_a_procesar = FEEDS_SPAIN
+        elif info["url"] == "COMBO_ARG":
+            feeds_a_procesar = FEEDS_ARGENTINA
+        elif info["url"] == "COMBO_BR":
+            feeds_a_procesar = FEEDS_BRASIL
+        else:
+            feeds_a_procesar = [info["url"]]
+
         for url in feeds_a_procesar:
             f_parse = feedparser.parse(url, agent=USER_AGENT)
             for e in f_parse.entries[:10]:
@@ -82,7 +90,7 @@ def ejecutar():
                 total_articulos += 1
     conn.commit()
 
-    # --- CÁLCULO DE RADARES DUALES ---
+    # --- CÁLCULO DE RADARES ---
     def get_avg(region):
         cur.execute("SELECT AVG(sentimiento) FROM news WHERE region=? AND timestamp > datetime('now', '-24 hours')", (region,))
         return cur.fetchone()[0] or 0.0
@@ -113,31 +121,26 @@ def ejecutar():
     # --- INFORME HUGO ---
     filename = f"{ahora.strftime('%Y-%m-%d')}-informe.md"
     with open(os.path.join(POSTS_OUTPUT, filename), 'w') as f:
-        # Frontmatter
         f.write(f"---\n")
         f.write(f"title: \"Monitor Intel: {ahora.strftime('%H:%M')} (UTC)\"\n")
         f.write(f"date: {ahora.strftime('%Y-%m-%dT%H:%M:%S')}\n")
         f.write(f"categories: [{categorias_str}]\n")
-        f.write(f"description: \"Estado del nodo y análisis de sentimiento global.\"\n")
+        f.write(f"description: \"Análisis de sentimiento global. Foco especial en LATAM y Cono Sur.\"\n")
         f.write(f"---\n\n")
 
-        # Dashboard de Estado
         f.write(f"## 🛡️ ESTADO DEL NODO\n\n")
         f.write(f"| Indicador | Valor |\n")
         f.write(f"| :--- | :--- |\n")
         f.write(f"| **STATUS** | 🟢 **OPERATIVO** |\n")
-        f.write(f"| **ÚLTIMA SYNC** | `{fecha_str}` |\n")
-        f.write(f"| **ARTÍCULOS 24H** | {total_articulos} |\n")
-        f.write(f"| **HARDWARE** | `Odroid-C2-Madrid` |\n\n")
-        f.write(f"---\n\n") 
-        
-        f.write(f"## 📊 RADARES DE TENDENCIA\n\n")
-        f.write(f"| Región | Sentimiento (Polaridad) |\n")
+        f.write(f"| **NODO** | `Odroid-C2-Madrid` |\n")
+        f.write(f"| **ARTÍCULOS PROCESADOS** | {total_articulos} |\n\n")
+
+        f.write(f"## 📈 RADARES DE TENDENCIA\n\n")
+        f.write(f"| Región | Sentimiento |\n")
         f.write(f"| :--- | :--- |\n")
         f.write(f"| 🇺🇸 USA | **{round(avg_usa, 4)}** |\n")
         f.write(f"| 🇪🇸 ESPAÑA | **{round(avg_spain, 4)}** |\n\n")
 
-        # Clasificación de noticias
         cur.execute("SELECT region, title, link FROM news WHERE timestamp > datetime('now', '-24 hours') ORDER BY timestamp DESC LIMIT 80")
         alertas, electoral, normales = [], [], []
         vistas = set()
@@ -145,7 +148,6 @@ def ejecutar():
         for reg, tit, link in cur.fetchall():
             if tit in vistas: continue
             vistas.add(tit)
-            
             txt = f"- **[{reg}]**: {tit} ([Link]({link}))"
             tit_l = tit.lower()
             if any(key in tit_l for key in KEYWORDS_CRITICAS):
@@ -154,11 +156,6 @@ def ejecutar():
                 electoral.append(txt.replace("**[", "🗳️ **[ELECTORAL] "))
             else:
                 normales.append(txt)
-
-        # Gráfica
-        f.write(f"## 📈 Evolución de Tendencia\n\n")
-        f.write(f"![Gráfica de Sentimiento](../../images/trend.png)\n\n")
-        f.write(f"---\n\n")
 
         if alertas:
             f.write(f"### ⚡ ALERTAS CRÍTICAS\n\n")
@@ -171,16 +168,8 @@ def ejecutar():
         f.write(f"### 🌍 RESUMEN GLOBAL\n\n")
         f.write("\n".join(normales[:50]))
 
-        # --- RESUMEN DE TENDENCIA (AHORA DENTRO DEL ARCHIVO) ---
-        f.write(f"\n---\n")
-        f.write(f"### 🧠 ANÁLISIS DEL ANALISTA\n\n")
-        if avg_usa < -0.1 or avg_spain < -0.1:
-            f.write(f"⚠️ **ALERTA DE CLIMA:** Se detecta una caída significativa en el sentimiento. Revisar fuentes primarias.\n")
-        else:
-            f.write(f"✅ **ESTABILIDAD:** Los niveles de sentimiento se mantienen dentro de los parámetros nominales.\n")
-
     conn.close()
-    print(f"[+] INFORME GENERADO: {filename}")
+    print(f"[+] INFORME GENERADO EXITOSAMENTE: {filename}")
 
 if __name__ == "__main__":
     ejecutar()
