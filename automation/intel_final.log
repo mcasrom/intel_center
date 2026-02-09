@@ -1198,3 +1198,24 @@ ERROR open /home/dietpi/intel_center_odroid/blog/public/ayuda/index.html: permis
 ERROR render: failed to render pages: open /home/dietpi/intel_center_odroid/blog/public/about/index.html: permission denied
 Total in 772 ms
 Error: error copying static files: chtimes /home/dietpi/intel_center_odroid/blog/public/images/trend.png: operation not permitted
+[main 74baf2e] Intel Update: Informe, Gráficas y Separadores Restaurados
+ 6 files changed, 76 insertions(+), 12 deletions(-)
+To https://github.com/mcasrom/intel_center.git
+   fe4ec9c..74baf2e  main -> main
+[+] Iniciando ciclo de inteligencia...
+[+] Gráfica generada en: /home/dietpi/intel_center_odroid/blog/static/images/trend.png
+Start building sites … 
+hugo v0.146.0-5d1b9d39858bb0b2e505af9f649bfb55295ecca1+extended linux/arm64 BuildDate=2025-04-10T14:57:56Z VendorInfo=gohugoio
+
+
+                   | EN  
+-------------------+-----
+  Pages            | 41  
+  Paginator pages  |  1  
+  Non-page files   |  0  
+  Static files     |  9  
+  Processed images |  0  
+  Aliases          |  2  
+  Cleaned          |  0  
+
+Total in 927 ms
