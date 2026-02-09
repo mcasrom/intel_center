@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Odroid-C2 on Intel Center</title><link>https://mcasrom.github.io/intel_center/tags/odroid-c2/</link><description>Recent content in Odroid-C2 on Intel Center</description><generator>Hugo</generator><language>es</language><lastBuildDate>Mon, 09 Feb 2026 18:10:00 +0100</lastBuildDate><atom:link href="https://mcasrom.github.io/intel_center/tags/odroid-c2/index.xml" rel="self" type="application/rss+xml"/><item><title>Arquitectura del Sistema: Inteligencia en Tiempo Real</title><link>https://mcasrom.github.io/intel_center/arquitectura/</link><pubDate>Mon, 09 Feb 2026 18:10:00 +0100</pubDate><guid>https://mcasrom.github.io/intel_center/arquitectura/</guid><description>&lt;h3 id="descripción-general-del-flujo-de-datos"&gt;Descripción General del Flujo de Datos&lt;/h3&gt;
 &lt;p&gt;El Intel Center opera sobre una infraestructura descentralizada en hardware dedicado (Odroid-C2). Siguiendo el diagrama de arquitectura adjunto, el sistema se divide en cuatro capas críticas que garantizan la transformación de ruido mediático en inteligencia accionable.&lt;/p&gt;
-&lt;p&gt;&lt;img src="https://mcasrom.github.io/intel_center/images/monitor_intel_center_architecture.png" alt="Arquitectura General del Sistema OSINT"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://mcasrom.github.io/intel_center/images/monitor_intel_center_architecture.png" alt="Arquitectura General del Sistema OSINT"&gt;
+&lt;figure&gt;&lt;img src="https://mcasrom.github.io/intel_center/images/monitor_intel_center_architecture.png"&gt;&lt;figcaption&gt;
+ &lt;h4&gt;Arquitectura General del Sistema OSINT&lt;/h4&gt;
+ &lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;/p&gt;
 &lt;h4 id="1-capa-de-ingestión-fuentes-osint"&gt;1. Capa de Ingestión (Fuentes OSINT)&lt;/h4&gt;
 &lt;p&gt;El sistema monitoriza fuentes externas mediante APIs de noticias y canales RSS/Feeds. Esta capa filtra la entrada inicial basándose en los &lt;strong&gt;8 ejes estratégicos&lt;/strong&gt; definidos (incluyendo la reciente incorporación del nodo Sudamérica para Brasil y Argentina).&lt;/p&gt;</description></item></channel></rss>
