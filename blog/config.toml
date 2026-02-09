@@ -13,19 +13,19 @@ buildDrafts = true
   [[menu.main]]
     name = "Informes"
     url = "/post/"
-    weight = 20
+    weight = 30
   [[menu.main]]
     name = "Acerca de"
     url = "/about/"
-    weight = 30
+    weight = 40
   [[menu.main]]
     name = "Contacto"
     url = "/contact/"
-    weight = 40
+    weight = 50
   [[menu.main]]
     name = "Metodología"
     url = "/metodologia/"
-    weight = 50
+    weight = 20
 
 
 [params]
