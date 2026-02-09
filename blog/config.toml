@@ -4,6 +4,9 @@ title = "Intel Center"
 theme = "ananke"
 buildFuture = true
 buildDrafts = true
+canonifyURLs = true
+relativeURLs = false
+
 
 [menu]
   [[menu.main]]

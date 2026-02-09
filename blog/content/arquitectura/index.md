@@ -12,8 +12,13 @@ background_image: "/images/monitor_intel_center_architecture.png"
 
 El Intel Center opera sobre una infraestructura descentralizada en hardware dedicado (Odroid-C2). Siguiendo el diagrama de arquitectura adjunto, el sistema se divide en cuatro capas críticas que garantizan la transformación de ruido mediático en inteligencia accionable.
 
-![Arquitectura General del Sistema OSINT](/images/monitor_intel_center_architecture.png)
-{{< figure src="/images/monitor_intel_center_architecture.png" title="Arquitectura General del Sistema OSINT" >}}
+
+# Opción A (Markdown estándar):
+![Arquitectura](images/monitor_intel_center_architecture.png)
+
+# Opción B (Shortcode de Hugo - RECOMENDADO):
+{{< figure src="images/monitor_intel_center_architecture.png" >}}
+
 
 #### 1. Capa de Ingestión (Fuentes OSINT)
 El sistema monitoriza fuentes externas mediante APIs de noticias y canales RSS/Feeds. Esta capa filtra la entrada inicial basándose en los **8 ejes estratégicos** definidos (incluyendo la reciente incorporación del nodo Sudamérica para Brasil y Argentina).
