@@ -5,7 +5,7 @@ draft: false
 tags: ["Arquitectura", "OSINT", "Odroid-C2", "Sistemas"]
 categories: ["Infraestructura"]
 author: "Odroid-C2 Node"
-featured_image: "/images/monitor_intel_center_architecture.png"
+background_image: "/images/monitor_intel_center_architecture.png"
 ---
 
 ### Descripción General del Flujo de Datos
