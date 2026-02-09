@@ -935,3 +935,70 @@ ERROR open /home/dietpi/intel_center_odroid/blog/public/categories/index.html: p
 ERROR render: failed to render pages: open /home/dietpi/intel_center_odroid/blog/public/about/index.html: permission denied
 Total in 795 ms
 Error: error copying static files: chtimes /home/dietpi/intel_center_odroid/blog/public/images/trend.png: operation not permitted
+[main da89249] Intel Update: Informe, Gráficas y Separadores Restaurados
+ 8 files changed, 78 insertions(+), 10 deletions(-)
+ rename blog/content/{arquitectura.md => arquitectura/index.md} (97%)
+ create mode 100644 lib
+To https://github.com/mcasrom/intel_center.git
+   3a17838..da89249  main -> main
+[+] Iniciando ciclo de inteligencia...
+[+] Gráfica generada en: /home/dietpi/intel_center_odroid/blog/static/images/trend.png
+rm: cannot remove 'public/tags/arquitectura/index.xml': Permission denied
+rm: cannot remove 'public/tags/arquitectura/index.html': Permission denied
+rm: cannot remove 'public/tags/sistemas/index.xml': Permission denied
+rm: cannot remove 'public/tags/sistemas/index.html': Permission denied
+rm: cannot remove 'public/tags/metodología/index.xml': Permission denied
+rm: cannot remove 'public/tags/metodología/index.html': Permission denied
+rm: cannot remove 'public/tags/manual/index.xml': Permission denied
+rm: cannot remove 'public/tags/manual/index.html': Permission denied
+rm: cannot remove 'public/tags/osint/index.xml': Permission denied
+rm: cannot remove 'public/tags/osint/index.html': Permission denied
+rm: cannot remove 'public/tags/odroid-c2/index.xml': Permission denied
+rm: cannot remove 'public/tags/odroid-c2/index.html': Permission denied
+rm: cannot remove 'public/tags/protocolo/index.xml': Permission denied
+rm: cannot remove 'public/tags/protocolo/index.html': Permission denied
+rm: cannot remove 'public/tags/documentación/index.xml': Permission denied
+rm: cannot remove 'public/tags/documentación/index.html': Permission denied
+rm: cannot remove 'public/tags/index.xml': Permission denied
+rm: cannot remove 'public/tags/index.html': Permission denied
+rm: cannot remove 'public/arquitectura/index.html': Permission denied
+rm: cannot remove 'public/categories/infraestructura/index.xml': Permission denied
+rm: cannot remove 'public/categories/infraestructura/index.html': Permission denied
+rm: cannot remove 'public/categories/index.xml': Permission denied
+rm: cannot remove 'public/categories/index.html': Permission denied
+rm: cannot remove 'public/mapa/index.html': Permission denied
+rm: cannot remove 'public/metodologia/index.html': Permission denied
+rm: cannot remove 'public/page/2/index.html': Permission denied
+rm: cannot remove 'public/page/1/index.html': Permission denied
+rm: cannot remove 'public/backups/backup_node_20260208.tar.gz': Permission denied
+rm: cannot remove 'public/css/custom.css': Permission denied
+rm: cannot remove 'public/about/index.html': Permission denied
+rm: cannot remove 'public/contact/index.html': Permission denied
+rm: cannot remove 'public/ananke/css/main.css.map': Permission denied
+rm: cannot remove 'public/ananke/css/main.min.css': Permission denied
+rm: cannot remove 'public/post/2026-02-05-informe-inteligencia/index.html': Permission denied
+rm: cannot remove 'public/post/2026-02-06-informe-inteligencia/index.html': Permission denied
+rm: cannot remove 'public/post/2026-02-08-informe/index.html': Permission denied
+rm: cannot remove 'public/post/page/1/index.html': Permission denied
+rm: cannot remove 'public/post/2026-02-07-informe/index.html': Permission denied
+rm: cannot remove 'public/post/2026-02-04-informe-inteligencia/index.html': Permission denied
+rm: cannot remove 'public/post/2026-02-06-informe/index.html': Permission denied
+rm: cannot remove 'public/post/index.xml': Permission denied
+rm: cannot remove 'public/post/index.html': Permission denied
+rm: cannot remove 'public/post/guia-interpretacion-nodos/index.html': Permission denied
+rm: cannot remove 'public/images/gohugo-default-sample-hero-image.jpg': Permission denied
+rm: cannot remove 'public/images/header_intel.jpg': Permission denied
+rm: cannot remove 'public/images/monitor_intel_center_architecture.png': Permission denied
+rm: cannot remove 'public/images/trend.png': Permission denied
+rm: cannot remove 'public/ayuda/index.html': Permission denied
+rm: cannot remove 'public/data/hotspots.json': Permission denied
+Start building sites … 
+hugo v0.146.0-5d1b9d39858bb0b2e505af9f649bfb55295ecca1+extended linux/arm64 BuildDate=2025-04-10T14:57:56Z VendorInfo=gohugoio
+
+ERROR open /home/dietpi/intel_center_odroid/blog/public/arquitectura/index.html: permission denied
+ERROR open /home/dietpi/intel_center_odroid/blog/public/categories/index.html: permission denied
+ERROR open /home/dietpi/intel_center_odroid/blog/public/ayuda/index.html: permission denied
+ERROR open /home/dietpi/intel_center_odroid/blog/public/categories/infraestructura/index.html: permission denied
+ERROR render: failed to render pages: open /home/dietpi/intel_center_odroid/blog/public/about/index.html: permission denied
+Total in 800 ms
+Error: error copying static files: chtimes /home/dietpi/intel_center_odroid/blog/public/images/trend.png: operation not permitted
