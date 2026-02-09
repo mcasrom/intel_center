@@ -12,8 +12,8 @@
         "lat": 15.0,
         "lon": 15.0,
         "intensity": 15,
-        "color": "#e74c3c",
-        "sentiment_index": -0.0517
+        "color": "#f1c40f",
+        "sentiment_index": -0.0485
     },
     {
         "name": "Asia_Nikkei",
@@ -21,7 +21,7 @@
         "lon": 135.0,
         "intensity": 15,
         "color": "#2ecc71",
-        "sentiment_index": 0.1148
+        "sentiment_index": 0.1189
     },
     {
         "name": "BRASIL",
@@ -61,7 +61,7 @@
         "lon": 90.0,
         "intensity": 15,
         "color": "#f1c40f",
-        "sentiment_index": -0.0153
+        "sentiment_index": -0.0159
     },
     {
         "name": "USA_NORTE",
