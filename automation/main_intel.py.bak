@@ -1,234 +1,154 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
-import os
-import feedparser
-import sqlite3
-import json
-from datetime import datetime, timezone
+import os, feedparser, sqlite3, json, pytz
+from datetime import datetime
 
-# ===============================
-# SENTIMIENTO (robusto)
-# ===============================
-try:
-    from vaderSentiment.vaderSentiment import SentimentIntensityAnalyzer
-    analyzer = SentimentIntensityAnalyzer()
-    VADER_OK = True
-except Exception:
-    analyzer = None
-    VADER_OK = False
+# --- CONFIGURACIÓN DE RUTAS ---
+BASE_DIR = "/home/dietpi/intel_center_odroid"
+DB_PATH = os.path.join(BASE_DIR, "data/news.db")
+JSON_OUTPUT = os.path.join(BASE_DIR, "blog/data/hotspots.json")
+INFORME_MD = os.path.join(BASE_DIR, "blog/content/post/2026-02-08-informe.md")
+USA_CSV = os.path.join(BASE_DIR, "data/usa_trend.csv")
+SPAIN_CSV = os.path.join(BASE_DIR, "data/spain_trend.csv")
 
-def obtener_sentimiento(texto: str) -> float:
-    if not VADER_OK:
-        return 0.0
-    try:
-        return analyzer.polarity_scores(texto)["compound"]
-    except Exception:
-        return 0.0
+ZONA_LOCAL = pytz.timezone("Europe/Madrid")
+ahora = datetime.now(ZONA_LOCAL)
+fecha_s = ahora.strftime("%Y-%m-%d %H:%M")
 
-# ===============================
-# MODOS OPERATIVOS
-# ===============================
-INTEL_MODE = os.getenv("INTEL_MODE", "LOW").upper()
-TEST_MODE  = os.getenv("INTEL_TEST", "0") == "1"
-
-LOW_POWER = {
-    "entries": 5,
-    "latam_extended": False,
+FEEDS = {
+    "USA_NORTE": "https://www.theguardian.com/us-news/rss",
+    "ESPAÑA": "https://elpais.com/rss/politica/portada.xml",
+    "ARGENTINA": "https://www.clarin.com/rss/politica/",
+    "BRASIL": "https://agenciabrasil.ebc.com.br/rss/ultimasnoticias/feed.xml",
+    "Europa_DW": "https://rss.dw.com/rdf/rss-en-top",
+    "Rusia_Eurasia": "https://tass.com/rss/v2.xml",
+    "Medio_Oriente": "https://www.aljazeera.com/xml/rss/all.xml",
+    "Asia_Nikkei": "https://asia.nikkei.com/rss/feed/nar",
+    "Africa_Sahel": "https://www.africanews.com/feed/"
 }
 
-HIGH_INTEL = {
-    "entries": 12,
-    "latam_extended": True,
+COORDS = {
+    "USA_NORTE": [40.0, -100.0], "ESPAÑA": [40.4, -3.7], "ARGENTINA": [-34.0, -64.0],
+    "BRASIL": [-10.0, -55.0], "Europa_DW": [50.0, 10.0], "Rusia_Eurasia": [60.0, 90.0],
+    "Medio_Oriente": [25.0, 45.0], "Asia_Nikkei": [35.0, 135.0], "Africa_Sahel": [15.0, 15.0]
 }
 
-CFG = HIGH_INTEL if INTEL_MODE == "HIGH" else LOW_POWER
-
-# ===============================
-# RUTAS
-# ===============================
-SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
-BASE_DIR   = os.path.dirname(SCRIPT_DIR)
-
-DB_PATH        = os.path.join(BASE_DIR, "data/news.db")
-JSON_OUTPUT    = os.path.join(BASE_DIR, "blog/static/data/hotspots.json")
-POSTS_OUTPUT   = os.path.join(BASE_DIR, "blog/content/post")
-USA_LOG_CSV    = os.path.join(BASE_DIR, "data/usa_trend.csv")
-SPAIN_LOG_CSV  = os.path.join(BASE_DIR, "data/spain_trend.csv")
-
-USER_AGENT = "IntelCenterBot/1.0 (DietPi LowPower)"
-
-# ===============================
-# FEEDS
-# ===============================
-FEEDS_SPAIN = [
-    "https://elpais.com/rss/politica/portada.xml",
-    "https://www.elmundo.es/e/rss/espana.xml",
-]
-
-DATOS_INTEL = {
-    "USA_NORTE":      {"url": "https://www.theguardian.com/us-news/rss", "coord": [40.0, -100.0]},
-    "Europa_DW":      {"url": "https://rss.dw.com/rdf/rss-en-top", "coord": [50.0, 10.0]},
-    "Rusia_Eurasia":  {"url": "https://tass.com/rss/v2.xml", "coord": [60.0, 90.0]},
-    "Medio_Oriente":  {"url": "https://www.aljazeera.com/xml/rss/all.xml", "coord": [25.0, 45.0]},
-    "Asia_Nikkei":    {"url": "https://asia.nikkei.com/rss/feed/nar", "coord": [35.0, 135.0]},
-    "Africa_Sahel":   {"url": "https://www.africanews.com/feed/", "coord": [15.0, 15.0]},
-    "ESPAÑA":         {"url": "COMBO", "coord": [40.4, -3.7]},
-    "LATAM_GENERAL":  {"url": "https://www.bbc.com/mundo/temas/america_latina/index.xml", "coord": [-15.0, -60.0]},
-    "BRASIL":         {"url": "https://agenciabrasil.ebc.com.br/rss/ultimasnoticias/feed.xml", "coord": [-10.0, -55.0]},
-    "ARGENTINA":      {"url": "https://www.telam.com.ar/rss2/politica.xml", "coord": [-34.0, -64.0]},
+# --- DICCIONARIO DE LÍDERES ---
+BUSQUEDA_LIDERES = {
+    "Donald Trump": ["trump", "potus", "maga"],
+    "Vladimir Putin": ["putin", "kremlin"],
+    "Xi Jinping": ["xi jinping", "jinping", "beijing"],
+    "Pedro Sánchez": ["sánchez", "moncloa"],
+    "Javier Milei": ["milei", "casa rosada"]
 }
 
-# FILTRO LATAM según CFG
-if not CFG["latam_extended"]:
-    if "ARGENTINA" in DATOS_INTEL:
-        DATOS_INTEL.pop("ARGENTINA")
-    if "BRASIL" in DATOS_INTEL:
-        DATOS_INTEL.pop("BRASIL")
-
-# ===============================
-# KEYWORDS
-# ===============================
-KEYWORDS_CRITICAS = [
-    "nuclear","missile","misil","attack","ataque","war","coup",
-    "terror","military","militar","threat","sanción","tensión"
-]
-
-KEYWORDS_ELECTORALES = [
-    "election","vote","ballot","voters",
-    "elecciones","comicios","votación","campaña"
-]
-
-def calcular_score(titulo: str, sentimiento: float) -> float:
-    t = titulo.lower()
-    score = 1.0
-    if any(k in t for k in KEYWORDS_CRITICAS):
-        score += 2.5
-    if any(k in t for k in KEYWORDS_ELECTORALES):
-        score += 1.5
-    if sentimiento < -0.3:
-        score += 1.0
-    return round(score, 2)
-
-# ===============================
-# LOG CSV
-# ===============================
-def registrar_tendencia(path: str, valor: float, fecha: str):
-    if not os.path.exists(path):
-        with open(path, "w") as f:
-            f.write("timestamp,avg_sentiment\n")
-    with open(path, "a") as f:
-        f.write(f"{fecha},{round(valor,4)}\n")
-
-# ===============================
-# MAIN
-# ===============================
 def ejecutar():
-    import pytz  # pip install pytz si no lo tienes
-    print("=" * 60)
-    print(f"INTEL CENTER | MODE={INTEL_MODE} | TEST={TEST_MODE}")
-    print(f"Sentiment engine: {'VADER' if VADER_OK else 'NEUTRAL'}")
-    print("=" * 60)
-
-    os.makedirs(os.path.dirname(DB_PATH), exist_ok=True)
-    os.makedirs(POSTS_OUTPUT, exist_ok=True)
-
     conn = sqlite3.connect(DB_PATH)
-    cur  = conn.cursor()
+    cur = conn.cursor()
+    cur.execute("CREATE TABLE IF NOT EXISTS news (region TEXT, title TEXT, link TEXT UNIQUE, sentimiento REAL, timestamp DATETIME DEFAULT CURRENT_TIMESTAMP)")
 
-    cur.execute("""
-        CREATE TABLE IF NOT EXISTS news (
-            id INTEGER PRIMARY KEY AUTOINCREMENT,
-            timestamp DATETIME DEFAULT CURRENT_TIMESTAMP,
-            region TEXT,
-            title TEXT,
-            link TEXT UNIQUE,
-            sentimiento REAL,
-            score REAL
-        )
-    """)
+    alertas, electoral, resumen, lideres = [], [], [], []
 
-    if TEST_MODE:
-        print("[TEST] No limpieza de histórico")
-    else:
-        cur.execute("DELETE FROM news WHERE timestamp < datetime('now','-7 days')")
+    # 1. FETCH Y CLASIFICACIÓN
+    for reg, url in FEEDS.items():
+        feed = feedparser.parse(url)
+        for e in feed.entries[:12]:
+            title = e.title
+            link = e.link
+            low_title = title.lower()
+            
+            # A. Detección de Líderes (Prioridad 1)
+            encontrado_lider = False
+            for nombre, claves in BUSQUEDA_LIDERES.items():
+                if any(x in low_title for x in claves):
+                    lideres.append(f"👤 **{nombre}**: {title} ([Link]({link}))")
+                    encontrado_lider = True
+                    break
 
-    # -----------------------------
-    # FECHA / HORA LOCAL (Madrid)
-    # -----------------------------
-    ZONA_LOCAL = pytz.timezone("Europe/Madrid")
-    ahora = datetime.now(ZONA_LOCAL)
-    fecha_str = ahora.strftime("%Y-%m-%d %H:%M")
-    print(f"[INFO] Fecha/Hora local usada en informes: {fecha_str}")
+            if not encontrado_lider:
+                # B. Alertas Críticas (Prioridad 2)
+                if any(x in low_title for x in ["war", "military", "conflict", "missing", "attack", "detention", "nuclear", "bomb", "missile"]):
+                    alertas.append(f"🚩 [ALERTA] {reg}]: {title} ([Link]({link}))")
+                # C. Electoral (Prioridad 3)
+                elif any(x in low_title for x in ["election", "voto", "campaña", "parliament", "electoral", "voter", "pp", "psoe"]):
+                    electoral.append(f"🗳️ [ELECTORAL] {reg}]: {title} ([Link]({link}))")
+                # D. Resumen Global
+                else:
+                    resumen.append(f"[{reg}]: {title} ([Link]({link}))")
 
-    total = 0
-
-    for region, info in DATOS_INTEL.items():
-        feeds = FEEDS_SPAIN if info["url"] == "COMBO" else [info["url"]]
-        for url in feeds:
-            parsed = feedparser.parse(url, agent=USER_AGENT)
-            entries = parsed.entries[:CFG["entries"]]
-            for e in entries:
-                title = getattr(e, "title", "").strip()
-                link  = getattr(e, "link", "")
-                if not title or not link:
-                    continue
-                sent = obtener_sentimiento(title)
-                score = calcular_score(title, sent)
-                cur.execute("""
-                    INSERT OR IGNORE INTO news(region,title,link,sentimiento,score)
-                    VALUES (?,?,?,?,?)
-                """, (region, title, link, sent, score))
-                total += 1
+            cur.execute("INSERT OR IGNORE INTO news (region, title, link, sentimiento) VALUES (?,?,?,?)", (reg, title, link, 0.0))
 
     conn.commit()
 
-    # ===============================
-    # RADARES
-    # ===============================
-    def avg(region):
-        cur.execute("""
-            SELECT AVG(sentimiento)
-            FROM news
-            WHERE region=? AND timestamp > datetime('now','-24 hours')
-        """, (region,))
-        return cur.fetchone()[0] or 0.0
+    # 2. SENTIMIENTOS DINÁMICOS Y CSV
+    def get_avg(region):
+        cur.execute("SELECT AVG(sentimiento) FROM news WHERE region=? AND timestamp > datetime('now','-24 hours')", (region,))
+        return round(cur.fetchone()[0] or 0.0, 4)
 
-    registrar_tendencia(USA_LOG_CSV, avg("USA_NORTE"), fecha_str)
-    registrar_tendencia(SPAIN_LOG_CSV, avg("ESPAÑA"), fecha_str)
+    s_usa, s_esp = get_avg("USA_NORTE"), get_avg("ESPAÑA")
+    for csv_path, val in [(USA_CSV, s_usa), (SPAIN_CSV, s_esp)]:
+        with open(csv_path, "a") as f: f.write(f"{fecha_s},{val}\n")
 
-    # ===============================
-    # MAPA
-    # ===============================
-    cur.execute("""
-        SELECT region, COUNT(*) as ct, AVG(sentimiento) as s
-        FROM news
-        WHERE timestamp > datetime('now','-24 hours')
-        GROUP BY region
-    """)
-
+    # 3. GENERAR HOTSPOTS (JSON PARA EL MAPA)
     hotspots = []
-    for r, ct, s in cur.fetchall():
-        if r not in DATOS_INTEL:
-            continue
-        color = "#f1c40f"  # neutro
-        if s < -0.05:
-            color = "#ff4b2b"
-        intensity = min(round(ct * (1 + abs(s))), 10)
-        hotspots.append({
-            "name": r,
-            "lat": DATOS_INTEL[r]["coord"][0],
-            "lon": DATOS_INTEL[r]["coord"][1],
-            "intensity": intensity,
-            "color": color,
-            "sentiment_index": round(s, 2)
-        })
+    cur.execute("SELECT region, AVG(sentimiento), COUNT(*) FROM news WHERE timestamp > datetime('now','-24 hours') GROUP BY region")
+    
+    for r, sent, count in cur.fetchall():
+        if r in COORDS:
+            if sent < -0.05:
+                color_nodo = "#e74c3c"  # Rojo
+            elif sent > 0.05:
+                color_nodo = "#2ecc71"  # Verde
+            else:
+                color_nodo = "#f1c40f"  # Amarillo/Dorado
 
-    with open(JSON_OUTPUT, "w") as f:
-        json.dump(hotspots, f, indent=4)
+            hotspots.append({
+                "name": r, "lat": COORDS[r][0], "lon": COORDS[r][1],
+                "intensity": min(count, 15), "color": color_nodo,
+                "sentiment_index": round(sent, 4)
+            })
+    
+    with open(JSON_OUTPUT, "w") as j:
+        json.dump(hotspots, j, indent=4)
 
-    print(f"[OK] JSON hotspots generado con {len(hotspots)} regiones")
-    print(f"[OK] Artículos procesados: {total}")
+    # 4. GENERAR INFORME MD
+    with open(INFORME_MD, "w") as f:
+        f.write(f'---\ntitle: "Monitor Intel: {fecha_s}"\ndate: {ahora.isoformat()}\n---\n\n')
+        f.write("🛡️ ESTADO DEL NODO\n\n| Indicador | Valor |\n| :--- | :--- |\n")
+        f.write(f"| STATUS | 🟢 OPERATIVO |\n| ÚLTIMA SYNC | {fecha_s} |\n| HARDWARE | Odroid-C2-Madrid |\n\n")
+        
+        f.write("📊 RADARES DE TENDENCIA\n\n| Región | Sentimiento |\n| :--- | :--- |\n")
+        f.write(f"| 🇺🇸 USA | {s_usa} |\n| 🇪🇸 ESPAÑA | {s_esp} |\n\n")
+        
+        f.write("📈 Evolución de Tendencia\n\n")
+        f.write("![Gráfica de Tendencias](/intel_center/images/trend.png)\n\n")
 
-if __name__ == "__main__":
-    ejecutar()
+        f.write("👤 MOVIMIENTOS DE LÍDERES MUNDIALES\n\n")
+        if lideres:
+            for l in lideres[:10]: f.write(f"{l}  \n")
+        else:
+            f.write("No se detectan movimientos directos de mandatarios clave.  \n")
+
+        f.write("\n⚡ ALERTAS CRÍTICAS\n\n")
+        if alertas:
+            for a in alertas[:6]: f.write(f"{a}  \n")
+        else:
+            f.write("No se han detectado eventos críticos.  \n")
+
+        f.write("\n🗳️ VIGILANCIA ELECTORAL\n\n")
+        if electoral:
+            for e in electoral[:5]: f.write(f"{e}  \n")
+        else:
+            f.write("Sin novedades electorales en el radar.  \n")
+
+        f.write("\n🌍 RESUMEN GLOBAL\n\n")
+        for r in resumen[:12]: f.write(f"{r}  \n")
+
+    # --- MANTENIMIENTO ---
+    cur.execute("DELETE FROM news WHERE timestamp < datetime('now','-15 days')")
+    conn.commit()
+    conn.execute("VACUUM")
+    conn.close()
+
+if __name__ == "__main__": ejecutar()

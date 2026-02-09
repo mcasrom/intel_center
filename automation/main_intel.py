@@ -6,9 +6,15 @@ from datetime import datetime
 
 # --- CONFIGURACIÓN DE RUTAS ---
 BASE_DIR = "/home/dietpi/intel_center_odroid"
+# Apuntamos a la base de datos que comprobamos que tiene el "oro" (los sentimientos)
 DB_PATH = os.path.join(BASE_DIR, "data/news.db")
 JSON_OUTPUT = os.path.join(BASE_DIR, "blog/data/hotspots.json")
-INFORME_MD = os.path.join(BASE_DIR, "blog/content/post/2026-02-08-informe.md")
+
+# Generación dinámica del nombre del informe para que no siempre sea el mismo archivo
+ahora_utc = datetime.now()
+nombre_informe = ahora_utc.strftime("%Y-%m-%d") + "-informe.md"
+INFORME_MD = os.path.join(BASE_DIR, f"blog/content/post/{nombre_informe}")
+
 USA_CSV = os.path.join(BASE_DIR, "data/usa_trend.csv")
 SPAIN_CSV = os.path.join(BASE_DIR, "data/spain_trend.csv")
 
@@ -34,7 +40,6 @@ COORDS = {
     "Medio_Oriente": [25.0, 45.0], "Asia_Nikkei": [35.0, 135.0], "Africa_Sahel": [15.0, 15.0]
 }
 
-# --- DICCIONARIO DE LÍDERES ---
 BUSQUEDA_LIDERES = {
     "Donald Trump": ["trump", "potus", "maga"],
     "Vladimir Putin": ["putin", "kremlin"],
@@ -44,9 +49,15 @@ BUSQUEDA_LIDERES = {
 }
 
 def ejecutar():
+    # Conectamos a la DB correcta
     conn = sqlite3.connect(DB_PATH)
     cur = conn.cursor()
-    cur.execute("CREATE TABLE IF NOT EXISTS news (region TEXT, title TEXT, link TEXT UNIQUE, sentimiento REAL, timestamp DATETIME DEFAULT CURRENT_TIMESTAMP)")
+    
+    # Aseguramos que la tabla news tenga la columna 'sentimiento' (con 'o')
+    cur.execute("""
+        CREATE TABLE IF NOT EXISTS news 
+        (region TEXT, title TEXT, link TEXT UNIQUE, sentimiento REAL, timestamp DATETIME DEFAULT CURRENT_TIMESTAMP)
+    """)
 
     alertas, electoral, resumen, lideres = [], [], [], []
 
@@ -58,7 +69,7 @@ def ejecutar():
             link = e.link
             low_title = title.lower()
             
-            # A. Detección de Líderes (Prioridad 1)
+            # A. Detección de Líderes
             encontrado_lider = False
             for nombre, claves in BUSQUEDA_LIDERES.items():
                 if any(x in low_title for x in claves):
@@ -67,41 +78,40 @@ def ejecutar():
                     break
 
             if not encontrado_lider:
-                # B. Alertas Críticas (Prioridad 2)
-                if any(x in low_title for x in ["war", "military", "conflict", "missing", "attack", "detention", "nuclear", "bomb", "missile"]):
-                    alertas.append(f"🚩 [ALERTA] {reg}]: {title} ([Link]({link}))")
-                # C. Electoral (Prioridad 3)
-                elif any(x in low_title for x in ["election", "voto", "campaña", "parliament", "electoral", "voter", "pp", "psoe"]):
-                    electoral.append(f"🗳️ [ELECTORAL] {reg}]: {title} ([Link]({link}))")
-                # D. Resumen Global
+                if any(x in low_title for x in ["war", "military", "conflict", "attack", "nuclear", "missile"]):
+                    alertas.append(f"🚩 [ALERTA] {reg}: {title} ([Link]({link}))")
+                elif any(x in low_title for x in ["election", "voto", "campaña", "electoral", "pp", "psoe"]):
+                    electoral.append(f"🗳️ [ELECTORAL] {reg}: {title} ([Link]({link}))")
                 else:
                     resumen.append(f"[{reg}]: {title} ([Link]({link}))")
 
+            # IMPORTANTE: No insertamos 0.0 si el link ya existe para no borrar el sentimiento real calculado
             cur.execute("INSERT OR IGNORE INTO news (region, title, link, sentimiento) VALUES (?,?,?,?)", (reg, title, link, 0.0))
 
     conn.commit()
 
-    # 2. SENTIMIENTOS DINÁMICOS Y CSV
+    # 2. SENTIMIENTOS DINÁMICOS (Usando la columna 'sentimiento' confirmada)
     def get_avg(region):
-        cur.execute("SELECT AVG(sentimiento) FROM news WHERE region=? AND timestamp > datetime('now','-24 hours')", (region,))
-        return round(cur.fetchone()[0] or 0.0, 4)
+        # Filtramos para que no cuente los 0.0 que son noticias nuevas sin procesar aún
+        cur.execute("SELECT AVG(sentimiento) FROM news WHERE region=? AND sentimiento != 0.0 AND timestamp > datetime('now','-48 hours')", (region,))
+        res = cur.fetchone()[0]
+        return round(res if res is not None else 0.0, 4)
 
     s_usa, s_esp = get_avg("USA_NORTE"), get_avg("ESPAÑA")
+    
+    # Guardar en CSV para la gráfica (solo si hay datos nuevos)
     for csv_path, val in [(USA_CSV, s_usa), (SPAIN_CSV, s_esp)]:
         with open(csv_path, "a") as f: f.write(f"{fecha_s},{val}\n")
 
-    # 3. GENERAR HOTSPOTS (JSON PARA EL MAPA)
+    # 3. GENERAR HOTSPOTS (JSON)
     hotspots = []
-    cur.execute("SELECT region, AVG(sentimiento), COUNT(*) FROM news WHERE timestamp > datetime('now','-24 hours') GROUP BY region")
+    cur.execute("SELECT region, AVG(sentimiento), COUNT(*) FROM news WHERE sentimiento != 0.0 AND timestamp > datetime('now','-24 hours') GROUP BY region")
     
     for r, sent, count in cur.fetchall():
         if r in COORDS:
-            if sent < -0.05:
-                color_nodo = "#e74c3c"  # Rojo
-            elif sent > 0.05:
-                color_nodo = "#2ecc71"  # Verde
-            else:
-                color_nodo = "#f1c40f"  # Amarillo/Dorado
+            color_nodo = "#f1c40f" # Neutro
+            if sent < -0.05: color_nodo = "#e74c3c" # Rojo
+            elif sent > 0.05: color_nodo = "#2ecc71" # Verde
 
             hotspots.append({
                 "name": r, "lat": COORDS[r][0], "lon": COORDS[r][1],
@@ -112,17 +122,15 @@ def ejecutar():
     with open(JSON_OUTPUT, "w") as j:
         json.dump(hotspots, j, indent=4)
 
-    # 4. GENERAR INFORME MD
+    # 4. GENERAR INFORME MD (Corrigiendo la ruta de la imagen para GitHub y Local)
     with open(INFORME_MD, "w") as f:
         f.write(f'---\ntitle: "Monitor Intel: {fecha_s}"\ndate: {ahora.isoformat()}\n---\n\n')
         f.write("🛡️ ESTADO DEL NODO\n\n| Indicador | Valor |\n| :--- | :--- |\n")
         f.write(f"| STATUS | 🟢 OPERATIVO |\n| ÚLTIMA SYNC | {fecha_s} |\n| HARDWARE | Odroid-C2-Madrid |\n\n")
-        
         f.write("📊 RADARES DE TENDENCIA\n\n| Región | Sentimiento |\n| :--- | :--- |\n")
         f.write(f"| 🇺🇸 USA | {s_usa} |\n| 🇪🇸 ESPAÑA | {s_esp} |\n\n")
-        
         f.write("📈 Evolución de Tendencia\n\n")
-        f.write("![Gráfica de Tendencias](/intel_center/images/trend.png)\n\n")
+        f.write("![Gráfica de Tendencias](/images/trend.png)\n\n") # Ruta absoluta para Hugo
 
         f.write("👤 MOVIMIENTOS DE LÍDERES MUNDIALES\n\n")
         if lideres:
@@ -136,19 +144,13 @@ def ejecutar():
         else:
             f.write("No se han detectado eventos críticos.  \n")
 
-        f.write("\n🗳️ VIGILANCIA ELECTORAL\n\n")
-        if electoral:
-            for e in electoral[:5]: f.write(f"{e}  \n")
-        else:
-            f.write("Sin novedades electorales en el radar.  \n")
-
         f.write("\n🌍 RESUMEN GLOBAL\n\n")
         for r in resumen[:12]: f.write(f"{r}  \n")
 
     # --- MANTENIMIENTO ---
     cur.execute("DELETE FROM news WHERE timestamp < datetime('now','-15 days')")
     conn.commit()
-    conn.execute("VACUUM")
     conn.close()
 
-if __name__ == "__main__": ejecutar()
+if __name__ == "__main__":
+    ejecutar()
