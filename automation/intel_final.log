@@ -825,3 +825,25 @@ hugo v0.146.0-5d1b9d39858bb0b2e505af9f649bfb55295ecca1+extended linux/arm64 Buil
   Cleaned          |  0  
 
 Total in 883 ms
+[main 9387f4b] Intel Update: Informe, Gráficas y Separadores Restaurados
+ 10 files changed, 115 insertions(+), 72 deletions(-)
+ create mode 100755 automation/ver_intel.sh
+To https://github.com/mcasrom/intel_center.git
+   976931c..9387f4b  main -> main
+[+] Iniciando ciclo de inteligencia...
+[+] Gráfica generada en: /home/dietpi/intel_center_odroid/blog/static/images/trend.png
+Start building sites … 
+hugo v0.146.0-5d1b9d39858bb0b2e505af9f649bfb55295ecca1+extended linux/arm64 BuildDate=2025-04-10T14:57:56Z VendorInfo=gohugoio
+
+
+                   | EN  
+-------------------+-----
+  Pages            | 41  
+  Paginator pages  |  1  
+  Non-page files   |  0  
+  Static files     |  9  
+  Processed images |  0  
+  Aliases          |  2  
+  Cleaned          |  0  
+
+Total in 965 ms

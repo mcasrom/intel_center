@@ -2,7 +2,6 @@
 title: "Metodología OSINT: El Libro Blanco del Nodo"
 date: 2026-02-08T23:04:22+01:00
 tags: ["metodología", "osint", "documentación"]
-featured_image: "/images/metodologia_header.png"
 description: "Documentación técnica sobre el procesamiento de datos, umbrales de sentimiento y lógica de alertas."
 ---
 
