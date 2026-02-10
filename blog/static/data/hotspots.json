@@ -27,7 +27,7 @@
         "name": "ESPA\u00d1A",
         "lat": 40.4,
         "lon": -3.7,
-        "intensity": 2,
+        "intensity": 1,
         "color": "#2ecc71",
         "sentiment_index": 0.6
     },
@@ -59,8 +59,8 @@
         "name": "USA_NORTE",
         "lat": 40.0,
         "lon": -100.0,
-        "intensity": 12,
+        "intensity": 11,
         "color": "#f1c40f",
-        "sentiment_index": 0.0402
+        "sentiment_index": -0.0198
     }
 ]
