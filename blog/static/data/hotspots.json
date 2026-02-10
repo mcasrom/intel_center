@@ -21,7 +21,7 @@
         "lon": 135.0,
         "intensity": 15,
         "color": "#2ecc71",
-        "sentiment_index": 0.206
+        "sentiment_index": 0.22
     },
     {
         "name": "BRASIL",
@@ -45,7 +45,7 @@
         "lon": 10.0,
         "intensity": 15,
         "color": "#f1c40f",
-        "sentiment_index": -0.0098
+        "sentiment_index": -0.0175
     },
     {
         "name": "Medio_Oriente",
@@ -53,7 +53,7 @@
         "lon": 45.0,
         "intensity": 15,
         "color": "#2ecc71",
-        "sentiment_index": 0.0794
+        "sentiment_index": 0.08
     },
     {
         "name": "Rusia_Eurasia",
@@ -69,6 +69,6 @@
         "lon": -100.0,
         "intensity": 15,
         "color": "#2ecc71",
-        "sentiment_index": 0.0889
+        "sentiment_index": 0.1018
     }
 ]
