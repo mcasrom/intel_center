@@ -59,8 +59,8 @@
         "name": "USA_NORTE",
         "lat": 40.0,
         "lon": -100.0,
-        "intensity": 15,
+        "intensity": 13,
         "color": "#f1c40f",
-        "sentiment_index": 0.01
+        "sentiment_index": 0.0332
     }
 ]
