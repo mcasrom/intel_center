@@ -35,9 +35,9 @@
         "name": "Europa_DW",
         "lat": 50.0,
         "lon": 10.0,
-        "intensity": 14,
+        "intensity": 15,
         "color": "#f1c40f",
-        "sentiment_index": -0.0314
+        "sentiment_index": -0.026
     },
     {
         "name": "Medio_Oriente",
@@ -45,7 +45,7 @@
         "lon": 45.0,
         "intensity": 15,
         "color": "#f1c40f",
-        "sentiment_index": 0.0229
+        "sentiment_index": 0.0356
     },
     {
         "name": "Rusia_Eurasia",
@@ -61,6 +61,6 @@
         "lon": -100.0,
         "intensity": 15,
         "color": "#2ecc71",
-        "sentiment_index": 0.1771
+        "sentiment_index": 0.1883
     }
 ]
