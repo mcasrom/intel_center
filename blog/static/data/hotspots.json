@@ -11,9 +11,9 @@
         "name": "Africa_Sahel",
         "lat": 15.0,
         "lon": 15.0,
-        "intensity": 12,
+        "intensity": 11,
         "color": "#e74c3c",
-        "sentiment_index": -0.0772
+        "sentiment_index": -0.0751
     },
     {
         "name": "Asia_Nikkei",
@@ -45,7 +45,7 @@
         "lon": 45.0,
         "intensity": 15,
         "color": "#2ecc71",
-        "sentiment_index": 0.0712
+        "sentiment_index": 0.0568
     },
     {
         "name": "Rusia_Eurasia",
@@ -53,7 +53,7 @@
         "lon": 90.0,
         "intensity": 15,
         "color": "#f1c40f",
-        "sentiment_index": -0.0001
+        "sentiment_index": -0.0007
     },
     {
         "name": "USA_NORTE",
