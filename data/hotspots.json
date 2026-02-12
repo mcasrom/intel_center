@@ -21,7 +21,7 @@
         "lon": 135.0,
         "intensity": 15,
         "color": "#2ecc71",
-        "sentiment_index": 0.1804
+        "sentiment_index": 0.1693
     },
     {
         "name": "BRASIL",
@@ -61,7 +61,7 @@
         "lon": 90.0,
         "intensity": 15,
         "color": "#f1c40f",
-        "sentiment_index": 0.0461
+        "sentiment_index": 0.0421
     },
     {
         "name": "USA_NORTE",
