@@ -32,12 +32,20 @@
         "sentiment_index": 0.5
     },
     {
+        "name": "ESPA\u00d1A",
+        "lat": 40.4,
+        "lon": -3.7,
+        "intensity": 1,
+        "color": "#f1c40f",
+        "sentiment_index": 0.05
+    },
+    {
         "name": "Europa_DW",
         "lat": 50.0,
         "lon": 10.0,
         "intensity": 15,
         "color": "#f1c40f",
-        "sentiment_index": 0.0095
+        "sentiment_index": 0.02
     },
     {
         "name": "Medio_Oriente",
@@ -45,15 +53,15 @@
         "lon": 45.0,
         "intensity": 15,
         "color": "#f1c40f",
-        "sentiment_index": 0.0109
+        "sentiment_index": 0.0193
     },
     {
         "name": "Rusia_Eurasia",
         "lat": 60.0,
         "lon": 90.0,
         "intensity": 15,
-        "color": "#2ecc71",
-        "sentiment_index": 0.0585
+        "color": "#f1c40f",
+        "sentiment_index": 0.044
     },
     {
         "name": "USA_NORTE",
@@ -61,6 +69,6 @@
         "lon": -100.0,
         "intensity": 15,
         "color": "#2ecc71",
-        "sentiment_index": 0.1082
+        "sentiment_index": 0.1208
     }
 ]
