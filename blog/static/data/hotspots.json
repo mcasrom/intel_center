@@ -37,7 +37,7 @@
         "lon": 10.0,
         "intensity": 15,
         "color": "#f1c40f",
-        "sentiment_index": 0.0006
+        "sentiment_index": 0.0083
     },
     {
         "name": "Medio_Oriente",
@@ -45,7 +45,7 @@
         "lon": 45.0,
         "intensity": 15,
         "color": "#f1c40f",
-        "sentiment_index": -0.0006
+        "sentiment_index": 0.0106
     },
     {
         "name": "Rusia_Eurasia",
