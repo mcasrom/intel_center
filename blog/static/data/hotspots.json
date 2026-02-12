@@ -13,7 +13,7 @@
         "lon": 15.0,
         "intensity": 15,
         "color": "#f1c40f",
-        "sentiment_index": 0.0363
+        "sentiment_index": 0.0285
     },
     {
         "name": "Asia_Nikkei",
@@ -37,7 +37,7 @@
         "lon": 10.0,
         "intensity": 15,
         "color": "#f1c40f",
-        "sentiment_index": 0.0083
+        "sentiment_index": 0.0163
     },
     {
         "name": "Medio_Oriente",
@@ -61,6 +61,6 @@
         "lon": -100.0,
         "intensity": 15,
         "color": "#2ecc71",
-        "sentiment_index": 0.1206
+        "sentiment_index": 0.1242
     }
 ]
