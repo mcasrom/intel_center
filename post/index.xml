@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Informes de Inteligencia on Intel Center</title><link>https://mcasrom.github.io/intel_center/post/</link><description>Recent content in Informes de Inteligencia on Intel Center</description><generator>Hugo</generator><language>es</language><lastBuildDate>Thu, 12 Feb 2026 17:00:05 +0100</lastBuildDate><atom:link href="https://mcasrom.github.io/intel_center/post/index.xml" rel="self" type="application/rss+xml"/><item><title>📌 MANUAL: Operaciones e Interpretación de Inteligencia</title><link>https://mcasrom.github.io/intel_center/post/guia-interpretacion-nodos/</link><pubDate>Fri, 06 Feb 2026 17:00:00 +0000</pubDate><guid>https://mcasrom.github.io/intel_center/post/guia-interpretacion-nodos/</guid><description>&lt;p&gt;📌 &lt;strong&gt;PROTOCOLO DE INTELIGENCIA CONSOLIDADO (v2.1)&lt;/strong&gt;&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Informes de Inteligencia on Intel Center</title><link>https://mcasrom.github.io/intel_center/post/</link><description>Recent content in Informes de Inteligencia on Intel Center</description><generator>Hugo</generator><language>es</language><lastBuildDate>Thu, 12 Feb 2026 18:00:05 +0100</lastBuildDate><atom:link href="https://mcasrom.github.io/intel_center/post/index.xml" rel="self" type="application/rss+xml"/><item><title>📌 MANUAL: Operaciones e Interpretación de Inteligencia</title><link>https://mcasrom.github.io/intel_center/post/guia-interpretacion-nodos/</link><pubDate>Fri, 06 Feb 2026 17:00:00 +0000</pubDate><guid>https://mcasrom.github.io/intel_center/post/guia-interpretacion-nodos/</guid><description>&lt;p&gt;📌 &lt;strong&gt;PROTOCOLO DE INTELIGENCIA CONSOLIDADO (v2.1)&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;Este documento define la metodología aplicada por el motor OSINT de la &lt;strong&gt;Odroid-C2&lt;/strong&gt; para transformar datos masivos en indicadores tácticos.&lt;/p&gt;
 &lt;h4 id="1-semáforo-de-tensión-y-dinámica-política"&gt;1. Semáforo de Tensión y Dinámica Política&lt;/h4&gt;
 &lt;p&gt;El color de cada nodo se calcula mediante NLP y detección de contextos:&lt;/p&gt;
@@ -9,7 +9,7 @@
 &lt;li&gt;🔴 &lt;strong&gt;Rojo (Hostilidad)&lt;/strong&gt;: Polaridad &lt;strong&gt;&amp;lt; -0.05&lt;/strong&gt;. Conflictos o inestabilidad grave.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h4 id="2-clasificación-de-alertas"&gt;2. Clasificación de Alertas&lt;/h4&gt;
-&lt;p&gt;Jerarquía de prioridad para el analista:&lt;/p&gt;</description></item><item><title>Monitor Intel: 2026-02-12 17:00</title><link>https://mcasrom.github.io/intel_center/post/2026-02-12-informe/</link><pubDate>Thu, 12 Feb 2026 17:00:05 +0100</pubDate><guid>https://mcasrom.github.io/intel_center/post/2026-02-12-informe/</guid><description>&lt;p&gt;🛡️ ESTADO DEL NODO&lt;/p&gt;
+&lt;p&gt;Jerarquía de prioridad para el analista:&lt;/p&gt;</description></item><item><title>Monitor Intel: 2026-02-12 18:00</title><link>https://mcasrom.github.io/intel_center/post/2026-02-12-informe/</link><pubDate>Thu, 12 Feb 2026 18:00:05 +0100</pubDate><guid>https://mcasrom.github.io/intel_center/post/2026-02-12-informe/</guid><description>&lt;p&gt;🛡️ ESTADO DEL NODO&lt;/p&gt;
 &lt;table&gt;
  &lt;thead&gt;
  &lt;tr&gt;
@@ -24,7 +24,7 @@
  &lt;/tr&gt;
  &lt;tr&gt;
  &lt;td style="text-align: left"&gt;ÚLTIMA SYNC&lt;/td&gt;
- &lt;td style="text-align: left"&gt;2026-02-12 17:00&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;2026-02-12 18:00&lt;/td&gt;
  &lt;/tr&gt;
  &lt;tr&gt;
  &lt;td style="text-align: left"&gt;HARDWARE&lt;/td&gt;
@@ -43,7 +43,7 @@
  &lt;tbody&gt;
  &lt;tr&gt;
  &lt;td style="text-align: left"&gt;🇺🇸 USA&lt;/td&gt;
- &lt;td style="text-align: left"&gt;0.2114&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;0.2612&lt;/td&gt;
  &lt;/tr&gt;
  &lt;tr&gt;
  &lt;td style="text-align: left"&gt;🇪🇸 ESPAÑA&lt;/td&gt;
@@ -52,13 +52,15 @@
  &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;p&gt;📈 Evolución de Tendencia&lt;/p&gt;
-&lt;p&gt;&lt;img src="https://mcasrom.github.io/intel_center/images/260212_1700_trend.png" alt="Gráfica de Tendencias"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://mcasrom.github.io/intel_center/images/260212_1800_trend.png" alt="Gráfica de Tendencias"&gt;&lt;/p&gt;
 &lt;p&gt;👤 MOVIMIENTOS DE LÍDERES MUNDIALES&lt;/p&gt;
-&lt;p&gt;👤 &lt;strong&gt;Donald Trump&lt;/strong&gt;: Trump’s pick for top diplomatic role faces scrutiny over ‘white supremacist’ views (&lt;a href="https://www.theguardian.com/us-news/2026/feb/12/trump-nominee-jeremy-carl-racist-views"&gt;Link&lt;/a&gt;)&lt;br&gt;
+&lt;p&gt;👤 &lt;strong&gt;Donald Trump&lt;/strong&gt;: Trump crowned ‘undisputed champion of beautiful clean coal’ by coal advocacy group (&lt;a href="https://www.theguardian.com/us-news/2026/feb/12/trump-clean-coal-award"&gt;Link&lt;/a&gt;)&lt;br&gt;
+👤 &lt;strong&gt;Donald Trump&lt;/strong&gt;: Tim Walz says ‘long road to recovery starts now’ after Trump border czar says Minnesota immigration surge will end - US politics live (&lt;a href="https://www.theguardian.com/us-news/live/2026/feb/12/trump-tariffs-canada-republicans-democrats-ice-bovino-pam-bondi-jeffrey-epstein-latest-news-updates"&gt;Link&lt;/a&gt;)&lt;br&gt;
+👤 &lt;strong&gt;Donald Trump&lt;/strong&gt;: Trump’s pick for top diplomatic role faces scrutiny over ‘white supremacist’ views (&lt;a href="https://www.theguardian.com/us-news/2026/feb/12/trump-nominee-jeremy-carl-racist-views"&gt;Link&lt;/a&gt;)&lt;br&gt;
 👤 &lt;strong&gt;Donald Trump&lt;/strong&gt;: Climate leaders condemn Trump EPA’s biggest rollback yet: ‘This is corruption’ (&lt;a href="https://www.theguardian.com/us-news/2026/feb/12/climate-trump-epa-biggest-rollback"&gt;Link&lt;/a&gt;)&lt;br&gt;
-👤 &lt;strong&gt;Donald Trump&lt;/strong&gt;: Trump’s multibillion lawsuit against BBC over Panorama edit set for Florida trial in 2027 (&lt;a href="https://www.theguardian.com/media/2026/feb/12/trumps-lawsuit-bbc-panorama-edit-florida-trial-in-2027"&gt;Link&lt;/a&gt;)&lt;br&gt;
-👤 &lt;strong&gt;Donald Trump&lt;/strong&gt;: US House backs bid to block Canada tariffs in rebuke of Trump (&lt;a href="https://www.theguardian.com/us-news/2026/feb/11/us-house-vote-trump-canada-tariffs"&gt;Link&lt;/a&gt;)&lt;br&gt;
-👤 &lt;strong&gt;Javier Milei&lt;/strong&gt;: Javier Milei y sus medidas, EN VIVO: tras la victoria en el Senado por la reforma laboral, el Gobierno pone hoy su foco en Diputados por otras dos leyes clave (&lt;a href="https://www.clarin.com/politica/javier-milei-medidas-vivo-victoria-senado-reforma-laboral-gobierno-pone-hoy-foco-diputados-leyes-clave_0_gEaFMWuiKL.html"&gt;Link&lt;/a&gt;)&lt;/p&gt;</description></item><item><title>Monitor Intel: 2026-02-11 23:00</title><link>https://mcasrom.github.io/intel_center/post/2026-02-11-informe/</link><pubDate>Wed, 11 Feb 2026 23:00:06 +0100</pubDate><guid>https://mcasrom.github.io/intel_center/post/2026-02-11-informe/</guid><description>&lt;p&gt;🛡️ ESTADO DEL NODO&lt;/p&gt;
+👤 &lt;strong&gt;Donald Trump&lt;/strong&gt;: US antitrust chief Gail Slater ousted from Trump justice department (&lt;a href="https://www.theguardian.com/us-news/2026/feb/12/us-antitrust-gail-slater-ousted-trump-administration"&gt;Link&lt;/a&gt;)&lt;br&gt;
+👤 &lt;strong&gt;Donald Trump&lt;/strong&gt;: Trump’s multibillion lawsuit against BBC over Panorama edit set for trial in 2027 (&lt;a href="https://www.theguardian.com/media/2026/feb/12/trumps-lawsuit-bbc-panorama-edit-florida-trial-in-2027"&gt;Link&lt;/a&gt;)&lt;br&gt;
+👤 &lt;strong&gt;Donald Trump&lt;/strong&gt;: US border chief says Trump agrees to end deportation surge in Minnesota (&lt;a href="https://www.aljazeera.com/news/2026/2/12/tom-homan-announces-end-of-ice-operation-metro-surge-in-minnesota?traffic_source=rss"&gt;Link&lt;/a&gt;)&lt;/p&gt;</description></item><item><title>Monitor Intel: 2026-02-11 23:00</title><link>https://mcasrom.github.io/intel_center/post/2026-02-11-informe/</link><pubDate>Wed, 11 Feb 2026 23:00:06 +0100</pubDate><guid>https://mcasrom.github.io/intel_center/post/2026-02-11-informe/</guid><description>&lt;p&gt;🛡️ ESTADO DEL NODO&lt;/p&gt;
 &lt;table&gt;
  &lt;thead&gt;
  &lt;tr&gt;
