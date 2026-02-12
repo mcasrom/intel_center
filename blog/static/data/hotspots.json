@@ -21,7 +21,7 @@
         "lon": 135.0,
         "intensity": 15,
         "color": "#2ecc71",
-        "sentiment_index": 0.1805
+        "sentiment_index": 0.1823
     },
     {
         "name": "BRASIL",
@@ -61,6 +61,6 @@
         "lon": -100.0,
         "intensity": 15,
         "color": "#2ecc71",
-        "sentiment_index": 0.1461
+        "sentiment_index": 0.1506
     }
 ]
