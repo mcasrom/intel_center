@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Informes de Inteligencia on Intel Center</title><link>https://mcasrom.github.io/intel_center/post/</link><description>Recent content in Informes de Inteligencia on Intel Center</description><generator>Hugo</generator><language>es</language><lastBuildDate>Fri, 13 Feb 2026 13:00:06 +0100</lastBuildDate><atom:link href="https://mcasrom.github.io/intel_center/post/index.xml" rel="self" type="application/rss+xml"/><item><title>📌 MANUAL: Operaciones e Interpretación de Inteligencia</title><link>https://mcasrom.github.io/intel_center/post/guia-interpretacion-nodos/</link><pubDate>Fri, 06 Feb 2026 17:00:00 +0000</pubDate><guid>https://mcasrom.github.io/intel_center/post/guia-interpretacion-nodos/</guid><description>&lt;p&gt;📌 &lt;strong&gt;PROTOCOLO DE INTELIGENCIA CONSOLIDADO (v2.1)&lt;/strong&gt;&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Informes de Inteligencia on Intel Center</title><link>https://mcasrom.github.io/intel_center/post/</link><description>Recent content in Informes de Inteligencia on Intel Center</description><generator>Hugo</generator><language>es</language><lastBuildDate>Fri, 13 Feb 2026 14:00:05 +0100</lastBuildDate><atom:link href="https://mcasrom.github.io/intel_center/post/index.xml" rel="self" type="application/rss+xml"/><item><title>📌 MANUAL: Operaciones e Interpretación de Inteligencia</title><link>https://mcasrom.github.io/intel_center/post/guia-interpretacion-nodos/</link><pubDate>Fri, 06 Feb 2026 17:00:00 +0000</pubDate><guid>https://mcasrom.github.io/intel_center/post/guia-interpretacion-nodos/</guid><description>&lt;p&gt;📌 &lt;strong&gt;PROTOCOLO DE INTELIGENCIA CONSOLIDADO (v2.1)&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;Este documento define la metodología aplicada por el motor OSINT de la &lt;strong&gt;Odroid-C2&lt;/strong&gt; para transformar datos masivos en indicadores tácticos.&lt;/p&gt;
 &lt;h4 id="1-semáforo-de-tensión-y-dinámica-política"&gt;1. Semáforo de Tensión y Dinámica Política&lt;/h4&gt;
 &lt;p&gt;El color de cada nodo se calcula mediante NLP y detección de contextos:&lt;/p&gt;
@@ -9,7 +9,7 @@
 &lt;li&gt;🔴 &lt;strong&gt;Rojo (Hostilidad)&lt;/strong&gt;: Polaridad &lt;strong&gt;&amp;lt; -0.05&lt;/strong&gt;. Conflictos o inestabilidad grave.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h4 id="2-clasificación-de-alertas"&gt;2. Clasificación de Alertas&lt;/h4&gt;
-&lt;p&gt;Jerarquía de prioridad para el analista:&lt;/p&gt;</description></item><item><title>Monitor Intel: 2026-02-13 13:00</title><link>https://mcasrom.github.io/intel_center/post/2026-02-13-informe/</link><pubDate>Fri, 13 Feb 2026 13:00:06 +0100</pubDate><guid>https://mcasrom.github.io/intel_center/post/2026-02-13-informe/</guid><description>&lt;p&gt;🛡️ ESTADO DEL NODO&lt;/p&gt;
+&lt;p&gt;Jerarquía de prioridad para el analista:&lt;/p&gt;</description></item><item><title>Monitor Intel: 2026-02-13 14:00</title><link>https://mcasrom.github.io/intel_center/post/2026-02-13-informe/</link><pubDate>Fri, 13 Feb 2026 14:00:05 +0100</pubDate><guid>https://mcasrom.github.io/intel_center/post/2026-02-13-informe/</guid><description>&lt;p&gt;🛡️ ESTADO DEL NODO&lt;/p&gt;
 &lt;table&gt;
  &lt;thead&gt;
  &lt;tr&gt;
@@ -24,7 +24,7 @@
  &lt;/tr&gt;
  &lt;tr&gt;
  &lt;td style="text-align: left"&gt;ÚLTIMA SYNC&lt;/td&gt;
- &lt;td style="text-align: left"&gt;2026-02-13 13:00&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;2026-02-13 14:00&lt;/td&gt;
  &lt;/tr&gt;
  &lt;tr&gt;
  &lt;td style="text-align: left"&gt;HARDWARE&lt;/td&gt;
@@ -43,7 +43,7 @@
  &lt;tbody&gt;
  &lt;tr&gt;
  &lt;td style="text-align: left"&gt;🇺🇸 USA&lt;/td&gt;
- &lt;td style="text-align: left"&gt;0.212&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;0.2183&lt;/td&gt;
  &lt;/tr&gt;
  &lt;tr&gt;
  &lt;td style="text-align: left"&gt;🇪🇸 ESPAÑA&lt;/td&gt;
@@ -52,18 +52,18 @@
  &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;p&gt;📈 Evolución de Tendencia&lt;/p&gt;
-&lt;p&gt;&lt;img src="https://mcasrom.github.io/intel_center/images/260213_1300_trend.png" alt="Gráfica de Tendencias"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://mcasrom.github.io/intel_center/images/260213_1400_trend.png" alt="Gráfica de Tendencias"&gt;&lt;/p&gt;
 &lt;p&gt;👤 MOVIMIENTOS DE LÍDERES MUNDIALES&lt;/p&gt;
 &lt;p&gt;👤 &lt;strong&gt;Donald Trump&lt;/strong&gt;: Trump’s repeal of landmark climate ruling ‘un-American’ and ‘Orwellian’, says John Kerry – US politics live (&lt;a href="https://www.theguardian.com/us-news/live/2026/feb/13/trump-climate-epa-repeal-pollution-john-kerry-us-politics-latest-news-updates"&gt;Link&lt;/a&gt;)&lt;br&gt;
+👤 &lt;strong&gt;Donald Trump&lt;/strong&gt;: First Thing: Trump repeals landmark climate finding in gift to ‘billionaire polluters’ (&lt;a href="https://www.theguardian.com/us-news/2026/feb/13/first-thing-trump-repeals-landmark-climate-finding-in-gift-to-billionaire-polluters"&gt;Link&lt;/a&gt;)&lt;br&gt;
 👤 &lt;strong&gt;Donald Trump&lt;/strong&gt;: Democrats at Munich security summit to urge Europe to stand up to Trump (&lt;a href="https://www.theguardian.com/us-news/2026/feb/13/democrats-munich-security-conference-urge-europe-stand-up-to-trump"&gt;Link&lt;/a&gt;)&lt;br&gt;
 👤 &lt;strong&gt;Donald Trump&lt;/strong&gt;: Pride flag reinstated at Stonewall after it was removed by Trump administration (&lt;a href="https://www.theguardian.com/us-news/2026/feb/12/pride-flag-reinstated-stonewall"&gt;Link&lt;/a&gt;)&lt;br&gt;
-👤 &lt;strong&gt;Donald Trump&lt;/strong&gt;: Trump doubles down on racist video, saying no staffer has been disciplined (&lt;a href="https://www.theguardian.com/us-news/2026/feb/12/trump-racist-video-staffer"&gt;Link&lt;/a&gt;)&lt;br&gt;
-👤 &lt;strong&gt;Donald Trump&lt;/strong&gt;: Trump news at a glance: White House rejects climate science and opens door to more pollution (&lt;a href="https://www.theguardian.com/us-news/2026/feb/12/trump-administration-news-updates-today"&gt;Link&lt;/a&gt;)&lt;br&gt;
 👤 &lt;strong&gt;Donald Trump&lt;/strong&gt;: Trump nominates hospitality executive to lead National Park Service (&lt;a href="https://www.theguardian.com/us-news/2026/feb/12/trump-nominates-scott-socha-national-park-service"&gt;Link&lt;/a&gt;)&lt;br&gt;
 👤 &lt;strong&gt;Donald Trump&lt;/strong&gt;: US antitrust chief Gail Slater ousted from Trump justice department (&lt;a href="https://www.theguardian.com/us-news/2026/feb/12/us-antitrust-gail-slater-ousted-trump-administration"&gt;Link&lt;/a&gt;)&lt;br&gt;
+👤 &lt;strong&gt;Javier Milei&lt;/strong&gt;: Javier Milei y sus medidas, EN VIVO: el Gobierno incluirá al financiamiento universitario en las sesiones extraordinarias del Congreso (&lt;a href="https://www.clarin.com/politica/javier-milei-medidas-vivo-gobierno-incluira-financiamiento-universitario-sesiones-extraordinarias-congreso_0_Ct8N7Ap2Vc.html"&gt;Link&lt;/a&gt;)&lt;br&gt;
 👤 &lt;strong&gt;Javier Milei&lt;/strong&gt;: La sombra acecha y Milei promete ser &amp;ldquo;implacable&amp;rdquo; contra la corrupción (&lt;a href="https://www.clarin.com/politica/sombra-acecha-milei-promete-implacable-corrupcion_0_2lnRVZijFf.html"&gt;Link&lt;/a&gt;)&lt;br&gt;
-👤 &lt;strong&gt;Donald Trump&lt;/strong&gt;: Trump drops key US climate rule, swaps health for cheap cars (&lt;a href="https://www.dw.com/en/trump-drops-key-us-climate-rule-swaps-health-for-cheap-cars/a-75939736?maca=en-rss-en-top-1022-rdf"&gt;Link&lt;/a&gt;)&lt;br&gt;
-👤 &lt;strong&gt;Vladimir Putin&lt;/strong&gt;: Russia &amp;lsquo;obviously&amp;rsquo; open to economic cooperation with US — Kremlin (&lt;a href="https://tass.com/politics/2086417"&gt;Link&lt;/a&gt;)&lt;/p&gt;</description></item><item><title>Monitor Intel: 2026-02-12 23:00</title><link>https://mcasrom.github.io/intel_center/post/2026-02-12-informe/</link><pubDate>Thu, 12 Feb 2026 23:00:06 +0100</pubDate><guid>https://mcasrom.github.io/intel_center/post/2026-02-12-informe/</guid><description>&lt;p&gt;🛡️ ESTADO DEL NODO&lt;/p&gt;
+👤 &lt;strong&gt;Donald Trump&lt;/strong&gt;: Homenagem do Salgueiro a Rosa Magalhães fechará desfiles de 2026 (&lt;a href="https://agenciabrasil.ebc.com.br/cultura/noticia/2026-02/homenagem-do-salgueiro-rosa-magalhaes-fechara-desfiles-de-2026"&gt;Link&lt;/a&gt;)&lt;br&gt;
+👤 &lt;strong&gt;Donald Trump&lt;/strong&gt;: Trump drops key US climate rule, swaps health for cheap cars (&lt;a href="https://www.dw.com/en/trump-drops-key-us-climate-rule-swaps-health-for-cheap-cars/a-75939736?maca=en-rss-en-top-1022-rdf"&gt;Link&lt;/a&gt;)&lt;/p&gt;</description></item><item><title>Monitor Intel: 2026-02-12 23:00</title><link>https://mcasrom.github.io/intel_center/post/2026-02-12-informe/</link><pubDate>Thu, 12 Feb 2026 23:00:06 +0100</pubDate><guid>https://mcasrom.github.io/intel_center/post/2026-02-12-informe/</guid><description>&lt;p&gt;🛡️ ESTADO DEL NODO&lt;/p&gt;
 &lt;table&gt;
  &lt;thead&gt;
  &lt;tr&gt;
