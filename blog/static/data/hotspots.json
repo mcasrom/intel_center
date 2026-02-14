@@ -21,15 +21,15 @@
         "lon": 135.0,
         "intensity": 15,
         "color": "#2ecc71",
-        "sentiment_index": 0.2562
+        "sentiment_index": 0.254
     },
     {
         "name": "BRASIL",
         "lat": -10.0,
         "lon": -55.0,
-        "intensity": 2,
-        "color": "#2ecc71",
-        "sentiment_index": 0.275
+        "intensity": 1,
+        "color": "#f1c40f",
+        "sentiment_index": 0.05
     },
     {
         "name": "ESPA\u00d1A",
@@ -45,7 +45,7 @@
         "lon": 10.0,
         "intensity": 15,
         "color": "#2ecc71",
-        "sentiment_index": 0.0868
+        "sentiment_index": 0.0715
     },
     {
         "name": "Medio_Oriente",
@@ -53,7 +53,7 @@
         "lon": 45.0,
         "intensity": 15,
         "color": "#2ecc71",
-        "sentiment_index": 0.0574
+        "sentiment_index": 0.0664
     },
     {
         "name": "Rusia_Eurasia",
