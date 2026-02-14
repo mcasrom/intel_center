@@ -1,6 +1,6 @@
 ---
 title: "Balance Estratégico Semanal: 14/02/2026"
-date: 2026-02-14T20:00:19.851176
+date: 2026-02-14T21:00:20.261133
 ---
 
 ## 📉 Comparativa de Sentimiento Regional (7d vs 14d)
@@ -12,11 +12,11 @@ date: 2026-02-14T20:00:19.851176
 | **Asia_Nikkei** | 0.230 | 0.055 | 📈 Mejorando | 67 | 🟢 Positivo |
 | **BRASIL** | 0.436 | 0.000 | 📈 Mejorando | 7 | 🟢 Positivo |
 | **ESPAÑA** | 0.383 | 0.600 | 📉 Deterioro | 3 | 🟢 Positivo |
-| **Europa_DW** | 0.058 | 0.006 | 📈 Mejorando | 55 | 🟡 Neutral |
-| **Medio_Oriente** | 0.060 | 0.169 | 📉 Deterioro | 140 | 🟡 Neutral |
-| **Rusia_Eurasia** | 0.036 | -0.017 | 📈 Mejorando | 193 | 🟡 Neutral |
+| **Europa_DW** | 0.057 | 0.027 | ➡️ Estable | 53 | 🟡 Neutral |
+| **Medio_Oriente** | 0.055 | 0.162 | 📉 Deterioro | 139 | 🟡 Neutral |
+| **Rusia_Eurasia** | 0.041 | -0.038 | 📈 Mejorando | 189 | 🟡 Neutral |
 | **USA_NORTE** | 0.087 | 0.036 | 📈 Mejorando | 74 | 🟡 Neutral |
 
 ### 🧠 Análisis de Situación
 
-> Se detecta una **recuperación del sentimiento** en áreas clave como Asia_Nikkei, BRASIL, sugiriendo una estabilización de la narrativa. El tono global vira hacia la neutralidad constructiva, con una reducción de la retórica hostil en los feeds monitorizados. Este informe sintetiza la actividad de 590 eventos analizados por el nodo Odroid-C2.
+> Se detecta una **recuperación del sentimiento** en áreas clave como Asia_Nikkei, BRASIL, sugiriendo una estabilización de la narrativa. El tono global vira hacia la neutralidad constructiva, con una reducción de la retórica hostil en los feeds monitorizados. Este informe sintetiza la actividad de 583 eventos analizados por el nodo Odroid-C2.
