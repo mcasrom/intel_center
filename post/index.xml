@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Informes de Inteligencia on Intel Center</title><link>https://mcasrom.github.io/intel_center/post/</link><description>Recent content in Informes de Inteligencia on Intel Center</description><generator>Hugo</generator><language>es</language><lastBuildDate>Sat, 14 Feb 2026 07:00:05 +0100</lastBuildDate><atom:link href="https://mcasrom.github.io/intel_center/post/index.xml" rel="self" type="application/rss+xml"/><item><title>📌 MANUAL: Operaciones e Interpretación de Inteligencia</title><link>https://mcasrom.github.io/intel_center/post/guia-interpretacion-nodos/</link><pubDate>Fri, 06 Feb 2026 17:00:00 +0000</pubDate><guid>https://mcasrom.github.io/intel_center/post/guia-interpretacion-nodos/</guid><description>&lt;p&gt;📌 &lt;strong&gt;PROTOCOLO DE INTELIGENCIA CONSOLIDADO (v2.1)&lt;/strong&gt;&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Informes de Inteligencia on Intel Center</title><link>https://mcasrom.github.io/intel_center/post/</link><description>Recent content in Informes de Inteligencia on Intel Center</description><generator>Hugo</generator><language>es</language><lastBuildDate>Sat, 14 Feb 2026 08:00:05 +0100</lastBuildDate><atom:link href="https://mcasrom.github.io/intel_center/post/index.xml" rel="self" type="application/rss+xml"/><item><title>📌 MANUAL: Operaciones e Interpretación de Inteligencia</title><link>https://mcasrom.github.io/intel_center/post/guia-interpretacion-nodos/</link><pubDate>Fri, 06 Feb 2026 17:00:00 +0000</pubDate><guid>https://mcasrom.github.io/intel_center/post/guia-interpretacion-nodos/</guid><description>&lt;p&gt;📌 &lt;strong&gt;PROTOCOLO DE INTELIGENCIA CONSOLIDADO (v2.1)&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;Este documento define la metodología aplicada por el motor OSINT de la &lt;strong&gt;Odroid-C2&lt;/strong&gt; para transformar datos masivos en indicadores tácticos.&lt;/p&gt;
 &lt;h4 id="1-semáforo-de-tensión-y-dinámica-política"&gt;1. Semáforo de Tensión y Dinámica Política&lt;/h4&gt;
 &lt;p&gt;El color de cada nodo se calcula mediante NLP y detección de contextos:&lt;/p&gt;
@@ -9,7 +9,7 @@
 &lt;li&gt;🔴 &lt;strong&gt;Rojo (Hostilidad)&lt;/strong&gt;: Polaridad &lt;strong&gt;&amp;lt; -0.05&lt;/strong&gt;. Conflictos o inestabilidad grave.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h4 id="2-clasificación-de-alertas"&gt;2. Clasificación de Alertas&lt;/h4&gt;
-&lt;p&gt;Jerarquía de prioridad para el analista:&lt;/p&gt;</description></item><item><title>Monitor Intel: 2026-02-14 07:00</title><link>https://mcasrom.github.io/intel_center/post/2026-02-14-informe/</link><pubDate>Sat, 14 Feb 2026 07:00:05 +0100</pubDate><guid>https://mcasrom.github.io/intel_center/post/2026-02-14-informe/</guid><description>&lt;p&gt;🛡️ ESTADO DEL NODO&lt;/p&gt;
+&lt;p&gt;Jerarquía de prioridad para el analista:&lt;/p&gt;</description></item><item><title>Monitor Intel: 2026-02-14 08:00</title><link>https://mcasrom.github.io/intel_center/post/2026-02-14-informe/</link><pubDate>Sat, 14 Feb 2026 08:00:05 +0100</pubDate><guid>https://mcasrom.github.io/intel_center/post/2026-02-14-informe/</guid><description>&lt;p&gt;🛡️ ESTADO DEL NODO&lt;/p&gt;
 &lt;table&gt;
  &lt;thead&gt;
  &lt;tr&gt;
@@ -24,7 +24,7 @@
  &lt;/tr&gt;
  &lt;tr&gt;
  &lt;td style="text-align: left"&gt;ÚLTIMA SYNC&lt;/td&gt;
- &lt;td style="text-align: left"&gt;2026-02-14 07:00&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;2026-02-14 08:00&lt;/td&gt;
  &lt;/tr&gt;
  &lt;tr&gt;
  &lt;td style="text-align: left"&gt;HARDWARE&lt;/td&gt;
@@ -43,7 +43,7 @@
  &lt;tbody&gt;
  &lt;tr&gt;
  &lt;td style="text-align: left"&gt;🇺🇸 USA&lt;/td&gt;
- &lt;td style="text-align: left"&gt;-0.1025&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;-0.086&lt;/td&gt;
  &lt;/tr&gt;
  &lt;tr&gt;
  &lt;td style="text-align: left"&gt;🇪🇸 ESPAÑA&lt;/td&gt;
@@ -52,17 +52,14 @@
  &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;p&gt;📈 Evolución de Tendencia&lt;/p&gt;
-&lt;p&gt;&lt;img src="https://mcasrom.github.io/intel_center/images/260214_0700_trend.png" alt="Gráfica de Tendencias"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://mcasrom.github.io/intel_center/images/260214_0800_trend.png" alt="Gráfica de Tendencias"&gt;&lt;/p&gt;
 &lt;p&gt;👤 MOVIMIENTOS DE LÍDERES MUNDIALES&lt;/p&gt;
 &lt;p&gt;👤 &lt;strong&gt;Donald Trump&lt;/strong&gt;: Trump says regime change in Iran ‘would be the best thing’ as US military reportedly plans for operation – as it happened (&lt;a href="https://www.theguardian.com/us-news/live/2026/feb/13/trump-climate-epa-repeal-pollution-john-kerry-us-politics-latest-news-updates"&gt;Link&lt;/a&gt;)&lt;br&gt;
 👤 &lt;strong&gt;Donald Trump&lt;/strong&gt;: Trump news at a glance: Alexandria Ocasio-Cortez blasts president’s ‘age of authoritarianism’ at European conference (&lt;a href="https://www.theguardian.com/us-news/2026/feb/13/trump-news-at-a-glance-updates-latest-today"&gt;Link&lt;/a&gt;)&lt;br&gt;
 👤 &lt;strong&gt;Donald Trump&lt;/strong&gt;: Trump threatens to impose photo ID for voters for midterm elections (&lt;a href="https://www.theguardian.com/us-news/2026/feb/13/trump-photo-id-midterm-elections"&gt;Link&lt;/a&gt;)&lt;br&gt;
 👤 &lt;strong&gt;Donald Trump&lt;/strong&gt;: Trump administration ends temporary protected status for Yemeni nationals (&lt;a href="https://www.theguardian.com/us-news/2026/feb/13/trump-administration-ends-temporary-protected-status-yemeni-nationals"&gt;Link&lt;/a&gt;)&lt;br&gt;
 👤 &lt;strong&gt;Donald Trump&lt;/strong&gt;: Trump’s immigration agenda worsening childcare crisis, lawmakers warn (&lt;a href="https://www.theguardian.com/us-news/2026/feb/13/childcare-trump-immigration-enforcement"&gt;Link&lt;/a&gt;)&lt;br&gt;
-👤 &lt;strong&gt;Donald Trump&lt;/strong&gt;: Trump seeks to force voter ID for midterm elections (&lt;a href="https://www.dw.com/en/trump-seeks-to-force-voter-id-for-midterm-elections/a-75965713?maca=en-rss-en-top-1022-rdf"&gt;Link&lt;/a&gt;)&lt;br&gt;
-👤 &lt;strong&gt;Donald Trump&lt;/strong&gt;: Trump-Musk clash costs both hefty sums in one day — media (&lt;a href="https://tass.com/economy/1969669"&gt;Link&lt;/a&gt;)&lt;br&gt;
-👤 &lt;strong&gt;Donald Trump&lt;/strong&gt;: Shadow of &amp;lsquo;potential brutal divorce&amp;rsquo; between Trump-Musk looms over Republicans — TV (&lt;a href="https://tass.com/world/1969641"&gt;Link&lt;/a&gt;)&lt;br&gt;
-👤 &lt;strong&gt;Donald Trump&lt;/strong&gt;: Trump threatens an executive order to mandate voter IDs before elections (&lt;a href="https://www.aljazeera.com/news/2026/2/14/trump-threatens-an-executive-order-to-mandate-voter-ids-before-elections?traffic_source=rss"&gt;Link&lt;/a&gt;)&lt;/p&gt;</description></item><item><title>Monitor Intel: 2026-02-13 23:00</title><link>https://mcasrom.github.io/intel_center/post/2026-02-13-informe/</link><pubDate>Fri, 13 Feb 2026 23:00:05 +0100</pubDate><guid>https://mcasrom.github.io/intel_center/post/2026-02-13-informe/</guid><description>&lt;p&gt;🛡️ ESTADO DEL NODO&lt;/p&gt;
+👤 &lt;strong&gt;Donald Trump&lt;/strong&gt;: Trump seeks to force voter ID for midterm elections (&lt;a href="https://www.dw.com/en/trump-seeks-to-force-voter-id-for-midterm-elections/a-75965713?maca=en-rss-en-top-1022-rdf"&gt;Link&lt;/a&gt;)&lt;/p&gt;</description></item><item><title>Monitor Intel: 2026-02-13 23:00</title><link>https://mcasrom.github.io/intel_center/post/2026-02-13-informe/</link><pubDate>Fri, 13 Feb 2026 23:00:05 +0100</pubDate><guid>https://mcasrom.github.io/intel_center/post/2026-02-13-informe/</guid><description>&lt;p&gt;🛡️ ESTADO DEL NODO&lt;/p&gt;
 &lt;table&gt;
  &lt;thead&gt;
  &lt;tr&gt;
