@@ -5,7 +5,7 @@
         "lon": 15.0,
         "intensity": 15,
         "color": "#2ecc71",
-        "sentiment_index": 0.0882
+        "sentiment_index": 0.0824
     },
     {
         "name": "Asia_Nikkei",
@@ -13,7 +13,7 @@
         "lon": 135.0,
         "intensity": 15,
         "color": "#2ecc71",
-        "sentiment_index": 0.2527
+        "sentiment_index": 0.2562
     },
     {
         "name": "BRASIL",
@@ -37,7 +37,7 @@
         "lon": 10.0,
         "intensity": 15,
         "color": "#2ecc71",
-        "sentiment_index": 0.096
+        "sentiment_index": 0.0855
     },
     {
         "name": "Medio_Oriente",
@@ -45,7 +45,7 @@
         "lon": 45.0,
         "intensity": 15,
         "color": "#2ecc71",
-        "sentiment_index": 0.0624
+        "sentiment_index": 0.0596
     },
     {
         "name": "Rusia_Eurasia",
@@ -61,6 +61,6 @@
         "lon": -100.0,
         "intensity": 15,
         "color": "#f1c40f",
-        "sentiment_index": 0.0498
+        "sentiment_index": 0.0463
     }
 ]
