@@ -13,7 +13,7 @@
         "lon": 135.0,
         "intensity": 15,
         "color": "#2ecc71",
-        "sentiment_index": 0.19
+        "sentiment_index": 0.2112
     },
     {
         "name": "BRASIL",
@@ -45,15 +45,15 @@
         "lon": 45.0,
         "intensity": 15,
         "color": "#f1c40f",
-        "sentiment_index": 0.0223
+        "sentiment_index": 0.0349
     },
     {
         "name": "Rusia_Eurasia",
         "lat": 60.0,
         "lon": 90.0,
         "intensity": 15,
-        "color": "#f1c40f",
-        "sentiment_index": 0.05
+        "color": "#2ecc71",
+        "sentiment_index": 0.0596
     },
     {
         "name": "USA_NORTE",
