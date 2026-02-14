@@ -1,6 +1,6 @@
 ---
 title: "Balance Estratégico Semanal: 14/02/2026"
-date: 2026-02-14T22:00:20.282041
+date: 2026-02-14T23:00:18.481079
 ---
 
 ## 📉 Comparativa de Sentimiento Regional (7d vs 14d)
@@ -14,9 +14,9 @@ date: 2026-02-14T22:00:20.282041
 | **ESPAÑA** | 0.383 | 0.600 | 📉 Deterioro | 3 | 🟢 Positivo |
 | **Europa_DW** | 0.056 | 0.036 | ➡️ Estable | 52 | 🟡 Neutral |
 | **Medio_Oriente** | 0.055 | 0.162 | 📉 Deterioro | 139 | 🟡 Neutral |
-| **Rusia_Eurasia** | 0.041 | -0.038 | 📈 Mejorando | 189 | 🟡 Neutral |
+| **Rusia_Eurasia** | 0.039 | -0.027 | 📈 Mejorando | 190 | 🟡 Neutral |
 | **USA_NORTE** | 0.087 | 0.036 | 📈 Mejorando | 74 | 🟡 Neutral |
 
 ### 🧠 Análisis de Situación
 
-> Se detecta una **recuperación del sentimiento** en áreas clave como Asia_Nikkei, BRASIL, sugiriendo una estabilización de la narrativa. El tono global vira hacia la neutralidad constructiva, con una reducción de la retórica hostil en los feeds monitorizados. Este informe sintetiza la actividad de 582 eventos analizados por el nodo Odroid-C2.
+> Se detecta una **recuperación del sentimiento** en áreas clave como Asia_Nikkei, BRASIL, sugiriendo una estabilización de la narrativa. El tono global vira hacia la neutralidad constructiva, con una reducción de la retórica hostil en los feeds monitorizados. Este informe sintetiza la actividad de 583 eventos analizados por el nodo Odroid-C2.
