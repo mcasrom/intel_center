@@ -1,7 +1,7 @@
 ---
 title: "Metodología y Criterios de Análisis"
 date: 2026-02-15T19:30:00
-report_types: ["Documentación"]
+report_types: ["Metodología"]
 tags: ["metodologia", "osint", "documentacion"]
 ---
 
