@@ -32,10 +32,9 @@ relativeURLs = false
     url = "/report_types/mensual/"
     weight = 23
   # --------------------------------
-
   [[menu.main]]
     name = "Metodología"
-    url = "/metodologia/"
+    url = "/report_types/metodología/"  # <--- Añadimos /report_types/
     weight = 30
   [[menu.main]]
     name = "Informes (Todo)"
