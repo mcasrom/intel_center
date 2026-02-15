@@ -1,9 +1,12 @@
 ---
 title: "Metodología OSINT: El Libro Blanco del Nodo"
 date: 2026-02-08T23:04:22+01:00
+report_types: ["metodologia"]
 tags: ["metodología", "osint", "documentación"]
 description: "Documentación técnica sobre el procesamiento de datos, umbrales de sentimiento y lógica de alertas."
 ---
+
+
 
 ### 1. Introducción
 El Intel Center opera bajo una arquitectura de **"Texto a Números"**. El motor procesa fuentes globales en tiempo real utilizando NLP para convertir narrativas en indicadores cuantitativos.
