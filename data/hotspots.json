@@ -45,7 +45,7 @@
         "lon": 10.0,
         "intensity": 15,
         "color": "#2ecc71",
-        "sentiment_index": 0.0939
+        "sentiment_index": 0.1011
     },
     {
         "name": "Medio_Oriente",
@@ -69,6 +69,6 @@
         "lon": -100.0,
         "intensity": 15,
         "color": "#2ecc71",
-        "sentiment_index": 0.0583
+        "sentiment_index": 0.056
     }
 ]
