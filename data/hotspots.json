@@ -53,14 +53,14 @@
         "lon": 90.0,
         "intensity": 15,
         "color": "#f1c40f",
-        "sentiment_index": 0.0291
+        "sentiment_index": 0.0346
     },
     {
         "name": "USA_NORTE",
         "lat": 40.0,
         "lon": -100.0,
         "intensity": 15,
-        "color": "#2ecc71",
-        "sentiment_index": 0.0609
+        "color": "#f1c40f",
+        "sentiment_index": 0.0442
     }
 ]
