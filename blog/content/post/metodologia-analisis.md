@@ -1,8 +1,9 @@
 ---
-title: "Metodología y Criterios de Análisis"
-date: 2026-02-15T19:30:00
-report_types: ["Metodología"]
-tags: ["metodologia", "osint", "documentacion"]
+title: "Metodología y Criterios: Volumen y Sentimiento"
+date: 2026-02-15T10:00:00+01:00
+report_types: ["metodologia"]
+tags: ["metodología", "osint", "documentación"]
+description: "Explicación detallada sobre el cálculo del Volumen y el Índice de Sentimiento del nodo."
 ---
 
 ### 🧠 Fundamentos del Nodo Odroid-C2
