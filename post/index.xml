@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Informes de Inteligencia on Intel Center</title><link>https://mcasrom.github.io/intel_center/post/</link><description>Recent content in Informes de Inteligencia on Intel Center</description><generator>Hugo</generator><language>es</language><lastBuildDate>Sun, 15 Feb 2026 17:57:13 +0000</lastBuildDate><atom:link href="https://mcasrom.github.io/intel_center/post/index.xml" rel="self" type="application/rss+xml"/><item><title>📌 MANUAL: Operaciones e Interpretación de Inteligencia</title><link>https://mcasrom.github.io/intel_center/post/guia-interpretacion-nodos/</link><pubDate>Fri, 06 Feb 2026 17:00:00 +0000</pubDate><guid>https://mcasrom.github.io/intel_center/post/guia-interpretacion-nodos/</guid><description>&lt;p&gt;📌 &lt;strong&gt;PROTOCOLO DE INTELIGENCIA CONSOLIDADO (v2.1)&lt;/strong&gt;&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Informes de Inteligencia on Intel Center</title><link>https://mcasrom.github.io/intel_center/post/</link><description>Recent content in Informes de Inteligencia on Intel Center</description><generator>Hugo</generator><language>es</language><lastBuildDate>Sun, 15 Feb 2026 17:59:11 +0000</lastBuildDate><atom:link href="https://mcasrom.github.io/intel_center/post/index.xml" rel="self" type="application/rss+xml"/><item><title>📌 MANUAL: Operaciones e Interpretación de Inteligencia</title><link>https://mcasrom.github.io/intel_center/post/guia-interpretacion-nodos/</link><pubDate>Fri, 06 Feb 2026 17:00:00 +0000</pubDate><guid>https://mcasrom.github.io/intel_center/post/guia-interpretacion-nodos/</guid><description>&lt;p&gt;📌 &lt;strong&gt;PROTOCOLO DE INTELIGENCIA CONSOLIDADO (v2.1)&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;Este documento define la metodología aplicada por el motor OSINT de la &lt;strong&gt;Odroid-C2&lt;/strong&gt; para transformar datos masivos en indicadores tácticos.&lt;/p&gt;
 &lt;h4 id="1-semáforo-de-tensión-y-dinámica-política"&gt;1. Semáforo de Tensión y Dinámica Política&lt;/h4&gt;
 &lt;p&gt;El color de cada nodo se calcula mediante NLP y detección de contextos:&lt;/p&gt;
@@ -9,7 +9,7 @@
 &lt;li&gt;🔴 &lt;strong&gt;Rojo (Hostilidad)&lt;/strong&gt;: Polaridad &lt;strong&gt;&amp;lt; -0.05&lt;/strong&gt;. Conflictos o inestabilidad grave.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h4 id="2-clasificación-de-alertas"&gt;2. Clasificación de Alertas&lt;/h4&gt;
-&lt;p&gt;Jerarquía de prioridad para el analista:&lt;/p&gt;</description></item><item><title>Balance Estratégico Semanal: 15/02/2026</title><link>https://mcasrom.github.io/intel_center/post/260215-estrategico/</link><pubDate>Sun, 15 Feb 2026 17:57:13 +0000</pubDate><guid>https://mcasrom.github.io/intel_center/post/260215-estrategico/</guid><description>&lt;h2 id="-comparativa-de-sentimiento-regional-7d-vs-14d"&gt;📉 Comparativa de Sentimiento Regional (7d vs 14d)&lt;/h2&gt;
+&lt;p&gt;Jerarquía de prioridad para el analista:&lt;/p&gt;</description></item><item><title>Balance Estratégico Semanal: 15/02/2026</title><link>https://mcasrom.github.io/intel_center/post/260215-estrategico/</link><pubDate>Sun, 15 Feb 2026 17:59:11 +0000</pubDate><guid>https://mcasrom.github.io/intel_center/post/260215-estrategico/</guid><description>&lt;h2 id="-comparativa-de-sentimiento-regional-7d-vs-14d"&gt;📉 Comparativa de Sentimiento Regional (7d vs 14d)&lt;/h2&gt;
 &lt;table&gt;
  &lt;thead&gt;
  &lt;tr&gt;
@@ -80,10 +80,10 @@
  &lt;/tr&gt;
  &lt;tr&gt;
  &lt;td style="text-align: left"&gt;&lt;strong&gt;Rusia_Eurasia&lt;/strong&gt;&lt;/td&gt;
- &lt;td style="text-align: left"&gt;0.032&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;0.033&lt;/td&gt;
  &lt;td style="text-align: left"&gt;0.006&lt;/td&gt;
  &lt;td style="text-align: left"&gt;➡️ Estable&lt;/td&gt;
- &lt;td style="text-align: left"&gt;197&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;198&lt;/td&gt;
  &lt;td style="text-align: left"&gt;🟡 Neutral&lt;/td&gt;
  &lt;/tr&gt;
  &lt;tr&gt;
@@ -98,7 +98,7 @@
 &lt;/table&gt;
 &lt;h3 id="-análisis-de-situación"&gt;🧠 Análisis de Situación&lt;/h3&gt;
 &lt;blockquote&gt;
-&lt;p&gt;Se detecta una &lt;strong&gt;recuperación del sentimiento&lt;/strong&gt; en áreas clave como ARGENTINA, Africa_Sahel, sugiriendo una estabilización de la narrativa. El tono global vira hacia la neutralidad constructiva, con una reducción de la retórica hostil en los feeds monitorizados. Este informe sintetiza la actividad de 564 eventos analizados por el nodo Odroid-C2.&lt;/p&gt;</description></item><item><title>Informe Mensual de Inteligencia: February 2026</title><link>https://mcasrom.github.io/intel_center/post/2602-informe-mensual/</link><pubDate>Sun, 15 Feb 2026 17:56:44 +0000</pubDate><guid>https://mcasrom.github.io/intel_center/post/2602-informe-mensual/</guid><description>&lt;h2 id="-análisis-de-volumen-mensual"&gt;📊 Análisis de Volumen Mensual&lt;/h2&gt;
+&lt;p&gt;Se detecta una &lt;strong&gt;recuperación del sentimiento&lt;/strong&gt; en áreas clave como ARGENTINA, Africa_Sahel, sugiriendo una estabilización de la narrativa. El tono global vira hacia la neutralidad constructiva, con una reducción de la retórica hostil en los feeds monitorizados. Este informe sintetiza la actividad de 565 eventos analizados por el nodo Odroid-C2.&lt;/p&gt;</description></item><item><title>Informe Mensual de Inteligencia: February 2026</title><link>https://mcasrom.github.io/intel_center/post/2602-informe-mensual/</link><pubDate>Sun, 15 Feb 2026 17:56:44 +0000</pubDate><guid>https://mcasrom.github.io/intel_center/post/2602-informe-mensual/</guid><description>&lt;h2 id="-análisis-de-volumen-mensual"&gt;📊 Análisis de Volumen Mensual&lt;/h2&gt;
 &lt;p&gt;&lt;img src="../../images/mensuales/volumen-2602.png" alt="Volumen Diario"&gt;&lt;/p&gt;
 &lt;h3 id="-conclusión-operativa"&gt;🧠 Conclusión Operativa&lt;/h3&gt;
 &lt;blockquote&gt;
