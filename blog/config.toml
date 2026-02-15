@@ -7,45 +7,45 @@ buildDrafts = true
 canonifyURLs = true
 relativeURLs = false
 
+[taxonomies]
+  category = "categories"
+  tag = "tags"
+  report_type = "report_types"
 
 [menu]
   [[menu.main]]
     name = "Mapa"
     url = "/mapa/"
     weight = 10
+  
+  # --- BLOQUE DE FILTRADO INTEL ---
   [[menu.main]]
-    name = "Informes"
-    url = "/post/"
-    weight = 30
+    name = "Diarios"
+    url = "/report_types/diario/"
+    weight = 21
   [[menu.main]]
-    name = "Acerca de"
-    url = "/about/"
-    weight = 50
+    name = "Semanales"
+    url = "/report_types/semanal/"
+    weight = 22
   [[menu.main]]
-    name = "Contacto"
-    url = "/contact/"
-    weight = 60
+    name = "Mensuales"
+    url = "/report_types/mensual/"
+    weight = 23
+  # --------------------------------
+
   [[menu.main]]
     name = "Metodología"
     url = "/metodologia/"
-    weight = 20
+    weight = 30
+  [[menu.main]]
+    name = "Informes (Todo)"
+    url = "/post/"
+    weight = 40
   [[menu.main]]
     name = "Arquitectura"
     url = "/arquitectura/"
-    weight = 40
-
-
-
-
-
-[params]
-  description = "Nodo de inteligencia OSINT - Monitorización global en tiempo real"
-  # Imagen de fondo en la cabecera del sitio
-  featured_image = "images/header_intel.jpg"
-  # Favicon (en la raíz de /static/)
-  favicon = "favicon.png"
-  # Previsualización en redes sociales (Telegram, Signal, etc.)
-  images = ["images/header_intel.jpg"]
-  # Logo para el esquema de datos (opcional)
-  site_logo = "favicon.png"
-  # Ultimo intento: Sun Feb  8 17:56:29 CET 2026
+    weight = 50
+  [[menu.main]]
+    name = "Acerca de"
+    url = "/about/"
+    weight = 60
