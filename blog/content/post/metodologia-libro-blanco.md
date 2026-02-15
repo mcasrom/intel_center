@@ -2,7 +2,7 @@
 title: "Metodología OSINT: El Libro Blanco del Nodo"
 date: 2026-02-08T23:04:22+01:00
 report_types: ["metodologia"]  # <--- SIN TILDE
-tags: ["metodologia", "osint"]
+tags: ["metodología", "osint"]
 ---
 
 
