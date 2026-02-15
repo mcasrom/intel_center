@@ -1,6 +1,6 @@
 ---
 title: "Balance Estratégico Semanal: 15/02/2026"
-date: 2026-02-15T01:00:19.104031
+date: 2026-02-15T02:00:24.885401
 ---
 
 ## 📉 Comparativa de Sentimiento Regional (7d vs 14d)
