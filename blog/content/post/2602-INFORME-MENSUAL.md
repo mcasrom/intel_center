@@ -1,6 +1,6 @@
 ---
 title: "Informe Mensual de Inteligencia: February 2026"
-date: 2026-02-15T17:56:44.659512
+date: 2026-02-15T18:07:27.814308
 report_types: ["Mensual"]
 ---
 
@@ -10,4 +10,4 @@ report_types: ["Mensual"]
 
 ### 🧠 Conclusión Operativa
 
-> El nodo Odroid-C2 ha procesado **2701 señales** este mes, con un promedio de **270.1 eventos/día**. El sistema de almacenamiento de 50GB se encuentra en estado óptimo tras la rotación de logs.
+> El nodo Odroid-C2 ha procesado **2703 señales** este mes, con un promedio de **270.3 eventos/día**. El sistema de almacenamiento de 50GB se encuentra en estado óptimo tras la rotación de logs.

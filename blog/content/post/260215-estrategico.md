@@ -1,6 +1,6 @@
 ---
 title: "Balance Estratégico Semanal: 15/02/2026"
-date: 2026-02-15T18:00:18.453269
+date: 2026-02-15T18:07:57.234348
 report_types: ["Semanal"]
 ---
 
