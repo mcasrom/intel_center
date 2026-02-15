@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Documentacion on Intel Center</title><link>https://mcasrom.github.io/intel_center/tags/documentacion/</link><description>Recent content in Documentacion on Intel Center</description><generator>Hugo</generator><language>es</language><lastBuildDate>Sun, 15 Feb 2026 19:30:00 +0000</lastBuildDate><atom:link href="https://mcasrom.github.io/intel_center/tags/documentacion/index.xml" rel="self" type="application/rss+xml"/><item><title>Metodología y Criterios de Análisis</title><link>https://mcasrom.github.io/intel_center/post/metodologia-analisis/</link><pubDate>Sun, 15 Feb 2026 19:30:00 +0000</pubDate><guid>https://mcasrom.github.io/intel_center/post/metodologia-analisis/</guid><description>&lt;h3 id="-fundamentos-del-nodo-odroid-c2"&gt;🧠 Fundamentos del Nodo Odroid-C2&lt;/h3&gt;
+&lt;p&gt;Este portal de inteligencia opera bajo un modelo de procesamiento local y descentralizado. A continuación, se detallan los criterios técnicos que rigen la generación de informes.&lt;/p&gt;
+&lt;h3 id="-1-el-parámetro-volumen"&gt;📊 1. El Parámetro &amp;ldquo;Volumen&amp;rdquo;&lt;/h3&gt;
+&lt;p&gt;En las tablas estratégicas, el &lt;strong&gt;Volumen&lt;/strong&gt; es la métrica de confianza.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Definición:&lt;/strong&gt; Representa el número total de noticias únicas procesadas y clasificadas para una región específica.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Interpretación:&lt;/strong&gt; Un volumen bajo (ej. &amp;lt;5) indica una anécdota informativa. Un volumen alto (&amp;gt;50) confirma una tendencia sólida en la narrativa regional.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Cálculo:&lt;/strong&gt; Es el sumatorio de registros (&lt;code&gt;COUNT&lt;/code&gt;) en la base de datos SQL del nodo durante el periodo analizado.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="-2-índice-de-sentimiento-nlp"&gt;📈 2. Índice de Sentimiento (NLP)&lt;/h3&gt;
+&lt;p&gt;Cada titular pasa por un motor de Procesamiento de Lenguaje Natural (NLP) que asigna un valor numérico:&lt;/p&gt;</description></item></channel></rss>
