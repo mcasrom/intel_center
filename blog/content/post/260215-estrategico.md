@@ -1,6 +1,6 @@
 ---
 title: "Balance Estratégico Semanal: 15/02/2026"
-date: 2026-02-15T05:00:19.183085
+date: 2026-02-15T06:00:18.508801
 ---
 
 ## 📉 Comparativa de Sentimiento Regional (7d vs 14d)
@@ -9,14 +9,14 @@ date: 2026-02-15T05:00:19.183085
 | :--- | :--- | :--- | :--- | :--- | :--- |
 | **ARGENTINA** | -0.205 | 0.000 | 📉 Deterioro | 4 | 🔴 Crítico |
 | **Africa_Sahel** | 0.056 | 0.019 | ➡️ Estable | 48 | 🟡 Neutral |
-| **Asia_Nikkei** | 0.232 | 0.067 | 📈 Mejorando | 66 | 🟢 Positivo |
+| **Asia_Nikkei** | 0.241 | 0.054 | 📈 Mejorando | 63 | 🟢 Positivo |
 | **BRASIL** | 0.436 | 0.000 | 📈 Mejorando | 7 | 🟢 Positivo |
-| **ESPAÑA** | 0.383 | 0.600 | 📉 Deterioro | 3 | 🟢 Positivo |
-| **Europa_DW** | 0.063 | 0.061 | ➡️ Estable | 50 | 🟡 Neutral |
-| **Medio_Oriente** | 0.055 | 0.162 | 📉 Deterioro | 141 | 🟡 Neutral |
-| **Rusia_Eurasia** | 0.037 | -0.014 | 📈 Mejorando | 188 | 🟡 Neutral |
+| **ESPAÑA** | 0.275 | 0.600 | 📉 Deterioro | 2 | 🟢 Positivo |
+| **Europa_DW** | 0.062 | 0.045 | ➡️ Estable | 50 | 🟡 Neutral |
+| **Medio_Oriente** | 0.054 | 0.158 | 📉 Deterioro | 140 | 🟡 Neutral |
+| **Rusia_Eurasia** | 0.033 | -0.009 | ➡️ Estable | 193 | 🟡 Neutral |
 | **USA_NORTE** | 0.091 | 0.046 | ➡️ Estable | 72 | 🟡 Neutral |
 
 ### 🧠 Análisis de Situación
 
-> Se detecta una **recuperación del sentimiento** en áreas clave como Asia_Nikkei, BRASIL, sugiriendo una estabilización de la narrativa. El tono global vira hacia la neutralidad constructiva, con una reducción de la retórica hostil en los feeds monitorizados. Este informe sintetiza la actividad de 579 eventos analizados por el nodo Odroid-C2.
+> El vector de inteligencia muestra un **sesgo de deterioro**, liderado por tensiones en ARGENTINA, ESPAÑA. El tono global vira hacia la neutralidad constructiva, con una reducción de la retórica hostil en los feeds monitorizados. Este informe sintetiza la actividad de 579 eventos analizados por el nodo Odroid-C2.
