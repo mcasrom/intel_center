@@ -45,7 +45,7 @@
         "lon": 45.0,
         "intensity": 15,
         "color": "#2ecc71",
-        "sentiment_index": 0.0721
+        "sentiment_index": 0.0866
     },
     {
         "name": "Rusia_Eurasia",
@@ -53,14 +53,14 @@
         "lon": 90.0,
         "intensity": 15,
         "color": "#f1c40f",
-        "sentiment_index": 0.0346
+        "sentiment_index": 0.0292
     },
     {
         "name": "USA_NORTE",
         "lat": 40.0,
         "lon": -100.0,
         "intensity": 15,
-        "color": "#f1c40f",
-        "sentiment_index": 0.0442
+        "color": "#2ecc71",
+        "sentiment_index": 0.0613
     }
 ]
