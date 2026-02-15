@@ -10,8 +10,8 @@ relativeURLs = false
 [taxonomies]
   category = "categories"
   tag = "tags"
-  report_type = "report_types"
-
+  report_type = "report_types" # <--- Vital para que reconozca los scripts
+ 
 [menu]
   [[menu.main]]
     name = "Mapa"
