@@ -27,9 +27,9 @@
         "name": "BRASIL",
         "lat": -10.0,
         "lon": -55.0,
-        "intensity": 2,
+        "intensity": 3,
         "color": "#2ecc71",
-        "sentiment_index": 0.275
+        "sentiment_index": 0.1267
     },
     {
         "name": "ESPA\u00d1A",
@@ -53,7 +53,7 @@
         "lon": 45.0,
         "intensity": 15,
         "color": "#f1c40f",
-        "sentiment_index": 0.0449
+        "sentiment_index": 0.0478
     },
     {
         "name": "Rusia_Eurasia",
@@ -69,6 +69,6 @@
         "lon": -100.0,
         "intensity": 15,
         "color": "#f1c40f",
-        "sentiment_index": 0.0254
+        "sentiment_index": 0.0276
     }
 ]
