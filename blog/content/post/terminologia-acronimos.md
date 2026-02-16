@@ -9,10 +9,12 @@ summary: "Listado alfabético de términos técnicos y categorías de alerta."
 
 ### 📋 Glosario A-Z
 
+### 📋 Glosario A-Z
+
 * **Alertas Críticas:** Clasificación de noticias con términos de alta peligrosidad (ej. "Ataque", "Emergencia"). Tienen prioridad visual absoluta.
 * **Feed:** Flujo de datos entrante (RSS/API) que provee la materia prima informativa al nodo.
-* **Frontmatter:** Bloque de metadatos (YAML) al inicio de los archivos Markdown que define títulos y categorías.
-* **Hotspot:** Punto de alta actividad informativa. Indica una región donde el volumen y el sentimiento sugieren un evento crítico en desarrollo.
+* **Hotspot:** Punto de alta actividad informativa. Se define por la convergencia de una alta **Intensidad** de noticias y un nivel de **Tensión** significativo en el sentimiento regional.
+* **Intensidad:** Métrica que cuantifica la frecuencia de impactos en un intervalo de tiempo reducido. Una intensidad alta indica un evento de rápida evolución.
 * **Líderes:** Actores clave o figuras de influencia detectadas que marcan la agenda informativa del periodo analizado.
 * **NLP (Natural Language Processing):** Procesamiento de Lenguaje Natural. Tecnología para calificar el sentimiento de los titulares.
 * **Nodo:** Unidad física de procesamiento local (**Odroid-C2**) que ejecuta el análisis de forma descentralizada.
@@ -20,7 +22,9 @@ summary: "Listado alfabético de términos técnicos y categorías de alerta."
 * **Sentimiento (Sent):** Valor numérico entre -1 y +1 que mide la carga emocional de una narrativa.
 * **SQLite:** Base de datos relacional local que almacena el histórico operativo del nodo.
 * **Taxonomía:** Sistema de organización (Diarios, Semanales, Metodología) para filtrar la inteligencia.
+* **Tensión:** Indicador del nivel de conflicto o fricción narrativa. Se calcula según la desviación del sentimiento hacia valores negativos o polarizados.
 * **Vigilancia Electoral:** Categoría dedicada al seguimiento de procesos de votación y encuestas regionales.
 * **Volumen:** Cantidad total de impactos analizados. Es el indicador de la solidez estadística de una tendencia.
 
 ---
+
