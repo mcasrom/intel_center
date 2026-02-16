@@ -2,7 +2,7 @@
 title: "Terminología y Acrónimos del Nodo"
 date: 2026-02-16T10:00:00+01:00
 report_types: ["metodologia"]
-tags: ["documentacion", "glosario", "osint"]
+tags: [ "metodología", "documentacion", "glosario", "osint"]
 weight: 5
 summary: "Listado alfabético de términos técnicos y categorías de alerta."
 ---
