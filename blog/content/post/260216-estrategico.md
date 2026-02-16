@@ -1,6 +1,6 @@
 ---
 title: "Balance Estratégico Semanal: 16/02/2026"
-date: 2026-02-16T01:00:19.867398
+date: 2026-02-16T02:00:19.954874
 report_types: ["Semanal"]
 ---
 
@@ -15,9 +15,9 @@ report_types: ["Semanal"]
 | **ESPAÑA** | 0.275 | 0.600 | 📉 Deterioro | 2 | 🟢 Positivo |
 | **Europa_DW** | 0.072 | 0.064 | ➡️ Estable | 52 | 🟡 Neutral |
 | **Medio_Oriente** | 0.042 | 0.123 | 📉 Deterioro | 132 | 🟡 Neutral |
-| **Rusia_Eurasia** | 0.039 | -0.006 | ➡️ Estable | 199 | 🟡 Neutral |
+| **Rusia_Eurasia** | 0.036 | -0.006 | ➡️ Estable | 202 | 🟡 Neutral |
 | **USA_NORTE** | 0.098 | 0.008 | 📈 Mejorando | 77 | 🟡 Neutral |
 
 ### 🧠 Análisis de Situación
 
-> Se detecta una **recuperación del sentimiento** en áreas clave como ARGENTINA, Africa_Sahel, sugiriendo una estabilización de la narrativa. El tono global vira hacia la neutralidad constructiva, con una reducción de la retórica hostil en los feeds monitorizados. Este informe sintetiza la actividad de 574 eventos analizados por el nodo Odroid-C2.
+> Se detecta una **recuperación del sentimiento** en áreas clave como ARGENTINA, Africa_Sahel, sugiriendo una estabilización de la narrativa. El tono global vira hacia la neutralidad constructiva, con una reducción de la retórica hostil en los feeds monitorizados. Este informe sintetiza la actividad de 577 eventos analizados por el nodo Odroid-C2.
