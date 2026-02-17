@@ -1,12 +1,15 @@
 ---
 title: "Análisis de Varianza y Tendencias Globales"
-date: 2026-02-17T15:21:14+01:00
-report_types: ["Metodología"]
+date: 2026-02-17T15:27:45+01:00
+report_types: ["metodologia"]
+tags: ["Metodología", "Análisis", "OSINT"]
 draft: false
 type: "post"
 ---
 
 ### 📊 Evolución de Sentimiento OSINT
+
+Comparativa de tensión narrativa (24h).
 
 | Región | Tensión Hoy | Tensión Ayer | Delta (Δ) | Estado |
 |:---|:---:|:---:|:---:|:---:|
@@ -22,4 +25,4 @@ type: "post"
 | **GLOBAL (Media)** | 0.0095 | 0.0103 | -0.0008 | ⚪ Estable |
 
 
-*Generado: 17/02/2026 15:21*
+*Generado automáticamente por el nodo Odroid-C2 el 17/02/2026 15:27.*
