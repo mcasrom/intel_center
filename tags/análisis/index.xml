@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Análisis on Intel Center</title><link>https://mcasrom.github.io/intel_center/tags/an%C3%A1lisis/</link><description>Recent content in Análisis on Intel Center</description><generator>Hugo</generator><language>es</language><lastBuildDate>Tue, 17 Feb 2026 17:00:19 +0100</lastBuildDate><atom:link href="https://mcasrom.github.io/intel_center/tags/an%C3%A1lisis/index.xml" rel="self" type="application/rss+xml"/><item><title>Análisis de Varianza y Tendencias Globales</title><link>https://mcasrom.github.io/intel_center/post/analisis-varianza/</link><pubDate>Tue, 17 Feb 2026 17:00:19 +0100</pubDate><guid>https://mcasrom.github.io/intel_center/post/analisis-varianza/</guid><description>&lt;h3 id="-evolución-de-sentimiento-osint"&gt;📊 Evolución de Sentimiento OSINT&lt;/h3&gt;
-&lt;p&gt;Comparativa de tensión narrativa (24h).&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Análisis on Intel Center</title><link>https://mcasrom.github.io/intel_center/tags/an%C3%A1lisis/</link><description>Recent content in Análisis on Intel Center</description><generator>Hugo</generator><language>es</language><lastBuildDate>Tue, 17 Feb 2026 17:20:17 +0100</lastBuildDate><atom:link href="https://mcasrom.github.io/intel_center/tags/an%C3%A1lisis/index.xml" rel="self" type="application/rss+xml"/><item><title>Análisis de Varianza: 17/02/2026</title><link>https://mcasrom.github.io/intel_center/post/260217_analisis-varianza/</link><pubDate>Tue, 17 Feb 2026 17:20:17 +0100</pubDate><guid>https://mcasrom.github.io/intel_center/post/260217_analisis-varianza/</guid><description>&lt;h3 id="-evolución-de-sentimiento-osint-17022026"&gt;📊 Evolución de Sentimiento OSINT (17/02/2026)&lt;/h3&gt;
+&lt;p&gt;Comparativa de tensión narrativa entre las últimas 24h y el periodo anterior.&lt;/p&gt;
 &lt;table&gt;
  &lt;thead&gt;
  &lt;tr&gt;
@@ -13,9 +13,9 @@
  &lt;tbody&gt;
  &lt;tr&gt;
  &lt;td style="text-align: left"&gt;ARGENTINA&lt;/td&gt;
- &lt;td style="text-align: center"&gt;0.0025&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;0.0048&lt;/td&gt;
  &lt;td style="text-align: center"&gt;0.0088&lt;/td&gt;
- &lt;td style="text-align: center"&gt;-0.0063&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;-0.0041&lt;/td&gt;
  &lt;td style="text-align: center"&gt;⚪ Estable&lt;/td&gt;
  &lt;/tr&gt;
  &lt;tr&gt;
@@ -27,9 +27,9 @@
  &lt;/tr&gt;
  &lt;tr&gt;
  &lt;td style="text-align: left"&gt;Asia_Nikkei&lt;/td&gt;
- &lt;td style="text-align: center"&gt;0.0215&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;0.0205&lt;/td&gt;
  &lt;td style="text-align: center"&gt;0.0117&lt;/td&gt;
- &lt;td style="text-align: center"&gt;+0.0098&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;+0.0088&lt;/td&gt;
  &lt;td style="text-align: center"&gt;⚪ Estable&lt;/td&gt;
  &lt;/tr&gt;
  &lt;tr&gt;
@@ -55,16 +55,16 @@
  &lt;/tr&gt;
  &lt;tr&gt;
  &lt;td style="text-align: left"&gt;Medio_Oriente&lt;/td&gt;
- &lt;td style="text-align: center"&gt;0.0292&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;0.0300&lt;/td&gt;
  &lt;td style="text-align: center"&gt;-0.0402&lt;/td&gt;
- &lt;td style="text-align: center"&gt;+0.0694&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;+0.0702&lt;/td&gt;
  &lt;td style="text-align: center"&gt;🔴 Escalada&lt;/td&gt;
  &lt;/tr&gt;
  &lt;tr&gt;
  &lt;td style="text-align: left"&gt;Rusia_Eurasia&lt;/td&gt;
- &lt;td style="text-align: center"&gt;0.0045&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;0.0041&lt;/td&gt;
  &lt;td style="text-align: center"&gt;-0.0008&lt;/td&gt;
- &lt;td style="text-align: center"&gt;+0.0054&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;+0.0049&lt;/td&gt;
  &lt;td style="text-align: center"&gt;⚪ Estable&lt;/td&gt;
  &lt;/tr&gt;
  &lt;tr&gt;
@@ -76,11 +76,20 @@
  &lt;/tr&gt;
  &lt;tr&gt;
  &lt;td style="text-align: left"&gt;&lt;strong&gt;GLOBAL (Media)&lt;/strong&gt;&lt;/td&gt;
- &lt;td style="text-align: center"&gt;0.0158&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;0.0159&lt;/td&gt;
  &lt;td style="text-align: center"&gt;0.0046&lt;/td&gt;
- &lt;td style="text-align: center"&gt;+0.0111&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;+0.0112&lt;/td&gt;
  &lt;td style="text-align: center"&gt;⚪ Estable&lt;/td&gt;
  &lt;/tr&gt;
  &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;p&gt;&lt;em&gt;Generado automáticamente por el nodo Odroid-C2 el 17/02/2026 17:00.&lt;/em&gt;&lt;/p&gt;</description></item></channel></rss>
+&lt;p&gt;&lt;em&gt;Generado automáticamente por el nodo Odroid-C2 el 17/02/2026 17:20.&lt;/em&gt;&lt;/p&gt;</description></item><item><title>Metodología: Análisis de Varianza de Sentimiento</title><link>https://mcasrom.github.io/intel_center/post/an%C3%A1lisis-varianda-metodologia/</link><pubDate>Tue, 17 Feb 2026 15:35:00 +0100</pubDate><guid>https://mcasrom.github.io/intel_center/post/an%C3%A1lisis-varianda-metodologia/</guid><description>&lt;h3 id="-introducción-al-cálculo-de-varianza-narrativa"&gt;📘 Introducción al Cálculo de Varianza Narrativa&lt;/h3&gt;
+&lt;p&gt;Para que el análisis de inteligencia en este nodo sea accionable, no basta con conocer el sentimiento actual; es imprescindible medir su evolución. El &lt;strong&gt;Análisis de Varianza&lt;/strong&gt; nos permite distinguir entre el ruido mediático habitual y una escalada de tensión real.&lt;/p&gt;
+&lt;h3 id="-metodología-de-cálculo"&gt;🧮 Metodología de Cálculo&lt;/h3&gt;
+&lt;p&gt;El sistema procesa la base de datos &lt;code&gt;news.db&lt;/code&gt; comparando dos ventanas temporales móviles:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;Ventana Actual ($T_0$):&lt;/strong&gt; Media aritmética del sentimiento de todas las noticias capturadas en las últimas 24 horas.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Ventana de Control ($T_{-1}$):&lt;/strong&gt; Media aritmética del sentimiento del periodo previo (de 24 a 48 horas atrás).&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Cálculo del Delta (Δ):&lt;/strong&gt; La diferencia neta entre ambas ventanas.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;$$\Delta = \bar{x}(Sentimiento_{Hoy}) - \bar{x}(Sentimiento_{Ayer})$$&lt;/p&gt;</description></item></channel></rss>
