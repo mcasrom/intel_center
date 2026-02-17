@@ -75,9 +75,9 @@
         "name": "INDIA_CORE",
         "lat": 28.6,
         "lon": 77.2,
-        "intensity": 7,
+        "intensity": 8,
         "color": "#e74c3c",
-        "sentiment_index": -0.0529
+        "sentiment_index": -0.0675
     },
     {
         "name": "CHINA_CORE",
