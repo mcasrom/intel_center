@@ -1,6 +1,6 @@
 ---
 title: "Análisis de Varianza: 17/02/2026"
-date: 2026-02-17T19:00:19+01:00
+date: 2026-02-17T19:08:20+01:00
 report_types: ["metodologia"]
 tags: ["Metodología", "Análisis", "OSINT"]
 draft: false
@@ -20,9 +20,9 @@ Comparativa de tensión narrativa entre las últimas 24h y el periodo anterior.
 | ESPAÑA | 0.0312 | 0.0175 | +0.0137 | ⚪ Estable |
 | Europa_DW | -0.0015 | 0.0553 | -0.0568 | 🟢 Distensión |
 | Medio_Oriente | 0.0276 | -0.0312 | +0.0588 | 🔴 Escalada |
-| Rusia_Eurasia | 0.0115 | -0.0140 | +0.0254 | ⚪ Estable |
-| USA_NORTE | 0.0896 | 0.0473 | +0.0423 | ⚪ Estable |
-| **GLOBAL (Media)** | 0.0158 | 0.0032 | +0.0126 | ⚪ Estable |
+| Rusia_Eurasia | 0.0115 | -0.0141 | +0.0256 | ⚪ Estable |
+| USA_NORTE | 0.1048 | 0.0473 | +0.0575 | 🔴 Escalada |
+| **GLOBAL (Media)** | 0.0169 | 0.0032 | +0.0137 | ⚪ Estable |
 
 
-*Generado automáticamente por el nodo Odroid-C2 el 17/02/2026 19:00.*
+*Generado automáticamente por el nodo Odroid-C2 el 17/02/2026 19:08.*
