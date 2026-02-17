@@ -3,8 +3,8 @@
         "name": "ARGENTINA",
         "lat": -34.0,
         "lon": -64.0,
-        "intensity": 6,
-        "color": "#2ecc71",
+        "intensity": 7,
+        "color": "#f1c40f",
         "sentiment_index": 0.05
     },
     {
@@ -51,9 +51,9 @@
         "name": "INDIA_CHINA_CORE",
         "lat": 28.6,
         "lon": 77.2,
-        "intensity": 1,
+        "intensity": 2,
         "color": "#2ecc71",
-        "sentiment_index": 0.36
+        "sentiment_index": 0.26
     },
     {
         "name": "Medio_Oriente",
