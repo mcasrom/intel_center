@@ -1,6 +1,6 @@
 ---
 title: "Balance Estratégico Semanal: 17/02/2026"
-date: 2026-02-17T07:00:20.857078
+date: 2026-02-17T08:00:19.699438
 report_types: ["Semanal"]
 ---
 
@@ -9,15 +9,15 @@ report_types: ["Semanal"]
 | Región | Actual (7d) | Previo (14d) | Tendencia | Volumen | Estado |
 | :--- | :--- | :--- | :--- | :--- | :--- |
 | **ARGENTINA** | 0.046 | -0.450 | 📈 Mejorando | 5 | 🟡 Neutral |
-| **Africa_Sahel** | 0.059 | -0.098 | 📈 Mejorando | 57 | 🟡 Neutral |
+| **Africa_Sahel** | 0.059 | -0.098 | 📈 Mejorando | 58 | 🟡 Neutral |
 | **Asia_Nikkei** | 0.196 | 0.227 | ➡️ Estable | 59 | 🟢 Positivo |
 | **BRASIL** | 0.376 | 0.000 | 📈 Mejorando | 9 | 🟢 Positivo |
 | **ESPAÑA** | 0.333 | 0.600 | 📉 Deterioro | 4 | 🟢 Positivo |
-| **Europa_DW** | 0.072 | 0.064 | ➡️ Estable | 68 | 🟡 Neutral |
+| **Europa_DW** | 0.065 | 0.064 | ➡️ Estable | 69 | 🟡 Neutral |
 | **Medio_Oriente** | 0.031 | 0.123 | 📉 Deterioro | 156 | 🟡 Neutral |
 | **Rusia_Eurasia** | 0.028 | -0.006 | ➡️ Estable | 246 | 🟡 Neutral |
 | **USA_NORTE** | 0.095 | 0.008 | 📈 Mejorando | 85 | 🟡 Neutral |
 
 ### 🧠 Análisis de Situación
 
-> Se detecta una **recuperación del sentimiento** en áreas clave como ARGENTINA, Africa_Sahel, sugiriendo una estabilización de la narrativa. El tono global vira hacia la neutralidad constructiva, con una reducción de la retórica hostil en los feeds monitorizados. Este informe sintetiza la actividad de 689 eventos analizados por el nodo Odroid-C2.
+> Se detecta una **recuperación del sentimiento** en áreas clave como ARGENTINA, Africa_Sahel, sugiriendo una estabilización de la narrativa. El tono global vira hacia la neutralidad constructiva, con una reducción de la retórica hostil en los feeds monitorizados. Este informe sintetiza la actividad de 691 eventos analizados por el nodo Odroid-C2.
