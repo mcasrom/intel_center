@@ -19,9 +19,9 @@
         "name": "Asia_Nikkei",
         "lat": 35.0,
         "lon": 135.0,
-        "intensity": 15,
+        "intensity": 14,
         "color": "#2ecc71",
-        "sentiment_index": 0.2773
+        "sentiment_index": 0.2257
     },
     {
         "name": "BRASIL",
@@ -53,7 +53,7 @@
         "lon": 45.0,
         "intensity": 15,
         "color": "#f1c40f",
-        "sentiment_index": 0.0476
+        "sentiment_index": 0.0311
     },
     {
         "name": "Rusia_Eurasia",
@@ -61,7 +61,7 @@
         "lon": 90.0,
         "intensity": 15,
         "color": "#f1c40f",
-        "sentiment_index": -0.0124
+        "sentiment_index": -0.0199
     },
     {
         "name": "USA_NORTE",
