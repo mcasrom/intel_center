@@ -9,8 +9,6 @@ summary: "Listado alfabético de términos técnicos y categorías de alerta."
 
 ### 📋 Glosario A-Z
 
-### 📋 Glosario A-Z
-
 * **Alertas Críticas:** Clasificación de noticias con términos de alta peligrosidad (ej. "Ataque", "Emergencia"). Tienen prioridad visual absoluta.
 * **Feed:** Flujo de datos entrante (RSS/API) que provee la materia prima informativa al nodo.
 * **Hotspot:** Punto de alta actividad informativa. Se define por la convergencia de una alta **Intensidad** de noticias y un nivel de **Tensión** significativo en el sentimiento regional.
