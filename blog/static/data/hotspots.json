@@ -48,20 +48,12 @@
         "sentiment_index": 0.0885
     },
     {
-        "name": "INDIA_CHINA_CORE",
-        "lat": 28.6,
-        "lon": 77.2,
-        "intensity": 2,
-        "color": "#2ecc71",
-        "sentiment_index": 0.26
-    },
-    {
         "name": "Medio_Oriente",
         "lat": 25.0,
         "lon": 45.0,
         "intensity": 15,
         "color": "#f1c40f",
-        "sentiment_index": 0.0205
+        "sentiment_index": 0.014
     },
     {
         "name": "Rusia_Eurasia",
