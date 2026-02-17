@@ -27,9 +27,9 @@
         "name": "BRASIL",
         "lat": -10.0,
         "lon": -55.0,
-        "intensity": 3,
+        "intensity": 2,
         "color": "#2ecc71",
-        "sentiment_index": 0.1267
+        "sentiment_index": 0.165
     },
     {
         "name": "ESPA\u00d1A",
@@ -61,7 +61,7 @@
         "lon": 90.0,
         "intensity": 15,
         "color": "#f1c40f",
-        "sentiment_index": -0.0106
+        "sentiment_index": -0.0124
     },
     {
         "name": "USA_NORTE",
@@ -69,6 +69,6 @@
         "lon": -100.0,
         "intensity": 15,
         "color": "#f1c40f",
-        "sentiment_index": 0.0276
+        "sentiment_index": 0.0329
     }
 ]
