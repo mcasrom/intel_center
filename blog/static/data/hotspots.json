@@ -13,7 +13,7 @@
         "lon": -3.7,
         "intensity": 3,
         "color": "#2ecc71",
-        "sentiment_index": 0.39
+        "sentiment_index": 0.4267
     },
     {
         "name": "ARGENTINA",
@@ -75,9 +75,9 @@
         "name": "INDIA_CORE",
         "lat": 28.6,
         "lon": 77.2,
-        "intensity": 8,
-        "color": "#e74c3c",
-        "sentiment_index": -0.0675
+        "intensity": 9,
+        "color": "#f1c40f",
+        "sentiment_index": -0.0044
     },
     {
         "name": "CHINA_CORE",

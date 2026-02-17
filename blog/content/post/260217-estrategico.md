@@ -4,6 +4,27 @@ date: 2026-02-17T15:00:19.745588
 report_types: ["Semanal"]
 ---
 
+### 📊 Evolución de Sentimiento (Varianza 24h)
+Comparativa de tensión narrativa: 17/02/2026
+
+| Región | Hoy | Ayer | Delta (Δ) | Estado |
+|:---|:---:|:---:|:---:|:---:|
+| ARGENTINA | 0.0065 | 0.0053 | +0.0013 | ⚪ Estable |
+| Africa_Sahel | -0.0129 | 0.0038 | -0.0167 | ⚪ Estable |
+| Asia_Nikkei | 0.0285 | 0.0291 | -0.0006 | ⚪ Estable |
+| BRASIL | -0.0117 | 0.0217 | -0.0335 | ⚪ Estable |
+| ESPAÑA | 0.0556 | 0.0175 | +0.0381 | ⚪ Estable |
+| Europa_DW | -0.0014 | 0.0553 | -0.0567 | 🟢 Distensión |
+| INDIA_CHINA_CORE | 0.0371 | 0.0000 | +0.0371 | ⚪ Estable |
+| INDIA_CORE | -0.0018 | 0.0000 | -0.0018 | ⚪ Estable |
+| Medio_Oriente | 0.0276 | -0.0312 | +0.0588 | 🔴 Escalada |
+| Rusia_Eurasia | 0.0111 | -0.0141 | +0.0252 | ⚪ Estable |
+| USA_NORTE | 0.0884 | 0.0473 | +0.0412 | ⚪ Estable |
+| **GLOBAL (Media)** | 0.0179 | 0.0032 | +0.0147 | ⚪ Estable |
+
+---
+
+
 ## 📉 Comparativa de Sentimiento Regional (7d vs 14d)
 
 | Región | Actual (7d) | Previo (14d) | Tendencia | Volumen | Estado |
