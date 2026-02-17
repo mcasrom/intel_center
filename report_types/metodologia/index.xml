@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Metodologia on Intel Center</title><link>https://mcasrom.github.io/intel_center/report_types/metodologia/</link><description>Recent content in Metodologia on Intel Center</description><generator>Hugo</generator><language>es</language><lastBuildDate>Tue, 17 Feb 2026 15:27:45 +0100</lastBuildDate><atom:link href="https://mcasrom.github.io/intel_center/report_types/metodologia/index.xml" rel="self" type="application/rss+xml"/><item><title>Terminología y Acrónimos del Nodo</title><link>https://mcasrom.github.io/intel_center/post/terminologia-acronimos/</link><pubDate>Mon, 16 Feb 2026 10:00:00 +0100</pubDate><guid>https://mcasrom.github.io/intel_center/post/terminologia-acronimos/</guid><description>&lt;h3 id="-glosario-a-z"&gt;📋 Glosario A-Z&lt;/h3&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Metodologia on Intel Center</title><link>https://mcasrom.github.io/intel_center/report_types/metodologia/</link><description>Recent content in Metodologia on Intel Center</description><generator>Hugo</generator><language>es</language><lastBuildDate>Tue, 17 Feb 2026 15:28:37 +0100</lastBuildDate><atom:link href="https://mcasrom.github.io/intel_center/report_types/metodologia/index.xml" rel="self" type="application/rss+xml"/><item><title>Terminología y Acrónimos del Nodo</title><link>https://mcasrom.github.io/intel_center/post/terminologia-acronimos/</link><pubDate>Mon, 16 Feb 2026 10:00:00 +0100</pubDate><guid>https://mcasrom.github.io/intel_center/post/terminologia-acronimos/</guid><description>&lt;h3 id="-glosario-a-z"&gt;📋 Glosario A-Z&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;Alertas Críticas:&lt;/strong&gt; Clasificación de noticias con términos de alta peligrosidad (ej. &amp;ldquo;Ataque&amp;rdquo;, &amp;ldquo;Emergencia&amp;rdquo;). Tienen prioridad visual absoluta.&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Feed:&lt;/strong&gt; Flujo de datos entrante (RSS/API) que provee la materia prima informativa al nodo.&lt;/li&gt;
@@ -15,7 +15,7 @@
 &lt;li&gt;&lt;strong&gt;Vigilancia Electoral:&lt;/strong&gt; Categoría dedicada al seguimiento de procesos de votación y encuestas regionales.&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Volumen:&lt;/strong&gt; Cantidad total de impactos analizados. Es el indicador de la solidez estadística de una tendencia.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;hr&gt;</description></item><item><title>Análisis de Varianza y Tendencias Globales</title><link>https://mcasrom.github.io/intel_center/post/analisis-varianza/</link><pubDate>Tue, 17 Feb 2026 15:27:45 +0100</pubDate><guid>https://mcasrom.github.io/intel_center/post/analisis-varianza/</guid><description>&lt;h3 id="-evolución-de-sentimiento-osint"&gt;📊 Evolución de Sentimiento OSINT&lt;/h3&gt;
+&lt;hr&gt;</description></item><item><title>Análisis de Varianza y Tendencias Globales</title><link>https://mcasrom.github.io/intel_center/post/analisis-varianza/</link><pubDate>Tue, 17 Feb 2026 15:28:37 +0100</pubDate><guid>https://mcasrom.github.io/intel_center/post/analisis-varianza/</guid><description>&lt;h3 id="-evolución-de-sentimiento-osint"&gt;📊 Evolución de Sentimiento OSINT&lt;/h3&gt;
 &lt;p&gt;Comparativa de tensión narrativa (24h).&lt;/p&gt;
 &lt;table&gt;
  &lt;thead&gt;
@@ -79,9 +79,9 @@
  &lt;/tr&gt;
  &lt;tr&gt;
  &lt;td style="text-align: left"&gt;Rusia_Eurasia&lt;/td&gt;
- &lt;td style="text-align: center"&gt;-0.0044&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;-0.0001&lt;/td&gt;
  &lt;td style="text-align: center"&gt;0.0066&lt;/td&gt;
- &lt;td style="text-align: center"&gt;-0.0109&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;-0.0067&lt;/td&gt;
  &lt;td style="text-align: center"&gt;⚪ Estable&lt;/td&gt;
  &lt;/tr&gt;
  &lt;tr&gt;
@@ -93,14 +93,14 @@
  &lt;/tr&gt;
  &lt;tr&gt;
  &lt;td style="text-align: left"&gt;&lt;strong&gt;GLOBAL (Media)&lt;/strong&gt;&lt;/td&gt;
- &lt;td style="text-align: center"&gt;0.0095&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;0.0109&lt;/td&gt;
  &lt;td style="text-align: center"&gt;0.0103&lt;/td&gt;
- &lt;td style="text-align: center"&gt;-0.0008&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;+0.0006&lt;/td&gt;
  &lt;td style="text-align: center"&gt;⚪ Estable&lt;/td&gt;
  &lt;/tr&gt;
  &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;p&gt;&lt;em&gt;Generado automáticamente por el nodo Odroid-C2 el 17/02/2026 15:27.&lt;/em&gt;&lt;/p&gt;</description></item><item><title>Metodología y Criterios: Volumen y Sentimiento</title><link>https://mcasrom.github.io/intel_center/post/metodologia-analisis/</link><pubDate>Sun, 15 Feb 2026 10:00:00 +0100</pubDate><guid>https://mcasrom.github.io/intel_center/post/metodologia-analisis/</guid><description>&lt;h3 id="-fundamentos-del-nodo-odroid-c2"&gt;🧠 Fundamentos del Nodo Odroid-C2&lt;/h3&gt;
+&lt;p&gt;&lt;em&gt;Generado automáticamente por el nodo Odroid-C2 el 17/02/2026 15:28.&lt;/em&gt;&lt;/p&gt;</description></item><item><title>Metodología y Criterios: Volumen y Sentimiento</title><link>https://mcasrom.github.io/intel_center/post/metodologia-analisis/</link><pubDate>Sun, 15 Feb 2026 10:00:00 +0100</pubDate><guid>https://mcasrom.github.io/intel_center/post/metodologia-analisis/</guid><description>&lt;h3 id="-fundamentos-del-nodo-odroid-c2"&gt;🧠 Fundamentos del Nodo Odroid-C2&lt;/h3&gt;
 &lt;p&gt;Este portal de inteligencia opera bajo un modelo de procesamiento local y descentralizado. A continuación, se detallan los criterios técnicos que rigen la generación de informes.&lt;/p&gt;
 &lt;h3 id="-1-el-parámetro-volumen"&gt;📊 1. El Parámetro &amp;ldquo;Volumen&amp;rdquo;&lt;/h3&gt;
 &lt;p&gt;En las tablas estratégicas, el &lt;strong&gt;Volumen&lt;/strong&gt; es la métrica de confianza.&lt;/p&gt;

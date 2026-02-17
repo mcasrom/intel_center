@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Análisis on Intel Center</title><link>https://mcasrom.github.io/intel_center/tags/an%C3%A1lisis/</link><description>Recent content in Análisis on Intel Center</description><generator>Hugo</generator><language>es</language><lastBuildDate>Tue, 17 Feb 2026 15:27:45 +0100</lastBuildDate><atom:link href="https://mcasrom.github.io/intel_center/tags/an%C3%A1lisis/index.xml" rel="self" type="application/rss+xml"/><item><title>Análisis de Varianza y Tendencias Globales</title><link>https://mcasrom.github.io/intel_center/post/analisis-varianza/</link><pubDate>Tue, 17 Feb 2026 15:27:45 +0100</pubDate><guid>https://mcasrom.github.io/intel_center/post/analisis-varianza/</guid><description>&lt;h3 id="-evolución-de-sentimiento-osint"&gt;📊 Evolución de Sentimiento OSINT&lt;/h3&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Análisis on Intel Center</title><link>https://mcasrom.github.io/intel_center/tags/an%C3%A1lisis/</link><description>Recent content in Análisis on Intel Center</description><generator>Hugo</generator><language>es</language><lastBuildDate>Tue, 17 Feb 2026 15:28:37 +0100</lastBuildDate><atom:link href="https://mcasrom.github.io/intel_center/tags/an%C3%A1lisis/index.xml" rel="self" type="application/rss+xml"/><item><title>Análisis de Varianza y Tendencias Globales</title><link>https://mcasrom.github.io/intel_center/post/analisis-varianza/</link><pubDate>Tue, 17 Feb 2026 15:28:37 +0100</pubDate><guid>https://mcasrom.github.io/intel_center/post/analisis-varianza/</guid><description>&lt;h3 id="-evolución-de-sentimiento-osint"&gt;📊 Evolución de Sentimiento OSINT&lt;/h3&gt;
 &lt;p&gt;Comparativa de tensión narrativa (24h).&lt;/p&gt;
 &lt;table&gt;
  &lt;thead&gt;
@@ -62,9 +62,9 @@
  &lt;/tr&gt;
  &lt;tr&gt;
  &lt;td style="text-align: left"&gt;Rusia_Eurasia&lt;/td&gt;
- &lt;td style="text-align: center"&gt;-0.0044&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;-0.0001&lt;/td&gt;
  &lt;td style="text-align: center"&gt;0.0066&lt;/td&gt;
- &lt;td style="text-align: center"&gt;-0.0109&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;-0.0067&lt;/td&gt;
  &lt;td style="text-align: center"&gt;⚪ Estable&lt;/td&gt;
  &lt;/tr&gt;
  &lt;tr&gt;
@@ -76,11 +76,11 @@
  &lt;/tr&gt;
  &lt;tr&gt;
  &lt;td style="text-align: left"&gt;&lt;strong&gt;GLOBAL (Media)&lt;/strong&gt;&lt;/td&gt;
- &lt;td style="text-align: center"&gt;0.0095&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;0.0109&lt;/td&gt;
  &lt;td style="text-align: center"&gt;0.0103&lt;/td&gt;
- &lt;td style="text-align: center"&gt;-0.0008&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;+0.0006&lt;/td&gt;
  &lt;td style="text-align: center"&gt;⚪ Estable&lt;/td&gt;
  &lt;/tr&gt;
  &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;p&gt;&lt;em&gt;Generado automáticamente por el nodo Odroid-C2 el 17/02/2026 15:27.&lt;/em&gt;&lt;/p&gt;</description></item></channel></rss>
+&lt;p&gt;&lt;em&gt;Generado automáticamente por el nodo Odroid-C2 el 17/02/2026 15:28.&lt;/em&gt;&lt;/p&gt;</description></item></channel></rss>
