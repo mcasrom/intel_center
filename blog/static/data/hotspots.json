@@ -53,7 +53,7 @@
         "lon": 45.0,
         "intensity": 15,
         "color": "#f1c40f",
-        "sentiment_index": 0.0311
+        "sentiment_index": 0.0254
     },
     {
         "name": "Rusia_Eurasia",
@@ -69,6 +69,6 @@
         "lon": -100.0,
         "intensity": 15,
         "color": "#f1c40f",
-        "sentiment_index": 0.0329
+        "sentiment_index": 0.0433
     }
 ]
