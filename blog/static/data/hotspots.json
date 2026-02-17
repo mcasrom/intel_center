@@ -48,6 +48,14 @@
         "sentiment_index": 0.0885
     },
     {
+        "name": "INDIA_CHINA_CORE",
+        "lat": 28.6,
+        "lon": 77.2,
+        "intensity": 1,
+        "color": "#2ecc71",
+        "sentiment_index": 0.36
+    },
+    {
         "name": "Medio_Oriente",
         "lat": 25.0,
         "lon": 45.0,
