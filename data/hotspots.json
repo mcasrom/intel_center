@@ -5,7 +5,7 @@
         "lon": -100.0,
         "intensity": 15,
         "color": "#2ecc71",
-        "sentiment_index": 0.1447
+        "sentiment_index": 0.1594
     },
     {
         "name": "ESPA\u00d1A",
@@ -45,7 +45,7 @@
         "lon": 90.0,
         "intensity": 15,
         "color": "#f1c40f",
-        "sentiment_index": 0.0039
+        "sentiment_index": 0.005
     },
     {
         "name": "Medio_Oriente",
@@ -53,15 +53,15 @@
         "lon": 45.0,
         "intensity": 15,
         "color": "#f1c40f",
-        "sentiment_index": 0.0158
+        "sentiment_index": 0.0234
     },
     {
         "name": "Asia_Nikkei",
         "lat": 35.0,
         "lon": 135.0,
-        "intensity": 13,
+        "intensity": 14,
         "color": "#2ecc71",
-        "sentiment_index": 0.1492
+        "sentiment_index": 0.1493
     },
     {
         "name": "Africa_Sahel",
@@ -75,9 +75,9 @@
         "name": "INDIA_CORE",
         "lat": 28.6,
         "lon": 77.2,
-        "intensity": 13,
+        "intensity": 15,
         "color": "#f1c40f",
-        "sentiment_index": -0.0377
+        "sentiment_index": 0.0127
     },
     {
         "name": "CHINA_CORE",
