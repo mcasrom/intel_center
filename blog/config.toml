@@ -48,3 +48,7 @@ relativeURLs = false
     name = "Acerca de"
     url = "/about/"
     weight = 60
+  [[menu.main]]
+    name = "Contacto"
+    url = "/contact/"
+    weight = 70
