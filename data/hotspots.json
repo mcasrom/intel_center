@@ -5,7 +5,7 @@
         "lon": -100.0,
         "intensity": 15,
         "color": "#2ecc71",
-        "sentiment_index": 0.1555
+        "sentiment_index": 0.1478
     },
     {
         "name": "ESPA\u00d1A",
@@ -45,7 +45,7 @@
         "lon": 90.0,
         "intensity": 15,
         "color": "#f1c40f",
-        "sentiment_index": 0.0083
+        "sentiment_index": 0.0068
     },
     {
         "name": "Medio_Oriente",
@@ -61,7 +61,7 @@
         "lon": 135.0,
         "intensity": 15,
         "color": "#2ecc71",
-        "sentiment_index": 0.156
+        "sentiment_index": 0.1731
     },
     {
         "name": "Africa_Sahel",
@@ -77,7 +77,7 @@
         "lon": 77.2,
         "intensity": 15,
         "color": "#f1c40f",
-        "sentiment_index": 0.0318
+        "sentiment_index": 0.0161
     },
     {
         "name": "CHINA_CORE",
