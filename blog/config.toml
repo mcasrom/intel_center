@@ -2,6 +2,7 @@ baseURL = "https://mcasrom.github.io/intel_center/"
 languageCode = "es"
 title = "Intel Center"
 theme = "ananke"
+enableRobotsTXT = true     # <--- ESTA ES LA MEJORA M1.4
 buildFuture = true
 buildDrafts = true
 canonifyURLs = true

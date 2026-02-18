@@ -19,7 +19,7 @@
         "name": "ARGENTINA",
         "lat": -34.0,
         "lon": -64.0,
-        "intensity": 5,
+        "intensity": 7,
         "color": "#f1c40f",
         "sentiment_index": 0.05
     },
@@ -45,7 +45,7 @@
         "lon": 90.0,
         "intensity": 15,
         "color": "#f1c40f",
-        "sentiment_index": 0.0306
+        "sentiment_index": 0.0303
     },
     {
         "name": "Medio_Oriente",
@@ -53,7 +53,7 @@
         "lon": 45.0,
         "intensity": 15,
         "color": "#2ecc71",
-        "sentiment_index": 0.0813
+        "sentiment_index": 0.0862
     },
     {
         "name": "Asia_Nikkei",
@@ -61,7 +61,7 @@
         "lon": 135.0,
         "intensity": 15,
         "color": "#2ecc71",
-        "sentiment_index": 0.1
+        "sentiment_index": 0.1247
     },
     {
         "name": "Africa_Sahel",
@@ -69,7 +69,7 @@
         "lon": 15.0,
         "intensity": 15,
         "color": "#f1c40f",
-        "sentiment_index": -0.0386
+        "sentiment_index": -0.0305
     },
     {
         "name": "INDIA_CORE",
