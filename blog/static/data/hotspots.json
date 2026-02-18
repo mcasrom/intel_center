@@ -37,7 +37,7 @@
         "lon": 10.0,
         "intensity": 15,
         "color": "#2ecc71",
-        "sentiment_index": 0.0665
+        "sentiment_index": 0.0619
     },
     {
         "name": "Rusia_Eurasia",
@@ -45,7 +45,7 @@
         "lon": 90.0,
         "intensity": 15,
         "color": "#f1c40f",
-        "sentiment_index": 0.0123
+        "sentiment_index": 0.0132
     },
     {
         "name": "Medio_Oriente",
@@ -53,7 +53,7 @@
         "lon": 45.0,
         "intensity": 15,
         "color": "#2ecc71",
-        "sentiment_index": 0.0558
+        "sentiment_index": 0.0574
     },
     {
         "name": "Asia_Nikkei",
