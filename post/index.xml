@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Informes de Inteligencia on Intel Center</title><link>https://mcasrom.github.io/intel_center/post/</link><description>Recent content in Informes de Inteligencia on Intel Center</description><generator>Hugo</generator><language>es</language><lastBuildDate>Wed, 18 Feb 2026 20:00:06 +0000</lastBuildDate><atom:link href="https://mcasrom.github.io/intel_center/post/index.xml" rel="self" type="application/rss+xml"/><item><title>📌 MANUAL: Operaciones e Interpretación de Inteligencia</title><link>https://mcasrom.github.io/intel_center/post/guia-interpretacion-nodos/</link><pubDate>Fri, 06 Feb 2026 17:00:00 +0000</pubDate><guid>https://mcasrom.github.io/intel_center/post/guia-interpretacion-nodos/</guid><description>&lt;p&gt;📌 &lt;strong&gt;PROTOCOLO DE INTELIGENCIA CONSOLIDADO (v2.1)&lt;/strong&gt;&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Informes de Inteligencia on Intel Center</title><link>https://mcasrom.github.io/intel_center/post/</link><description>Recent content in Informes de Inteligencia on Intel Center</description><generator>Hugo</generator><language>es</language><lastBuildDate>Wed, 18 Feb 2026 21:00:06 +0000</lastBuildDate><atom:link href="https://mcasrom.github.io/intel_center/post/index.xml" rel="self" type="application/rss+xml"/><item><title>📌 MANUAL: Operaciones e Interpretación de Inteligencia</title><link>https://mcasrom.github.io/intel_center/post/guia-interpretacion-nodos/</link><pubDate>Fri, 06 Feb 2026 17:00:00 +0000</pubDate><guid>https://mcasrom.github.io/intel_center/post/guia-interpretacion-nodos/</guid><description>&lt;p&gt;📌 &lt;strong&gt;PROTOCOLO DE INTELIGENCIA CONSOLIDADO (v2.1)&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;Este documento define la metodología aplicada por el motor OSINT de la &lt;strong&gt;Odroid-C2&lt;/strong&gt; para transformar datos masivos en indicadores tácticos.&lt;/p&gt;
 &lt;h4 id="1-semáforo-de-tensión-y-dinámica-política"&gt;1. Semáforo de Tensión y Dinámica Política&lt;/h4&gt;
 &lt;p&gt;El color de cada nodo se calcula mediante NLP y detección de contextos:&lt;/p&gt;
@@ -29,7 +29,7 @@
 &lt;li&gt;&lt;strong&gt;Vigilancia Electoral:&lt;/strong&gt; Categoría dedicada al seguimiento de procesos de votación y encuestas regionales.&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Volumen:&lt;/strong&gt; Cantidad total de impactos analizados. Es el indicador de la solidez estadística de una tendencia.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;hr&gt;</description></item><item><title>INTEL REPORT: 18/02/2026 20:00</title><link>https://mcasrom.github.io/intel_center/post/260218_2000-noticias/</link><pubDate>Wed, 18 Feb 2026 20:00:06 +0000</pubDate><guid>https://mcasrom.github.io/intel_center/post/260218_2000-noticias/</guid><description>&lt;h3 id="-resumen-operativo"&gt;⚡ RESUMEN OPERATIVO&lt;/h3&gt;
+&lt;hr&gt;</description></item><item><title>INTEL REPORT: 18/02/2026 21:00</title><link>https://mcasrom.github.io/intel_center/post/260218_2100-noticias/</link><pubDate>Wed, 18 Feb 2026 21:00:06 +0000</pubDate><guid>https://mcasrom.github.io/intel_center/post/260218_2100-noticias/</guid><description>&lt;h3 id="-resumen-operativo"&gt;⚡ RESUMEN OPERATIVO&lt;/h3&gt;
 &lt;p&gt;Análisis en Odroid-C2.&lt;/p&gt;
 
 &lt;div style="background: white; padding: 15px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); margin: 20px 0;"&gt;
@@ -48,8 +48,166 @@
  data: {
  labels: ['ARGENTINA', 'Africa_Sahel', 'Asia_Nikkei', 'BRASIL', 'CHINA_CORE', 'ESPAÑA', 'Europa_DW', 'INDIA_CHINA_CORE', 'INDIA_CORE', 'Medio_Oriente', 'Rusia_Eurasia', 'USA_NORTE'],
  datasets: [{
- label: 'Índice de Tensión (Actualizado: 19:00)',
- data: [48, 48, 40, 43, 70, 41, 46, 37, 50, 47, 48, 45],
+ label: 'Índice de Tensión (Actualizado: 20:00)',
+ data: [48, 48, 40, 43, 57, 41, 46, 37, 50, 47, 49, 46],
+ backgroundColor: 'rgba(255, 99, 132, 0.2)',
+ borderColor: 'rgba(255, 99, 132, 1)',
+ borderWidth: 2,
+ pointBackgroundColor: 'rgba(255, 99, 132, 1)'
+ }]
+ },
+ options: {
+ scales: {
+ r: {
+ min: 0,
+ max: 100,
+ ticks: { stepSize: 20 }
+ }
+ }
+ }
+ });
+ };
+ 
+ if (document.readyState === 'complete') { initRadar(); }
+ else { window.addEventListener('load', initRadar); }
+})();
+&lt;/script&gt;
+
+&lt;h4 id="-evolución-de-sentimiento-varianza-24h"&gt;📊 EVOLUCIÓN DE SENTIMIENTO (VARIANZA 24H)&lt;/h4&gt;
+&lt;table&gt;
+ &lt;thead&gt;
+ &lt;tr&gt;
+ &lt;th style="text-align: left"&gt;Región&lt;/th&gt;
+ &lt;th style="text-align: left"&gt;Hoy&lt;/th&gt;
+ &lt;th style="text-align: left"&gt;Ayer&lt;/th&gt;
+ &lt;th style="text-align: left"&gt;Delta (Δ)&lt;/th&gt;
+ &lt;th style="text-align: left"&gt;Estado&lt;/th&gt;
+ &lt;/tr&gt;
+ &lt;/thead&gt;
+ &lt;tbody&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: left"&gt;USA_NORTE&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;0.1163&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;0.2020&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;-0.0857&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;⚠ Tensión&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: left"&gt;ESPAÑA&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;-0.1667&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;0.5000&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;-0.6667&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;⚠ Tensión&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: left"&gt;ARGENTINA&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;0.0000&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;0.0500&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;-0.0500&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;⚠ Tensión&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: left"&gt;BRASIL&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;0.0000&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;-0.1700&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;+0.1700&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;🔴 Escalada&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: left"&gt;Europa_DW&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;0.0209&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;0.0090&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;+0.0119&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;⚪ Estable&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: left"&gt;Rusia_Eurasia&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;0.0766&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;0.0383&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;+0.0383&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;⚪ Estable&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: left"&gt;Medio_Oriente&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;0.1710&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;0.0618&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;+0.1092&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;🔴 Escalada&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: left"&gt;Asia_Nikkei&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;0.0963&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;0.2900&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;-0.1937&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;⚠ Tensión&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: left"&gt;Africa_Sahel&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;-0.1267&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;-0.0110&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;-0.1157&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;⚠ Tensión&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: left"&gt;INDIA_CORE&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;0.0336&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;-0.0377&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;+0.0713&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;🔴 Escalada&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: left"&gt;CHINA_CORE&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;-0.1500&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;0.0000&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;-0.1500&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;⚠ Tensión&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h4 id="-radares-de-tendencia"&gt;📊 RADARES DE TENDENCIA&lt;/h4&gt;
+&lt;table&gt;
+ &lt;thead&gt;
+ &lt;tr&gt;
+ &lt;th style="text-align: left"&gt;Región&lt;/th&gt;
+ &lt;th style="text-align: left"&gt;Sentiment&lt;/th&gt;
+ &lt;/tr&gt;
+ &lt;/thead&gt;
+ &lt;tbody&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: left"&gt;🇺🇸 USA&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;0.0887&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: left"&gt;🇪🇸 ESPAÑA&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;0.05&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: left"&gt;🌏 INDIA-CHINA&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;0.0136&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;&lt;img src="https://mcasrom.github.io/intel_center/images/260218_2100_trend.png" alt="Tendencias"&gt;&lt;/p&gt;</description></item><item><title>INTEL REPORT: 18/02/2026 20:00</title><link>https://mcasrom.github.io/intel_center/post/260218_2000-noticias/</link><pubDate>Wed, 18 Feb 2026 20:00:06 +0000</pubDate><guid>https://mcasrom.github.io/intel_center/post/260218_2000-noticias/</guid><description>&lt;h3 id="-resumen-operativo"&gt;⚡ RESUMEN OPERATIVO&lt;/h3&gt;
+&lt;p&gt;Análisis en Odroid-C2.&lt;/p&gt;
+
+&lt;div style="background: white; padding: 15px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); margin: 20px 0;"&gt;
+ &lt;canvas id="radarChartIntel"&gt;&lt;/canvas&gt;
+&lt;/div&gt;
+
+&lt;script src="https://cdn.jsdelivr.net/npm/chart.js"&gt;&lt;/script&gt;
+&lt;script&gt;
+(function() {
+ const initRadar = () =&gt; {
+ const ctx = document.getElementById('radarChartIntel');
+ if (!ctx) return;
+ 
+ new Chart(ctx, {
+ type: 'radar',
+ data: {
+ labels: ['ARGENTINA', 'Africa_Sahel', 'Asia_Nikkei', 'BRASIL', 'CHINA_CORE', 'ESPAÑA', 'Europa_DW', 'INDIA_CHINA_CORE', 'INDIA_CORE', 'Medio_Oriente', 'Rusia_Eurasia', 'USA_NORTE'],
+ datasets: [{
+ label: 'Índice de Tensión (Actualizado: 20:00)',
+ data: [48, 48, 40, 43, 57, 41, 46, 37, 50, 47, 49, 46],
  backgroundColor: 'rgba(255, 99, 132, 0.2)',
  borderColor: 'rgba(255, 99, 132, 1)',
  borderWidth: 2,
@@ -206,8 +364,8 @@
  data: {
  labels: ['ARGENTINA', 'Africa_Sahel', 'Asia_Nikkei', 'BRASIL', 'CHINA_CORE', 'ESPAÑA', 'Europa_DW', 'INDIA_CHINA_CORE', 'INDIA_CORE', 'Medio_Oriente', 'Rusia_Eurasia', 'USA_NORTE'],
  datasets: [{
- label: 'Índice de Tensión (Actualizado: 19:00)',
- data: [48, 48, 40, 43, 70, 41, 46, 37, 50, 47, 48, 45],
+ label: 'Índice de Tensión (Actualizado: 20:00)',
+ data: [48, 48, 40, 43, 57, 41, 46, 37, 50, 47, 49, 46],
  backgroundColor: 'rgba(255, 99, 132, 0.2)',
  borderColor: 'rgba(255, 99, 132, 1)',
  borderWidth: 2,
@@ -364,8 +522,8 @@
  data: {
  labels: ['ARGENTINA', 'Africa_Sahel', 'Asia_Nikkei', 'BRASIL', 'CHINA_CORE', 'ESPAÑA', 'Europa_DW', 'INDIA_CHINA_CORE', 'INDIA_CORE', 'Medio_Oriente', 'Rusia_Eurasia', 'USA_NORTE'],
  datasets: [{
- label: 'Índice de Tensión (Actualizado: 19:00)',
- data: [48, 48, 40, 43, 70, 41, 46, 37, 50, 47, 48, 45],
+ label: 'Índice de Tensión (Actualizado: 20:00)',
+ data: [48, 48, 40, 43, 57, 41, 46, 37, 50, 47, 49, 46],
  backgroundColor: 'rgba(255, 99, 132, 0.2)',
  borderColor: 'rgba(255, 99, 132, 1)',
  borderWidth: 2,
@@ -630,8 +788,8 @@
  data: {
  labels: ['ARGENTINA', 'Africa_Sahel', 'Asia_Nikkei', 'BRASIL', 'CHINA_CORE', 'ESPAÑA', 'Europa_DW', 'INDIA_CHINA_CORE', 'INDIA_CORE', 'Medio_Oriente', 'Rusia_Eurasia', 'USA_NORTE'],
  datasets: [{
- label: 'Índice de Tensión (Actualizado: 19:00)',
- data: [48, 48, 40, 43, 70, 41, 46, 37, 50, 47, 48, 45],
+ label: 'Índice de Tensión (Actualizado: 20:00)',
+ data: [48, 48, 40, 43, 57, 41, 46, 37, 50, 47, 49, 46],
  backgroundColor: 'rgba(255, 99, 132, 0.2)',
  borderColor: 'rgba(255, 99, 132, 1)',
  borderWidth: 2,
@@ -1933,44 +2091,6 @@
  &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;p&gt;&lt;img src="https://mcasrom.github.io/intel_center/images/260218_0700_trend.png" alt="Tendencias"&gt;&lt;/p&gt;
-&lt;h4 id="-líderes"&gt;👤 LÍDERES&lt;/h4&gt;
-&lt;p&gt;👤 &lt;strong&gt;Donald Trump&lt;/strong&gt;: Trump officials sued over effort to ‘erase history and science’ in national parks — &lt;a href="https://www.theguardian.com/us-news/2026/feb/17/trump-national-parks-lawsuit"&gt;Noticia&lt;/a&gt;
-👤 &lt;strong&gt;Donald Trump&lt;/strong&gt;: Trump news at a glance: Hillary Clinton urges Trump administration to release millions of withheld Epstein files — &lt;a href="https://www.theguardian.com/us-news/2026/feb/17/trump-administration-news-updates"&gt;Noticia&lt;/a&gt;
-👤 &lt;strong&gt;Donald Trump&lt;/strong&gt;: Obama, Trump and Biden lead tributes to Jesse Jackson: ‘one of America’s greatest patriots’ — &lt;a href="https://www.theguardian.com/us-news/2026/feb/17/jesse-jackson-death-tribute"&gt;Noticia&lt;/a&gt;
-👤 &lt;strong&gt;Donald Trump&lt;/strong&gt;: Top DHS spokesperson to exit role amid growing outrage over Trump’s ICE raids — &lt;a href="https://www.theguardian.com/us-news/2026/feb/17/tricia-mclaughlin-trump-dhs-exit-role"&gt;Noticia&lt;/a&gt;
-👤 &lt;strong&gt;Donald Trump&lt;/strong&gt;: Forget Maga. Welcome to Mega: Make Empire Great Again | Mehdi Hasan — &lt;a href="https://www.theguardian.com/commentisfree/2026/feb/17/maga-marco-rubio-munich-security-conference"&gt;Noticia&lt;/a&gt;
-👤 &lt;strong&gt;Pedro Sánchez&lt;/strong&gt;: El Gobierno aprueba el paquete de medidas anticorrupción pactado por Sánchez y Díaz tras el ‘caso Cerdán’ — &lt;a href="https://elpais.com/espana/2026-02-17/el-gobierno-aprueba-el-paquete-de-medidas-anticorrupcion-pactado-por-sanchez-y-diaz-tras-el-caso-cerdan.html"&gt;Noticia&lt;/a&gt;
-👤 &lt;strong&gt;Narendra Modi&lt;/strong&gt;: Los gobernadores y diputados aliados presionaron y el oficialismo eliminó el artículo que modifica las licencias por enfermedad — &lt;a href="https://www.clarin.com/politica/diputados-aliados-pidieron-eliminar-articulo-modifica-licencias-enfermedad_0_yEg1hgNWbn.html"&gt;Noticia&lt;/a&gt;
-👤 &lt;strong&gt;Javier Milei&lt;/strong&gt;: Javier Milei emprende su 14° viaje a EE.UU., mientras el Gobierno intenta que la reforma laboral no se retrase — &lt;a href="https://www.clarin.com/politica/javier-milei-emprende-13-viaje-eeuu-gobierno-intenta-reforma-laboral-retrase_0_qk9LMw9RH8.html"&gt;Noticia&lt;/a&gt;
-👤 &lt;strong&gt;Vladimir Putin&lt;/strong&gt;: Kremlin official says Russian navy to stop West’s seizure of merchant ships — &lt;a href="https://www.aljazeera.com/news/2026/2/18/kremlin-official-says-russian-navy-to-stop-wests-seizure-of-merchant-ships?traffic_source=rss"&gt;Noticia&lt;/a&gt;
-👤 &lt;strong&gt;Donald Trump&lt;/strong&gt;: ‘Tug of war’: Democrats push Trump to release New York City tunnel funds — &lt;a href="https://www.aljazeera.com/news/2026/2/18/tug-of-war-democrats-push-trump-to-release-new-york-city-tunnel-funds?traffic_source=rss"&gt;Noticia&lt;/a&gt;
-👤 &lt;strong&gt;Donald Trump&lt;/strong&gt;: US immigration judge rejects Trump bid to deport Columbia student Mahdawi — &lt;a href="https://www.aljazeera.com/news/2026/2/17/us-immigration-judge-rejects-trump-bid-to-deport-columbia-student-mahdawi?traffic_source=rss"&gt;Noticia&lt;/a&gt;
-👤 &lt;strong&gt;Donald Trump&lt;/strong&gt;: Hamas: Trump’s ‘Board of Peace’ must stop Israel’s killing in Gaza — &lt;a href="https://www.aljazeera.com/news/2026/2/17/hamas-trumps-board-of-peace-must-stop-israels-killing-in-gaza?traffic_source=rss"&gt;Noticia&lt;/a&gt;&lt;/p&gt;</description></item><item><title>INTEL REPORT: 18/02/2026 06:00</title><link>https://mcasrom.github.io/intel_center/post/260218_0600-noticias/</link><pubDate>Wed, 18 Feb 2026 06:00:06 +0000</pubDate><guid>https://mcasrom.github.io/intel_center/post/260218_0600-noticias/</guid><description>&lt;h3 id="-resumen-operativo"&gt;⚡ RESUMEN OPERATIVO&lt;/h3&gt;
-&lt;p&gt;Análisis en Odroid-C2.&lt;/p&gt;
-&lt;h4 id="-radares-de-tendencia"&gt;📊 RADARES DE TENDENCIA&lt;/h4&gt;
-&lt;table&gt;
- &lt;thead&gt;
- &lt;tr&gt;
- &lt;th style="text-align: left"&gt;Región&lt;/th&gt;
- &lt;th style="text-align: left"&gt;Sentiment&lt;/th&gt;
- &lt;/tr&gt;
- &lt;/thead&gt;
- &lt;tbody&gt;
- &lt;tr&gt;
- &lt;td style="text-align: left"&gt;🇺🇸 USA&lt;/td&gt;
- &lt;td style="text-align: left"&gt;0.418&lt;/td&gt;
- &lt;/tr&gt;
- &lt;tr&gt;
- &lt;td style="text-align: left"&gt;🇪🇸 ESPAÑA&lt;/td&gt;
- &lt;td style="text-align: left"&gt;0.275&lt;/td&gt;
- &lt;/tr&gt;
- &lt;tr&gt;
- &lt;td style="text-align: left"&gt;🌏 INDIA-CHINA&lt;/td&gt;
- &lt;td style="text-align: left"&gt;0.0333&lt;/td&gt;
- &lt;/tr&gt;
- &lt;/tbody&gt;
-&lt;/table&gt;
-&lt;p&gt;&lt;img src="https://mcasrom.github.io/intel_center/images/260218_0600_trend.png" alt="Tendencias"&gt;&lt;/p&gt;
 &lt;h4 id="-líderes"&gt;👤 LÍDERES&lt;/h4&gt;
 &lt;p&gt;👤 &lt;strong&gt;Donald Trump&lt;/strong&gt;: Trump officials sued over effort to ‘erase history and science’ in national parks — &lt;a href="https://www.theguardian.com/us-news/2026/feb/17/trump-national-parks-lawsuit"&gt;Noticia&lt;/a&gt;
 👤 &lt;strong&gt;Donald Trump&lt;/strong&gt;: Trump news at a glance: Hillary Clinton urges Trump administration to release millions of withheld Epstein files — &lt;a href="https://www.theguardian.com/us-news/2026/feb/17/trump-administration-news-updates"&gt;Noticia&lt;/a&gt;
