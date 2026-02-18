@@ -53,7 +53,7 @@
         "lon": 45.0,
         "intensity": 15,
         "color": "#2ecc71",
-        "sentiment_index": 0.0549
+        "sentiment_index": 0.0556
     },
     {
         "name": "Asia_Nikkei",
@@ -69,7 +69,7 @@
         "lon": 15.0,
         "intensity": 15,
         "color": "#f1c40f",
-        "sentiment_index": -0.014
+        "sentiment_index": -0.0229
     },
     {
         "name": "INDIA_CORE",
