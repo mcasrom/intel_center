@@ -1,0 +1,43 @@
+<div style="background: white; border: 2px solid red; padding: 20px;">
+    <h4 style="color: black; text-align: center;">--- ÁREA DE RADAR (DEBUG) ---</h4>
+    <canvas id="chartRadarTest" width="400" height="400"></canvas>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+
+<script>
+    console.log("Iniciando script del radar...");
+    
+    // Función para dibujar con datos de prueba forzados
+    function dibujarPrueba() {
+        const ctx = document.getElementById('chartRadarTest');
+        if (!ctx) {
+            console.error("No se encontró el elemento canvas");
+            return;
+        }
+        
+        new Chart(ctx, {
+            type: 'radar',
+            data: {
+                labels: ['USA', 'ESPAÑA', 'RUSIA', 'CHINA', 'M.ORIENTE'],
+                datasets: [{
+                    label: 'TEST DE TENSIÓN (HARDCODED)',
+                    data: [80, 40, 95, 70, 85],
+                    backgroundColor: 'rgba(255, 99, 132, 0.5)',
+                    borderColor: 'rgb(255, 99, 132)',
+                    borderWidth: 3
+                }]
+            },
+            options: {
+                responsive: true,
+                scales: {
+                    r: { beginAtZero: true, max: 100 }
+                }
+            }
+        });
+        console.log("Radar dibujado con datos de test");
+    }
+
+    // Ejecutar después de un pequeño delay para asegurar que el DOM está listo
+    setTimeout(dibujarPrueba, 500);
+</script>

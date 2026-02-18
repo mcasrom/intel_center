@@ -1,0 +1,41 @@
+
+<div style="background: white; padding: 15px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); margin: 20px 0;">
+    <canvas id="radarChartIntel"></canvas>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+(function() {
+    const initRadar = () => {
+        const ctx = document.getElementById('radarChartIntel');
+        if (!ctx) return;
+        
+        new Chart(ctx, {
+            type: 'radar',
+            data: {
+                labels: ['ARGENTINA', 'Africa_Sahel', 'Asia_Nikkei', 'BRASIL', 'ESPAÑA', 'Europa_DW', 'INDIA_CHINA_CORE', 'INDIA_CORE', 'Medio_Oriente', 'Rusia_Eurasia', 'USA_NORTE'],
+                datasets: [{
+                    label: 'Índice de Tensión (Actualizado: 15:28)',
+                    data: [48, 47, 39, 40, 41, 46, 37, 50, 47, 49, 45],
+                    backgroundColor: 'rgba(255, 99, 132, 0.2)',
+                    borderColor: 'rgba(255, 99, 132, 1)',
+                    borderWidth: 2,
+                    pointBackgroundColor: 'rgba(255, 99, 132, 1)'
+                }]
+            },
+            options: {
+                scales: {
+                    r: {
+                        min: 0,
+                        max: 100,
+                        ticks: { stepSize: 20 }
+                    }
+                }
+            }
+        });
+    };
+    // Ejecutar cuando el DOM esté listo
+    if (document.readyState === 'complete') { initRadar(); }
+    else { window.addEventListener('load', initRadar); }
+})();
+</script>
