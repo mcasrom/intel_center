@@ -10,45 +10,59 @@ relativeURLs = false
 [taxonomies]
   category = "categories"
   tag = "tags"
-  report_type = "report_types" # <--- Vital para que reconozca los scripts
- 
+  report_type = "report_types"
+
 [menu]
   [[menu.main]]
     name = "Mapa"
     url = "/mapa/"
     weight = 10
   
-  # --- BLOQUE DE FILTRADO INTEL ---
   [[menu.main]]
     name = "Diarios"
     url = "/report_types/diario/"
     weight = 21
+
   [[menu.main]]
     name = "Semanales"
     url = "/report_types/semanal/"
     weight = 22
+
   [[menu.main]]
     name = "Mensuales"
     url = "/report_types/mensual/"
     weight = 23
-  # --------------------------------
+
   [[menu.main]]
     name = "Metodología"
-    url = "/report_types/metodologia/"  # <--- Añadimos /report_types/
+    url = "/report_types/metodologia/"
     weight = 30
+
   [[menu.main]]
     name = "Informes (Todo)"
     url = "/post/"
     weight = 40
+
   [[menu.main]]
     name = "Arquitectura"
     url = "/arquitectura/"
     weight = 50
+
   [[menu.main]]
     name = "Acerca de"
     url = "/about/"
     weight = 60
+
   [[menu.main]]
     name = "Contacto"
     url = "/contact/"
     weight = 70
+
+[params]
+  description = "Nodo de inteligencia OSINT - Monitorización global en tiempo real"
+  # Imagen de fondo en la cabecera (Header)
+  featured_image = "images/header_intel.jpg"
+  # Favicon (Debe estar en static/favicon.png)
+  favicon = "favicon.png"
+  # Configuración para redes sociales (Preview)
+  site_logo = "favicon.png"

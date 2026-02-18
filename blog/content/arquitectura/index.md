@@ -47,7 +47,7 @@ Los índices de polaridad y las etiquetas de categoría se almacenan en una base
 #### 4. Alta Disponibilidad y Failover (La Capa de Resistencia)
 
 Esta es la nueva capa fundamental para la robustez del Intel Center.
-* **Monitorización Proactiva**: Un script `watchdog_intel.sh` se ejecuta periódicamente (cada 15 minutos vía Cron) en el Nodo de Respaldo (`192.168.1.154`). Este script envía un `ping` al Nodo Principal (`192.168.1.147`).
+* **Monitorización Proactiva**: Un script `watchdog_intel.sh` se ejecuta periódicamente (cada 15 minutos vía Cron) en el Nodo de Respaldo (`192.168.1.nn2`). Este script envía un `ping` al Nodo Principal (`192.168.1.nn1`).
 * **Activación del Failover**: Si el Nodo Principal no responde, el Nodo de Respaldo inicia automáticamente el ciclo completo:
     1.  **Sincronización de Emergencia**: Realiza un `git pull` para asegurar la última versión de la base de datos y los scripts desde el repositorio.
     2.  **Asunción de Rol**: Ejecuta el orquestador `run_intel.sh`, asumiendo las tareas de ingesta, análisis y despliegue que normalmente realiza el nodo principal.
