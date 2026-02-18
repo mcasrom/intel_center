@@ -1,10 +1,16 @@
 ---
 title: "Soberanía de Datos y Alta Disponibilidad en el Edge"
 date: 2026-02-18T08:15:00+01:00
+report_types: ["metodologia"]
 draft: false
-tags: ["documentacion", "metodologia", "redundancia", "failover", "Odroid", "OSINT"]
-summary: "Implementación de un sistema de redundancia crítica utilizando hardware Odroid C2 para garantizar la persistencia de inteligencia geopolítica."
+tags: ["documentacion", "metodología", "redundancia", "failover", "Odroid", "OSINT"]
+weight: 5
 ---
+
+###  summary: 
+
+Implementación de un sistema de redundancia crítica utilizando hardware Odroid C2 para garantizar la persistencia de inteligencia geopolítica.
+
 
 ### Introducción
 
@@ -18,7 +24,7 @@ No se trata solo de copiar archivos, sino de asegurar que la **inteligencia acum
 
 1. **Sincronización de Estado (Data Persistence):** La base de datos SQLite (`news.db`) se integra en el flujo de Git. Esto garantiza que el historial de varianza y sentimiento esté disponible en cualquier nodo del clúster en tiempo real.
 2. **Vigilancia Activa (Heartbeat):** El nodo secundario actúa como un centinela silencioso, verificando la salud del primario mediante un protocolo ICMP optimizado.
-3. **Failover Automatizado:** En caso de interrupción del nodo `192.168.1.147`, el nodo de respaldo `192.168.1.154` descarga el último estado conocido y asume las tareas de procesamiento.
+3. **Failover Automatizado:** En caso de interrupción del nodo `192.168.n.nn1`, el nodo de respaldo `192.168.n.nn2` descarga el último estado conocido y asume las tareas de procesamiento.
 
 ---
 
