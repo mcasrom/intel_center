@@ -11,9 +11,9 @@
         "name": "ESPA\u00d1A",
         "lat": 40.4,
         "lon": -3.7,
-        "intensity": 4,
+        "intensity": 5,
         "color": "#2ecc71",
-        "sentiment_index": 0.3325
+        "sentiment_index": 0.146
     },
     {
         "name": "ARGENTINA",
