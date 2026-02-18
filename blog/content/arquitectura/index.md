@@ -12,7 +12,7 @@ background_image: "/images/monitor_intel_center_architecture.png" # Mantener la 
 
 El Intel Center opera sobre una **infraestructura descentralizada y redundante** en hardware dedicado (Odroid-C2). El sistema se divide en **cinco capas críticas** que garantizan la transformación de ruido mediático en inteligencia accionable, incluso frente a fallos de hardware.
 
-21 ![Arquitectura del Clúster de Inteligencia OSINT con Redundancia](images/intel_center_architecture_redundancy.png)
+![Arquitectura del Clúster de Inteligencia OSINT con Redundancia](/images/intel_center_architecture_redundancy.png)
 
 ---
 
