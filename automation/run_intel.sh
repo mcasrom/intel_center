@@ -1,22 +1,29 @@
 #!/bin/bash
-# Usamos el binario que acabas de localizar
-PYTHON_INTEL="/home/dietpi/intel_center_odroid/venv/bin/python3"
+# NODO ODROID: ORQUESTADOR TOTAL SANEADO
 
-echo "[+] Iniciando ciclo de inteligencia..."
+AUTO_DIR="/home/dietpi/intel_center_odroid/automation"
+BLOG_DIR="/home/dietpi/intel_center_odroid/blog"
+LOG="$AUTO_DIR/intel_final.log"
 
-# 1. Generar datos
-$PYTHON_INTEL /home/dietpi/intel_center_odroid/automation/main_intel.py
+echo "--- INICIO CICLO $(date) ---" >> $LOG
 
-# 2. Generar la gráfica (Ahora sí funcionará con pandas)
-$PYTHON_INTEL /home/dietpi/intel_center_odroid/automation/plotter_intel.py
+# 0. Sincronización previa (Vital para redundancia)
+cd /home/dietpi/intel_center_odroid && git pull origin main >> $LOG 2>&1
 
-# 3. Hugo
-cd /home/dietpi/intel_center_odroid/blog
-rm -rf public/
-/usr/local/bin/hugo --buildFuture
+# 1. Ejecutar Ingesta de noticias
+/usr/bin/python3 $AUTO_DIR/main_intel.py >> $LOG 2>&1
 
-# 4. GitHub
-cd /home/dietpi/intel_center_odroid/
-git add .
-git commit -m "Intel Update: Informe, Gráficas y Separadores Restaurados"
-git push origin main
+# 2. Ejecutar Gráficos
+/usr/bin/python3 $AUTO_DIR/plotter_intel.py >> $LOG 2>&1
+
+# 3. Ejecutar Informe de Varianza
+/usr/bin/python3 $AUTO_DIR/analitica_varianza.py >> $LOG 2>&1
+
+# 4. Construcción de Hugo
+cd $BLOG_DIR
+/usr/local/bin/hugo --gc --minify >> $LOG 2>&1
+
+# 5. Despliegue Final (Usando el script correcto)
+/bin/bash $AUTO_DIR/deploy_intel.sh >> $LOG 2>&1
+
+echo "--- FIN CICLO EXITOSO ---" >> $LOG

@@ -1,0 +1,15 @@
+2026-02-17 18:49:13,250 - INFO - [NODO-ODROID] - --- INICIO DE CICLO OPERATIVO OSINT ---
+2026-02-17 18:49:13,252 - INFO - [NODO-ODROID] - Escaneando vector: USA_NORTE
+2026-02-17 18:49:14,056 - INFO - [NODO-ODROID] - Escaneando vector: ESPAÑA
+2026-02-17 18:49:14,602 - INFO - [NODO-ODROID] - Escaneando vector: ARGENTINA
+2026-02-17 18:49:14,838 - INFO - [NODO-ODROID] - Escaneando vector: BRASIL
+2026-02-17 18:49:15,464 - INFO - [NODO-ODROID] - Escaneando vector: Europa_DW
+2026-02-17 18:49:15,792 - INFO - [NODO-ODROID] - Escaneando vector: Rusia_Eurasia
+2026-02-17 18:49:16,929 - INFO - [NODO-ODROID] - Escaneando vector: Medio_Oriente
+2026-02-17 18:49:17,175 - INFO - [NODO-ODROID] - Escaneando vector: Asia_Nikkei
+2026-02-17 18:49:17,686 - INFO - [NODO-ODROID] - Escaneando vector: Africa_Sahel
+2026-02-17 18:49:17,979 - INFO - [NODO-ODROID] - Escaneando vector: INDIA_CORE
+2026-02-17 18:49:19,335 - INFO - [NODO-ODROID] - Escaneando vector: CHINA_CORE
+2026-02-17 18:49:19,569 - INFO - [NODO-ODROID] - Ejecutando mantenimiento de archivos antiguos...
+2026-02-17 18:49:19,571 - INFO - [NODO-ODROID] - Archivo purgado: /home/dietpi/intel_center_odroid/blog/content/post/260217_1100-noticias.md
+2026-02-17 18:49:19,576 - INFO - [NODO-ODROID] - --- CICLO FINALIZADO CON ÉXITO ---

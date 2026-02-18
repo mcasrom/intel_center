@@ -1,0 +1,107 @@
+#!/usr/bin/env python3
+import sqlite3
+import os
+import glob
+from datetime import datetime
+
+# CONFIGURACIÓN DE RUTAS
+DB_PATH = "/home/dietpi/intel_center_odroid/data/news.db"
+POSTS_DIR = "/home/dietpi/intel_center_odroid/blog/content/post/"
+
+def obtener_varianza():
+    if not os.path.exists(DB_PATH):
+        return None
+    try:
+        conn = sqlite3.connect(DB_PATH)
+        cursor = conn.cursor()
+        # Modificado: Usamos COALESCE para no perder regiones nuevas como INDIA_CORE o CHINA_CORE
+        query = """
+        WITH datos AS (
+            SELECT 
+                region, 
+                AVG(CASE WHEN timestamp >= datetime('now', '-1 day') THEN sentimiento END) as t_hoy,
+                AVG(CASE WHEN timestamp < datetime('now', '-1 day') AND timestamp >= datetime('now', '-2 days') THEN sentimiento END) as t_ayer
+            FROM news
+            GROUP BY region
+        )
+        SELECT region, t_hoy, COALESCE(t_ayer, 0.0) as t_ayer 
+        FROM datos 
+        WHERE t_hoy IS NOT NULL
+        UNION ALL
+        SELECT 
+            'GLOBAL (Media)', 
+            AVG(CASE WHEN timestamp >= datetime('now', '-1 day') THEN sentimiento END),
+            AVG(CASE WHEN timestamp < datetime('now', '-1 day') AND timestamp >= datetime('now', '-2 days') THEN sentimiento END)
+        FROM news
+        WHERE timestamp >= datetime('now', '-2 days');
+        """
+        cursor.execute(query)
+        resumen = cursor.fetchall()
+        conn.close()
+        return resumen
+    except Exception as e:
+        print(f"Error SQL: {e}")
+        return None
+
+def rotar_archivos(max_archivos=30):
+    """Borra los informes de varianza más antiguos para evitar saturación."""
+    archivos = sorted(glob.glob(os.path.join(POSTS_DIR, "*_analisis-varianza.md")))
+    if len(archivos) > max_archivos:
+        para_borrar = archivos[:-max_archivos]
+        for f in para_borrar:
+            try:
+                os.remove(f)
+                print(f"Rotación: Archivo antiguo eliminado: {f}")
+            except:
+                pass
+
+def generar_markdown(datos):
+    if not datos:
+        print("Sin datos suficientes.")
+        return
+    
+    # Configuración de nombres y fechas
+    ahora_dt = datetime.now()
+    prefijo = ahora_dt.strftime("%y%m%d_%H%M") # Añadido hora/min para evitar colisiones
+    nombre_archivo = f"{prefijo}_analisis-varianza.md"
+    FULL_PATH = os.path.join(POSTS_DIR, nombre_archivo)
+    ahora_iso = ahora_dt.strftime("%Y-%m-%dT%H:%M:%S+01:00")
+    
+    with open(FULL_PATH, 'w', encoding='utf-8') as f:
+        f.write("---\n")
+        f.write(f"title: \"Análisis de Varianza: {ahora_dt.strftime('%d/%m/%Y %H:%M')}\"\n")
+        f.write(f"date: {ahora_iso}\n")
+        f.write("report_types: [\"metodologia\"]\n")
+        f.write("tags: [\"Metodología\", \"Análisis\", \"OSINT\"]\n")
+        f.write("draft: false\n")
+        f.write("type: \"post\"\n")
+        f.write("---\n\n")
+        
+        f.write(f"### 📊 Evolución de Sentimiento OSINT ({ahora_dt.strftime('%d/%m/%Y')})\n\n")
+        f.write("Comparativa de tensión narrativa entre las últimas 24h y el periodo anterior.\n\n")
+        f.write("| Región | Tensión Hoy | Tensión Ayer | Delta (Δ) | Estado |\n")
+        f.write("|:---|:---:|:---:|:---:|:---:|\n")
+        
+        for reg, hoy, ayer in datos:
+            # Evitar división por cero o errores con None
+            h_val = hoy if hoy is not None else 0.0
+            a_val = ayer if ayer is not None else 0.0
+            delta = h_val - a_val
+            
+            b = "**" if "GLOBAL" in reg else ""
+            
+            # Lógica de estados basada en el Delta
+            if delta > 0.05: status = "🔴 Escalada"
+            elif delta < -0.05: status = "🟢 Distensión"
+            else: status = "⚪ Estable"
+            
+            f.write(f"| {b}{reg}{b} | {h_val:.4f} | {a_val:.4f} | {delta:+.4f} | {status} |\n")
+        
+        f.write(f"\n\n*Generado automáticamente por el nodo Odroid-C2 el {ahora_dt.strftime('%d/%m/%Y %H:%M')}.*")
+    
+    print(f"✅ Informe de varianza generado: {nombre_archivo}")
+    rotar_archivos(30)
+
+if __name__ == "__main__":
+    datos_varianza = obtener_varianza()
+    generar_markdown(datos_varianza)

@@ -1,18 +1,11 @@
 #!/bin/bash
+# Sincronización con GitHub - Nodo Intel
 
-# 1. Ejecutar el motor de inteligencia
-echo "🤖 Iniciando captura de inteligencia..."
-python3 ~/intel_center_test/automation/main_intel.py
+cd /home/dietpi/intel_center_odroid
 
-# 2. Construir el sitio con Hugo
-echo "🏗️ Generando sitio estático..."
-cd ~/intel_center_test/blog
-hugo --minify
-
-# 3. Subir a GitHub
-echo "🚀 Sincronizando con GitHub Pages..."
+# Añadimos todo (incluyendo la DB y los nuevos posts)
 git add .
-git commit -m "Update Intel: $(date +'%Y-%m-%d %H:%M')"
+git commit -m "OSINT Update: $(date +'%Y-%m-%d %H:%M') [Host: $(hostname)]"
 git push origin main
 
-echo "✅ Ciclo completado. Web actualizada."
+echo "🚀 Datos sincronizados en GitHub."

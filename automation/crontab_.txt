@@ -1,0 +1,29 @@
+# Intel Plus - Crontab Configuration
+# Ejecuta el pipeline cada 3 horas y deploy automático
+#
+# Para instalar:
+# crontab -e
+# Y pega estas líneas (ajusta rutas si es necesario)
+#
+# IMPORTANTE: En DietPi sobre Odroid C2, asegúrate de que:
+# 1. Python 3.11+ está instalado
+# 2. Hugo está en el PATH
+# 3. Git está configurado para GitHub Pages
+
+# Variables de entorno
+
+SHELL=/bin/bash
+PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+HOME=/home/dietpi
+
+# 1. Tu Nodo de Inteligencia principal (Minuto 0)
+00 * * * * /home/dietpi/intel_center_odroid/automation/run_intel.sh >> /home/dietpi/intel_center_odroid/automation/intel_final.log 2>&1
+
+# 2. Panel de Hugo (Minuto 15 y 45 para no pisar al principal)
+15,45 * * * * cd /home/dietpi/hugo-site && ./venv/bin/python scripts/fetch_rss.py && ./venv/bin/python scripts/sentiment.py && ./venv/bin/python scripts/build_dashboard.py
+
+# 3. Revisión de Logs (Minuto 20 y 50)
+20,50 * * * * /usr/bin/python3 /home/dietpi/perspectiva_global/revisar_logs.py >> /home/dietpi/revisar_logs.log 2>&1
+
+# 4. Monitor de Seguridad (Minuto 25 y 55)
+25,55 * * * * /home/dietpi/scripts/bash/monitor_seguridad.sh >> /home/dietpi/logs/monitor_seg.log 2>&1
