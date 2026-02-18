@@ -1,7 +1,13 @@
-# SQLite
-data/*.db
+# SQLite - COMENTAMOS LA DB PARA QUE HAYA REDUNDANCIA
+# data/*.db  <-- Quita o comenta esto para que el Nodo B reciba los datos
 data/*.db-wal
 data/*.db-shm
+
+# Archivos de Backup y Logs (Basura técnica)
+*.bak
+*.old
+*.log
+automation/cron_log.txt
 
 # Hugo
 blog/public/
