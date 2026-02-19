@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Monitor Global de Inteligencia on Intel Center</title><link>https://mcasrom.github.io/intel_center/</link><description>Recent content in Monitor Global de Inteligencia on Intel Center</description><generator>Hugo</generator><language>es</language><lastBuildDate>Thu, 19 Feb 2026 18:00:06 +0000</lastBuildDate><atom:link href="https://mcasrom.github.io/intel_center/index.xml" rel="self" type="application/rss+xml"/><item><title>📌 MANUAL: Operaciones e Interpretación de Inteligencia</title><link>https://mcasrom.github.io/intel_center/post/guia-interpretacion-nodos/</link><pubDate>Fri, 06 Feb 2026 17:00:00 +0000</pubDate><guid>https://mcasrom.github.io/intel_center/post/guia-interpretacion-nodos/</guid><description>&lt;p&gt;📌 &lt;strong&gt;PROTOCOLO DE INTELIGENCIA CONSOLIDADO (v2.1)&lt;/strong&gt;&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Monitor Global de Inteligencia on Intel Center</title><link>https://mcasrom.github.io/intel_center/</link><description>Recent content in Monitor Global de Inteligencia on Intel Center</description><generator>Hugo</generator><language>es</language><lastBuildDate>Thu, 19 Feb 2026 19:00:06 +0000</lastBuildDate><atom:link href="https://mcasrom.github.io/intel_center/index.xml" rel="self" type="application/rss+xml"/><item><title>📌 MANUAL: Operaciones e Interpretación de Inteligencia</title><link>https://mcasrom.github.io/intel_center/post/guia-interpretacion-nodos/</link><pubDate>Fri, 06 Feb 2026 17:00:00 +0000</pubDate><guid>https://mcasrom.github.io/intel_center/post/guia-interpretacion-nodos/</guid><description>&lt;p&gt;📌 &lt;strong&gt;PROTOCOLO DE INTELIGENCIA CONSOLIDADO (v2.1)&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;Este documento define la metodología aplicada por el motor OSINT de la &lt;strong&gt;Odroid-C2&lt;/strong&gt; para transformar datos masivos en indicadores tácticos.&lt;/p&gt;
 &lt;h4 id="1-semáforo-de-tensión-y-dinámica-política"&gt;1. Semáforo de Tensión y Dinámica Política&lt;/h4&gt;
 &lt;p&gt;El color de cada nodo se calcula mediante NLP y detección de contextos:&lt;/p&gt;
@@ -29,7 +29,187 @@
 &lt;li&gt;&lt;strong&gt;Vigilancia Electoral:&lt;/strong&gt; Categoría dedicada al seguimiento de procesos de votación y encuestas regionales.&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Volumen:&lt;/strong&gt; Cantidad total de impactos analizados. Es el indicador de la solidez estadística de una tendencia.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;hr&gt;</description></item><item><title>INTEL REPORT: 19/02/2026 18:00 (CET)</title><link>https://mcasrom.github.io/intel_center/post/260219_1800-noticias/</link><pubDate>Thu, 19 Feb 2026 18:00:06 +0000</pubDate><guid>https://mcasrom.github.io/intel_center/post/260219_1800-noticias/</guid><description>&lt;h3 id="-resumen-operativo"&gt;⚡ RESUMEN OPERATIVO&lt;/h3&gt;
+&lt;hr&gt;</description></item><item><title>INTEL REPORT: 19/02/2026 19:00 (CET)</title><link>https://mcasrom.github.io/intel_center/post/260219_1900-noticias/</link><pubDate>Thu, 19 Feb 2026 19:00:06 +0000</pubDate><guid>https://mcasrom.github.io/intel_center/post/260219_1900-noticias/</guid><description>&lt;h3 id="-resumen-operativo"&gt;⚡ RESUMEN OPERATIVO&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;Referencia Temporal:&lt;/strong&gt; 19:00 CET / &lt;strong&gt;2026-02-19 19:00 UTC&lt;/strong&gt;
+Nodo: Odroid-C2 Cluster Principal.&lt;/p&gt;
+
+&lt;div style="background: white; padding: 15px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); margin: 20px 0;"&gt;
+ &lt;canvas id="radarChartIntel"&gt;&lt;/canvas&gt;
+&lt;/div&gt;
+
+&lt;script src="https://cdn.jsdelivr.net/npm/chart.js"&gt;&lt;/script&gt;
+&lt;script&gt;
+(function() {
+ const initRadar = () =&gt; {
+ const ctx = document.getElementById('radarChartIntel');
+ if (!ctx) return;
+ 
+ new Chart(ctx, {
+ type: 'radar',
+ data: {
+ labels: ['ARGENTINA', 'Africa_Sahel', 'Asia_Nikkei', 'BRASIL', 'CHINA_CORE', 'ESPAÑA', 'Europa_DW', 'INDIA_CHINA_CORE', 'INDIA_CORE', 'MAR_CHINA', 'Medio_Oriente', 'Rusia_Eurasia', 'TURQUIA_SABAH', 'UCRANIA', 'USA_NORTE'],
+ datasets: [{
+ label: 'Índice de Tensión (Actualizado: 18:00)',
+ data: [45, 48, 40, 47, 53, 40, 46, 37, 48, 52, 46, 48, 46, 52, 46],
+ backgroundColor: 'rgba(255, 99, 132, 0.2)',
+ borderColor: 'rgba(255, 99, 132, 1)',
+ borderWidth: 2,
+ pointBackgroundColor: 'rgba(255, 99, 132, 1)'
+ }]
+ },
+ options: {
+ scales: {
+ r: {
+ min: 0,
+ max: 100,
+ ticks: { stepSize: 20 }
+ }
+ }
+ }
+ });
+ };
+ 
+ if (document.readyState === 'complete') { initRadar(); }
+ else { window.addEventListener('load', initRadar); }
+})();
+&lt;/script&gt;
+
+&lt;h4 id="-evolución-de-sentimiento-varianza-24h"&gt;📊 EVOLUCIÓN DE SENTIMIENTO (VARIANZA 24H)&lt;/h4&gt;
+&lt;table&gt;
+ &lt;thead&gt;
+ &lt;tr&gt;
+ &lt;th style="text-align: left"&gt;Región&lt;/th&gt;
+ &lt;th style="text-align: left"&gt;Hoy&lt;/th&gt;
+ &lt;th style="text-align: left"&gt;Ayer&lt;/th&gt;
+ &lt;th style="text-align: left"&gt;Δ Hist (30d)&lt;/th&gt;
+ &lt;th style="text-align: left"&gt;Estado&lt;/th&gt;
+ &lt;/tr&gt;
+ &lt;/thead&gt;
+ &lt;tbody&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: left"&gt;USA_NORTE&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;0.0433&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;0.1419&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;-0.0985&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;⚠ Tensión&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: left"&gt;ESPAÑA&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;0.2700&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;-0.0167&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;+0.2867&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;🔴 Escalada&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: left"&gt;ARGENTINA&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;0.2000&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;0.0000&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;+0.2000&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;🔴 Escalada&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: left"&gt;BRASIL&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;0.0000&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;0.0000&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;+0.0000&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;⚪ Estable&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: left"&gt;Europa_DW&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;0.0580&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;0.0150&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;+0.0430&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;⚪ Estable&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: left"&gt;Rusia_Eurasia&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;0.1046&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;0.0698&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;+0.0348&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;⚪ Estable&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: left"&gt;Medio_Oriente&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;0.0825&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;0.1828&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;-0.1003&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;⚠ Tensión&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: left"&gt;Asia_Nikkei&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;0.1883&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;0.1189&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;+0.0694&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;⚪ Estable&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: left"&gt;Africa_Sahel&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;-0.0950&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;-0.1267&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;+0.0317&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;⚪ Estable&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: left"&gt;INDIA_CORE&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;0.0656&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;0.0144&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;+0.0511&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;⚪ Estable&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: left"&gt;CHINA_CORE&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;0.0633&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;-0.4000&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;+0.4633&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;🔴 Escalada&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: left"&gt;TURQUIA_SABAH&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;0.0739&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;0.0000&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;+0.0739&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;🔴 Escalada&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: left"&gt;MAR_CHINA&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;-0.0500&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;0.0000&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;-0.0500&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;⚪ Estable&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: left"&gt;UCRANIA&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;-0.0494&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;0.0000&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;-0.0494&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;⚪ Estable&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h4 id="-radares-de-tendencia"&gt;📊 RADARES DE TENDENCIA&lt;/h4&gt;
+&lt;table&gt;
+ &lt;thead&gt;
+ &lt;tr&gt;
+ &lt;th style="text-align: left"&gt;Región&lt;/th&gt;
+ &lt;th style="text-align: left"&gt;Sentiment&lt;/th&gt;
+ &lt;/tr&gt;
+ &lt;/thead&gt;
+ &lt;tbody&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: left"&gt;🇺🇸 USA&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;0.0933&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: left"&gt;🇪🇸 ESPAÑA&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;0.15&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: left"&gt;🌏 INDIA-CHINA&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;0.0663&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;&lt;img src="https://mcasrom.github.io/intel_center/images/260219_1900_trend.png" alt="Tendencias"&gt;&lt;/p&gt;</description></item><item><title>INTEL REPORT: 19/02/2026 18:00 (CET)</title><link>https://mcasrom.github.io/intel_center/post/260219_1800-noticias/</link><pubDate>Thu, 19 Feb 2026 18:00:06 +0000</pubDate><guid>https://mcasrom.github.io/intel_center/post/260219_1800-noticias/</guid><description>&lt;h3 id="-resumen-operativo"&gt;⚡ RESUMEN OPERATIVO&lt;/h3&gt;
 &lt;p&gt;&lt;strong&gt;Referencia Temporal:&lt;/strong&gt; 18:00 CET / &lt;strong&gt;2026-02-19 18:00 UTC&lt;/strong&gt;
 Nodo: Odroid-C2 Cluster Principal.&lt;/p&gt;
 
@@ -49,8 +229,8 @@ Nodo: Odroid-C2 Cluster Principal.&lt;/p&gt;
  data: {
  labels: ['ARGENTINA', 'Africa_Sahel', 'Asia_Nikkei', 'BRASIL', 'CHINA_CORE', 'ESPAÑA', 'Europa_DW', 'INDIA_CHINA_CORE', 'INDIA_CORE', 'MAR_CHINA', 'Medio_Oriente', 'Rusia_Eurasia', 'TURQUIA_SABAH', 'UCRANIA', 'USA_NORTE'],
  datasets: [{
- label: 'Índice de Tensión (Actualizado: 17:00)',
- data: [45, 48, 40, 47, 53, 40, 46, 37, 48, 52, 47, 48, 46, 51, 46],
+ label: 'Índice de Tensión (Actualizado: 18:00)',
+ data: [45, 48, 40, 47, 53, 40, 46, 37, 48, 52, 46, 48, 46, 52, 46],
  backgroundColor: 'rgba(255, 99, 132, 0.2)',
  borderColor: 'rgba(255, 99, 132, 1)',
  borderWidth: 2,
@@ -229,8 +409,8 @@ Nodo: Odroid-C2 Cluster Principal.&lt;/p&gt;
  data: {
  labels: ['ARGENTINA', 'Africa_Sahel', 'Asia_Nikkei', 'BRASIL', 'CHINA_CORE', 'ESPAÑA', 'Europa_DW', 'INDIA_CHINA_CORE', 'INDIA_CORE', 'MAR_CHINA', 'Medio_Oriente', 'Rusia_Eurasia', 'TURQUIA_SABAH', 'UCRANIA', 'USA_NORTE'],
  datasets: [{
- label: 'Índice de Tensión (Actualizado: 17:00)',
- data: [45, 48, 40, 47, 53, 40, 46, 37, 48, 52, 47, 48, 46, 51, 46],
+ label: 'Índice de Tensión (Actualizado: 18:00)',
+ data: [45, 48, 40, 47, 53, 40, 46, 37, 48, 52, 46, 48, 46, 52, 46],
  backgroundColor: 'rgba(255, 99, 132, 0.2)',
  borderColor: 'rgba(255, 99, 132, 1)',
  borderWidth: 2,
@@ -409,8 +589,8 @@ Nodo: Odroid-C2 Cluster Principal.&lt;/p&gt;
  data: {
  labels: ['ARGENTINA', 'Africa_Sahel', 'Asia_Nikkei', 'BRASIL', 'CHINA_CORE', 'ESPAÑA', 'Europa_DW', 'INDIA_CHINA_CORE', 'INDIA_CORE', 'MAR_CHINA', 'Medio_Oriente', 'Rusia_Eurasia', 'TURQUIA_SABAH', 'UCRANIA', 'USA_NORTE'],
  datasets: [{
- label: 'Índice de Tensión (Actualizado: 17:00)',
- data: [45, 48, 40, 47, 53, 40, 46, 37, 48, 52, 47, 48, 46, 51, 46],
+ label: 'Índice de Tensión (Actualizado: 18:00)',
+ data: [45, 48, 40, 47, 53, 40, 46, 37, 48, 52, 46, 48, 46, 52, 46],
  backgroundColor: 'rgba(255, 99, 132, 0.2)',
  borderColor: 'rgba(255, 99, 132, 1)',
  borderWidth: 2,
@@ -741,8 +921,8 @@ Nodo: Odroid-C2 Cluster Principal.&lt;/p&gt;
  data: {
  labels: ['ARGENTINA', 'Africa_Sahel', 'Asia_Nikkei', 'BRASIL', 'CHINA_CORE', 'ESPAÑA', 'Europa_DW', 'INDIA_CHINA_CORE', 'INDIA_CORE', 'MAR_CHINA', 'Medio_Oriente', 'Rusia_Eurasia', 'TURQUIA_SABAH', 'UCRANIA', 'USA_NORTE'],
  datasets: [{
- label: 'Índice de Tensión (Actualizado: 17:00)',
- data: [45, 48, 40, 47, 53, 40, 46, 37, 48, 52, 47, 48, 46, 51, 46],
+ label: 'Índice de Tensión (Actualizado: 18:00)',
+ data: [45, 48, 40, 47, 53, 40, 46, 37, 48, 52, 46, 48, 46, 52, 46],
  backgroundColor: 'rgba(255, 99, 132, 0.2)',
  borderColor: 'rgba(255, 99, 132, 1)',
  borderWidth: 2,
@@ -936,8 +1116,8 @@ Nodo: Odroid-C2 Cluster Principal.&lt;/p&gt;
  data: {
  labels: ['ARGENTINA', 'Africa_Sahel', 'Asia_Nikkei', 'BRASIL', 'CHINA_CORE', 'ESPAÑA', 'Europa_DW', 'INDIA_CHINA_CORE', 'INDIA_CORE', 'MAR_CHINA', 'Medio_Oriente', 'Rusia_Eurasia', 'TURQUIA_SABAH', 'UCRANIA', 'USA_NORTE'],
  datasets: [{
- label: 'Índice de Tensión (Actualizado: 17:00)',
- data: [45, 48, 40, 47, 53, 40, 46, 37, 48, 52, 47, 48, 46, 51, 46],
+ label: 'Índice de Tensión (Actualizado: 18:00)',
+ data: [45, 48, 40, 47, 53, 40, 46, 37, 48, 52, 46, 48, 46, 52, 46],
  backgroundColor: 'rgba(255, 99, 132, 0.2)',
  borderColor: 'rgba(255, 99, 132, 1)',
  borderWidth: 2,
@@ -1116,8 +1296,8 @@ Nodo: Odroid-C2 Cluster Principal.&lt;/p&gt;
  data: {
  labels: ['ARGENTINA', 'Africa_Sahel', 'Asia_Nikkei', 'BRASIL', 'CHINA_CORE', 'ESPAÑA', 'Europa_DW', 'INDIA_CHINA_CORE', 'INDIA_CORE', 'MAR_CHINA', 'Medio_Oriente', 'Rusia_Eurasia', 'TURQUIA_SABAH', 'UCRANIA', 'USA_NORTE'],
  datasets: [{
- label: 'Índice de Tensión (Actualizado: 17:00)',
- data: [45, 48, 40, 47, 53, 40, 46, 37, 48, 52, 47, 48, 46, 51, 46],
+ label: 'Índice de Tensión (Actualizado: 18:00)',
+ data: [45, 48, 40, 47, 53, 40, 46, 37, 48, 52, 46, 48, 46, 52, 46],
  backgroundColor: 'rgba(255, 99, 132, 0.2)',
  borderColor: 'rgba(255, 99, 132, 1)',
  borderWidth: 2,
@@ -1296,8 +1476,8 @@ Nodo: Odroid-C2 Cluster Principal.&lt;/p&gt;
  data: {
  labels: ['ARGENTINA', 'Africa_Sahel', 'Asia_Nikkei', 'BRASIL', 'CHINA_CORE', 'ESPAÑA', 'Europa_DW', 'INDIA_CHINA_CORE', 'INDIA_CORE', 'MAR_CHINA', 'Medio_Oriente', 'Rusia_Eurasia', 'TURQUIA_SABAH', 'UCRANIA', 'USA_NORTE'],
  datasets: [{
- label: 'Índice de Tensión (Actualizado: 17:00)',
- data: [45, 48, 40, 47, 53, 40, 46, 37, 48, 52, 47, 48, 46, 51, 46],
+ label: 'Índice de Tensión (Actualizado: 18:00)',
+ data: [45, 48, 40, 47, 53, 40, 46, 37, 48, 52, 46, 48, 46, 52, 46],
  backgroundColor: 'rgba(255, 99, 132, 0.2)',
  borderColor: 'rgba(255, 99, 132, 1)',
  borderWidth: 2,
@@ -1476,8 +1656,8 @@ Nodo: Odroid-C2 Cluster Principal.&lt;/p&gt;
  data: {
  labels: ['ARGENTINA', 'Africa_Sahel', 'Asia_Nikkei', 'BRASIL', 'CHINA_CORE', 'ESPAÑA', 'Europa_DW', 'INDIA_CHINA_CORE', 'INDIA_CORE', 'MAR_CHINA', 'Medio_Oriente', 'Rusia_Eurasia', 'TURQUIA_SABAH', 'UCRANIA', 'USA_NORTE'],
  datasets: [{
- label: 'Índice de Tensión (Actualizado: 17:00)',
- data: [45, 48, 40, 47, 53, 40, 46, 37, 48, 52, 47, 48, 46, 51, 46],
+ label: 'Índice de Tensión (Actualizado: 18:00)',
+ data: [45, 48, 40, 47, 53, 40, 46, 37, 48, 52, 46, 48, 46, 52, 46],
  backgroundColor: 'rgba(255, 99, 132, 0.2)',
  borderColor: 'rgba(255, 99, 132, 1)',
  borderWidth: 2,
@@ -1656,8 +1836,8 @@ Nodo: Odroid-C2 Cluster Principal.&lt;/p&gt;
  data: {
  labels: ['ARGENTINA', 'Africa_Sahel', 'Asia_Nikkei', 'BRASIL', 'CHINA_CORE', 'ESPAÑA', 'Europa_DW', 'INDIA_CHINA_CORE', 'INDIA_CORE', 'MAR_CHINA', 'Medio_Oriente', 'Rusia_Eurasia', 'TURQUIA_SABAH', 'UCRANIA', 'USA_NORTE'],
  datasets: [{
- label: 'Índice de Tensión (Actualizado: 17:00)',
- data: [45, 48, 40, 47, 53, 40, 46, 37, 48, 52, 47, 48, 46, 51, 46],
+ label: 'Índice de Tensión (Actualizado: 18:00)',
+ data: [45, 48, 40, 47, 53, 40, 46, 37, 48, 52, 46, 48, 46, 52, 46],
  backgroundColor: 'rgba(255, 99, 132, 0.2)',
  borderColor: 'rgba(255, 99, 132, 1)',
  borderWidth: 2,
@@ -1836,8 +2016,8 @@ Nodo: Odroid-C2 Cluster Principal.&lt;/p&gt;
  data: {
  labels: ['ARGENTINA', 'Africa_Sahel', 'Asia_Nikkei', 'BRASIL', 'CHINA_CORE', 'ESPAÑA', 'Europa_DW', 'INDIA_CHINA_CORE', 'INDIA_CORE', 'MAR_CHINA', 'Medio_Oriente', 'Rusia_Eurasia', 'TURQUIA_SABAH', 'UCRANIA', 'USA_NORTE'],
  datasets: [{
- label: 'Índice de Tensión (Actualizado: 17:00)',
- data: [45, 48, 40, 47, 53, 40, 46, 37, 48, 52, 47, 48, 46, 51, 46],
+ label: 'Índice de Tensión (Actualizado: 18:00)',
+ data: [45, 48, 40, 47, 53, 40, 46, 37, 48, 52, 46, 48, 46, 52, 46],
  backgroundColor: 'rgba(255, 99, 132, 0.2)',
  borderColor: 'rgba(255, 99, 132, 1)',
  borderWidth: 2,
@@ -2016,8 +2196,8 @@ Nodo: Odroid-C2 Cluster Principal.&lt;/p&gt;
  data: {
  labels: ['ARGENTINA', 'Africa_Sahel', 'Asia_Nikkei', 'BRASIL', 'CHINA_CORE', 'ESPAÑA', 'Europa_DW', 'INDIA_CHINA_CORE', 'INDIA_CORE', 'MAR_CHINA', 'Medio_Oriente', 'Rusia_Eurasia', 'TURQUIA_SABAH', 'UCRANIA', 'USA_NORTE'],
  datasets: [{
- label: 'Índice de Tensión (Actualizado: 17:00)',
- data: [45, 48, 40, 47, 53, 40, 46, 37, 48, 52, 47, 48, 46, 51, 46],
+ label: 'Índice de Tensión (Actualizado: 18:00)',
+ data: [45, 48, 40, 47, 53, 40, 46, 37, 48, 52, 46, 48, 46, 52, 46],
  backgroundColor: 'rgba(255, 99, 132, 0.2)',
  borderColor: 'rgba(255, 99, 132, 1)',
  borderWidth: 2,
@@ -2196,8 +2376,8 @@ Nodo: Odroid-C2 Cluster Principal.&lt;/p&gt;
  data: {
  labels: ['ARGENTINA', 'Africa_Sahel', 'Asia_Nikkei', 'BRASIL', 'CHINA_CORE', 'ESPAÑA', 'Europa_DW', 'INDIA_CHINA_CORE', 'INDIA_CORE', 'MAR_CHINA', 'Medio_Oriente', 'Rusia_Eurasia', 'TURQUIA_SABAH', 'UCRANIA', 'USA_NORTE'],
  datasets: [{
- label: 'Índice de Tensión (Actualizado: 17:00)',
- data: [45, 48, 40, 47, 53, 40, 46, 37, 48, 52, 47, 48, 46, 51, 46],
+ label: 'Índice de Tensión (Actualizado: 18:00)',
+ data: [45, 48, 40, 47, 53, 40, 46, 37, 48, 52, 46, 48, 46, 52, 46],
  backgroundColor: 'rgba(255, 99, 132, 0.2)',
  borderColor: 'rgba(255, 99, 132, 1)',
  borderWidth: 2,
@@ -2376,8 +2556,8 @@ Nodo: Odroid-C2 Cluster Principal.&lt;/p&gt;
  data: {
  labels: ['ARGENTINA', 'Africa_Sahel', 'Asia_Nikkei', 'BRASIL', 'CHINA_CORE', 'ESPAÑA', 'Europa_DW', 'INDIA_CHINA_CORE', 'INDIA_CORE', 'MAR_CHINA', 'Medio_Oriente', 'Rusia_Eurasia', 'TURQUIA_SABAH', 'UCRANIA', 'USA_NORTE'],
  datasets: [{
- label: 'Índice de Tensión (Actualizado: 17:00)',
- data: [45, 48, 40, 47, 53, 40, 46, 37, 48, 52, 47, 48, 46, 51, 46],
+ label: 'Índice de Tensión (Actualizado: 18:00)',
+ data: [45, 48, 40, 47, 53, 40, 46, 37, 48, 52, 46, 48, 46, 52, 46],
  backgroundColor: 'rgba(255, 99, 132, 0.2)',
  borderColor: 'rgba(255, 99, 132, 1)',
  borderWidth: 2,
@@ -2658,8 +2838,8 @@ Nodo: Odroid-C2 Cluster Principal.&lt;/p&gt;
  data: {
  labels: ['ARGENTINA', 'Africa_Sahel', 'Asia_Nikkei', 'BRASIL', 'CHINA_CORE', 'ESPAÑA', 'Europa_DW', 'INDIA_CHINA_CORE', 'INDIA_CORE', 'MAR_CHINA', 'Medio_Oriente', 'Rusia_Eurasia', 'TURQUIA_SABAH', 'UCRANIA', 'USA_NORTE'],
  datasets: [{
- label: 'Índice de Tensión (Actualizado: 17:00)',
- data: [45, 48, 40, 47, 53, 40, 46, 37, 48, 52, 47, 48, 46, 51, 46],
+ label: 'Índice de Tensión (Actualizado: 18:00)',
+ data: [45, 48, 40, 47, 53, 40, 46, 37, 48, 52, 46, 48, 46, 52, 46],
  backgroundColor: 'rgba(255, 99, 132, 0.2)',
  borderColor: 'rgba(255, 99, 132, 1)',
  borderWidth: 2,
@@ -2831,8 +3011,8 @@ Nodo: Odroid-C2 Cluster Principal.&lt;/p&gt;
  data: {
  labels: ['ARGENTINA', 'Africa_Sahel', 'Asia_Nikkei', 'BRASIL', 'CHINA_CORE', 'ESPAÑA', 'Europa_DW', 'INDIA_CHINA_CORE', 'INDIA_CORE', 'MAR_CHINA', 'Medio_Oriente', 'Rusia_Eurasia', 'TURQUIA_SABAH', 'UCRANIA', 'USA_NORTE'],
  datasets: [{
- label: 'Índice de Tensión (Actualizado: 17:00)',
- data: [45, 48, 40, 47, 53, 40, 46, 37, 48, 52, 47, 48, 46, 51, 46],
+ label: 'Índice de Tensión (Actualizado: 18:00)',
+ data: [45, 48, 40, 47, 53, 40, 46, 37, 48, 52, 46, 48, 46, 52, 46],
  backgroundColor: 'rgba(255, 99, 132, 0.2)',
  borderColor: 'rgba(255, 99, 132, 1)',
  borderWidth: 2,
@@ -2990,8 +3170,8 @@ Nodo: Odroid-C2 Cluster Principal.&lt;/p&gt;
  data: {
  labels: ['ARGENTINA', 'Africa_Sahel', 'Asia_Nikkei', 'BRASIL', 'CHINA_CORE', 'ESPAÑA', 'Europa_DW', 'INDIA_CHINA_CORE', 'INDIA_CORE', 'MAR_CHINA', 'Medio_Oriente', 'Rusia_Eurasia', 'TURQUIA_SABAH', 'UCRANIA', 'USA_NORTE'],
  datasets: [{
- label: 'Índice de Tensión (Actualizado: 17:00)',
- data: [45, 48, 40, 47, 53, 40, 46, 37, 48, 52, 47, 48, 46, 51, 46],
+ label: 'Índice de Tensión (Actualizado: 18:00)',
+ data: [45, 48, 40, 47, 53, 40, 46, 37, 48, 52, 46, 48, 46, 52, 46],
  backgroundColor: 'rgba(255, 99, 132, 0.2)',
  borderColor: 'rgba(255, 99, 132, 1)',
  borderWidth: 2,
@@ -3149,8 +3329,8 @@ Nodo: Odroid-C2 Cluster Principal.&lt;/p&gt;
  data: {
  labels: ['ARGENTINA', 'Africa_Sahel', 'Asia_Nikkei', 'BRASIL', 'CHINA_CORE', 'ESPAÑA', 'Europa_DW', 'INDIA_CHINA_CORE', 'INDIA_CORE', 'MAR_CHINA', 'Medio_Oriente', 'Rusia_Eurasia', 'TURQUIA_SABAH', 'UCRANIA', 'USA_NORTE'],
  datasets: [{
- label: 'Índice de Tensión (Actualizado: 17:00)',
- data: [45, 48, 40, 47, 53, 40, 46, 37, 48, 52, 47, 48, 46, 51, 46],
+ label: 'Índice de Tensión (Actualizado: 18:00)',
+ data: [45, 48, 40, 47, 53, 40, 46, 37, 48, 52, 46, 48, 46, 52, 46],
  backgroundColor: 'rgba(255, 99, 132, 0.2)',
  borderColor: 'rgba(255, 99, 132, 1)',
  borderWidth: 2,
@@ -3308,8 +3488,8 @@ Nodo: Odroid-C2 Cluster Principal.&lt;/p&gt;
  data: {
  labels: ['ARGENTINA', 'Africa_Sahel', 'Asia_Nikkei', 'BRASIL', 'CHINA_CORE', 'ESPAÑA', 'Europa_DW', 'INDIA_CHINA_CORE', 'INDIA_CORE', 'MAR_CHINA', 'Medio_Oriente', 'Rusia_Eurasia', 'TURQUIA_SABAH', 'UCRANIA', 'USA_NORTE'],
  datasets: [{
- label: 'Índice de Tensión (Actualizado: 17:00)',
- data: [45, 48, 40, 47, 53, 40, 46, 37, 48, 52, 47, 48, 46, 51, 46],
+ label: 'Índice de Tensión (Actualizado: 18:00)',
+ data: [45, 48, 40, 47, 53, 40, 46, 37, 48, 52, 46, 48, 46, 52, 46],
  backgroundColor: 'rgba(255, 99, 132, 0.2)',
  borderColor: 'rgba(255, 99, 132, 1)',
  borderWidth: 2,
@@ -3447,166 +3627,7 @@ Nodo: Odroid-C2 Cluster Principal.&lt;/p&gt;
  &lt;/tr&gt;
  &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;p&gt;&lt;img src="https://mcasrom.github.io/intel_center/images/260219_0500_trend.png" alt="Tendencias"&gt;&lt;/p&gt;</description></item><item><title>INTEL REPORT: 19/02/2026 04:00 (CET)</title><link>https://mcasrom.github.io/intel_center/post/260219_0400-noticias/</link><pubDate>Thu, 19 Feb 2026 04:00:07 +0000</pubDate><guid>https://mcasrom.github.io/intel_center/post/260219_0400-noticias/</guid><description>&lt;h3 id="-resumen-operativo"&gt;⚡ RESUMEN OPERATIVO&lt;/h3&gt;
-&lt;p&gt;&lt;strong&gt;Referencia Temporal:&lt;/strong&gt; 04:00 CET / &lt;strong&gt;2026-02-19 04:00 UTC&lt;/strong&gt;
-Nodo: Odroid-C2 Cluster Principal.&lt;/p&gt;
-
-&lt;div style="background: white; padding: 15px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); margin: 20px 0;"&gt;
- &lt;canvas id="radarChartIntel"&gt;&lt;/canvas&gt;
-&lt;/div&gt;
-
-&lt;script src="https://cdn.jsdelivr.net/npm/chart.js"&gt;&lt;/script&gt;
-&lt;script&gt;
-(function() {
- const initRadar = () =&gt; {
- const ctx = document.getElementById('radarChartIntel');
- if (!ctx) return;
- 
- new Chart(ctx, {
- type: 'radar',
- data: {
- labels: ['ARGENTINA', 'Africa_Sahel', 'Asia_Nikkei', 'BRASIL', 'CHINA_CORE', 'ESPAÑA', 'Europa_DW', 'INDIA_CHINA_CORE', 'INDIA_CORE', 'MAR_CHINA', 'Medio_Oriente', 'Rusia_Eurasia', 'TURQUIA_SABAH', 'UCRANIA', 'USA_NORTE'],
- datasets: [{
- label: 'Índice de Tensión (Actualizado: 17:00)',
- data: [45, 48, 40, 47, 53, 40, 46, 37, 48, 52, 47, 48, 46, 51, 46],
- backgroundColor: 'rgba(255, 99, 132, 0.2)',
- borderColor: 'rgba(255, 99, 132, 1)',
- borderWidth: 2,
- pointBackgroundColor: 'rgba(255, 99, 132, 1)'
- }]
- },
- options: {
- scales: {
- r: {
- min: 0,
- max: 100,
- ticks: { stepSize: 20 }
- }
- }
- }
- });
- };
- 
- if (document.readyState === 'complete') { initRadar(); }
- else { window.addEventListener('load', initRadar); }
-})();
-&lt;/script&gt;
-
-&lt;h4 id="-evolución-de-sentimiento-varianza-24h"&gt;📊 EVOLUCIÓN DE SENTIMIENTO (VARIANZA 24H)&lt;/h4&gt;
-&lt;table&gt;
- &lt;thead&gt;
- &lt;tr&gt;
- &lt;th style="text-align: left"&gt;Región&lt;/th&gt;
- &lt;th style="text-align: left"&gt;Hoy&lt;/th&gt;
- &lt;th style="text-align: left"&gt;Ayer&lt;/th&gt;
- &lt;th style="text-align: left"&gt;Δ Hist (30d)&lt;/th&gt;
- &lt;th style="text-align: left"&gt;Estado&lt;/th&gt;
- &lt;/tr&gt;
- &lt;/thead&gt;
- &lt;tbody&gt;
- &lt;tr&gt;
- &lt;td style="text-align: left"&gt;USA_NORTE&lt;/td&gt;
- &lt;td style="text-align: left"&gt;0.0445&lt;/td&gt;
- &lt;td style="text-align: left"&gt;0.2419&lt;/td&gt;
- &lt;td style="text-align: left"&gt;-0.1974&lt;/td&gt;
- &lt;td style="text-align: left"&gt;⚠ Tensión&lt;/td&gt;
- &lt;/tr&gt;
- &lt;tr&gt;
- &lt;td style="text-align: left"&gt;ESPAÑA&lt;/td&gt;
- &lt;td style="text-align: left"&gt;-0.1667&lt;/td&gt;
- &lt;td style="text-align: left"&gt;0.5000&lt;/td&gt;
- &lt;td style="text-align: left"&gt;-0.6667&lt;/td&gt;
- &lt;td style="text-align: left"&gt;⚠ Tensión&lt;/td&gt;
- &lt;/tr&gt;
- &lt;tr&gt;
- &lt;td style="text-align: left"&gt;ARGENTINA&lt;/td&gt;
- &lt;td style="text-align: left"&gt;0.2000&lt;/td&gt;
- &lt;td style="text-align: left"&gt;0.0500&lt;/td&gt;
- &lt;td style="text-align: left"&gt;+0.1500&lt;/td&gt;
- &lt;td style="text-align: left"&gt;🔴 Escalada&lt;/td&gt;
- &lt;/tr&gt;
- &lt;tr&gt;
- &lt;td style="text-align: left"&gt;BRASIL&lt;/td&gt;
- &lt;td style="text-align: left"&gt;0.0000&lt;/td&gt;
- &lt;td style="text-align: left"&gt;-0.1700&lt;/td&gt;
- &lt;td style="text-align: left"&gt;+0.1700&lt;/td&gt;
- &lt;td style="text-align: left"&gt;🔴 Escalada&lt;/td&gt;
- &lt;/tr&gt;
- &lt;tr&gt;
- &lt;td style="text-align: left"&gt;Europa_DW&lt;/td&gt;
- &lt;td style="text-align: left"&gt;0.0280&lt;/td&gt;
- &lt;td style="text-align: left"&gt;0.0090&lt;/td&gt;
- &lt;td style="text-align: left"&gt;+0.0190&lt;/td&gt;
- &lt;td style="text-align: left"&gt;⚪ Estable&lt;/td&gt;
- &lt;/tr&gt;
- &lt;tr&gt;
- &lt;td style="text-align: left"&gt;Rusia_Eurasia&lt;/td&gt;
- &lt;td style="text-align: left"&gt;0.1087&lt;/td&gt;
- &lt;td style="text-align: left"&gt;0.0243&lt;/td&gt;
- &lt;td style="text-align: left"&gt;+0.0844&lt;/td&gt;
- &lt;td style="text-align: left"&gt;🔴 Escalada&lt;/td&gt;
- &lt;/tr&gt;
- &lt;tr&gt;
- &lt;td style="text-align: left"&gt;Medio_Oriente&lt;/td&gt;
- &lt;td style="text-align: left"&gt;0.1476&lt;/td&gt;
- &lt;td style="text-align: left"&gt;0.1171&lt;/td&gt;
- &lt;td style="text-align: left"&gt;+0.0304&lt;/td&gt;
- &lt;td style="text-align: left"&gt;⚪ Estable&lt;/td&gt;
- &lt;/tr&gt;
- &lt;tr&gt;
- &lt;td style="text-align: left"&gt;Asia_Nikkei&lt;/td&gt;
- &lt;td style="text-align: left"&gt;-0.0120&lt;/td&gt;
- &lt;td style="text-align: left"&gt;0.2833&lt;/td&gt;
- &lt;td style="text-align: left"&gt;-0.2953&lt;/td&gt;
- &lt;td style="text-align: left"&gt;⚠ Tensión&lt;/td&gt;
- &lt;/tr&gt;
- &lt;tr&gt;
- &lt;td style="text-align: left"&gt;Africa_Sahel&lt;/td&gt;
- &lt;td style="text-align: left"&gt;-0.0880&lt;/td&gt;
- &lt;td style="text-align: left"&gt;0.0056&lt;/td&gt;
- &lt;td style="text-align: left"&gt;-0.0936&lt;/td&gt;
- &lt;td style="text-align: left"&gt;⚠ Tensión&lt;/td&gt;
- &lt;/tr&gt;
- &lt;tr&gt;
- &lt;td style="text-align: left"&gt;INDIA_CORE&lt;/td&gt;
- &lt;td style="text-align: left"&gt;0.0178&lt;/td&gt;
- &lt;td style="text-align: left"&gt;0.0161&lt;/td&gt;
- &lt;td style="text-align: left"&gt;+0.0017&lt;/td&gt;
- &lt;td style="text-align: left"&gt;⚪ Estable&lt;/td&gt;
- &lt;/tr&gt;
- &lt;tr&gt;
- &lt;td style="text-align: left"&gt;CHINA_CORE&lt;/td&gt;
- &lt;td style="text-align: left"&gt;-0.1500&lt;/td&gt;
- &lt;td style="text-align: left"&gt;0.0000&lt;/td&gt;
- &lt;td style="text-align: left"&gt;-0.1500&lt;/td&gt;
- &lt;td style="text-align: left"&gt;⚠ Tensión&lt;/td&gt;
- &lt;/tr&gt;
- &lt;/tbody&gt;
-&lt;/table&gt;
-&lt;h4 id="-radares-de-tendencia"&gt;📊 RADARES DE TENDENCIA&lt;/h4&gt;
-&lt;table&gt;
- &lt;thead&gt;
- &lt;tr&gt;
- &lt;th style="text-align: left"&gt;Región&lt;/th&gt;
- &lt;th style="text-align: left"&gt;Sentiment&lt;/th&gt;
- &lt;/tr&gt;
- &lt;/thead&gt;
- &lt;tbody&gt;
- &lt;tr&gt;
- &lt;td style="text-align: left"&gt;🇺🇸 USA&lt;/td&gt;
- &lt;td style="text-align: left"&gt;0.045&lt;/td&gt;
- &lt;/tr&gt;
- &lt;tr&gt;
- &lt;td style="text-align: left"&gt;🇪🇸 ESPAÑA&lt;/td&gt;
- &lt;td style="text-align: left"&gt;0.05&lt;/td&gt;
- &lt;/tr&gt;
- &lt;tr&gt;
- &lt;td style="text-align: left"&gt;🌏 INDIA-CHINA&lt;/td&gt;
- &lt;td style="text-align: left"&gt;0.0245&lt;/td&gt;
- &lt;/tr&gt;
- &lt;/tbody&gt;
-&lt;/table&gt;
-&lt;p&gt;&lt;img src="https://mcasrom.github.io/intel_center/images/260219_0400_trend.png" alt="Tendencias"&gt;&lt;/p&gt;</description></item><item><title>Arquitectura del Sistema: Inteligencia en Tiempo Real con Alta Disponibilidad</title><link>https://mcasrom.github.io/intel_center/arquitectura/</link><pubDate>Wed, 18 Feb 2026 08:30:00 +0100</pubDate><guid>https://mcasrom.github.io/intel_center/arquitectura/</guid><description>&lt;h3 id="descripción-general-del-flujo-de-datos"&gt;Descripción General del Flujo de Datos&lt;/h3&gt;
+&lt;p&gt;&lt;img src="https://mcasrom.github.io/intel_center/images/260219_0500_trend.png" alt="Tendencias"&gt;&lt;/p&gt;</description></item><item><title>Arquitectura del Sistema: Inteligencia en Tiempo Real con Alta Disponibilidad</title><link>https://mcasrom.github.io/intel_center/arquitectura/</link><pubDate>Wed, 18 Feb 2026 08:30:00 +0100</pubDate><guid>https://mcasrom.github.io/intel_center/arquitectura/</guid><description>&lt;h3 id="descripción-general-del-flujo-de-datos"&gt;Descripción General del Flujo de Datos&lt;/h3&gt;
 &lt;p&gt;El Intel Center opera sobre una &lt;strong&gt;infraestructura descentralizada y redundante&lt;/strong&gt; en hardware dedicado (Odroid-C2). El sistema se divide en &lt;strong&gt;cinco capas críticas&lt;/strong&gt; que garantizan la transformación de ruido mediático en inteligencia accionable, incluso frente a fallos de hardware.&lt;/p&gt;
 &lt;p&gt;&lt;img src="https://mcasrom.github.io/intel_center/images/intel_center_architecture_redundancy.png" alt="Arquitectura del Clúster de Inteligencia OSINT con Redundancia"&gt;&lt;/p&gt;
 &lt;hr&gt;
@@ -5429,8 +5450,8 @@ fetch('/data/radar_data.json').then(res =&gt; res.json()).then(data =&gt; {
  data: {
  labels: ['ARGENTINA', 'Africa_Sahel', 'Asia_Nikkei', 'BRASIL', 'CHINA_CORE', 'ESPAÑA', 'Europa_DW', 'INDIA_CHINA_CORE', 'INDIA_CORE', 'MAR_CHINA', 'Medio_Oriente', 'Rusia_Eurasia', 'TURQUIA_SABAH', 'UCRANIA', 'USA_NORTE'],
  datasets: [{
- label: 'Índice de Tensión (Actualizado: 17:00)',
- data: [45, 48, 40, 47, 53, 40, 46, 37, 48, 52, 47, 48, 46, 51, 46],
+ label: 'Índice de Tensión (Actualizado: 18:00)',
+ data: [45, 48, 40, 47, 53, 40, 46, 37, 48, 52, 46, 48, 46, 52, 46],
  backgroundColor: 'rgba(255, 99, 132, 0.2)',
  borderColor: 'rgba(255, 99, 132, 1)',
  borderWidth: 2,
