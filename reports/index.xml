@@ -1,34 +1,63 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Reports on Intel Center</title><link>https://mcasrom.github.io/intel_center/reports/</link><description>Recent content in Reports on Intel Center</description><generator>Hugo</generator><language>es</language><lastBuildDate>Thu, 19 Feb 2026 12:59:25 +0000</lastBuildDate><atom:link href="https://mcasrom.github.io/intel_center/reports/index.xml" rel="self" type="application/rss+xml"/><item><title>Análisis de Estado - 2026-02-19 12:59</title><link>https://mcasrom.github.io/intel_center/reports/260219_total_analysis/</link><pubDate>Thu, 19 Feb 2026 12:59:25 +0000</pubDate><guid>https://mcasrom.github.io/intel_center/reports/260219_total_analysis/</guid><description>&lt;h1 id="-dashboard-operativo-nodo-odroid-c2"&gt;🛡️ Dashboard Operativo: Nodo odroid-c2&lt;/h1&gt;
-&lt;p&gt;Actualización: 19/02/2026 12:59:25&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Reports on Intel Center</title><link>https://mcasrom.github.io/intel_center/reports/</link><description>Recent content in Reports on Intel Center</description><generator>Hugo</generator><language>es</language><lastBuildDate>Thu, 19 Feb 2026 13:58:11 +0000</lastBuildDate><atom:link href="https://mcasrom.github.io/intel_center/reports/index.xml" rel="self" type="application/rss+xml"/><item><title>Análisis de Estado - 2026-02-19 13:58</title><link>https://mcasrom.github.io/intel_center/reports/260219_total_analysis/</link><pubDate>Thu, 19 Feb 2026 13:58:11 +0000</pubDate><guid>https://mcasrom.github.io/intel_center/reports/260219_total_analysis/</guid><description>&lt;h1 id="-dashboard-operativo-nodo-odroid-c2"&gt;🛡️ Dashboard Operativo: Nodo odroid-c2&lt;/h1&gt;
+&lt;p&gt;Actualización: 19/02/2026 13:58:11&lt;/p&gt;
 &lt;h2 id="-telemetría-de-hardware"&gt;🌡️ Telemetría de Hardware&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Temperatura CPU&lt;/strong&gt;: 15°C&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Carga Sistema&lt;/strong&gt;: 0.01, 0.03, 0.00&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Uptime&lt;/strong&gt;: up 4 days, 1 hour, 48 minutes&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Temperatura CPU&lt;/strong&gt;: 16°C&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Carga Sistema&lt;/strong&gt;: 0.06, 0.03, 0.01&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Uptime&lt;/strong&gt;: up 4 days, 2 hours, 46 minutes&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id="-análisis-de-errores-últimas-12h"&gt;🕵️ Análisis de Errores (Últimas 12h)&lt;/h2&gt;
+&lt;h2 id="-verificación-de-scripts-críticos"&gt;📜 Verificación de Scripts Críticos&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;⚠️ &lt;strong&gt;Alertas detectadas&lt;/strong&gt;:&lt;/li&gt;
+&lt;li&gt;✅ &lt;strong&gt;OK&lt;/strong&gt;: /home/dietpi/intel_center_odroid/automation/run_intel.sh&lt;/li&gt;
+&lt;li&gt;✅ &lt;strong&gt;OK&lt;/strong&gt;: /home/dietpi/intel_center_odroid/automation/radar_intel.py&lt;/li&gt;
+&lt;li&gt;✅ &lt;strong&gt;OK&lt;/strong&gt;: /home/dietpi/intel_center_odroid/automation/analitica_varianza.py&lt;/li&gt;
+&lt;li&gt;✅ &lt;strong&gt;OK&lt;/strong&gt;: /home/dietpi/intel_center_odroid/automation/analista_historico.py&lt;/li&gt;
+&lt;li&gt;✅ &lt;strong&gt;OK&lt;/strong&gt;: /home/dietpi/intel_center_odroid/automation/analista_mensual.py&lt;/li&gt;
+&lt;li&gt;✅ &lt;strong&gt;OK&lt;/strong&gt;: /home/dietpi/scripts/monitor_hw.sh&lt;/li&gt;
+&lt;li&gt;✅ &lt;strong&gt;OK&lt;/strong&gt;: /home/dietpi/scripts/archive_data.py&lt;/li&gt;
 &lt;/ul&gt;
-&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-text" data-lang="text"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;ERROR render: failed to render pages: open /home/dietpi/intel_center_odroid/blog/public/about/index.html: permission denied
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;Error: error copying static files: chtimes /home/dietpi/intel_center_odroid/blog/public/images/trend.png: operation not permitted
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; mode change 100644 =&amp;gt; 100755 blog/themes/ananke/assets/ananke/socials/critical-role.svg
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;NameError: name &amp;#39;DIARIO_PATH&amp;#39; is not defined
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;IndentationError: unindent does not match any outer indentation level
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id="-calidad-de-ingesta-últimas-24h"&gt;📊 Calidad de Ingesta (Últimas 24h)&lt;/h2&gt;
+&lt;h2 id="-calidad-de-ingesta-últimas-24h"&gt;📊 Calidad de Ingesta (Últimas 24h)&lt;/h2&gt;
 &lt;table&gt;
  &lt;thead&gt;
  &lt;tr&gt;
  &lt;th style="text-align: left"&gt;Región&lt;/th&gt;
- &lt;th style="text-align: left"&gt;Noticias&lt;/th&gt;
+ &lt;th style="text-align: left"&gt;Noticias Ingeridas&lt;/th&gt;
  &lt;/tr&gt;
  &lt;/thead&gt;
  &lt;tbody&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: left"&gt;INDIA_CORE&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;224&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: left"&gt;Rusia_Eurasia&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;133&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: left"&gt;Medio_Oriente&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;83&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: left"&gt;TURQUIA_SABAH&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;48&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: left"&gt;Europa_DW&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;42&lt;/td&gt;
+ &lt;/tr&gt;
  &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;h2 id="-redundancia-odroid-149"&gt;🔄 Redundancia (Odroid .149)&lt;/h2&gt;
+&lt;h2 id="-análisis-de-errores-últimas-12h"&gt;🕵️ Análisis de Errores (Últimas 12h)&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;🔑 Espejo Remoto: &lt;strong&gt;CONECTADO Y AUTENTICADO&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;✅ Logs limpios. No se detectan anomalías críticas.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="-redundancia-espejo-149"&gt;🔄 Redundancia (Espejo .149)&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;🔑 Enlace SSH: &lt;strong&gt;VERIFICADO&lt;/strong&gt; (Backup garantizado)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="-almacenamiento"&gt;💾 Almacenamiento&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Uso de Disco&lt;/strong&gt;: 14%&lt;/li&gt;
 &lt;/ul&gt;
 &lt;hr&gt;
-&lt;p&gt;&lt;em&gt;Auto-reporte generado por Intel Center System Check.&lt;/em&gt;&lt;/p&gt;</description></item></channel></rss>
+&lt;p&gt;&lt;em&gt;Auto-reporte generado por el Nodo de Inteligencia odroid-c2.&lt;/em&gt;&lt;/p&gt;</description></item></channel></rss>
