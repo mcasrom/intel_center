@@ -1,34 +1,44 @@
 ---
-title: "Análisis de Estado - 2026-02-19 12:59"
-date: 2026-02-19T12:59:25
+title: "Análisis de Estado - 2026-02-19 13:58"
+date: 2026-02-19T13:58:11
 layout: "post"
 tags: ["monitor", "sistema"]
 ---
 
 # 🛡️ Dashboard Operativo: Nodo odroid-c2
-Actualización: 19/02/2026 12:59:25
+Actualización: 19/02/2026 13:58:11
 
 ## 🌡️ Telemetría de Hardware
-- **Temperatura CPU**: 15°C
-- **Carga Sistema**:  0.01, 0.03, 0.00
-- **Uptime**: up 4 days, 1 hour, 48 minutes
+- **Temperatura CPU**: 16°C
+- **Carga Sistema**:  0.06, 0.03, 0.01
+- **Uptime**: up 4 days, 2 hours, 46 minutes
 
-## 🕵️ Análisis de Errores (Últimas 12h)
-- ⚠️ **Alertas detectadas**:
-```text
-ERROR render: failed to render pages: open /home/dietpi/intel_center_odroid/blog/public/about/index.html: permission denied
-Error: error copying static files: chtimes /home/dietpi/intel_center_odroid/blog/public/images/trend.png: operation not permitted
- mode change 100644 => 100755 blog/themes/ananke/assets/ananke/socials/critical-role.svg
-NameError: name 'DIARIO_PATH' is not defined
-IndentationError: unindent does not match any outer indentation level
-```
+## 📜 Verificación de Scripts Críticos
+- ✅ **OK**: /home/dietpi/intel_center_odroid/automation/run_intel.sh
+- ✅ **OK**: /home/dietpi/intel_center_odroid/automation/radar_intel.py
+- ✅ **OK**: /home/dietpi/intel_center_odroid/automation/analitica_varianza.py
+- ✅ **OK**: /home/dietpi/intel_center_odroid/automation/analista_historico.py
+- ✅ **OK**: /home/dietpi/intel_center_odroid/automation/analista_mensual.py
+- ✅ **OK**: /home/dietpi/scripts/monitor_hw.sh
+- ✅ **OK**: /home/dietpi/scripts/archive_data.py
 
 ## 📊 Calidad de Ingesta (Últimas 24h)
-| Región | Noticias |
+| Región | Noticias Ingeridas |
 | :--- | :--- |
+| INDIA_CORE | 224 |
+| Rusia_Eurasia | 133 |
+| Medio_Oriente | 83 |
+| TURQUIA_SABAH | 48 |
+| Europa_DW | 42 |
 
-## 🔄 Redundancia (Odroid .149)
-- 🔑 Espejo Remoto: **CONECTADO Y AUTENTICADO**
+## 🕵️ Análisis de Errores (Últimas 12h)
+- ✅ Logs limpios. No se detectan anomalías críticas.
+
+## 🔄 Redundancia (Espejo .149)
+- 🔑 Enlace SSH: **VERIFICADO** (Backup garantizado)
+
+## 💾 Almacenamiento
+- **Uso de Disco**: 14%
 
 ---
-*Auto-reporte generado por Intel Center System Check.*
+*Auto-reporte generado por el Nodo de Inteligencia odroid-c2.*
