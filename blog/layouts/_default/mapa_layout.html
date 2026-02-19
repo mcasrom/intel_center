@@ -9,82 +9,86 @@
     text-shadow: 2px 2px 4px #000;
     text-align: center;
   }
-  /* Contenedor del mapa con estética 'Terminal' */
+  /* Contenedor del mapa */
   .mapa-full-width { 
     width: 100%; 
     border: 2px solid #333; 
     border-radius: 4px;
     box-shadow: 0 0 20px rgba(0,0,0,0.5);
   }
+  /* Contenedor del Radar - Tamaño Controlado */
+  .radar-section {
+    margin-top: 40px;
+    padding: 30px;
+    background: #ffffff;
+    border-radius: 12px;
+    border: 1px solid #ddd;
+    color: #333;
+  }
+  .radar-wrapper {
+    max-width: 600px;
+    margin: 0 auto; /* Centrado horizontal */
+  }
 </style>
 
 <div class="post">
     <h1 class="post-title">{{ .Title }}</h1>
-    <div id="map" class="mapa-full-width" style="height: 700px; background: #1a1b1c;"></div>
+    
+    <div id="map" class="mapa-full-width" style="height: 650px; background: #1a1b1c;"></div>
+
+    <div class="post-content" style="margin: 30px 0; color: #555; font-family: monospace; font-size: 1.1em;">
+        {{ .Content }}
+    </div>
+
+    <div class="radar-section">
+        <h2 style="text-align: center; margin-top: 0; font-family: sans-serif; color: #222;">📊 Monitor de Tensión Geopolítica</h2>
+        <div class="radar-wrapper">
+            {{ readFile "layouts/shortcodes/radar_intel.html" | safeHTML }}
+        </div>
+        <p style="text-align: center; font-size: 0.85em; color: #777; margin-top: 15px;">
+            Análisis dinámico de sentimiento y volumen por región.
+        </p>
+    </div>
 </div>
 
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 
 <script>
-    // Inicialización del mapa centrada en el Ecuador
     var map = L.map('map').setView([20.0, 0.0], 2);    
 
-    // Capa de mapa oscura (CartoDB Dark Matter)
     L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
         attribution: '© OpenStreetMap | Intel Center OSINT'
     }).addTo(map);
 
-    // Consumo del JSON generado por el script de Python
     fetch('https://mcasrom.github.io/intel_center/data/hotspots.json')
         .then(response => response.json())
         .then(data => {
             data.forEach(spot => {
-                // Cálculo dinámico del radio basado en volumen de noticias
                 var radius = Math.max(spot.intensity * 18000, 120000); 
-                
-                // LÓGICA DE ANOMALÍA: Si existe el flag, duplicamos tamaño y resaltamos borde
                 var finalRadius = spot.anomaly ? radius * 2 : radius;
-                var strokeWidth = spot.anomaly ? 5 : 2;
-                var dashPattern = spot.anomaly ? "5, 10" : null;
-
-                // Color extraído del análisis de sentimiento
                 var nodeColor = spot.color || '#00ff00'; 
 
-                // Dibujado del área de influencia (Círculo)
                 L.circle([spot.lat, spot.lon], {
                     color: nodeColor, 
                     fillColor: nodeColor,
                     fillOpacity: 0.25, 
-                    weight: strokeWidth,
-                    dashArray: dashPattern,
+                    weight: spot.anomaly ? 5 : 2,
                     radius: finalRadius
                 }).addTo(map);
 
-                // Icono con el número de noticias y color de tensión
                 var numberIcon = L.divIcon({
                     className: 'number-label',
                     html: `<div style="color: ${nodeColor};">${spot.intensity}${spot.anomaly ? '⚠️' : ''}</div>`,
                     iconSize: [60, 40]
                 });
 
-                // Marcador con etiqueta numérica
                 L.marker([spot.lat, spot.lon], { icon: numberIcon }).addTo(map);
                 
-                // Popup informativo detallado
                 var popupText = `<b>Nodo: ${spot.name}</b><br>Intensidad: ${spot.intensity}<br>Tensión: ${spot.sentiment_index}`;
-                if (spot.anomaly) {
-                    popupText += `<br><span style="color:#ff4b2b;">⚠️ <b>ANOMALÍA DETECTADA</b></span>`;
-                }
-
-                L.marker([spot.lat, spot.lon], { opacity: 0 })
-                 .bindPopup(popupText)
-                 .addTo(map);
+                L.marker([spot.lat, spot.lon], { opacity: 0 }).bindPopup(popupText).addTo(map);
             });
         })
-        .catch(err => {
-            console.error("Error en la telemetría de datos:", err);
-            document.getElementById('map').innerHTML = "<p style='color:red; padding:20px;'>Error: No se pudo conectar con el servidor de datos OSINT.</p>";
-        });
+        .catch(err => console.error("Error en telemetría:", err));
 </script>
 {{ end }}
