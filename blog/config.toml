@@ -61,9 +61,8 @@ relativeURLs = false
 
 [params]
   description = "Nodo de inteligencia OSINT - Monitorización global en tiempo real"
-  # Imagen de fondo en la cabecera (Header)
   featured_image = "images/header_intel.jpg"
-  # Favicon (Debe estar en static/favicon.png)
   favicon = "favicon.png"
-  # Configuración para redes sociales (Preview)
   site_logo = "favicon.png"
+  # CRÍTICO: URL absoluta para og:image en WhatsApp/Telegram
+  images = ["https://mcasrom.github.io/intel_center/images/header_intel.jpg"]
