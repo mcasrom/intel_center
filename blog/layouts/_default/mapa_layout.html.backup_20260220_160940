@@ -9,13 +9,19 @@
     text-shadow: 2px 2px 4px #000;
     text-align: center;
   }
+
   /* Contenedor del mapa */
   .mapa-full-width { 
     width: 100%; 
+    max-width: 1200px; /* evita que sobrepase pantallas grandes */
+    height: 65vh;       /* altura relativa, adapta a pantallas pequeñas */
+    min-height: 400px;  /* mínimo aceptable en móviles */
+    margin: 0 auto;
     border: 2px solid #333; 
     border-radius: 4px;
     box-shadow: 0 0 20px rgba(0,0,0,0.5);
   }
+
   /* Contenedor del Radar - Tamaño Controlado */
   .radar-section {
     margin-top: 40px;
@@ -25,16 +31,32 @@
     border: 1px solid #ddd;
     color: #333;
   }
+
   .radar-wrapper {
     max-width: 600px;
-    margin: 0 auto; /* Centrado horizontal */
+    width: 90%;
+    margin: 0 auto; /* centrado horizontal */
+  }
+
+  /* Ajuste responsivo de texto y contenedores */
+  @media (max-width: 768px) {
+    .post-content {
+        font-size: 1em;
+    }
+    .radar-wrapper {
+        width: 100%;
+        padding: 0 10px;
+    }
+    .number-label {
+        font-size: 14px;
+    }
   }
 </style>
 
 <div class="post">
     <h1 class="post-title">{{ .Title }}</h1>
     
-    <div id="map" class="mapa-full-width" style="height: 650px; background: #1a1b1c;"></div>
+    <div id="map" class="mapa-full-width"></div>
 
     <div class="post-content" style="margin: 30px 0; color: #555; font-family: monospace; font-size: 1.1em;">
         {{ .Content }}
@@ -65,8 +87,11 @@
         .then(response => response.json())
         .then(data => {
             data.forEach(spot => {
-                var radius = Math.max(spot.intensity * 18000, 120000); 
-                var finalRadius = spot.anomaly ? radius * 2 : radius;
+                // Ajuste de radio con límites para móviles y pantallas grandes
+                var baseRadius = Math.max(spot.intensity * 8000, 60000);
+                var finalRadius = spot.anomaly ? baseRadius * 1.5 : baseRadius;
+                finalRadius = Math.min(finalRadius, 150000);
+
                 var nodeColor = spot.color || '#00ff00'; 
 
                 L.circle([spot.lat, spot.lon], {
@@ -79,7 +104,7 @@
 
                 var numberIcon = L.divIcon({
                     className: 'number-label',
-                    html: `<div style="color: ${nodeColor};">${spot.intensity}${spot.anomaly ? '⚠️' : ''}</div>`,
+                    html: `<div style="color: ${nodeColor};">${spot.intensity}${spot.anomaly ? '⚠' : ''}</div>`,
                     iconSize: [60, 40]
                 });
 

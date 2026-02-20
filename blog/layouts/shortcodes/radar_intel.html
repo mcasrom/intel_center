@@ -1,22 +1,13 @@
-<div class="radar-wrapper" style="max-width:550px; margin:0 auto; padding:10px; background:white; border-radius:8px; box-shadow:0 4px 6px rgba(0,0,0,0.1);">
-    <canvas id="radarChartIntel" style="width:100%; height:350px;"></canvas>
+<div class="radar-wrapper" style="max-width:550px; margin:0 auto; padding:15px; background:white; border-radius:8px; box-shadow:0 4px 6px rgba(0,0,0,0.1);">
+    <canvas id="radarChartIntel" style="width:100%; height:420px;"></canvas>
 </div>
 
-<script src="/js/chart.umd.min.js"></script>
-
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <script>
 (function() {
-    function renderRadar(data) {
+    function renderRadar(labels, values) {
         const canvas = document.getElementById("radarChartIntel");
-        if (!canvas) {
-            console.error("Canvas no encontrado");
-            return;
-        }
-
-        if (typeof Chart === "undefined") {
-            console.error("Chart.js no cargó");
-            return;
-        }
+        if (!canvas) return;
 
         const existing = Chart.getChart(canvas);
         if (existing) existing.destroy();
@@ -24,10 +15,10 @@
         new Chart(canvas, {
             type: "radar",
             data: {
-                labels: data.labels,
+                labels: labels,
                 datasets: [{
-                    label: "Índice de Tensión (Actualizado)",
-                    data: data.values,
+                    label: "Índice de Tensión (Última ejecución)",
+                    data: values,
                     fill: true,
                     backgroundColor: "rgba(220, 38, 38, 0.2)",
                     borderColor: "rgba(220, 38, 38, 1)",
@@ -39,21 +30,19 @@
                 responsive: true,
                 maintainAspectRatio: false,
                 scales: {
-                    r: {
-                        min: 0,
-                        max: 100,
-                        ticks: { stepSize: 20 }
-                    }
+                    r: { min: 0, max: 100, ticks: { stepSize: 20 } }
                 },
                 plugins: { legend: { position: "top" } }
             }
         });
     }
 
-    // Cargar datos desde radar_data.json
-    fetch('/data/radar_data.json')
-        .then(res => res.json())
-        .then(json => renderRadar(json))
-        .catch(err => console.error("Error cargando datos del radar:", err));
+    window.addEventListener("load", function() {
+        // 🟢 Aquí insertamos los datos que genera tu Python directamente
+        const labels = ["ARGENTINA","Africa_Sahel","Asia_Nikkei","BRASIL","CHINA_CORE","ESPAÑA","Europa_DW","INDIA_CHINA_CORE","INDIA_CORE","MAR_CHINA","Medio_Oriente","Rusia_Eurasia","TURQUIA_SABAH","UCRANIA","USA_NORTE"];
+        const values = [46,48,42,47,53,38,47,37,48,51,46,48,47,53,45]; // <- reemplaza con la salida real de radar_intel.py
+
+        renderRadar(labels, values);
+    });
 })();
 </script>
