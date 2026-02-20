@@ -1,21 +1,43 @@
-<canvas id="radarTension" width="400" height="400"></canvas>
+<div style="max-width: 600px; margin: auto;">
+  <canvas id="radarTension" style="width: 100%; height: 400px;"></canvas>
+</div>
+
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <script>
-const ctx = document.getElementById('radarTension').getContext('2d');
-fetch('/data/radar_data.json').then(res => res.json()).then(data => {
-    new Chart(ctx, {
+document.addEventListener("DOMContentLoaded", function() {
+  const ctx = document.getElementById('radarTension').getContext('2d');
+  fetch('/data/radar_data.json')
+    .then(res => res.json())
+    .then(data => {
+      new Chart(ctx, {
         type: 'radar',
         data: {
-            labels: data.labels,
-            datasets: [{
-                label: 'Índice de Tensión (0-100)',
-                data: data.values,
-                backgroundColor: 'rgba(255, 99, 132, 0.2)',
-                borderColor: 'rgba(255, 99, 132, 1)',
-                pointBackgroundColor: 'rgba(255, 99, 132, 1)'
-            }]
+          labels: data.labels,
+          datasets: [{
+            label: 'Índice de Tensión (0-100)',
+            data: data.values,
+            backgroundColor: 'rgba(255, 99, 132, 0.2)',
+            borderColor: 'rgba(255, 99, 132, 1)',
+            pointBackgroundColor: 'rgba(255, 99, 132, 1)',
+            pointRadius: 5,
+            borderWidth: 2
+          }]
         },
-        options: { scales: { r: { min: 0, max: 100 } } }
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          scales: {
+            r: {
+              min: 0,
+              max: 100,
+              ticks: { stepSize: 10 }
+            }
+          },
+          plugins: {
+            legend: { display: true, position: 'top' }
+          }
+        }
+      });
     });
 });
 </script>

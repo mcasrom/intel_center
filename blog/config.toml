@@ -79,3 +79,8 @@ relativeURLs = false
 
   # Seguridad extra para OG
   opengraph = true
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true   # permite <script> y <canvas> en shortcodes y MD
