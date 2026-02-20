@@ -45,7 +45,7 @@
         "lon": 90.0,
         "intensity": 15,
         "color": "#2ecc71",
-        "sentiment_index": 0.0655
+        "sentiment_index": 0.0614
     },
     {
         "name": "Medio_Oriente",
@@ -61,7 +61,7 @@
         "lon": 135.0,
         "intensity": 15,
         "color": "#2ecc71",
-        "sentiment_index": 0.155
+        "sentiment_index": 0.15
     },
     {
         "name": "Africa_Sahel",
@@ -77,7 +77,7 @@
         "lon": 77.2,
         "intensity": 15,
         "color": "#f1c40f",
-        "sentiment_index": 0.029
+        "sentiment_index": 0.0282
     },
     {
         "name": "CHINA_CORE",
@@ -101,7 +101,7 @@
         "lon": 114.1,
         "intensity": 15,
         "color": "#e74c3c",
-        "sentiment_index": -0.0583
+        "sentiment_index": -0.096
     },
     {
         "name": "UCRANIA",
