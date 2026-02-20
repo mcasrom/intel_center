@@ -1,31 +1,31 @@
 ---
-title: "Análisis de Estado - 2026-02-20 00:00"
-date: 2026-02-20T00:00:01
+title: "Análisis de Estado - 2026-02-20 12:00"
+date: 2026-02-20T12:00:01
 layout: "post"
 tags: ["monitor", "sistema"]
 ---
 
 ### 🚨 ALERTAS DE TENSIÓN DETECTADAS
-- <b style='color:orange'>⚠️ ARGENTINA</b>: Incremento del 45.0% sobre la media semanal.
-- <b style='color:orange'>⚠️ BRASIL</b>: Incremento del 24.7% sobre la media semanal.
-- <b style='color:orange'>⚠️ Rusia_Eurasia</b>: Incremento del 23.3% sobre la media semanal.
-- <b style='color:orange'>⚠️ Medio_Oriente</b>: Incremento del 23.5% sobre la media semanal.
-- <b style='color:orange'>⚠️ ESPAÑA</b>: Incremento del 30.8% sobre la media semanal.
-- <b style='color:red'>⚠️ INDIA_CORE</b>: Incremento del 212.2% sobre la media semanal.
-- <b style='color:red'>⚠️ TURQUIA_SABAH</b>: Incremento del 600.0% sobre la media semanal.
-- <b style='color:red'>⚠️ MAR_CHINA</b>: Incremento del 600.0% sobre la media semanal.
-- <b style='color:red'>⚠️ UCRANIA</b>: Incremento del 600.0% sobre la media semanal.
+- <b style='color:orange'>⚠️ BRASIL</b>: Incremento del 45.7% sobre la media semanal.
+- <b style='color:orange'>⚠️ Asia_Nikkei</b>: Incremento del 34.2% sobre la media semanal.
+- <b style='color:orange'>⚠️ Africa_Sahel</b>: Incremento del 31.3% sobre la media semanal.
+- <b style='color:orange'>⚠️ USA_NORTE</b>: Incremento del 25.3% sobre la media semanal.
+- <b style='color:orange'>⚠️ ARGENTINA</b>: Incremento del 26.8% sobre la media semanal.
+- <b style='color:red'>⚠️ INDIA_CORE</b>: Incremento del 179.2% sobre la media semanal.
+- <b style='color:red'>⚠️ TURQUIA_SABAH</b>: Incremento del 378.9% sobre la media semanal.
+- <b style='color:red'>⚠️ MAR_CHINA</b>: Incremento del 440.2% sobre la media semanal.
+- <b style='color:red'>⚠️ UCRANIA</b>: Incremento del 406.0% sobre la media semanal.
 
 ---
 
 
 # 🛡️ Dashboard Operativo: Nodo odroid-c2
-Actualización: 20/02/2026 00:00:01
+Actualización: 20/02/2026 12:00:01
 
 ## 🌡️ Telemetría de Hardware
-- **Temperatura CPU**: 19°C
-- **Carga Sistema**:  0.00, 0.01, 0.00
-- **Uptime**: up 4 days, 12 hours, 48 minutes
+- **Temperatura CPU**: 18°C
+- **Carga Sistema**:  0.00, 0.00, 0.00
+- **Uptime**: up 5 days, 48 minutes
 
 ## 📜 Verificación de Scripts Críticos
 - ✅ **OK**: /home/dietpi/intel_center_odroid/automation/run_intel.sh
@@ -39,11 +39,11 @@ Actualización: 20/02/2026 00:00:01
 ## 📊 Calidad de Ingesta (Últimas 24h)
 | Región | Noticias Ingeridas |
 | :--- | :--- |
-| INDIA_CORE | 194 |
-| Rusia_Eurasia | 127 |
-| Medio_Oriente | 75 |
-| TURQUIA_SABAH | 68 |
-| UCRANIA | 56 |
+| INDIA_CORE | 201 |
+| Rusia_Eurasia | 122 |
+| MAR_CHINA | 71 |
+| Medio_Oriente | 64 |
+| UCRANIA | 60 |
 
 
 ## 📊 Perfil Geo-Estratégico de las Áreas en Observación
@@ -52,7 +52,6 @@ Actualización: 20/02/2026 00:00:01
 | **INDIA_CORE** | 1,428M | $3.7T | Hinduismo | Alto |
 | **Rusia_Eurasia** | 144M | $2.2T | Ortodoxia | Extremo |
 | **Medio_Oriente** | 450M | $4.5T | Islam | Crítico |
-| **TURQUIA_SABAH** | 85M | $1.1T | Islam | Alto |
 
 ## 🕵️ Análisis de Errores (Últimas 12h)
 - ✅ Logs limpios. No se detectan anomalías críticas.
