@@ -45,7 +45,7 @@
         "lon": 90.0,
         "intensity": 15,
         "color": "#2ecc71",
-        "sentiment_index": 0.0683
+        "sentiment_index": 0.0657
     },
     {
         "name": "Medio_Oriente",
@@ -53,7 +53,7 @@
         "lon": 45.0,
         "intensity": 15,
         "color": "#2ecc71",
-        "sentiment_index": 0.1049
+        "sentiment_index": 0.1036
     },
     {
         "name": "Asia_Nikkei",
@@ -101,7 +101,7 @@
         "lon": 114.1,
         "intensity": 15,
         "color": "#e74c3c",
-        "sentiment_index": -0.0805
+        "sentiment_index": -0.0845
     },
     {
         "name": "UCRANIA",
