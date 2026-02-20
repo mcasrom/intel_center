@@ -1,33 +1,63 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Diario on Intel Center</title><link>https://mcasrom.github.io/intel_center/report_types/diario/</link><description>Recent content in Diario on Intel Center</description><generator>Hugo</generator><language>es</language><lastBuildDate>Fri, 20 Feb 2026 14:00:06 +0000</lastBuildDate><atom:link href="https://mcasrom.github.io/intel_center/report_types/diario/index.xml" rel="self" type="application/rss+xml"/><item><title>INTEL REPORT: 20/02/2026 14:00 (CET)</title><link>https://mcasrom.github.io/intel_center/post/260220_1400-noticias/</link><pubDate>Fri, 20 Feb 2026 14:00:06 +0000</pubDate><guid>https://mcasrom.github.io/intel_center/post/260220_1400-noticias/</guid><description>&lt;h3 id="-resumen-operativo"&gt;⚡ RESUMEN OPERATIVO&lt;/h3&gt;
-&lt;p&gt;&lt;strong&gt;Referencia Temporal:&lt;/strong&gt; 14:00 CET / &lt;strong&gt;2026-02-20 14:00 UTC&lt;/strong&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Diario on Intel Center</title><link>https://mcasrom.github.io/intel_center/report_types/diario/</link><description>Recent content in Diario on Intel Center</description><generator>Hugo</generator><language>es</language><lastBuildDate>Fri, 20 Feb 2026 15:00:07 +0000</lastBuildDate><atom:link href="https://mcasrom.github.io/intel_center/report_types/diario/index.xml" rel="self" type="application/rss+xml"/><item><title>INTEL REPORT: 20/02/2026 15:00 (CET)</title><link>https://mcasrom.github.io/intel_center/post/260220_1500-noticias/</link><pubDate>Fri, 20 Feb 2026 15:00:07 +0000</pubDate><guid>https://mcasrom.github.io/intel_center/post/260220_1500-noticias/</guid><description>&lt;h3 id="-resumen-operativo"&gt;⚡ RESUMEN OPERATIVO&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;Referencia Temporal:&lt;/strong&gt; 15:00 CET / &lt;strong&gt;2026-02-20 15:00 UTC&lt;/strong&gt;
 Nodo: Odroid-C2 Cluster Principal.&lt;/p&gt;
-&lt;div class="radar-wrapper" style="max-width:600px; margin:0 auto; padding:15px; background:white; border-radius:8px; box-shadow:0 4px 6px rgba(0,0,0,0.1);"&gt;
- &lt;canvas id="radarChartIntel"&gt;&lt;/canvas&gt;
+&lt;div style="max-width:650px;margin:20px auto;padding:20px;background:#ffffff;border-radius:10px;box-shadow:0 6px 12px rgba(0,0,0,0.08);"&gt;
+ &lt;canvas id="radarChartIntel" style="width:100%;height:420px;"&gt;&lt;/canvas&gt;
 &lt;/div&gt;
 
-&lt;script src="https://cdn.jsdelivr.net/npm/chart.js"&gt;&lt;/script&gt;
+&lt;script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"&gt;&lt;/script&gt;
+
 &lt;script&gt;
 (function() {
- const initRadar = () =&gt; {
- const ctx = document.getElementById('radarChartIntel');
- if (!ctx) return;
 
- new Chart(ctx, {
- type: 'radar',
+ function renderRadar() {
+ const canvas = document.getElementById("radarChartIntel");
+ if (!canvas) {
+ console.error("Canvas no encontrado");
+ return;
+ }
+
+ if (typeof Chart === "undefined") {
+ console.error("Chart.js no cargó");
+ return;
+ }
+
+ const existing = Chart.getChart(canvas);
+ if (existing) existing.destroy();
+
+ new Chart(canvas, {
+ type: "radar",
  data: {
- labels: ['ARGENTINA', 'Africa_Sahel', 'Asia_Nikkei', 'BRASIL', 'CHINA_CORE', 'ESPAÑA', 'Europa_DW', 'INDIA_CHINA_CORE', 'INDIA_CORE', 'MAR_CHINA', 'Medio_Oriente', 'Rusia_Eurasia', 'TURQUIA_SABAH', 'UCRANIA', 'USA_NORTE'],
+ labels: [
+ "ARGENTINA",
+ "Africa_Sahel",
+ "Asia_Nikkei",
+ "BRASIL",
+ "CHINA_CORE",
+ "ESPAÑA",
+ "Europa_DW",
+ "INDIA_CHINA_CORE",
+ "INDIA_CORE",
+ "MAR_CHINA",
+ "Medio_Oriente",
+ "Rusia_Eurasia",
+ "TURQUIA_SABAH",
+ "UCRANIA",
+ "USA_NORTE"
+ ],
  datasets: [{
- label: 'Índice de Tensión (Actualizado: 09:00)',
- data: [46, 48, 42, 47, 53, 38, 47, 37, 48, 51, 46, 48, 47, 53, 45],
- backgroundColor: 'rgba(255, 99, 132, 0.2)',
- borderColor: 'rgba(255, 99, 132, 1)',
+ label: "Índice de Tensión (Actualizado 09:00)",
+ data: [46,48,42,47,53,38,47,37,48,51,46,48,47,53,45],
+ fill: true,
+ backgroundColor: "rgba(220, 38, 38, 0.2)",
+ borderColor: "rgba(220, 38, 38, 1)",
  borderWidth: 2,
- pointBackgroundColor: 'rgba(255, 99, 132, 1)'
+ pointBackgroundColor: "rgba(220, 38, 38, 1)"
  }]
  },
  options: {
  responsive: true,
- maintainAspectRatio: true,
+ maintainAspectRatio: false,
  scales: {
  r: {
  min: 0,
@@ -36,17 +66,236 @@ Nodo: Odroid-C2 Cluster Principal.&lt;/p&gt;
  }
  },
  plugins: {
- legend: { position: 'top' }
+ legend: { position: "top" }
  }
  }
  });
- };
-
- if (document.readyState === 'complete') {
- initRadar();
- } else {
- window.addEventListener('load', initRadar);
  }
+
+ if (document.readyState === "complete") {
+ renderRadar();
+ } else {
+ window.addEventListener("load", renderRadar);
+ }
+
+})();
+&lt;/script&gt;
+
+&lt;h4 id="-evolución-de-sentimiento-varianza-24h"&gt;📊 EVOLUCIÓN DE SENTIMIENTO (VARIANZA 24H)&lt;/h4&gt;
+&lt;table&gt;
+ &lt;thead&gt;
+ &lt;tr&gt;
+ &lt;th style="text-align: left"&gt;Región&lt;/th&gt;
+ &lt;th style="text-align: left"&gt;Hoy&lt;/th&gt;
+ &lt;th style="text-align: left"&gt;Ayer&lt;/th&gt;
+ &lt;th style="text-align: left"&gt;Δ Hist (30d)&lt;/th&gt;
+ &lt;th style="text-align: left"&gt;Estado&lt;/th&gt;
+ &lt;/tr&gt;
+ &lt;/thead&gt;
+ &lt;tbody&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: left"&gt;USA_NORTE&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;0.1995&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;0.0527&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;+0.1468&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;🔴 Escalada&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: left"&gt;ESPAÑA&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;0.5000&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;0.2700&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;+0.2300&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;🔴 Escalada&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: left"&gt;ARGENTINA&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;0.0300&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;0.2000&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;-0.1700&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;⚠ Tensión&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: left"&gt;BRASIL&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;0.0500&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;0.0000&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;+0.0500&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;⚪ Estable&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: left"&gt;Europa_DW&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;0.0060&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;0.0437&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;-0.0377&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;⚪ Estable&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: left"&gt;Rusia_Eurasia&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;0.0730&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;0.0800&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;-0.0070&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;⚪ Estable&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: left"&gt;Medio_Oriente&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;0.0036&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;0.0719&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;-0.0684&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;⚪ Estable&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: left"&gt;Asia_Nikkei&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;0.0845&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;0.0917&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;-0.0071&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;⚪ Estable&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: left"&gt;Africa_Sahel&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;0.3200&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;-0.0867&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;+0.4067&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;🔴 Escalada&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: left"&gt;INDIA_CORE&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;0.0419&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;0.0802&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;-0.0382&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;⚪ Estable&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: left"&gt;CHINA_CORE&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;0.0000&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;-0.0525&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;+0.0525&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;⚪ Estable&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: left"&gt;TURQUIA_SABAH&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;0.0039&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;0.0431&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;-0.0392&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;⚪ Estable&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: left"&gt;MAR_CHINA&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;-0.0127&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;-0.0746&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;+0.0619&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;⚪ Estable&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: left"&gt;UCRANIA&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;-0.0242&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;-0.0670&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;+0.0428&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;⚪ Estable&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h4 id="-radares-de-tendencia"&gt;📊 RADARES DE TENDENCIA&lt;/h4&gt;
+&lt;table&gt;
+ &lt;thead&gt;
+ &lt;tr&gt;
+ &lt;th style="text-align: left"&gt;Región&lt;/th&gt;
+ &lt;th style="text-align: left"&gt;Sentiment&lt;/th&gt;
+ &lt;/tr&gt;
+ &lt;/thead&gt;
+ &lt;tbody&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: left"&gt;🇺🇸 USA&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;0.199&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: left"&gt;🇪🇸 ESPAÑA&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;0.5&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: left"&gt;🌏 INDIA-CHINA&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;0.1091&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;&lt;img src="https://mcasrom.github.io/intel_center/images/260220_1500_trend.png" alt="Tendencias"&gt;&lt;/p&gt;</description></item><item><title>INTEL REPORT: 20/02/2026 14:00 (CET)</title><link>https://mcasrom.github.io/intel_center/post/260220_1400-noticias/</link><pubDate>Fri, 20 Feb 2026 14:00:06 +0000</pubDate><guid>https://mcasrom.github.io/intel_center/post/260220_1400-noticias/</guid><description>&lt;h3 id="-resumen-operativo"&gt;⚡ RESUMEN OPERATIVO&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;Referencia Temporal:&lt;/strong&gt; 14:00 CET / &lt;strong&gt;2026-02-20 14:00 UTC&lt;/strong&gt;
+Nodo: Odroid-C2 Cluster Principal.&lt;/p&gt;
+&lt;div style="max-width:650px;margin:20px auto;padding:20px;background:#ffffff;border-radius:10px;box-shadow:0 6px 12px rgba(0,0,0,0.08);"&gt;
+ &lt;canvas id="radarChartIntel" style="width:100%;height:420px;"&gt;&lt;/canvas&gt;
+&lt;/div&gt;
+
+&lt;script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"&gt;&lt;/script&gt;
+
+&lt;script&gt;
+(function() {
+
+ function renderRadar() {
+ const canvas = document.getElementById("radarChartIntel");
+ if (!canvas) {
+ console.error("Canvas no encontrado");
+ return;
+ }
+
+ if (typeof Chart === "undefined") {
+ console.error("Chart.js no cargó");
+ return;
+ }
+
+ const existing = Chart.getChart(canvas);
+ if (existing) existing.destroy();
+
+ new Chart(canvas, {
+ type: "radar",
+ data: {
+ labels: [
+ "ARGENTINA",
+ "Africa_Sahel",
+ "Asia_Nikkei",
+ "BRASIL",
+ "CHINA_CORE",
+ "ESPAÑA",
+ "Europa_DW",
+ "INDIA_CHINA_CORE",
+ "INDIA_CORE",
+ "MAR_CHINA",
+ "Medio_Oriente",
+ "Rusia_Eurasia",
+ "TURQUIA_SABAH",
+ "UCRANIA",
+ "USA_NORTE"
+ ],
+ datasets: [{
+ label: "Índice de Tensión (Actualizado 09:00)",
+ data: [46,48,42,47,53,38,47,37,48,51,46,48,47,53,45],
+ fill: true,
+ backgroundColor: "rgba(220, 38, 38, 0.2)",
+ borderColor: "rgba(220, 38, 38, 1)",
+ borderWidth: 2,
+ pointBackgroundColor: "rgba(220, 38, 38, 1)"
+ }]
+ },
+ options: {
+ responsive: true,
+ maintainAspectRatio: false,
+ scales: {
+ r: {
+ min: 0,
+ max: 100,
+ ticks: { stepSize: 20 }
+ }
+ },
+ plugins: {
+ legend: { position: "top" }
+ }
+ }
+ });
+ }
+
+ if (document.readyState === "complete") {
+ renderRadar();
+ } else {
+ window.addEventListener("load", renderRadar);
+ }
+
 })();
 &lt;/script&gt;
 
@@ -188,33 +437,63 @@ Nodo: Odroid-C2 Cluster Principal.&lt;/p&gt;
 &lt;p&gt;&lt;img src="https://mcasrom.github.io/intel_center/images/260220_1400_trend.png" alt="Tendencias"&gt;&lt;/p&gt;</description></item><item><title>INTEL REPORT: 20/02/2026 13:00 (CET)</title><link>https://mcasrom.github.io/intel_center/post/260220_1300-noticias/</link><pubDate>Fri, 20 Feb 2026 13:00:06 +0000</pubDate><guid>https://mcasrom.github.io/intel_center/post/260220_1300-noticias/</guid><description>&lt;h3 id="-resumen-operativo"&gt;⚡ RESUMEN OPERATIVO&lt;/h3&gt;
 &lt;p&gt;&lt;strong&gt;Referencia Temporal:&lt;/strong&gt; 13:00 CET / &lt;strong&gt;2026-02-20 13:00 UTC&lt;/strong&gt;
 Nodo: Odroid-C2 Cluster Principal.&lt;/p&gt;
-&lt;div class="radar-wrapper" style="max-width:600px; margin:0 auto; padding:15px; background:white; border-radius:8px; box-shadow:0 4px 6px rgba(0,0,0,0.1);"&gt;
- &lt;canvas id="radarChartIntel"&gt;&lt;/canvas&gt;
+&lt;div style="max-width:650px;margin:20px auto;padding:20px;background:#ffffff;border-radius:10px;box-shadow:0 6px 12px rgba(0,0,0,0.08);"&gt;
+ &lt;canvas id="radarChartIntel" style="width:100%;height:420px;"&gt;&lt;/canvas&gt;
 &lt;/div&gt;
 
-&lt;script src="https://cdn.jsdelivr.net/npm/chart.js"&gt;&lt;/script&gt;
+&lt;script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"&gt;&lt;/script&gt;
+
 &lt;script&gt;
 (function() {
- const initRadar = () =&gt; {
- const ctx = document.getElementById('radarChartIntel');
- if (!ctx) return;
 
- new Chart(ctx, {
- type: 'radar',
+ function renderRadar() {
+ const canvas = document.getElementById("radarChartIntel");
+ if (!canvas) {
+ console.error("Canvas no encontrado");
+ return;
+ }
+
+ if (typeof Chart === "undefined") {
+ console.error("Chart.js no cargó");
+ return;
+ }
+
+ const existing = Chart.getChart(canvas);
+ if (existing) existing.destroy();
+
+ new Chart(canvas, {
+ type: "radar",
  data: {
- labels: ['ARGENTINA', 'Africa_Sahel', 'Asia_Nikkei', 'BRASIL', 'CHINA_CORE', 'ESPAÑA', 'Europa_DW', 'INDIA_CHINA_CORE', 'INDIA_CORE', 'MAR_CHINA', 'Medio_Oriente', 'Rusia_Eurasia', 'TURQUIA_SABAH', 'UCRANIA', 'USA_NORTE'],
+ labels: [
+ "ARGENTINA",
+ "Africa_Sahel",
+ "Asia_Nikkei",
+ "BRASIL",
+ "CHINA_CORE",
+ "ESPAÑA",
+ "Europa_DW",
+ "INDIA_CHINA_CORE",
+ "INDIA_CORE",
+ "MAR_CHINA",
+ "Medio_Oriente",
+ "Rusia_Eurasia",
+ "TURQUIA_SABAH",
+ "UCRANIA",
+ "USA_NORTE"
+ ],
  datasets: [{
- label: 'Índice de Tensión (Actualizado: 09:00)',
- data: [46, 48, 42, 47, 53, 38, 47, 37, 48, 51, 46, 48, 47, 53, 45],
- backgroundColor: 'rgba(255, 99, 132, 0.2)',
- borderColor: 'rgba(255, 99, 132, 1)',
+ label: "Índice de Tensión (Actualizado 09:00)",
+ data: [46,48,42,47,53,38,47,37,48,51,46,48,47,53,45],
+ fill: true,
+ backgroundColor: "rgba(220, 38, 38, 0.2)",
+ borderColor: "rgba(220, 38, 38, 1)",
  borderWidth: 2,
- pointBackgroundColor: 'rgba(255, 99, 132, 1)'
+ pointBackgroundColor: "rgba(220, 38, 38, 1)"
  }]
  },
  options: {
  responsive: true,
- maintainAspectRatio: true,
+ maintainAspectRatio: false,
  scales: {
  r: {
  min: 0,
@@ -223,17 +502,18 @@ Nodo: Odroid-C2 Cluster Principal.&lt;/p&gt;
  }
  },
  plugins: {
- legend: { position: 'top' }
+ legend: { position: "top" }
  }
  }
  });
- };
-
- if (document.readyState === 'complete') {
- initRadar();
- } else {
- window.addEventListener('load', initRadar);
  }
+
+ if (document.readyState === "complete") {
+ renderRadar();
+ } else {
+ window.addEventListener("load", renderRadar);
+ }
+
 })();
 &lt;/script&gt;
 
@@ -375,33 +655,63 @@ Nodo: Odroid-C2 Cluster Principal.&lt;/p&gt;
 &lt;p&gt;&lt;img src="https://mcasrom.github.io/intel_center/images/260220_1300_trend.png" alt="Tendencias"&gt;&lt;/p&gt;</description></item><item><title>INTEL REPORT: 20/02/2026 12:00 (CET)</title><link>https://mcasrom.github.io/intel_center/post/260220_1200-noticias/</link><pubDate>Fri, 20 Feb 2026 12:00:06 +0000</pubDate><guid>https://mcasrom.github.io/intel_center/post/260220_1200-noticias/</guid><description>&lt;h3 id="-resumen-operativo"&gt;⚡ RESUMEN OPERATIVO&lt;/h3&gt;
 &lt;p&gt;&lt;strong&gt;Referencia Temporal:&lt;/strong&gt; 12:00 CET / &lt;strong&gt;2026-02-20 12:00 UTC&lt;/strong&gt;
 Nodo: Odroid-C2 Cluster Principal.&lt;/p&gt;
-&lt;div class="radar-wrapper" style="max-width:600px; margin:0 auto; padding:15px; background:white; border-radius:8px; box-shadow:0 4px 6px rgba(0,0,0,0.1);"&gt;
- &lt;canvas id="radarChartIntel"&gt;&lt;/canvas&gt;
+&lt;div style="max-width:650px;margin:20px auto;padding:20px;background:#ffffff;border-radius:10px;box-shadow:0 6px 12px rgba(0,0,0,0.08);"&gt;
+ &lt;canvas id="radarChartIntel" style="width:100%;height:420px;"&gt;&lt;/canvas&gt;
 &lt;/div&gt;
 
-&lt;script src="https://cdn.jsdelivr.net/npm/chart.js"&gt;&lt;/script&gt;
+&lt;script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"&gt;&lt;/script&gt;
+
 &lt;script&gt;
 (function() {
- const initRadar = () =&gt; {
- const ctx = document.getElementById('radarChartIntel');
- if (!ctx) return;
 
- new Chart(ctx, {
- type: 'radar',
+ function renderRadar() {
+ const canvas = document.getElementById("radarChartIntel");
+ if (!canvas) {
+ console.error("Canvas no encontrado");
+ return;
+ }
+
+ if (typeof Chart === "undefined") {
+ console.error("Chart.js no cargó");
+ return;
+ }
+
+ const existing = Chart.getChart(canvas);
+ if (existing) existing.destroy();
+
+ new Chart(canvas, {
+ type: "radar",
  data: {
- labels: ['ARGENTINA', 'Africa_Sahel', 'Asia_Nikkei', 'BRASIL', 'CHINA_CORE', 'ESPAÑA', 'Europa_DW', 'INDIA_CHINA_CORE', 'INDIA_CORE', 'MAR_CHINA', 'Medio_Oriente', 'Rusia_Eurasia', 'TURQUIA_SABAH', 'UCRANIA', 'USA_NORTE'],
+ labels: [
+ "ARGENTINA",
+ "Africa_Sahel",
+ "Asia_Nikkei",
+ "BRASIL",
+ "CHINA_CORE",
+ "ESPAÑA",
+ "Europa_DW",
+ "INDIA_CHINA_CORE",
+ "INDIA_CORE",
+ "MAR_CHINA",
+ "Medio_Oriente",
+ "Rusia_Eurasia",
+ "TURQUIA_SABAH",
+ "UCRANIA",
+ "USA_NORTE"
+ ],
  datasets: [{
- label: 'Índice de Tensión (Actualizado: 09:00)',
- data: [46, 48, 42, 47, 53, 38, 47, 37, 48, 51, 46, 48, 47, 53, 45],
- backgroundColor: 'rgba(255, 99, 132, 0.2)',
- borderColor: 'rgba(255, 99, 132, 1)',
+ label: "Índice de Tensión (Actualizado 09:00)",
+ data: [46,48,42,47,53,38,47,37,48,51,46,48,47,53,45],
+ fill: true,
+ backgroundColor: "rgba(220, 38, 38, 0.2)",
+ borderColor: "rgba(220, 38, 38, 1)",
  borderWidth: 2,
- pointBackgroundColor: 'rgba(255, 99, 132, 1)'
+ pointBackgroundColor: "rgba(220, 38, 38, 1)"
  }]
  },
  options: {
  responsive: true,
- maintainAspectRatio: true,
+ maintainAspectRatio: false,
  scales: {
  r: {
  min: 0,
@@ -410,17 +720,18 @@ Nodo: Odroid-C2 Cluster Principal.&lt;/p&gt;
  }
  },
  plugins: {
- legend: { position: 'top' }
+ legend: { position: "top" }
  }
  }
  });
- };
-
- if (document.readyState === 'complete') {
- initRadar();
- } else {
- window.addEventListener('load', initRadar);
  }
+
+ if (document.readyState === "complete") {
+ renderRadar();
+ } else {
+ window.addEventListener("load", renderRadar);
+ }
+
 })();
 &lt;/script&gt;
 
@@ -562,33 +873,63 @@ Nodo: Odroid-C2 Cluster Principal.&lt;/p&gt;
 &lt;p&gt;&lt;img src="https://mcasrom.github.io/intel_center/images/260220_1200_trend.png" alt="Tendencias"&gt;&lt;/p&gt;</description></item><item><title>INTEL REPORT: 20/02/2026 11:00 (CET)</title><link>https://mcasrom.github.io/intel_center/post/260220_1100-noticias/</link><pubDate>Fri, 20 Feb 2026 11:00:07 +0000</pubDate><guid>https://mcasrom.github.io/intel_center/post/260220_1100-noticias/</guid><description>&lt;h3 id="-resumen-operativo"&gt;⚡ RESUMEN OPERATIVO&lt;/h3&gt;
 &lt;p&gt;&lt;strong&gt;Referencia Temporal:&lt;/strong&gt; 11:00 CET / &lt;strong&gt;2026-02-20 11:00 UTC&lt;/strong&gt;
 Nodo: Odroid-C2 Cluster Principal.&lt;/p&gt;
-&lt;div class="radar-wrapper" style="max-width:600px; margin:0 auto; padding:15px; background:white; border-radius:8px; box-shadow:0 4px 6px rgba(0,0,0,0.1);"&gt;
- &lt;canvas id="radarChartIntel"&gt;&lt;/canvas&gt;
+&lt;div style="max-width:650px;margin:20px auto;padding:20px;background:#ffffff;border-radius:10px;box-shadow:0 6px 12px rgba(0,0,0,0.08);"&gt;
+ &lt;canvas id="radarChartIntel" style="width:100%;height:420px;"&gt;&lt;/canvas&gt;
 &lt;/div&gt;
 
-&lt;script src="https://cdn.jsdelivr.net/npm/chart.js"&gt;&lt;/script&gt;
+&lt;script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"&gt;&lt;/script&gt;
+
 &lt;script&gt;
 (function() {
- const initRadar = () =&gt; {
- const ctx = document.getElementById('radarChartIntel');
- if (!ctx) return;
 
- new Chart(ctx, {
- type: 'radar',
+ function renderRadar() {
+ const canvas = document.getElementById("radarChartIntel");
+ if (!canvas) {
+ console.error("Canvas no encontrado");
+ return;
+ }
+
+ if (typeof Chart === "undefined") {
+ console.error("Chart.js no cargó");
+ return;
+ }
+
+ const existing = Chart.getChart(canvas);
+ if (existing) existing.destroy();
+
+ new Chart(canvas, {
+ type: "radar",
  data: {
- labels: ['ARGENTINA', 'Africa_Sahel', 'Asia_Nikkei', 'BRASIL', 'CHINA_CORE', 'ESPAÑA', 'Europa_DW', 'INDIA_CHINA_CORE', 'INDIA_CORE', 'MAR_CHINA', 'Medio_Oriente', 'Rusia_Eurasia', 'TURQUIA_SABAH', 'UCRANIA', 'USA_NORTE'],
+ labels: [
+ "ARGENTINA",
+ "Africa_Sahel",
+ "Asia_Nikkei",
+ "BRASIL",
+ "CHINA_CORE",
+ "ESPAÑA",
+ "Europa_DW",
+ "INDIA_CHINA_CORE",
+ "INDIA_CORE",
+ "MAR_CHINA",
+ "Medio_Oriente",
+ "Rusia_Eurasia",
+ "TURQUIA_SABAH",
+ "UCRANIA",
+ "USA_NORTE"
+ ],
  datasets: [{
- label: 'Índice de Tensión (Actualizado: 09:00)',
- data: [46, 48, 42, 47, 53, 38, 47, 37, 48, 51, 46, 48, 47, 53, 45],
- backgroundColor: 'rgba(255, 99, 132, 0.2)',
- borderColor: 'rgba(255, 99, 132, 1)',
+ label: "Índice de Tensión (Actualizado 09:00)",
+ data: [46,48,42,47,53,38,47,37,48,51,46,48,47,53,45],
+ fill: true,
+ backgroundColor: "rgba(220, 38, 38, 0.2)",
+ borderColor: "rgba(220, 38, 38, 1)",
  borderWidth: 2,
- pointBackgroundColor: 'rgba(255, 99, 132, 1)'
+ pointBackgroundColor: "rgba(220, 38, 38, 1)"
  }]
  },
  options: {
  responsive: true,
- maintainAspectRatio: true,
+ maintainAspectRatio: false,
  scales: {
  r: {
  min: 0,
@@ -597,17 +938,18 @@ Nodo: Odroid-C2 Cluster Principal.&lt;/p&gt;
  }
  },
  plugins: {
- legend: { position: 'top' }
+ legend: { position: "top" }
  }
  }
  });
- };
-
- if (document.readyState === 'complete') {
- initRadar();
- } else {
- window.addEventListener('load', initRadar);
  }
+
+ if (document.readyState === "complete") {
+ renderRadar();
+ } else {
+ window.addEventListener("load", renderRadar);
+ }
+
 })();
 &lt;/script&gt;
 
@@ -749,33 +1091,63 @@ Nodo: Odroid-C2 Cluster Principal.&lt;/p&gt;
 &lt;p&gt;&lt;img src="https://mcasrom.github.io/intel_center/images/260220_1100_trend.png" alt="Tendencias"&gt;&lt;/p&gt;</description></item><item><title>INTEL REPORT: 20/02/2026 10:00 (CET)</title><link>https://mcasrom.github.io/intel_center/post/260220_1000-noticias/</link><pubDate>Fri, 20 Feb 2026 10:00:06 +0000</pubDate><guid>https://mcasrom.github.io/intel_center/post/260220_1000-noticias/</guid><description>&lt;h3 id="-resumen-operativo"&gt;⚡ RESUMEN OPERATIVO&lt;/h3&gt;
 &lt;p&gt;&lt;strong&gt;Referencia Temporal:&lt;/strong&gt; 10:00 CET / &lt;strong&gt;2026-02-20 10:00 UTC&lt;/strong&gt;
 Nodo: Odroid-C2 Cluster Principal.&lt;/p&gt;
-&lt;div class="radar-wrapper" style="max-width:600px; margin:0 auto; padding:15px; background:white; border-radius:8px; box-shadow:0 4px 6px rgba(0,0,0,0.1);"&gt;
- &lt;canvas id="radarChartIntel"&gt;&lt;/canvas&gt;
+&lt;div style="max-width:650px;margin:20px auto;padding:20px;background:#ffffff;border-radius:10px;box-shadow:0 6px 12px rgba(0,0,0,0.08);"&gt;
+ &lt;canvas id="radarChartIntel" style="width:100%;height:420px;"&gt;&lt;/canvas&gt;
 &lt;/div&gt;
 
-&lt;script src="https://cdn.jsdelivr.net/npm/chart.js"&gt;&lt;/script&gt;
+&lt;script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"&gt;&lt;/script&gt;
+
 &lt;script&gt;
 (function() {
- const initRadar = () =&gt; {
- const ctx = document.getElementById('radarChartIntel');
- if (!ctx) return;
 
- new Chart(ctx, {
- type: 'radar',
+ function renderRadar() {
+ const canvas = document.getElementById("radarChartIntel");
+ if (!canvas) {
+ console.error("Canvas no encontrado");
+ return;
+ }
+
+ if (typeof Chart === "undefined") {
+ console.error("Chart.js no cargó");
+ return;
+ }
+
+ const existing = Chart.getChart(canvas);
+ if (existing) existing.destroy();
+
+ new Chart(canvas, {
+ type: "radar",
  data: {
- labels: ['ARGENTINA', 'Africa_Sahel', 'Asia_Nikkei', 'BRASIL', 'CHINA_CORE', 'ESPAÑA', 'Europa_DW', 'INDIA_CHINA_CORE', 'INDIA_CORE', 'MAR_CHINA', 'Medio_Oriente', 'Rusia_Eurasia', 'TURQUIA_SABAH', 'UCRANIA', 'USA_NORTE'],
+ labels: [
+ "ARGENTINA",
+ "Africa_Sahel",
+ "Asia_Nikkei",
+ "BRASIL",
+ "CHINA_CORE",
+ "ESPAÑA",
+ "Europa_DW",
+ "INDIA_CHINA_CORE",
+ "INDIA_CORE",
+ "MAR_CHINA",
+ "Medio_Oriente",
+ "Rusia_Eurasia",
+ "TURQUIA_SABAH",
+ "UCRANIA",
+ "USA_NORTE"
+ ],
  datasets: [{
- label: 'Índice de Tensión (Actualizado: 09:00)',
- data: [46, 48, 42, 47, 53, 38, 47, 37, 48, 51, 46, 48, 47, 53, 45],
- backgroundColor: 'rgba(255, 99, 132, 0.2)',
- borderColor: 'rgba(255, 99, 132, 1)',
+ label: "Índice de Tensión (Actualizado 09:00)",
+ data: [46,48,42,47,53,38,47,37,48,51,46,48,47,53,45],
+ fill: true,
+ backgroundColor: "rgba(220, 38, 38, 0.2)",
+ borderColor: "rgba(220, 38, 38, 1)",
  borderWidth: 2,
- pointBackgroundColor: 'rgba(255, 99, 132, 1)'
+ pointBackgroundColor: "rgba(220, 38, 38, 1)"
  }]
  },
  options: {
  responsive: true,
- maintainAspectRatio: true,
+ maintainAspectRatio: false,
  scales: {
  r: {
  min: 0,
@@ -784,17 +1156,18 @@ Nodo: Odroid-C2 Cluster Principal.&lt;/p&gt;
  }
  },
  plugins: {
- legend: { position: 'top' }
+ legend: { position: "top" }
  }
  }
  });
- };
-
- if (document.readyState === 'complete') {
- initRadar();
- } else {
- window.addEventListener('load', initRadar);
  }
+
+ if (document.readyState === "complete") {
+ renderRadar();
+ } else {
+ window.addEventListener("load", renderRadar);
+ }
+
 })();
 &lt;/script&gt;
 
@@ -1059,33 +1432,63 @@ Nodo: Odroid-C2 Cluster Principal.&lt;/p&gt;
 Nodo: Odroid-C2 Cluster Principal.&lt;/p&gt;</description></item><item><title>INTEL REPORT: 20/02/2026 08:16 (CET)</title><link>https://mcasrom.github.io/intel_center/post/260220_0816-noticias/</link><pubDate>Fri, 20 Feb 2026 08:16:17 +0000</pubDate><guid>https://mcasrom.github.io/intel_center/post/260220_0816-noticias/</guid><description>&lt;h3 id="-resumen-operativo"&gt;⚡ RESUMEN OPERATIVO&lt;/h3&gt;
 &lt;p&gt;&lt;strong&gt;Referencia Temporal:&lt;/strong&gt; 08:16 CET / &lt;strong&gt;2026-02-20 08:16 UTC&lt;/strong&gt;
 Nodo: Odroid-C2 Cluster Principal.&lt;/p&gt;
-&lt;div class="radar-wrapper" style="max-width:600px; margin:0 auto; padding:15px; background:white; border-radius:8px; box-shadow:0 4px 6px rgba(0,0,0,0.1);"&gt;
- &lt;canvas id="radarChartIntel"&gt;&lt;/canvas&gt;
+&lt;div style="max-width:650px;margin:20px auto;padding:20px;background:#ffffff;border-radius:10px;box-shadow:0 6px 12px rgba(0,0,0,0.08);"&gt;
+ &lt;canvas id="radarChartIntel" style="width:100%;height:420px;"&gt;&lt;/canvas&gt;
 &lt;/div&gt;
 
-&lt;script src="https://cdn.jsdelivr.net/npm/chart.js"&gt;&lt;/script&gt;
+&lt;script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"&gt;&lt;/script&gt;
+
 &lt;script&gt;
 (function() {
- const initRadar = () =&gt; {
- const ctx = document.getElementById('radarChartIntel');
- if (!ctx) return;
 
- new Chart(ctx, {
- type: 'radar',
+ function renderRadar() {
+ const canvas = document.getElementById("radarChartIntel");
+ if (!canvas) {
+ console.error("Canvas no encontrado");
+ return;
+ }
+
+ if (typeof Chart === "undefined") {
+ console.error("Chart.js no cargó");
+ return;
+ }
+
+ const existing = Chart.getChart(canvas);
+ if (existing) existing.destroy();
+
+ new Chart(canvas, {
+ type: "radar",
  data: {
- labels: ['ARGENTINA', 'Africa_Sahel', 'Asia_Nikkei', 'BRASIL', 'CHINA_CORE', 'ESPAÑA', 'Europa_DW', 'INDIA_CHINA_CORE', 'INDIA_CORE', 'MAR_CHINA', 'Medio_Oriente', 'Rusia_Eurasia', 'TURQUIA_SABAH', 'UCRANIA', 'USA_NORTE'],
+ labels: [
+ "ARGENTINA",
+ "Africa_Sahel",
+ "Asia_Nikkei",
+ "BRASIL",
+ "CHINA_CORE",
+ "ESPAÑA",
+ "Europa_DW",
+ "INDIA_CHINA_CORE",
+ "INDIA_CORE",
+ "MAR_CHINA",
+ "Medio_Oriente",
+ "Rusia_Eurasia",
+ "TURQUIA_SABAH",
+ "UCRANIA",
+ "USA_NORTE"
+ ],
  datasets: [{
- label: 'Índice de Tensión (Actualizado: 09:00)',
- data: [46, 48, 42, 47, 53, 38, 47, 37, 48, 51, 46, 48, 47, 53, 45],
- backgroundColor: 'rgba(255, 99, 132, 0.2)',
- borderColor: 'rgba(255, 99, 132, 1)',
+ label: "Índice de Tensión (Actualizado 09:00)",
+ data: [46,48,42,47,53,38,47,37,48,51,46,48,47,53,45],
+ fill: true,
+ backgroundColor: "rgba(220, 38, 38, 0.2)",
+ borderColor: "rgba(220, 38, 38, 1)",
  borderWidth: 2,
- pointBackgroundColor: 'rgba(255, 99, 132, 1)'
+ pointBackgroundColor: "rgba(220, 38, 38, 1)"
  }]
  },
  options: {
  responsive: true,
- maintainAspectRatio: true,
+ maintainAspectRatio: false,
  scales: {
  r: {
  min: 0,
@@ -1094,17 +1497,18 @@ Nodo: Odroid-C2 Cluster Principal.&lt;/p&gt;
  }
  },
  plugins: {
- legend: { position: 'top' }
+ legend: { position: "top" }
  }
  }
  });
- };
-
- if (document.readyState === 'complete') {
- initRadar();
- } else {
- window.addEventListener('load', initRadar);
  }
+
+ if (document.readyState === "complete") {
+ renderRadar();
+ } else {
+ window.addEventListener("load", renderRadar);
+ }
+
 })();
 &lt;/script&gt;
 
@@ -1246,33 +1650,63 @@ Nodo: Odroid-C2 Cluster Principal.&lt;/p&gt;
 &lt;p&gt;&lt;img src="https://mcasrom.github.io/intel_center/images/260220_0816_trend.png" alt="Tendencias"&gt;&lt;/p&gt;</description></item><item><title>INTEL REPORT: 20/02/2026 08:00 (CET)</title><link>https://mcasrom.github.io/intel_center/post/260220_0800-noticias/</link><pubDate>Fri, 20 Feb 2026 08:00:06 +0000</pubDate><guid>https://mcasrom.github.io/intel_center/post/260220_0800-noticias/</guid><description>&lt;h3 id="-resumen-operativo"&gt;⚡ RESUMEN OPERATIVO&lt;/h3&gt;
 &lt;p&gt;&lt;strong&gt;Referencia Temporal:&lt;/strong&gt; 08:00 CET / &lt;strong&gt;2026-02-20 08:00 UTC&lt;/strong&gt;
 Nodo: Odroid-C2 Cluster Principal.&lt;/p&gt;
-&lt;div class="radar-wrapper" style="max-width:600px; margin:0 auto; padding:15px; background:white; border-radius:8px; box-shadow:0 4px 6px rgba(0,0,0,0.1);"&gt;
- &lt;canvas id="radarChartIntel"&gt;&lt;/canvas&gt;
+&lt;div style="max-width:650px;margin:20px auto;padding:20px;background:#ffffff;border-radius:10px;box-shadow:0 6px 12px rgba(0,0,0,0.08);"&gt;
+ &lt;canvas id="radarChartIntel" style="width:100%;height:420px;"&gt;&lt;/canvas&gt;
 &lt;/div&gt;
 
-&lt;script src="https://cdn.jsdelivr.net/npm/chart.js"&gt;&lt;/script&gt;
+&lt;script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"&gt;&lt;/script&gt;
+
 &lt;script&gt;
 (function() {
- const initRadar = () =&gt; {
- const ctx = document.getElementById('radarChartIntel');
- if (!ctx) return;
 
- new Chart(ctx, {
- type: 'radar',
+ function renderRadar() {
+ const canvas = document.getElementById("radarChartIntel");
+ if (!canvas) {
+ console.error("Canvas no encontrado");
+ return;
+ }
+
+ if (typeof Chart === "undefined") {
+ console.error("Chart.js no cargó");
+ return;
+ }
+
+ const existing = Chart.getChart(canvas);
+ if (existing) existing.destroy();
+
+ new Chart(canvas, {
+ type: "radar",
  data: {
- labels: ['ARGENTINA', 'Africa_Sahel', 'Asia_Nikkei', 'BRASIL', 'CHINA_CORE', 'ESPAÑA', 'Europa_DW', 'INDIA_CHINA_CORE', 'INDIA_CORE', 'MAR_CHINA', 'Medio_Oriente', 'Rusia_Eurasia', 'TURQUIA_SABAH', 'UCRANIA', 'USA_NORTE'],
+ labels: [
+ "ARGENTINA",
+ "Africa_Sahel",
+ "Asia_Nikkei",
+ "BRASIL",
+ "CHINA_CORE",
+ "ESPAÑA",
+ "Europa_DW",
+ "INDIA_CHINA_CORE",
+ "INDIA_CORE",
+ "MAR_CHINA",
+ "Medio_Oriente",
+ "Rusia_Eurasia",
+ "TURQUIA_SABAH",
+ "UCRANIA",
+ "USA_NORTE"
+ ],
  datasets: [{
- label: 'Índice de Tensión (Actualizado: 09:00)',
- data: [46, 48, 42, 47, 53, 38, 47, 37, 48, 51, 46, 48, 47, 53, 45],
- backgroundColor: 'rgba(255, 99, 132, 0.2)',
- borderColor: 'rgba(255, 99, 132, 1)',
+ label: "Índice de Tensión (Actualizado 09:00)",
+ data: [46,48,42,47,53,38,47,37,48,51,46,48,47,53,45],
+ fill: true,
+ backgroundColor: "rgba(220, 38, 38, 0.2)",
+ borderColor: "rgba(220, 38, 38, 1)",
  borderWidth: 2,
- pointBackgroundColor: 'rgba(255, 99, 132, 1)'
+ pointBackgroundColor: "rgba(220, 38, 38, 1)"
  }]
  },
  options: {
  responsive: true,
- maintainAspectRatio: true,
+ maintainAspectRatio: false,
  scales: {
  r: {
  min: 0,
@@ -1281,17 +1715,18 @@ Nodo: Odroid-C2 Cluster Principal.&lt;/p&gt;
  }
  },
  plugins: {
- legend: { position: 'top' }
+ legend: { position: "top" }
  }
  }
  });
- };
-
- if (document.readyState === 'complete') {
- initRadar();
- } else {
- window.addEventListener('load', initRadar);
  }
+
+ if (document.readyState === "complete") {
+ renderRadar();
+ } else {
+ window.addEventListener("load", renderRadar);
+ }
+
 })();
 &lt;/script&gt;
 
@@ -1433,33 +1868,63 @@ Nodo: Odroid-C2 Cluster Principal.&lt;/p&gt;
 &lt;p&gt;&lt;img src="https://mcasrom.github.io/intel_center/images/260220_0800_trend.png" alt="Tendencias"&gt;&lt;/p&gt;</description></item><item><title>INTEL REPORT: 20/02/2026 07:00 (CET)</title><link>https://mcasrom.github.io/intel_center/post/260220_0700-noticias/</link><pubDate>Fri, 20 Feb 2026 07:00:06 +0000</pubDate><guid>https://mcasrom.github.io/intel_center/post/260220_0700-noticias/</guid><description>&lt;h3 id="-resumen-operativo"&gt;⚡ RESUMEN OPERATIVO&lt;/h3&gt;
 &lt;p&gt;&lt;strong&gt;Referencia Temporal:&lt;/strong&gt; 07:00 CET / &lt;strong&gt;2026-02-20 07:00 UTC&lt;/strong&gt;
 Nodo: Odroid-C2 Cluster Principal.&lt;/p&gt;
-&lt;div class="radar-wrapper" style="max-width:600px; margin:0 auto; padding:15px; background:white; border-radius:8px; box-shadow:0 4px 6px rgba(0,0,0,0.1);"&gt;
- &lt;canvas id="radarChartIntel"&gt;&lt;/canvas&gt;
+&lt;div style="max-width:650px;margin:20px auto;padding:20px;background:#ffffff;border-radius:10px;box-shadow:0 6px 12px rgba(0,0,0,0.08);"&gt;
+ &lt;canvas id="radarChartIntel" style="width:100%;height:420px;"&gt;&lt;/canvas&gt;
 &lt;/div&gt;
 
-&lt;script src="https://cdn.jsdelivr.net/npm/chart.js"&gt;&lt;/script&gt;
+&lt;script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"&gt;&lt;/script&gt;
+
 &lt;script&gt;
 (function() {
- const initRadar = () =&gt; {
- const ctx = document.getElementById('radarChartIntel');
- if (!ctx) return;
 
- new Chart(ctx, {
- type: 'radar',
+ function renderRadar() {
+ const canvas = document.getElementById("radarChartIntel");
+ if (!canvas) {
+ console.error("Canvas no encontrado");
+ return;
+ }
+
+ if (typeof Chart === "undefined") {
+ console.error("Chart.js no cargó");
+ return;
+ }
+
+ const existing = Chart.getChart(canvas);
+ if (existing) existing.destroy();
+
+ new Chart(canvas, {
+ type: "radar",
  data: {
- labels: ['ARGENTINA', 'Africa_Sahel', 'Asia_Nikkei', 'BRASIL', 'CHINA_CORE', 'ESPAÑA', 'Europa_DW', 'INDIA_CHINA_CORE', 'INDIA_CORE', 'MAR_CHINA', 'Medio_Oriente', 'Rusia_Eurasia', 'TURQUIA_SABAH', 'UCRANIA', 'USA_NORTE'],
+ labels: [
+ "ARGENTINA",
+ "Africa_Sahel",
+ "Asia_Nikkei",
+ "BRASIL",
+ "CHINA_CORE",
+ "ESPAÑA",
+ "Europa_DW",
+ "INDIA_CHINA_CORE",
+ "INDIA_CORE",
+ "MAR_CHINA",
+ "Medio_Oriente",
+ "Rusia_Eurasia",
+ "TURQUIA_SABAH",
+ "UCRANIA",
+ "USA_NORTE"
+ ],
  datasets: [{
- label: 'Índice de Tensión (Actualizado: 09:00)',
- data: [46, 48, 42, 47, 53, 38, 47, 37, 48, 51, 46, 48, 47, 53, 45],
- backgroundColor: 'rgba(255, 99, 132, 0.2)',
- borderColor: 'rgba(255, 99, 132, 1)',
+ label: "Índice de Tensión (Actualizado 09:00)",
+ data: [46,48,42,47,53,38,47,37,48,51,46,48,47,53,45],
+ fill: true,
+ backgroundColor: "rgba(220, 38, 38, 0.2)",
+ borderColor: "rgba(220, 38, 38, 1)",
  borderWidth: 2,
- pointBackgroundColor: 'rgba(255, 99, 132, 1)'
+ pointBackgroundColor: "rgba(220, 38, 38, 1)"
  }]
  },
  options: {
  responsive: true,
- maintainAspectRatio: true,
+ maintainAspectRatio: false,
  scales: {
  r: {
  min: 0,
@@ -1468,17 +1933,18 @@ Nodo: Odroid-C2 Cluster Principal.&lt;/p&gt;
  }
  },
  plugins: {
- legend: { position: 'top' }
+ legend: { position: "top" }
  }
  }
  });
- };
-
- if (document.readyState === 'complete') {
- initRadar();
- } else {
- window.addEventListener('load', initRadar);
  }
+
+ if (document.readyState === "complete") {
+ renderRadar();
+ } else {
+ window.addEventListener("load", renderRadar);
+ }
+
 })();
 &lt;/script&gt;
 
@@ -1620,33 +2086,63 @@ Nodo: Odroid-C2 Cluster Principal.&lt;/p&gt;
 &lt;p&gt;&lt;img src="https://mcasrom.github.io/intel_center/images/260220_0700_trend.png" alt="Tendencias"&gt;&lt;/p&gt;</description></item><item><title>INTEL REPORT: 20/02/2026 06:00 (CET)</title><link>https://mcasrom.github.io/intel_center/post/260220_0600-noticias/</link><pubDate>Fri, 20 Feb 2026 06:00:06 +0000</pubDate><guid>https://mcasrom.github.io/intel_center/post/260220_0600-noticias/</guid><description>&lt;h3 id="-resumen-operativo"&gt;⚡ RESUMEN OPERATIVO&lt;/h3&gt;
 &lt;p&gt;&lt;strong&gt;Referencia Temporal:&lt;/strong&gt; 06:00 CET / &lt;strong&gt;2026-02-20 06:00 UTC&lt;/strong&gt;
 Nodo: Odroid-C2 Cluster Principal.&lt;/p&gt;
-&lt;div class="radar-wrapper" style="max-width:600px; margin:0 auto; padding:15px; background:white; border-radius:8px; box-shadow:0 4px 6px rgba(0,0,0,0.1);"&gt;
- &lt;canvas id="radarChartIntel"&gt;&lt;/canvas&gt;
+&lt;div style="max-width:650px;margin:20px auto;padding:20px;background:#ffffff;border-radius:10px;box-shadow:0 6px 12px rgba(0,0,0,0.08);"&gt;
+ &lt;canvas id="radarChartIntel" style="width:100%;height:420px;"&gt;&lt;/canvas&gt;
 &lt;/div&gt;
 
-&lt;script src="https://cdn.jsdelivr.net/npm/chart.js"&gt;&lt;/script&gt;
+&lt;script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"&gt;&lt;/script&gt;
+
 &lt;script&gt;
 (function() {
- const initRadar = () =&gt; {
- const ctx = document.getElementById('radarChartIntel');
- if (!ctx) return;
 
- new Chart(ctx, {
- type: 'radar',
+ function renderRadar() {
+ const canvas = document.getElementById("radarChartIntel");
+ if (!canvas) {
+ console.error("Canvas no encontrado");
+ return;
+ }
+
+ if (typeof Chart === "undefined") {
+ console.error("Chart.js no cargó");
+ return;
+ }
+
+ const existing = Chart.getChart(canvas);
+ if (existing) existing.destroy();
+
+ new Chart(canvas, {
+ type: "radar",
  data: {
- labels: ['ARGENTINA', 'Africa_Sahel', 'Asia_Nikkei', 'BRASIL', 'CHINA_CORE', 'ESPAÑA', 'Europa_DW', 'INDIA_CHINA_CORE', 'INDIA_CORE', 'MAR_CHINA', 'Medio_Oriente', 'Rusia_Eurasia', 'TURQUIA_SABAH', 'UCRANIA', 'USA_NORTE'],
+ labels: [
+ "ARGENTINA",
+ "Africa_Sahel",
+ "Asia_Nikkei",
+ "BRASIL",
+ "CHINA_CORE",
+ "ESPAÑA",
+ "Europa_DW",
+ "INDIA_CHINA_CORE",
+ "INDIA_CORE",
+ "MAR_CHINA",
+ "Medio_Oriente",
+ "Rusia_Eurasia",
+ "TURQUIA_SABAH",
+ "UCRANIA",
+ "USA_NORTE"
+ ],
  datasets: [{
- label: 'Índice de Tensión (Actualizado: 09:00)',
- data: [46, 48, 42, 47, 53, 38, 47, 37, 48, 51, 46, 48, 47, 53, 45],
- backgroundColor: 'rgba(255, 99, 132, 0.2)',
- borderColor: 'rgba(255, 99, 132, 1)',
+ label: "Índice de Tensión (Actualizado 09:00)",
+ data: [46,48,42,47,53,38,47,37,48,51,46,48,47,53,45],
+ fill: true,
+ backgroundColor: "rgba(220, 38, 38, 0.2)",
+ borderColor: "rgba(220, 38, 38, 1)",
  borderWidth: 2,
- pointBackgroundColor: 'rgba(255, 99, 132, 1)'
+ pointBackgroundColor: "rgba(220, 38, 38, 1)"
  }]
  },
  options: {
  responsive: true,
- maintainAspectRatio: true,
+ maintainAspectRatio: false,
  scales: {
  r: {
  min: 0,
@@ -1655,17 +2151,18 @@ Nodo: Odroid-C2 Cluster Principal.&lt;/p&gt;
  }
  },
  plugins: {
- legend: { position: 'top' }
+ legend: { position: "top" }
  }
  }
  });
- };
-
- if (document.readyState === 'complete') {
- initRadar();
- } else {
- window.addEventListener('load', initRadar);
  }
+
+ if (document.readyState === "complete") {
+ renderRadar();
+ } else {
+ window.addEventListener("load", renderRadar);
+ }
+
 })();
 &lt;/script&gt;
 
@@ -1807,33 +2304,63 @@ Nodo: Odroid-C2 Cluster Principal.&lt;/p&gt;
 &lt;p&gt;&lt;img src="https://mcasrom.github.io/intel_center/images/260220_0600_trend.png" alt="Tendencias"&gt;&lt;/p&gt;</description></item><item><title>INTEL REPORT: 20/02/2026 05:00 (CET)</title><link>https://mcasrom.github.io/intel_center/post/260220_0500-noticias/</link><pubDate>Fri, 20 Feb 2026 05:00:07 +0000</pubDate><guid>https://mcasrom.github.io/intel_center/post/260220_0500-noticias/</guid><description>&lt;h3 id="-resumen-operativo"&gt;⚡ RESUMEN OPERATIVO&lt;/h3&gt;
 &lt;p&gt;&lt;strong&gt;Referencia Temporal:&lt;/strong&gt; 05:00 CET / &lt;strong&gt;2026-02-20 05:00 UTC&lt;/strong&gt;
 Nodo: Odroid-C2 Cluster Principal.&lt;/p&gt;
-&lt;div class="radar-wrapper" style="max-width:600px; margin:0 auto; padding:15px; background:white; border-radius:8px; box-shadow:0 4px 6px rgba(0,0,0,0.1);"&gt;
- &lt;canvas id="radarChartIntel"&gt;&lt;/canvas&gt;
+&lt;div style="max-width:650px;margin:20px auto;padding:20px;background:#ffffff;border-radius:10px;box-shadow:0 6px 12px rgba(0,0,0,0.08);"&gt;
+ &lt;canvas id="radarChartIntel" style="width:100%;height:420px;"&gt;&lt;/canvas&gt;
 &lt;/div&gt;
 
-&lt;script src="https://cdn.jsdelivr.net/npm/chart.js"&gt;&lt;/script&gt;
+&lt;script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"&gt;&lt;/script&gt;
+
 &lt;script&gt;
 (function() {
- const initRadar = () =&gt; {
- const ctx = document.getElementById('radarChartIntel');
- if (!ctx) return;
 
- new Chart(ctx, {
- type: 'radar',
+ function renderRadar() {
+ const canvas = document.getElementById("radarChartIntel");
+ if (!canvas) {
+ console.error("Canvas no encontrado");
+ return;
+ }
+
+ if (typeof Chart === "undefined") {
+ console.error("Chart.js no cargó");
+ return;
+ }
+
+ const existing = Chart.getChart(canvas);
+ if (existing) existing.destroy();
+
+ new Chart(canvas, {
+ type: "radar",
  data: {
- labels: ['ARGENTINA', 'Africa_Sahel', 'Asia_Nikkei', 'BRASIL', 'CHINA_CORE', 'ESPAÑA', 'Europa_DW', 'INDIA_CHINA_CORE', 'INDIA_CORE', 'MAR_CHINA', 'Medio_Oriente', 'Rusia_Eurasia', 'TURQUIA_SABAH', 'UCRANIA', 'USA_NORTE'],
+ labels: [
+ "ARGENTINA",
+ "Africa_Sahel",
+ "Asia_Nikkei",
+ "BRASIL",
+ "CHINA_CORE",
+ "ESPAÑA",
+ "Europa_DW",
+ "INDIA_CHINA_CORE",
+ "INDIA_CORE",
+ "MAR_CHINA",
+ "Medio_Oriente",
+ "Rusia_Eurasia",
+ "TURQUIA_SABAH",
+ "UCRANIA",
+ "USA_NORTE"
+ ],
  datasets: [{
- label: 'Índice de Tensión (Actualizado: 09:00)',
- data: [46, 48, 42, 47, 53, 38, 47, 37, 48, 51, 46, 48, 47, 53, 45],
- backgroundColor: 'rgba(255, 99, 132, 0.2)',
- borderColor: 'rgba(255, 99, 132, 1)',
+ label: "Índice de Tensión (Actualizado 09:00)",
+ data: [46,48,42,47,53,38,47,37,48,51,46,48,47,53,45],
+ fill: true,
+ backgroundColor: "rgba(220, 38, 38, 0.2)",
+ borderColor: "rgba(220, 38, 38, 1)",
  borderWidth: 2,
- pointBackgroundColor: 'rgba(255, 99, 132, 1)'
+ pointBackgroundColor: "rgba(220, 38, 38, 1)"
  }]
  },
  options: {
  responsive: true,
- maintainAspectRatio: true,
+ maintainAspectRatio: false,
  scales: {
  r: {
  min: 0,
@@ -1842,17 +2369,18 @@ Nodo: Odroid-C2 Cluster Principal.&lt;/p&gt;
  }
  },
  plugins: {
- legend: { position: 'top' }
+ legend: { position: "top" }
  }
  }
  });
- };
-
- if (document.readyState === 'complete') {
- initRadar();
- } else {
- window.addEventListener('load', initRadar);
  }
+
+ if (document.readyState === "complete") {
+ renderRadar();
+ } else {
+ window.addEventListener("load", renderRadar);
+ }
+
 })();
 &lt;/script&gt;
 
@@ -1994,33 +2522,63 @@ Nodo: Odroid-C2 Cluster Principal.&lt;/p&gt;
 &lt;p&gt;&lt;img src="https://mcasrom.github.io/intel_center/images/260220_0500_trend.png" alt="Tendencias"&gt;&lt;/p&gt;</description></item><item><title>INTEL REPORT: 20/02/2026 04:00 (CET)</title><link>https://mcasrom.github.io/intel_center/post/260220_0400-noticias/</link><pubDate>Fri, 20 Feb 2026 04:00:06 +0000</pubDate><guid>https://mcasrom.github.io/intel_center/post/260220_0400-noticias/</guid><description>&lt;h3 id="-resumen-operativo"&gt;⚡ RESUMEN OPERATIVO&lt;/h3&gt;
 &lt;p&gt;&lt;strong&gt;Referencia Temporal:&lt;/strong&gt; 04:00 CET / &lt;strong&gt;2026-02-20 04:00 UTC&lt;/strong&gt;
 Nodo: Odroid-C2 Cluster Principal.&lt;/p&gt;
-&lt;div class="radar-wrapper" style="max-width:600px; margin:0 auto; padding:15px; background:white; border-radius:8px; box-shadow:0 4px 6px rgba(0,0,0,0.1);"&gt;
- &lt;canvas id="radarChartIntel"&gt;&lt;/canvas&gt;
+&lt;div style="max-width:650px;margin:20px auto;padding:20px;background:#ffffff;border-radius:10px;box-shadow:0 6px 12px rgba(0,0,0,0.08);"&gt;
+ &lt;canvas id="radarChartIntel" style="width:100%;height:420px;"&gt;&lt;/canvas&gt;
 &lt;/div&gt;
 
-&lt;script src="https://cdn.jsdelivr.net/npm/chart.js"&gt;&lt;/script&gt;
+&lt;script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"&gt;&lt;/script&gt;
+
 &lt;script&gt;
 (function() {
- const initRadar = () =&gt; {
- const ctx = document.getElementById('radarChartIntel');
- if (!ctx) return;
 
- new Chart(ctx, {
- type: 'radar',
+ function renderRadar() {
+ const canvas = document.getElementById("radarChartIntel");
+ if (!canvas) {
+ console.error("Canvas no encontrado");
+ return;
+ }
+
+ if (typeof Chart === "undefined") {
+ console.error("Chart.js no cargó");
+ return;
+ }
+
+ const existing = Chart.getChart(canvas);
+ if (existing) existing.destroy();
+
+ new Chart(canvas, {
+ type: "radar",
  data: {
- labels: ['ARGENTINA', 'Africa_Sahel', 'Asia_Nikkei', 'BRASIL', 'CHINA_CORE', 'ESPAÑA', 'Europa_DW', 'INDIA_CHINA_CORE', 'INDIA_CORE', 'MAR_CHINA', 'Medio_Oriente', 'Rusia_Eurasia', 'TURQUIA_SABAH', 'UCRANIA', 'USA_NORTE'],
+ labels: [
+ "ARGENTINA",
+ "Africa_Sahel",
+ "Asia_Nikkei",
+ "BRASIL",
+ "CHINA_CORE",
+ "ESPAÑA",
+ "Europa_DW",
+ "INDIA_CHINA_CORE",
+ "INDIA_CORE",
+ "MAR_CHINA",
+ "Medio_Oriente",
+ "Rusia_Eurasia",
+ "TURQUIA_SABAH",
+ "UCRANIA",
+ "USA_NORTE"
+ ],
  datasets: [{
- label: 'Índice de Tensión (Actualizado: 09:00)',
- data: [46, 48, 42, 47, 53, 38, 47, 37, 48, 51, 46, 48, 47, 53, 45],
- backgroundColor: 'rgba(255, 99, 132, 0.2)',
- borderColor: 'rgba(255, 99, 132, 1)',
+ label: "Índice de Tensión (Actualizado 09:00)",
+ data: [46,48,42,47,53,38,47,37,48,51,46,48,47,53,45],
+ fill: true,
+ backgroundColor: "rgba(220, 38, 38, 0.2)",
+ borderColor: "rgba(220, 38, 38, 1)",
  borderWidth: 2,
- pointBackgroundColor: 'rgba(255, 99, 132, 1)'
+ pointBackgroundColor: "rgba(220, 38, 38, 1)"
  }]
  },
  options: {
  responsive: true,
- maintainAspectRatio: true,
+ maintainAspectRatio: false,
  scales: {
  r: {
  min: 0,
@@ -2029,17 +2587,18 @@ Nodo: Odroid-C2 Cluster Principal.&lt;/p&gt;
  }
  },
  plugins: {
- legend: { position: 'top' }
+ legend: { position: "top" }
  }
  }
  });
- };
-
- if (document.readyState === 'complete') {
- initRadar();
- } else {
- window.addEventListener('load', initRadar);
  }
+
+ if (document.readyState === "complete") {
+ renderRadar();
+ } else {
+ window.addEventListener("load", renderRadar);
+ }
+
 })();
 &lt;/script&gt;
 
@@ -2304,33 +2863,63 @@ Nodo: Odroid-C2 Cluster Principal.&lt;/p&gt;
 Nodo: Odroid-C2 Cluster Principal.&lt;/p&gt;</description></item><item><title>INTEL REPORT: 20/02/2026 02:00 (CET)</title><link>https://mcasrom.github.io/intel_center/post/260220_0200-noticias/</link><pubDate>Fri, 20 Feb 2026 02:00:06 +0000</pubDate><guid>https://mcasrom.github.io/intel_center/post/260220_0200-noticias/</guid><description>&lt;h3 id="-resumen-operativo"&gt;⚡ RESUMEN OPERATIVO&lt;/h3&gt;
 &lt;p&gt;&lt;strong&gt;Referencia Temporal:&lt;/strong&gt; 02:00 CET / &lt;strong&gt;2026-02-20 02:00 UTC&lt;/strong&gt;
 Nodo: Odroid-C2 Cluster Principal.&lt;/p&gt;
-&lt;div class="radar-wrapper" style="max-width:600px; margin:0 auto; padding:15px; background:white; border-radius:8px; box-shadow:0 4px 6px rgba(0,0,0,0.1);"&gt;
- &lt;canvas id="radarChartIntel"&gt;&lt;/canvas&gt;
+&lt;div style="max-width:650px;margin:20px auto;padding:20px;background:#ffffff;border-radius:10px;box-shadow:0 6px 12px rgba(0,0,0,0.08);"&gt;
+ &lt;canvas id="radarChartIntel" style="width:100%;height:420px;"&gt;&lt;/canvas&gt;
 &lt;/div&gt;
 
-&lt;script src="https://cdn.jsdelivr.net/npm/chart.js"&gt;&lt;/script&gt;
+&lt;script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"&gt;&lt;/script&gt;
+
 &lt;script&gt;
 (function() {
- const initRadar = () =&gt; {
- const ctx = document.getElementById('radarChartIntel');
- if (!ctx) return;
 
- new Chart(ctx, {
- type: 'radar',
+ function renderRadar() {
+ const canvas = document.getElementById("radarChartIntel");
+ if (!canvas) {
+ console.error("Canvas no encontrado");
+ return;
+ }
+
+ if (typeof Chart === "undefined") {
+ console.error("Chart.js no cargó");
+ return;
+ }
+
+ const existing = Chart.getChart(canvas);
+ if (existing) existing.destroy();
+
+ new Chart(canvas, {
+ type: "radar",
  data: {
- labels: ['ARGENTINA', 'Africa_Sahel', 'Asia_Nikkei', 'BRASIL', 'CHINA_CORE', 'ESPAÑA', 'Europa_DW', 'INDIA_CHINA_CORE', 'INDIA_CORE', 'MAR_CHINA', 'Medio_Oriente', 'Rusia_Eurasia', 'TURQUIA_SABAH', 'UCRANIA', 'USA_NORTE'],
+ labels: [
+ "ARGENTINA",
+ "Africa_Sahel",
+ "Asia_Nikkei",
+ "BRASIL",
+ "CHINA_CORE",
+ "ESPAÑA",
+ "Europa_DW",
+ "INDIA_CHINA_CORE",
+ "INDIA_CORE",
+ "MAR_CHINA",
+ "Medio_Oriente",
+ "Rusia_Eurasia",
+ "TURQUIA_SABAH",
+ "UCRANIA",
+ "USA_NORTE"
+ ],
  datasets: [{
- label: 'Índice de Tensión (Actualizado: 09:00)',
- data: [46, 48, 42, 47, 53, 38, 47, 37, 48, 51, 46, 48, 47, 53, 45],
- backgroundColor: 'rgba(255, 99, 132, 0.2)',
- borderColor: 'rgba(255, 99, 132, 1)',
+ label: "Índice de Tensión (Actualizado 09:00)",
+ data: [46,48,42,47,53,38,47,37,48,51,46,48,47,53,45],
+ fill: true,
+ backgroundColor: "rgba(220, 38, 38, 0.2)",
+ borderColor: "rgba(220, 38, 38, 1)",
  borderWidth: 2,
- pointBackgroundColor: 'rgba(255, 99, 132, 1)'
+ pointBackgroundColor: "rgba(220, 38, 38, 1)"
  }]
  },
  options: {
  responsive: true,
- maintainAspectRatio: true,
+ maintainAspectRatio: false,
  scales: {
  r: {
  min: 0,
@@ -2339,17 +2928,18 @@ Nodo: Odroid-C2 Cluster Principal.&lt;/p&gt;
  }
  },
  plugins: {
- legend: { position: 'top' }
+ legend: { position: "top" }
  }
  }
  });
- };
-
- if (document.readyState === 'complete') {
- initRadar();
- } else {
- window.addEventListener('load', initRadar);
  }
+
+ if (document.readyState === "complete") {
+ renderRadar();
+ } else {
+ window.addEventListener("load", renderRadar);
+ }
+
 })();
 &lt;/script&gt;
 
@@ -2491,33 +3081,63 @@ Nodo: Odroid-C2 Cluster Principal.&lt;/p&gt;
 &lt;p&gt;&lt;img src="https://mcasrom.github.io/intel_center/images/260220_0200_trend.png" alt="Tendencias"&gt;&lt;/p&gt;</description></item><item><title>INTEL REPORT: 20/02/2026 01:00 (CET)</title><link>https://mcasrom.github.io/intel_center/post/260220_0100-noticias/</link><pubDate>Fri, 20 Feb 2026 01:00:06 +0000</pubDate><guid>https://mcasrom.github.io/intel_center/post/260220_0100-noticias/</guid><description>&lt;h3 id="-resumen-operativo"&gt;⚡ RESUMEN OPERATIVO&lt;/h3&gt;
 &lt;p&gt;&lt;strong&gt;Referencia Temporal:&lt;/strong&gt; 01:00 CET / &lt;strong&gt;2026-02-20 01:00 UTC&lt;/strong&gt;
 Nodo: Odroid-C2 Cluster Principal.&lt;/p&gt;
-&lt;div class="radar-wrapper" style="max-width:600px; margin:0 auto; padding:15px; background:white; border-radius:8px; box-shadow:0 4px 6px rgba(0,0,0,0.1);"&gt;
- &lt;canvas id="radarChartIntel"&gt;&lt;/canvas&gt;
+&lt;div style="max-width:650px;margin:20px auto;padding:20px;background:#ffffff;border-radius:10px;box-shadow:0 6px 12px rgba(0,0,0,0.08);"&gt;
+ &lt;canvas id="radarChartIntel" style="width:100%;height:420px;"&gt;&lt;/canvas&gt;
 &lt;/div&gt;
 
-&lt;script src="https://cdn.jsdelivr.net/npm/chart.js"&gt;&lt;/script&gt;
+&lt;script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"&gt;&lt;/script&gt;
+
 &lt;script&gt;
 (function() {
- const initRadar = () =&gt; {
- const ctx = document.getElementById('radarChartIntel');
- if (!ctx) return;
 
- new Chart(ctx, {
- type: 'radar',
+ function renderRadar() {
+ const canvas = document.getElementById("radarChartIntel");
+ if (!canvas) {
+ console.error("Canvas no encontrado");
+ return;
+ }
+
+ if (typeof Chart === "undefined") {
+ console.error("Chart.js no cargó");
+ return;
+ }
+
+ const existing = Chart.getChart(canvas);
+ if (existing) existing.destroy();
+
+ new Chart(canvas, {
+ type: "radar",
  data: {
- labels: ['ARGENTINA', 'Africa_Sahel', 'Asia_Nikkei', 'BRASIL', 'CHINA_CORE', 'ESPAÑA', 'Europa_DW', 'INDIA_CHINA_CORE', 'INDIA_CORE', 'MAR_CHINA', 'Medio_Oriente', 'Rusia_Eurasia', 'TURQUIA_SABAH', 'UCRANIA', 'USA_NORTE'],
+ labels: [
+ "ARGENTINA",
+ "Africa_Sahel",
+ "Asia_Nikkei",
+ "BRASIL",
+ "CHINA_CORE",
+ "ESPAÑA",
+ "Europa_DW",
+ "INDIA_CHINA_CORE",
+ "INDIA_CORE",
+ "MAR_CHINA",
+ "Medio_Oriente",
+ "Rusia_Eurasia",
+ "TURQUIA_SABAH",
+ "UCRANIA",
+ "USA_NORTE"
+ ],
  datasets: [{
- label: 'Índice de Tensión (Actualizado: 09:00)',
- data: [46, 48, 42, 47, 53, 38, 47, 37, 48, 51, 46, 48, 47, 53, 45],
- backgroundColor: 'rgba(255, 99, 132, 0.2)',
- borderColor: 'rgba(255, 99, 132, 1)',
+ label: "Índice de Tensión (Actualizado 09:00)",
+ data: [46,48,42,47,53,38,47,37,48,51,46,48,47,53,45],
+ fill: true,
+ backgroundColor: "rgba(220, 38, 38, 0.2)",
+ borderColor: "rgba(220, 38, 38, 1)",
  borderWidth: 2,
- pointBackgroundColor: 'rgba(255, 99, 132, 1)'
+ pointBackgroundColor: "rgba(220, 38, 38, 1)"
  }]
  },
  options: {
  responsive: true,
- maintainAspectRatio: true,
+ maintainAspectRatio: false,
  scales: {
  r: {
  min: 0,
@@ -2526,17 +3146,18 @@ Nodo: Odroid-C2 Cluster Principal.&lt;/p&gt;
  }
  },
  plugins: {
- legend: { position: 'top' }
+ legend: { position: "top" }
  }
  }
  });
- };
-
- if (document.readyState === 'complete') {
- initRadar();
- } else {
- window.addEventListener('load', initRadar);
  }
+
+ if (document.readyState === "complete") {
+ renderRadar();
+ } else {
+ window.addEventListener("load", renderRadar);
+ }
+
 })();
 &lt;/script&gt;
 
@@ -2895,33 +3516,63 @@ Nodo: Odroid-C2 Cluster Principal.&lt;/p&gt;</description></item><item><title>An
 &lt;p&gt;El &lt;strong&gt;Índice de Intensidad ($P_p$)&lt;/strong&gt; se calcula mediante la fórmula:&lt;/p&gt;</description></item><item><title>INTEL REPORT: 19/02/2026 23:00 (CET)</title><link>https://mcasrom.github.io/intel_center/post/260219_2300-noticias/</link><pubDate>Thu, 19 Feb 2026 23:00:06 +0000</pubDate><guid>https://mcasrom.github.io/intel_center/post/260219_2300-noticias/</guid><description>&lt;h3 id="-resumen-operativo"&gt;⚡ RESUMEN OPERATIVO&lt;/h3&gt;
 &lt;p&gt;&lt;strong&gt;Referencia Temporal:&lt;/strong&gt; 23:00 CET / &lt;strong&gt;2026-02-19 23:00 UTC&lt;/strong&gt;
 Nodo: Odroid-C2 Cluster Principal.&lt;/p&gt;
-&lt;div class="radar-wrapper" style="max-width:600px; margin:0 auto; padding:15px; background:white; border-radius:8px; box-shadow:0 4px 6px rgba(0,0,0,0.1);"&gt;
- &lt;canvas id="radarChartIntel"&gt;&lt;/canvas&gt;
+&lt;div style="max-width:650px;margin:20px auto;padding:20px;background:#ffffff;border-radius:10px;box-shadow:0 6px 12px rgba(0,0,0,0.08);"&gt;
+ &lt;canvas id="radarChartIntel" style="width:100%;height:420px;"&gt;&lt;/canvas&gt;
 &lt;/div&gt;
 
-&lt;script src="https://cdn.jsdelivr.net/npm/chart.js"&gt;&lt;/script&gt;
+&lt;script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"&gt;&lt;/script&gt;
+
 &lt;script&gt;
 (function() {
- const initRadar = () =&gt; {
- const ctx = document.getElementById('radarChartIntel');
- if (!ctx) return;
 
- new Chart(ctx, {
- type: 'radar',
+ function renderRadar() {
+ const canvas = document.getElementById("radarChartIntel");
+ if (!canvas) {
+ console.error("Canvas no encontrado");
+ return;
+ }
+
+ if (typeof Chart === "undefined") {
+ console.error("Chart.js no cargó");
+ return;
+ }
+
+ const existing = Chart.getChart(canvas);
+ if (existing) existing.destroy();
+
+ new Chart(canvas, {
+ type: "radar",
  data: {
- labels: ['ARGENTINA', 'Africa_Sahel', 'Asia_Nikkei', 'BRASIL', 'CHINA_CORE', 'ESPAÑA', 'Europa_DW', 'INDIA_CHINA_CORE', 'INDIA_CORE', 'MAR_CHINA', 'Medio_Oriente', 'Rusia_Eurasia', 'TURQUIA_SABAH', 'UCRANIA', 'USA_NORTE'],
+ labels: [
+ "ARGENTINA",
+ "Africa_Sahel",
+ "Asia_Nikkei",
+ "BRASIL",
+ "CHINA_CORE",
+ "ESPAÑA",
+ "Europa_DW",
+ "INDIA_CHINA_CORE",
+ "INDIA_CORE",
+ "MAR_CHINA",
+ "Medio_Oriente",
+ "Rusia_Eurasia",
+ "TURQUIA_SABAH",
+ "UCRANIA",
+ "USA_NORTE"
+ ],
  datasets: [{
- label: 'Índice de Tensión (Actualizado: 09:00)',
- data: [46, 48, 42, 47, 53, 38, 47, 37, 48, 51, 46, 48, 47, 53, 45],
- backgroundColor: 'rgba(255, 99, 132, 0.2)',
- borderColor: 'rgba(255, 99, 132, 1)',
+ label: "Índice de Tensión (Actualizado 09:00)",
+ data: [46,48,42,47,53,38,47,37,48,51,46,48,47,53,45],
+ fill: true,
+ backgroundColor: "rgba(220, 38, 38, 0.2)",
+ borderColor: "rgba(220, 38, 38, 1)",
  borderWidth: 2,
- pointBackgroundColor: 'rgba(255, 99, 132, 1)'
+ pointBackgroundColor: "rgba(220, 38, 38, 1)"
  }]
  },
  options: {
  responsive: true,
- maintainAspectRatio: true,
+ maintainAspectRatio: false,
  scales: {
  r: {
  min: 0,
@@ -2930,17 +3581,18 @@ Nodo: Odroid-C2 Cluster Principal.&lt;/p&gt;
  }
  },
  plugins: {
- legend: { position: 'top' }
+ legend: { position: "top" }
  }
  }
  });
- };
-
- if (document.readyState === 'complete') {
- initRadar();
- } else {
- window.addEventListener('load', initRadar);
  }
+
+ if (document.readyState === "complete") {
+ renderRadar();
+ } else {
+ window.addEventListener("load", renderRadar);
+ }
+
 })();
 &lt;/script&gt;
 
@@ -3082,33 +3734,63 @@ Nodo: Odroid-C2 Cluster Principal.&lt;/p&gt;
 &lt;p&gt;&lt;img src="https://mcasrom.github.io/intel_center/images/260219_2300_trend.png" alt="Tendencias"&gt;&lt;/p&gt;</description></item><item><title>INTEL REPORT: 19/02/2026 22:00 (CET)</title><link>https://mcasrom.github.io/intel_center/post/260219_2200-noticias/</link><pubDate>Thu, 19 Feb 2026 22:00:06 +0000</pubDate><guid>https://mcasrom.github.io/intel_center/post/260219_2200-noticias/</guid><description>&lt;h3 id="-resumen-operativo"&gt;⚡ RESUMEN OPERATIVO&lt;/h3&gt;
 &lt;p&gt;&lt;strong&gt;Referencia Temporal:&lt;/strong&gt; 22:00 CET / &lt;strong&gt;2026-02-19 22:00 UTC&lt;/strong&gt;
 Nodo: Odroid-C2 Cluster Principal.&lt;/p&gt;
-&lt;div class="radar-wrapper" style="max-width:600px; margin:0 auto; padding:15px; background:white; border-radius:8px; box-shadow:0 4px 6px rgba(0,0,0,0.1);"&gt;
- &lt;canvas id="radarChartIntel"&gt;&lt;/canvas&gt;
+&lt;div style="max-width:650px;margin:20px auto;padding:20px;background:#ffffff;border-radius:10px;box-shadow:0 6px 12px rgba(0,0,0,0.08);"&gt;
+ &lt;canvas id="radarChartIntel" style="width:100%;height:420px;"&gt;&lt;/canvas&gt;
 &lt;/div&gt;
 
-&lt;script src="https://cdn.jsdelivr.net/npm/chart.js"&gt;&lt;/script&gt;
+&lt;script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"&gt;&lt;/script&gt;
+
 &lt;script&gt;
 (function() {
- const initRadar = () =&gt; {
- const ctx = document.getElementById('radarChartIntel');
- if (!ctx) return;
 
- new Chart(ctx, {
- type: 'radar',
+ function renderRadar() {
+ const canvas = document.getElementById("radarChartIntel");
+ if (!canvas) {
+ console.error("Canvas no encontrado");
+ return;
+ }
+
+ if (typeof Chart === "undefined") {
+ console.error("Chart.js no cargó");
+ return;
+ }
+
+ const existing = Chart.getChart(canvas);
+ if (existing) existing.destroy();
+
+ new Chart(canvas, {
+ type: "radar",
  data: {
- labels: ['ARGENTINA', 'Africa_Sahel', 'Asia_Nikkei', 'BRASIL', 'CHINA_CORE', 'ESPAÑA', 'Europa_DW', 'INDIA_CHINA_CORE', 'INDIA_CORE', 'MAR_CHINA', 'Medio_Oriente', 'Rusia_Eurasia', 'TURQUIA_SABAH', 'UCRANIA', 'USA_NORTE'],
+ labels: [
+ "ARGENTINA",
+ "Africa_Sahel",
+ "Asia_Nikkei",
+ "BRASIL",
+ "CHINA_CORE",
+ "ESPAÑA",
+ "Europa_DW",
+ "INDIA_CHINA_CORE",
+ "INDIA_CORE",
+ "MAR_CHINA",
+ "Medio_Oriente",
+ "Rusia_Eurasia",
+ "TURQUIA_SABAH",
+ "UCRANIA",
+ "USA_NORTE"
+ ],
  datasets: [{
- label: 'Índice de Tensión (Actualizado: 09:00)',
- data: [46, 48, 42, 47, 53, 38, 47, 37, 48, 51, 46, 48, 47, 53, 45],
- backgroundColor: 'rgba(255, 99, 132, 0.2)',
- borderColor: 'rgba(255, 99, 132, 1)',
+ label: "Índice de Tensión (Actualizado 09:00)",
+ data: [46,48,42,47,53,38,47,37,48,51,46,48,47,53,45],
+ fill: true,
+ backgroundColor: "rgba(220, 38, 38, 0.2)",
+ borderColor: "rgba(220, 38, 38, 1)",
  borderWidth: 2,
- pointBackgroundColor: 'rgba(255, 99, 132, 1)'
+ pointBackgroundColor: "rgba(220, 38, 38, 1)"
  }]
  },
  options: {
  responsive: true,
- maintainAspectRatio: true,
+ maintainAspectRatio: false,
  scales: {
  r: {
  min: 0,
@@ -3117,17 +3799,18 @@ Nodo: Odroid-C2 Cluster Principal.&lt;/p&gt;
  }
  },
  plugins: {
- legend: { position: 'top' }
+ legend: { position: "top" }
  }
  }
  });
- };
-
- if (document.readyState === 'complete') {
- initRadar();
- } else {
- window.addEventListener('load', initRadar);
  }
+
+ if (document.readyState === "complete") {
+ renderRadar();
+ } else {
+ window.addEventListener("load", renderRadar);
+ }
+
 })();
 &lt;/script&gt;
 
@@ -3363,33 +4046,63 @@ Nodo: Odroid-C2 Cluster Principal.&lt;/p&gt;
 &lt;p&gt;El &lt;strong&gt;Índice de Intensidad ($P_p$)&lt;/strong&gt; se calcula mediante la fórmula:&lt;/p&gt;</description></item><item><title>INTEL REPORT: 19/02/2026 21:00 (CET)</title><link>https://mcasrom.github.io/intel_center/post/260219_2100-noticias/</link><pubDate>Thu, 19 Feb 2026 21:00:06 +0000</pubDate><guid>https://mcasrom.github.io/intel_center/post/260219_2100-noticias/</guid><description>&lt;h3 id="-resumen-operativo"&gt;⚡ RESUMEN OPERATIVO&lt;/h3&gt;
 &lt;p&gt;&lt;strong&gt;Referencia Temporal:&lt;/strong&gt; 21:00 CET / &lt;strong&gt;2026-02-19 21:00 UTC&lt;/strong&gt;
 Nodo: Odroid-C2 Cluster Principal.&lt;/p&gt;
-&lt;div class="radar-wrapper" style="max-width:600px; margin:0 auto; padding:15px; background:white; border-radius:8px; box-shadow:0 4px 6px rgba(0,0,0,0.1);"&gt;
- &lt;canvas id="radarChartIntel"&gt;&lt;/canvas&gt;
+&lt;div style="max-width:650px;margin:20px auto;padding:20px;background:#ffffff;border-radius:10px;box-shadow:0 6px 12px rgba(0,0,0,0.08);"&gt;
+ &lt;canvas id="radarChartIntel" style="width:100%;height:420px;"&gt;&lt;/canvas&gt;
 &lt;/div&gt;
 
-&lt;script src="https://cdn.jsdelivr.net/npm/chart.js"&gt;&lt;/script&gt;
+&lt;script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"&gt;&lt;/script&gt;
+
 &lt;script&gt;
 (function() {
- const initRadar = () =&gt; {
- const ctx = document.getElementById('radarChartIntel');
- if (!ctx) return;
 
- new Chart(ctx, {
- type: 'radar',
+ function renderRadar() {
+ const canvas = document.getElementById("radarChartIntel");
+ if (!canvas) {
+ console.error("Canvas no encontrado");
+ return;
+ }
+
+ if (typeof Chart === "undefined") {
+ console.error("Chart.js no cargó");
+ return;
+ }
+
+ const existing = Chart.getChart(canvas);
+ if (existing) existing.destroy();
+
+ new Chart(canvas, {
+ type: "radar",
  data: {
- labels: ['ARGENTINA', 'Africa_Sahel', 'Asia_Nikkei', 'BRASIL', 'CHINA_CORE', 'ESPAÑA', 'Europa_DW', 'INDIA_CHINA_CORE', 'INDIA_CORE', 'MAR_CHINA', 'Medio_Oriente', 'Rusia_Eurasia', 'TURQUIA_SABAH', 'UCRANIA', 'USA_NORTE'],
+ labels: [
+ "ARGENTINA",
+ "Africa_Sahel",
+ "Asia_Nikkei",
+ "BRASIL",
+ "CHINA_CORE",
+ "ESPAÑA",
+ "Europa_DW",
+ "INDIA_CHINA_CORE",
+ "INDIA_CORE",
+ "MAR_CHINA",
+ "Medio_Oriente",
+ "Rusia_Eurasia",
+ "TURQUIA_SABAH",
+ "UCRANIA",
+ "USA_NORTE"
+ ],
  datasets: [{
- label: 'Índice de Tensión (Actualizado: 09:00)',
- data: [46, 48, 42, 47, 53, 38, 47, 37, 48, 51, 46, 48, 47, 53, 45],
- backgroundColor: 'rgba(255, 99, 132, 0.2)',
- borderColor: 'rgba(255, 99, 132, 1)',
+ label: "Índice de Tensión (Actualizado 09:00)",
+ data: [46,48,42,47,53,38,47,37,48,51,46,48,47,53,45],
+ fill: true,
+ backgroundColor: "rgba(220, 38, 38, 0.2)",
+ borderColor: "rgba(220, 38, 38, 1)",
  borderWidth: 2,
- pointBackgroundColor: 'rgba(255, 99, 132, 1)'
+ pointBackgroundColor: "rgba(220, 38, 38, 1)"
  }]
  },
  options: {
  responsive: true,
- maintainAspectRatio: true,
+ maintainAspectRatio: false,
  scales: {
  r: {
  min: 0,
@@ -3398,17 +4111,18 @@ Nodo: Odroid-C2 Cluster Principal.&lt;/p&gt;
  }
  },
  plugins: {
- legend: { position: 'top' }
+ legend: { position: "top" }
  }
  }
  });
- };
-
- if (document.readyState === 'complete') {
- initRadar();
- } else {
- window.addEventListener('load', initRadar);
  }
+
+ if (document.readyState === "complete") {
+ renderRadar();
+ } else {
+ window.addEventListener("load", renderRadar);
+ }
+
 })();
 &lt;/script&gt;
 
@@ -3547,194 +4261,7 @@ Nodo: Odroid-C2 Cluster Principal.&lt;/p&gt;
  &lt;/tr&gt;
  &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;p&gt;&lt;img src="https://mcasrom.github.io/intel_center/images/260219_2100_trend.png" alt="Tendencias"&gt;&lt;/p&gt;</description></item><item><title>INTEL REPORT: 19/02/2026 20:00 (CET)</title><link>https://mcasrom.github.io/intel_center/post/260219_2000-noticias/</link><pubDate>Thu, 19 Feb 2026 20:00:06 +0000</pubDate><guid>https://mcasrom.github.io/intel_center/post/260219_2000-noticias/</guid><description>&lt;h3 id="-resumen-operativo"&gt;⚡ RESUMEN OPERATIVO&lt;/h3&gt;
-&lt;p&gt;&lt;strong&gt;Referencia Temporal:&lt;/strong&gt; 20:00 CET / &lt;strong&gt;2026-02-19 20:00 UTC&lt;/strong&gt;
-Nodo: Odroid-C2 Cluster Principal.&lt;/p&gt;
-&lt;div class="radar-wrapper" style="max-width:600px; margin:0 auto; padding:15px; background:white; border-radius:8px; box-shadow:0 4px 6px rgba(0,0,0,0.1);"&gt;
- &lt;canvas id="radarChartIntel"&gt;&lt;/canvas&gt;
-&lt;/div&gt;
-
-&lt;script src="https://cdn.jsdelivr.net/npm/chart.js"&gt;&lt;/script&gt;
-&lt;script&gt;
-(function() {
- const initRadar = () =&gt; {
- const ctx = document.getElementById('radarChartIntel');
- if (!ctx) return;
-
- new Chart(ctx, {
- type: 'radar',
- data: {
- labels: ['ARGENTINA', 'Africa_Sahel', 'Asia_Nikkei', 'BRASIL', 'CHINA_CORE', 'ESPAÑA', 'Europa_DW', 'INDIA_CHINA_CORE', 'INDIA_CORE', 'MAR_CHINA', 'Medio_Oriente', 'Rusia_Eurasia', 'TURQUIA_SABAH', 'UCRANIA', 'USA_NORTE'],
- datasets: [{
- label: 'Índice de Tensión (Actualizado: 09:00)',
- data: [46, 48, 42, 47, 53, 38, 47, 37, 48, 51, 46, 48, 47, 53, 45],
- backgroundColor: 'rgba(255, 99, 132, 0.2)',
- borderColor: 'rgba(255, 99, 132, 1)',
- borderWidth: 2,
- pointBackgroundColor: 'rgba(255, 99, 132, 1)'
- }]
- },
- options: {
- responsive: true,
- maintainAspectRatio: true,
- scales: {
- r: {
- min: 0,
- max: 100,
- ticks: { stepSize: 20 }
- }
- },
- plugins: {
- legend: { position: 'top' }
- }
- }
- });
- };
-
- if (document.readyState === 'complete') {
- initRadar();
- } else {
- window.addEventListener('load', initRadar);
- }
-})();
-&lt;/script&gt;
-
-&lt;h4 id="-evolución-de-sentimiento-varianza-24h"&gt;📊 EVOLUCIÓN DE SENTIMIENTO (VARIANZA 24H)&lt;/h4&gt;
-&lt;table&gt;
- &lt;thead&gt;
- &lt;tr&gt;
- &lt;th style="text-align: left"&gt;Región&lt;/th&gt;
- &lt;th style="text-align: left"&gt;Hoy&lt;/th&gt;
- &lt;th style="text-align: left"&gt;Ayer&lt;/th&gt;
- &lt;th style="text-align: left"&gt;Δ Hist (30d)&lt;/th&gt;
- &lt;th style="text-align: left"&gt;Estado&lt;/th&gt;
- &lt;/tr&gt;
- &lt;/thead&gt;
- &lt;tbody&gt;
- &lt;tr&gt;
- &lt;td style="text-align: left"&gt;USA_NORTE&lt;/td&gt;
- &lt;td style="text-align: left"&gt;0.0933&lt;/td&gt;
- &lt;td style="text-align: left"&gt;0.0856&lt;/td&gt;
- &lt;td style="text-align: left"&gt;+0.0077&lt;/td&gt;
- &lt;td style="text-align: left"&gt;⚪ Estable&lt;/td&gt;
- &lt;/tr&gt;
- &lt;tr&gt;
- &lt;td style="text-align: left"&gt;ESPAÑA&lt;/td&gt;
- &lt;td style="text-align: left"&gt;0.2700&lt;/td&gt;
- &lt;td style="text-align: left"&gt;-0.2750&lt;/td&gt;
- &lt;td style="text-align: left"&gt;+0.5450&lt;/td&gt;
- &lt;td style="text-align: left"&gt;🔴 Escalada&lt;/td&gt;
- &lt;/tr&gt;
- &lt;tr&gt;
- &lt;td style="text-align: left"&gt;ARGENTINA&lt;/td&gt;
- &lt;td style="text-align: left"&gt;0.2000&lt;/td&gt;
- &lt;td style="text-align: left"&gt;0.0000&lt;/td&gt;
- &lt;td style="text-align: left"&gt;+0.2000&lt;/td&gt;
- &lt;td style="text-align: left"&gt;🔴 Escalada&lt;/td&gt;
- &lt;/tr&gt;
- &lt;tr&gt;
- &lt;td style="text-align: left"&gt;BRASIL&lt;/td&gt;
- &lt;td style="text-align: left"&gt;0.0000&lt;/td&gt;
- &lt;td style="text-align: left"&gt;0.0000&lt;/td&gt;
- &lt;td style="text-align: left"&gt;+0.0000&lt;/td&gt;
- &lt;td style="text-align: left"&gt;⚪ Estable&lt;/td&gt;
- &lt;/tr&gt;
- &lt;tr&gt;
- &lt;td style="text-align: left"&gt;Europa_DW&lt;/td&gt;
- &lt;td style="text-align: left"&gt;0.0580&lt;/td&gt;
- &lt;td style="text-align: left"&gt;0.0150&lt;/td&gt;
- &lt;td style="text-align: left"&gt;+0.0430&lt;/td&gt;
- &lt;td style="text-align: left"&gt;⚪ Estable&lt;/td&gt;
- &lt;/tr&gt;
- &lt;tr&gt;
- &lt;td style="text-align: left"&gt;Rusia_Eurasia&lt;/td&gt;
- &lt;td style="text-align: left"&gt;0.0956&lt;/td&gt;
- &lt;td style="text-align: left"&gt;0.0766&lt;/td&gt;
- &lt;td style="text-align: left"&gt;+0.0190&lt;/td&gt;
- &lt;td style="text-align: left"&gt;⚪ Estable&lt;/td&gt;
- &lt;/tr&gt;
- &lt;tr&gt;
- &lt;td style="text-align: left"&gt;Medio_Oriente&lt;/td&gt;
- &lt;td style="text-align: left"&gt;0.0793&lt;/td&gt;
- &lt;td style="text-align: left"&gt;0.1721&lt;/td&gt;
- &lt;td style="text-align: left"&gt;-0.0928&lt;/td&gt;
- &lt;td style="text-align: left"&gt;⚠ Tensión&lt;/td&gt;
- &lt;/tr&gt;
- &lt;tr&gt;
- &lt;td style="text-align: left"&gt;Asia_Nikkei&lt;/td&gt;
- &lt;td style="text-align: left"&gt;0.1900&lt;/td&gt;
- &lt;td style="text-align: left"&gt;0.1189&lt;/td&gt;
- &lt;td style="text-align: left"&gt;+0.0711&lt;/td&gt;
- &lt;td style="text-align: left"&gt;🔴 Escalada&lt;/td&gt;
- &lt;/tr&gt;
- &lt;tr&gt;
- &lt;td style="text-align: left"&gt;Africa_Sahel&lt;/td&gt;
- &lt;td style="text-align: left"&gt;-0.0950&lt;/td&gt;
- &lt;td style="text-align: left"&gt;-0.1267&lt;/td&gt;
- &lt;td style="text-align: left"&gt;+0.0317&lt;/td&gt;
- &lt;td style="text-align: left"&gt;⚪ Estable&lt;/td&gt;
- &lt;/tr&gt;
- &lt;tr&gt;
- &lt;td style="text-align: left"&gt;INDIA_CORE&lt;/td&gt;
- &lt;td style="text-align: left"&gt;0.0682&lt;/td&gt;
- &lt;td style="text-align: left"&gt;0.0091&lt;/td&gt;
- &lt;td style="text-align: left"&gt;+0.0590&lt;/td&gt;
- &lt;td style="text-align: left"&gt;⚪ Estable&lt;/td&gt;
- &lt;/tr&gt;
- &lt;tr&gt;
- &lt;td style="text-align: left"&gt;CHINA_CORE&lt;/td&gt;
- &lt;td style="text-align: left"&gt;0.0450&lt;/td&gt;
- &lt;td style="text-align: left"&gt;-0.1500&lt;/td&gt;
- &lt;td style="text-align: left"&gt;+0.1950&lt;/td&gt;
- &lt;td style="text-align: left"&gt;🔴 Escalada&lt;/td&gt;
- &lt;/tr&gt;
- &lt;tr&gt;
- &lt;td style="text-align: left"&gt;TURQUIA_SABAH&lt;/td&gt;
- &lt;td style="text-align: left"&gt;0.0739&lt;/td&gt;
- &lt;td style="text-align: left"&gt;0.0000&lt;/td&gt;
- &lt;td style="text-align: left"&gt;+0.0739&lt;/td&gt;
- &lt;td style="text-align: left"&gt;🔴 Escalada&lt;/td&gt;
- &lt;/tr&gt;
- &lt;tr&gt;
- &lt;td style="text-align: left"&gt;MAR_CHINA&lt;/td&gt;
- &lt;td style="text-align: left"&gt;-0.0500&lt;/td&gt;
- &lt;td style="text-align: left"&gt;0.0000&lt;/td&gt;
- &lt;td style="text-align: left"&gt;-0.0500&lt;/td&gt;
- &lt;td style="text-align: left"&gt;⚪ Estable&lt;/td&gt;
- &lt;/tr&gt;
- &lt;tr&gt;
- &lt;td style="text-align: left"&gt;UCRANIA&lt;/td&gt;
- &lt;td style="text-align: left"&gt;-0.0353&lt;/td&gt;
- &lt;td style="text-align: left"&gt;0.0000&lt;/td&gt;
- &lt;td style="text-align: left"&gt;-0.0353&lt;/td&gt;
- &lt;td style="text-align: left"&gt;⚪ Estable&lt;/td&gt;
- &lt;/tr&gt;
- &lt;/tbody&gt;
-&lt;/table&gt;
-&lt;h4 id="-radares-de-tendencia"&gt;📊 RADARES DE TENDENCIA&lt;/h4&gt;
-&lt;table&gt;
- &lt;thead&gt;
- &lt;tr&gt;
- &lt;th style="text-align: left"&gt;Región&lt;/th&gt;
- &lt;th style="text-align: left"&gt;Sentiment&lt;/th&gt;
- &lt;/tr&gt;
- &lt;/thead&gt;
- &lt;tbody&gt;
- &lt;tr&gt;
- &lt;td style="text-align: left"&gt;🇺🇸 USA&lt;/td&gt;
- &lt;td style="text-align: left"&gt;0.134&lt;/td&gt;
- &lt;/tr&gt;
- &lt;tr&gt;
- &lt;td style="text-align: left"&gt;🇪🇸 ESPAÑA&lt;/td&gt;
- &lt;td style="text-align: left"&gt;0.15&lt;/td&gt;
- &lt;/tr&gt;
- &lt;tr&gt;
- &lt;td style="text-align: left"&gt;🌏 INDIA-CHINA&lt;/td&gt;
- &lt;td style="text-align: left"&gt;0.0424&lt;/td&gt;
- &lt;/tr&gt;
- &lt;/tbody&gt;
-&lt;/table&gt;
-&lt;p&gt;&lt;img src="https://mcasrom.github.io/intel_center/images/260219_2000_trend.png" alt="Tendencias"&gt;&lt;/p&gt;</description></item><item><title>Informe IIE: 2026-02-19</title><link>https://mcasrom.github.io/intel_center/post/2026-02-19-informe-iie/</link><pubDate>Thu, 19 Feb 2026 15:24:22 +0000</pubDate><guid>https://mcasrom.github.io/intel_center/post/2026-02-19-informe-iie/</guid><description>&lt;h1 id="-análisis-de-intensidad-global-2026-02-19"&gt;📊 Análisis de Intensidad Global (2026-02-19)&lt;/h1&gt;
+&lt;p&gt;&lt;img src="https://mcasrom.github.io/intel_center/images/260219_2100_trend.png" alt="Tendencias"&gt;&lt;/p&gt;</description></item><item><title>Informe IIE: 2026-02-19</title><link>https://mcasrom.github.io/intel_center/post/2026-02-19-informe-iie/</link><pubDate>Thu, 19 Feb 2026 15:24:22 +0000</pubDate><guid>https://mcasrom.github.io/intel_center/post/2026-02-19-informe-iie/</guid><description>&lt;h1 id="-análisis-de-intensidad-global-2026-02-19"&gt;📊 Análisis de Intensidad Global (2026-02-19)&lt;/h1&gt;
 &lt;table&gt;
  &lt;thead&gt;
  &lt;tr&gt;
