@@ -6,6 +6,19 @@ tags: ["monitor", "sistema"]
 ---
 
 ### 🚨 ALERTAS DE TENSIÓN DETECTADAS
+- <b style='color:orange'>⚠️ USA_NORTE</b>: Incremento del 31.9% sobre la media semanal.
+- <b style='color:orange'>⚠️ ARGENTINA</b>: Incremento del 31.9% sobre la media semanal.
+- <b style='color:orange'>⚠️ BRASIL</b>: Incremento del 37.4% sobre la media semanal.
+- <b style='color:orange'>⚠️ Asia_Nikkei</b>: Incremento del 37.1% sobre la media semanal.
+- <b style='color:red'>⚠️ INDIA_CORE</b>: Incremento del 157.2% sobre la media semanal.
+- <b style='color:red'>⚠️ TURQUIA_SABAH</b>: Incremento del 267.0% sobre la media semanal.
+- <b style='color:red'>⚠️ MAR_CHINA</b>: Incremento del 383.6% sobre la media semanal.
+- <b style='color:red'>⚠️ UCRANIA</b>: Incremento del 359.4% sobre la media semanal.
+
+---
+
+
+### 🚨 ALERTAS DE TENSIÓN DETECTADAS
 - <b style='color:orange'>⚠️ BRASIL</b>: Incremento del 45.7% sobre la media semanal.
 - <b style='color:orange'>⚠️ Asia_Nikkei</b>: Incremento del 34.2% sobre la media semanal.
 - <b style='color:orange'>⚠️ Africa_Sahel</b>: Incremento del 31.3% sobre la media semanal.
