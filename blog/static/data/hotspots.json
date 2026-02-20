@@ -19,9 +19,9 @@
         "name": "ARGENTINA",
         "lat": -34.0,
         "lon": -64.0,
-        "intensity": 7,
+        "intensity": 6,
         "color": "#2ecc71",
-        "sentiment_index": 0.1114
+        "sentiment_index": 0.1217
     },
     {
         "name": "BRASIL",
@@ -45,7 +45,7 @@
         "lon": 90.0,
         "intensity": 15,
         "color": "#2ecc71",
-        "sentiment_index": 0.0659
+        "sentiment_index": 0.0644
     },
     {
         "name": "Medio_Oriente",
@@ -68,16 +68,16 @@
         "lat": 15.0,
         "lon": 15.0,
         "intensity": 15,
-        "color": "#f1c40f",
-        "sentiment_index": 0.0444
+        "color": "#2ecc71",
+        "sentiment_index": 0.0565
     },
     {
         "name": "INDIA_CORE",
         "lat": 28.6,
         "lon": 77.2,
         "intensity": 15,
-        "color": "#f1c40f",
-        "sentiment_index": 0.046
+        "color": "#2ecc71",
+        "sentiment_index": 0.0526
     },
     {
         "name": "CHINA_CORE",
@@ -109,6 +109,6 @@
         "lon": 30.5,
         "intensity": 15,
         "color": "#f1c40f",
-        "sentiment_index": -0.041
+        "sentiment_index": -0.0355
     }
 ]
