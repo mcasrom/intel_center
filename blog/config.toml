@@ -2,9 +2,11 @@ baseURL = "https://mcasrom.github.io/intel_center/"
 languageCode = "es"
 title = "Intel Center"
 theme = "ananke"
-enableRobotsTXT = true     # <--- ESTA ES LA MEJORA M1.4
+
+enableRobotsTXT = true
 buildFuture = true
-buildDrafts = true
+buildDrafts = false   # ⚠️ IMPORTANTE para RRSS (no publiques drafts)
+
 canonifyURLs = true
 relativeURLs = false
 
@@ -14,11 +16,12 @@ relativeURLs = false
   report_type = "report_types"
 
 [menu]
+
   [[menu.main]]
     name = "Mapa"
     url = "/mapa/"
     weight = 10
-  
+
   [[menu.main]]
     name = "Diarios"
     url = "/report_types/diario/"
@@ -60,9 +63,19 @@ relativeURLs = false
     weight = 70
 
 [params]
-  description = "Nodo de inteligencia OSINT - Monitorización global en tiempo real"
-  featured_image = "images/header_intel.jpg"
-  favicon = "favicon.png"
-  site_logo = "favicon.png"
-  # CRÍTICO: URL absoluta para og:image en WhatsApp/Telegram
+
+  description = "Monitor OSINT de tensión geopolítica global con radar dinámico y mapa interactivo en tiempo real."
+
+  # ⚠️ USAR RUTA ABSOLUTA REAL
   images = ["https://mcasrom.github.io/intel_center/images/header_intel.jpg"]
+
+  # Estos dos ayudan a ananke
+  featured_image = "/images/header_intel.jpg"
+  site_logo = "/favicon.png"
+  favicon = "/favicon.png"
+
+  # Forzar twitter card correcta
+  twitter = "summary_large_image"
+
+  # Seguridad extra para OG
+  opengraph = true
