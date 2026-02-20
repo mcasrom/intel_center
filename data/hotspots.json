@@ -5,7 +5,7 @@
         "lon": -100.0,
         "intensity": 15,
         "color": "#2ecc71",
-        "sentiment_index": 0.1224
+        "sentiment_index": 0.1173
     },
     {
         "name": "ESPA\u00d1A",
@@ -53,7 +53,7 @@
         "lon": 45.0,
         "intensity": 15,
         "color": "#2ecc71",
-        "sentiment_index": 0.0543
+        "sentiment_index": 0.0529
     },
     {
         "name": "Asia_Nikkei",
@@ -101,7 +101,7 @@
         "lon": 114.1,
         "intensity": 15,
         "color": "#f1c40f",
-        "sentiment_index": 0.0127
+        "sentiment_index": 0.0161
     },
     {
         "name": "UCRANIA",
@@ -109,6 +109,6 @@
         "lon": 30.5,
         "intensity": 15,
         "color": "#f1c40f",
-        "sentiment_index": -0.0242
+        "sentiment_index": -0.032
     }
 ]
