@@ -41,8 +41,6 @@ nombre_imagen_dinamica = f"{timestamp_img}_trend.png"
 USA_CSV = os.path.join(BASE_DIR, "data/usa_trend.csv")
 SPAIN_CSV = os.path.join(BASE_DIR, "data/spain_trend.csv")
 INDIA_CHINA_CSV = os.path.join(BASE_DIR, "data/india_china_core_trend.csv")
-# --- LOGS ADICIONALES ---
-DIARIO_PATH = "/home/dietpi/intel_center_odroid/automation/intel_final.log"
 
 ZONA_LOCAL = pytz.timezone("Europe/Madrid")
 ahora_local = datetime.now(ZONA_LOCAL)

@@ -1,0 +1,49 @@
+#+TITLE: RADAR SCREEN - INTELIGENCIA SEMANAL
+#+DATE: 2026-02-18 14:56
+
+* VISUALIZACIÓN DE TENSIÓN CIRCULAR
+#+begin_src plantuml :file radar_tension.png
+@startmindmap
+caption Nivel de Tensión Geopolítica
+colors solo
++:<b>RADAR SCREEN</b>
+2026-02-18 14:56;
+++ ARGENTINA <orange>
++++_ Tensión: 48%
+++ Africa_Sahel <orange>
++++_ Tensión: 47%
+++ Asia_Nikkei <green>
++++_ Tensión: 39%
+++ BRASIL <green>
++++_ Tensión: 38%
+++ ESPAÑA <green>
++++_ Tensión: 41%
+++ Europa_DW <orange>
++++_ Tensión: 46%
+++ INDIA_CHINA_CORE <green>
++++_ Tensión: 37%
+++ INDIA_CORE <orange>
++++_ Tensión: 51%
+++ Medio_Oriente <orange>
++++_ Tensión: 47%
+++ Rusia_Eurasia <orange>
++++_ Tensión: 49%
+++ USA_NORTE <green>
++++_ Tensión: 45%
+@endmindmap
+#+end_src
+
+* TABLA DE AUDITORÍA
+| Región | Índice de Tensión |
+| :--- | :--- |
+| ARGENTINA | 48% |
+| Africa_Sahel | 47% |
+| Asia_Nikkei | 39% |
+| BRASIL | 38% |
+| ESPAÑA | 41% |
+| Europa_DW | 46% |
+| INDIA_CHINA_CORE | 37% |
+| INDIA_CORE | 51% |
+| Medio_Oriente | 47% |
+| Rusia_Eurasia | 49% |
+| USA_NORTE | 45% |
