@@ -5,7 +5,7 @@
         "lon": -100.0,
         "intensity": 15,
         "color": "#2ecc71",
-        "sentiment_index": 0.0828
+        "sentiment_index": 0.0785
     },
     {
         "name": "ESPA\u00d1A",
@@ -44,8 +44,8 @@
         "lat": 60.0,
         "lon": 90.0,
         "intensity": 15,
-        "color": "#2ecc71",
-        "sentiment_index": 0.054
+        "color": "#f1c40f",
+        "sentiment_index": 0.0499
     },
     {
         "name": "Medio_Oriente",
@@ -77,7 +77,7 @@
         "lon": 77.2,
         "intensity": 15,
         "color": "#2ecc71",
-        "sentiment_index": 0.0822
+        "sentiment_index": 0.0816
     },
     {
         "name": "CHINA_CORE",
