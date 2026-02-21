@@ -5,7 +5,7 @@
         "lon": -100.0,
         "intensity": 15,
         "color": "#2ecc71",
-        "sentiment_index": 0.1173
+        "sentiment_index": 0.1121
     },
     {
         "name": "ESPA\u00d1A",
@@ -45,15 +45,15 @@
         "lon": 90.0,
         "intensity": 15,
         "color": "#2ecc71",
-        "sentiment_index": 0.0692
+        "sentiment_index": 0.0681
     },
     {
         "name": "Medio_Oriente",
         "lat": 25.0,
         "lon": 45.0,
         "intensity": 15,
-        "color": "#2ecc71",
-        "sentiment_index": 0.0529
+        "color": "#f1c40f",
+        "sentiment_index": 0.0471
     },
     {
         "name": "Asia_Nikkei",
@@ -77,7 +77,7 @@
         "lon": 77.2,
         "intensity": 15,
         "color": "#2ecc71",
-        "sentiment_index": 0.0675
+        "sentiment_index": 0.0666
     },
     {
         "name": "CHINA_CORE",
