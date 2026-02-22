@@ -5,7 +5,7 @@
         "lon": -100.0,
         "intensity": 15,
         "color": "#2ecc71",
-        "sentiment_index": 0.0656
+        "sentiment_index": 0.074
     },
     {
         "name": "ESPA\u00d1A",
@@ -77,7 +77,7 @@
         "lon": 77.2,
         "intensity": 15,
         "color": "#2ecc71",
-        "sentiment_index": 0.0804
+        "sentiment_index": 0.0824
     },
     {
         "name": "CHINA_CORE",
