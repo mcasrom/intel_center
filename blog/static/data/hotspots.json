@@ -37,7 +37,7 @@
         "lon": 10.0,
         "intensity": 15,
         "color": "#f1c40f",
-        "sentiment_index": -0.0252
+        "sentiment_index": -0.0045
     },
     {
         "name": "Rusia_Eurasia",
@@ -45,7 +45,7 @@
         "lon": 90.0,
         "intensity": 15,
         "color": "#f1c40f",
-        "sentiment_index": 0.0361
+        "sentiment_index": 0.0362
     },
     {
         "name": "Medio_Oriente",
@@ -53,7 +53,7 @@
         "lon": 45.0,
         "intensity": 15,
         "color": "#f1c40f",
-        "sentiment_index": 0.0193
+        "sentiment_index": 0.0231
     },
     {
         "name": "Asia_Nikkei",
@@ -77,15 +77,15 @@
         "lon": 77.2,
         "intensity": 15,
         "color": "#2ecc71",
-        "sentiment_index": 0.084
+        "sentiment_index": 0.0838
     },
     {
         "name": "CHINA_CORE",
         "lat": 39.9,
         "lon": 116.4,
         "intensity": 3,
-        "color": "#f1c40f",
-        "sentiment_index": 0.045
+        "color": "#2ecc71",
+        "sentiment_index": 0.07
     },
     {
         "name": "TURQUIA_SABAH",
@@ -101,7 +101,7 @@
         "lon": 114.1,
         "intensity": 15,
         "color": "#2ecc71",
-        "sentiment_index": 0.0591
+        "sentiment_index": 0.0587
     },
     {
         "name": "UCRANIA",
