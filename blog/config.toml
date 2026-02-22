@@ -62,6 +62,12 @@ relativeURLs = false
     url = "/contact/"
     weight = 70
 
+  [[menu.main]]
+    name = "🔔 RSS Feed"
+    url = "/index.xml"
+    weight = 80                     # ponlo al final
+
+
 [params]
 
   description = "Monitor OSINT de tensión geopolítica global con radar dinámico y mapa interactivo en tiempo real."
@@ -84,3 +90,11 @@ relativeURLs = false
   [markup.goldmark]
     [markup.goldmark.renderer]
       unsafe = true   # permite <script> y <canvas> en shortcodes y MD
+[outputs]
+  home = ["HTML", "RSS"]          # genera index.xml en la raíz
+  # Opcional: si quieres RSS también en secciones específicas (ej. /report_types/diario/)
+  # section = ["HTML", "RSS"]
+  # taxonomy = ["HTML"]           # sin RSS en categorías/tags por defecto
+
+[services.rss]
+  limit = 15                    # opcional: limita a los últimos 15 posts (por defecto todos)
