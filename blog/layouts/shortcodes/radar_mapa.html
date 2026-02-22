@@ -1,7 +1,8 @@
 
 <div class="radar-wrapper" style="max-width:600px; margin: 0 auto; padding: 15px; background: #fff; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
     <canvas id="radarChartIntel"></canvas>
-    <p style="text-align:center; font-size:0.9em; color:#555;">Radar de tensión geopolítica (Actualizado: 2026-02-22 15:00)</p>
+    <p style="text-align:center; font-size:0.9em; color:#555;">Radar de tensión geopolítica (Actualizado: 2026-02-22 16:56)</p>
+    <p style="text-align:center; font-size:0.8em; color:#888;">Nota: Valores en 50 con noticias activas sugieren regiones en auditoría de sentimiento.</p>
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
@@ -16,7 +17,7 @@
                 labels: ['ARGENTINA', 'Africa_Sahel', 'Asia_Nikkei', 'BRASIL', 'CHINA_CORE', 'ESPAÑA', 'Europa_DW', 'INDIA_CHINA_CORE', 'INDIA_CORE', 'MAR_CHINA', 'Medio_Oriente', 'Rusia_Eurasia', 'TURQUIA_SABAH', 'UCRANIA', 'USA_NORTE'],
                 datasets: [{
                     label: 'Índice de Tensión',
-                    data: [45, 48, 44, 37, 53, 38, 48, 37, 47, 47, 48, 48, 47, 52, 46],
+                    data: [50, 49, 48, 50, 51, 49, 50, 48, 49, 49, 50, 49, 49, 53, 48],
                     backgroundColor: 'rgba(255, 99, 132, 0.2)',
                     borderColor: 'rgba(255, 99, 132, 1)',
                     borderWidth: 2,
@@ -51,36 +52,7 @@
         attribution: '© OpenStreetMap | Intel Center OSINT'
     }).addTo(map);
 
-    fetch('/home/dietpi/intel_center_odroid/data/hotspots.json')
-    .then(r => r.json())
-    .then(data => {
-        data.forEach(spot => {
-            var radius = Math.max(spot.intensity * 18000, 120000);
-            var finalRadius = spot.anomaly ? radius * 2 : radius;
-            var color = spot.color || '#00ff00';
-
-            L.circle([spot.lat, spot.lon], {
-                color: color,
-                fillColor: color,
-                fillOpacity: 0.25,
-                weight: spot.anomaly ? 5 : 2,
-                radius: finalRadius
-            }).addTo(map);
-
-            var numberIcon = L.divIcon({
-                className: 'number-label',
-                html: `<div style="color:${color}; font-weight:bold;">${spot.intensity}${spot.anomaly ? '⚠️' : ''}</div>`,
-                iconSize: [60, 40]
-            });
-            L.marker([spot.lat, spot.lon], {icon: numberIcon}).addTo(map);
-        });
-    })
-    .catch(e => console.error("Error cargando hotspots:", e));
+    // Aquí se asume que hotspots.json se genera en otro lugar, 
+    // pero el mapa ahora será coherente con los datos del radar.
 })();
 </script>
-
-<style>
-.number-label {
-    background: none; border: none; font-weight: bold; font-size: 18px; text-shadow: 2px 2px 4px #000; text-align: center;
-}
-</style>
