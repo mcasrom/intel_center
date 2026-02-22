@@ -11,9 +11,9 @@
         "name": "ESPA\u00d1A",
         "lat": 40.4,
         "lon": -3.7,
-        "intensity": 5,
+        "intensity": 3,
         "color": "#2ecc71",
-        "sentiment_index": 0.36
+        "sentiment_index": 0.2667
     },
     {
         "name": "ARGENTINA",
@@ -36,8 +36,8 @@
         "lat": 50.0,
         "lon": 10.0,
         "intensity": 15,
-        "color": "#e74c3c",
-        "sentiment_index": -0.0665
+        "color": "#f1c40f",
+        "sentiment_index": -0.0252
     },
     {
         "name": "Rusia_Eurasia",
@@ -45,7 +45,7 @@
         "lon": 90.0,
         "intensity": 15,
         "color": "#f1c40f",
-        "sentiment_index": 0.037
+        "sentiment_index": 0.0361
     },
     {
         "name": "Medio_Oriente",
@@ -77,7 +77,7 @@
         "lon": 77.2,
         "intensity": 15,
         "color": "#2ecc71",
-        "sentiment_index": 0.0839
+        "sentiment_index": 0.084
     },
     {
         "name": "CHINA_CORE",
@@ -101,7 +101,7 @@
         "lon": 114.1,
         "intensity": 15,
         "color": "#2ecc71",
-        "sentiment_index": 0.0654
+        "sentiment_index": 0.0591
     },
     {
         "name": "UCRANIA",
@@ -109,6 +109,6 @@
         "lon": 30.5,
         "intensity": 15,
         "color": "#f1c40f",
-        "sentiment_index": -0.0302
+        "sentiment_index": -0.0318
     }
 ]
