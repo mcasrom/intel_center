@@ -1,0 +1,23 @@
+{{ define "main" }}
+  <main class="w-100 cf" role="main">
+    <article class="center mw9 ph3 ph4-m ph5-l pv3">
+      {{ $reportes := where .Site.RegularPages "Section" "post" }}
+      {{ range first 1 (where $reportes "Title" "like" "REPORT") }}
+          <div class="tc mb4">
+            <h1 class="f1 athelas tracked-tight blue">{{ .Title }}</h1>
+            <div class="f6 fw4 gray tracked uppercase italic">Monitor de Inteligencia en Tiempo Real</div>
+            <hr class="w-40 center b--light-gray">
+          </div>
+          
+          <div class="center w-100 mid-gray lh-copy">
+            {{ .Content }}
+          </div>
+      {{ else }}
+          <div class="tc pv5">
+            <h2 class="f3 gray">Esperando flujo de datos...</h2>
+            <p>Ejecuta el script de Python para generar el primer reporte.</p>
+          </div>
+      {{ end }}
+    </article>
+  </main>
+{{ end }}
