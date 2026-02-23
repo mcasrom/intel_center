@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Metodología on Intel Center</title><link>https://mcasrom.github.io/intel_center/tags/metodolog%C3%ADa/</link><description>Recent content in Metodología on Intel Center</description><generator>Hugo</generator><language>es</language><lastBuildDate>Mon, 23 Feb 2026 19:00:03 +0000</lastBuildDate><atom:link href="https://mcasrom.github.io/intel_center/tags/metodolog%C3%ADa/index.xml" rel="self" type="application/rss+xml"/><item><title>📊 INFORME SEMANAL: Índice Real de Libertades (IRL)</title><link>https://mcasrom.github.io/intel_center/post/2026-02-23-informe-irl-semanal/</link><pubDate>Mon, 23 Feb 2026 14:58:00 +0000</pubDate><guid>https://mcasrom.github.io/intel_center/post/2026-02-23-informe-irl-semanal/</guid><description>&lt;p&gt;weight: 1&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Metodología on Intel Center</title><link>https://mcasrom.github.io/intel_center/tags/metodolog%C3%ADa/</link><description>Recent content in Metodología on Intel Center</description><generator>Hugo</generator><language>es</language><lastBuildDate>Mon, 23 Feb 2026 20:00:03 +0000</lastBuildDate><atom:link href="https://mcasrom.github.io/intel_center/tags/metodolog%C3%ADa/index.xml" rel="self" type="application/rss+xml"/><item><title>📊 INFORME SEMANAL: Índice Real de Libertades (IRL)</title><link>https://mcasrom.github.io/intel_center/post/2026-02-23-informe-irl-semanal/</link><pubDate>Mon, 23 Feb 2026 14:58:00 +0000</pubDate><guid>https://mcasrom.github.io/intel_center/post/2026-02-23-informe-irl-semanal/</guid><description>&lt;p&gt;weight: 1&lt;/p&gt;
 &lt;h1 id="-ranking-global-de-resiliencia-y-libertad-irl"&gt;⚖️ Ranking Global de Resiliencia y Libertad (IRL)&lt;/h1&gt;
 &lt;p&gt;&lt;em&gt;Última actualización: 2026-02-23 14:58:00&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;Este índice combina el marco legal y digital (ONU) con el análisis de sentimiento en tiempo real procesado por este nodo Odroid-C2 sobre una ventana de &lt;strong&gt;90 días&lt;/strong&gt;.&lt;/p&gt;
@@ -126,7 +126,7 @@
 &lt;li&gt;&lt;strong&gt;Ventana de Control ($T_{-1}$):&lt;/strong&gt; Media aritmética del sentimiento del periodo previo (de 24 a 48 horas atrás).&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Cálculo del Delta (Δ):&lt;/strong&gt; La diferencia neta entre ambas ventanas.&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;$$\Delta = \bar{x}(Sentimiento_{Hoy}) - \bar{x}(Sentimiento_{Ayer})$$&lt;/p&gt;</description></item><item><title>Terminología y Acrónimos del Nodo</title><link>https://mcasrom.github.io/intel_center/documentos/terminologia-acronimos/</link><pubDate>Mon, 16 Feb 2026 10:00:00 +0100</pubDate><guid>https://mcasrom.github.io/intel_center/documentos/terminologia-acronimos/</guid><description>&lt;h3 id="-glosario-a-z"&gt;📋 Glosario A-Z&lt;/h3&gt;
+&lt;p&gt;$$\Delta = \bar{x}(Sentimiento_{Hoy}) - \bar{x}(Sentimiento_{Ayer})$$&lt;/p&gt;</description></item><item><title>Terminología y Acrónimos del Nodo</title><link>https://mcasrom.github.io/intel_center/documentos/terminologia-acronimos/</link><pubDate>Mon, 23 Feb 2026 19:39:25 +0000</pubDate><guid>https://mcasrom.github.io/intel_center/documentos/terminologia-acronimos/</guid><description>&lt;h3 id="-glosario-a-z"&gt;📋 Glosario A-Z&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;Alertas Críticas:&lt;/strong&gt; Clasificación de noticias con términos de alta peligrosidad (ej. &amp;ldquo;Ataque&amp;rdquo;, &amp;ldquo;Emergencia&amp;rdquo;). Tienen prioridad visual absoluta.&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Feed:&lt;/strong&gt; Flujo de datos entrante (RSS/API) que provee la materia prima informativa al nodo.&lt;/li&gt;
@@ -143,7 +143,194 @@
 &lt;li&gt;&lt;strong&gt;Vigilancia Electoral:&lt;/strong&gt; Categoría dedicada al seguimiento de procesos de votación y encuestas regionales.&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Volumen:&lt;/strong&gt; Cantidad total de impactos analizados. Es el indicador de la solidez estadística de una tendencia.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;hr&gt;</description></item><item><title>INTEL REPORT: 23/02/2026 19:00 (CET)</title><link>https://mcasrom.github.io/intel_center/post/260223_1900-noticias/</link><pubDate>Mon, 23 Feb 2026 19:00:03 +0000</pubDate><guid>https://mcasrom.github.io/intel_center/post/260223_1900-noticias/</guid><description>&lt;h3 id="-resumen-operativo"&gt;⚡ RESUMEN OPERATIVO&lt;/h3&gt;
+&lt;hr&gt;</description></item><item><title>INTEL REPORT: 23/02/2026 20:00 (CET)</title><link>https://mcasrom.github.io/intel_center/post/260223_2000-noticias/</link><pubDate>Mon, 23 Feb 2026 20:00:03 +0000</pubDate><guid>https://mcasrom.github.io/intel_center/post/260223_2000-noticias/</guid><description>&lt;h3 id="-resumen-operativo"&gt;⚡ RESUMEN OPERATIVO&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;Referencia Temporal:&lt;/strong&gt; 20:00 CET / &lt;strong&gt;2026-02-23 20:00 UTC&lt;/strong&gt;
+Nodo: Odroid-C2 Cluster Principal.&lt;/p&gt;
+&lt;div class="radar-wrapper" style="max-width:550px; margin:0 auto; padding:15px; background:white; border-radius:8px; box-shadow:0 4px 6px rgba(0,0,0,0.1);"&gt;
+ &lt;canvas id="radarChartIntel" style="width:100%; height:420px;"&gt;&lt;/canvas&gt;
+&lt;/div&gt;
+
+&lt;script src="https://cdn.jsdelivr.net/npm/chart.js"&gt;&lt;/script&gt;
+&lt;script&gt;
+(function() {
+ function renderRadar(labels, values) {
+ const canvas = document.getElementById("radarChartIntel");
+ if (!canvas) return;
+
+ const existing = Chart.getChart(canvas);
+ if (existing) existing.destroy();
+
+ new Chart(canvas, {
+ type: "radar",
+ data: {
+ labels: labels,
+ datasets: [{
+ label: "Índice de Tensión (Última ejecución)",
+ data: values,
+ fill: true,
+ backgroundColor: "rgba(220, 38, 38, 0.2)",
+ borderColor: "rgba(220, 38, 38, 1)",
+ borderWidth: 2,
+ pointBackgroundColor: "rgba(220, 38, 38, 1)"
+ }]
+ },
+ options: {
+ responsive: true,
+ maintainAspectRatio: false,
+ scales: {
+ r: { min: 0, max: 100, ticks: { stepSize: 20 } }
+ },
+ plugins: { legend: { position: "top" } }
+ }
+ });
+ }
+
+ window.addEventListener("load", function() {
+ 
+ const labels = ["ARGENTINA","Africa_Sahel","Asia_Nikkei","BRASIL","CHINA_CORE","ESPAÑA","Europa_DW","INDIA_CHINA_CORE","INDIA_CORE","MAR_CHINA","Medio_Oriente","Rusia_Eurasia","TURQUIA_SABAH","UCRANIA","USA_NORTE"];
+ const values = [46,48,42,47,53,38,47,37,48,51,46,48,47,53,45]; 
+
+ renderRadar(labels, values);
+ });
+})();
+&lt;/script&gt;
+
+&lt;h4 id="-evolución-de-sentimiento-varianza-24h"&gt;📊 EVOLUCIÓN DE SENTIMIENTO (VARIANZA 24H)&lt;/h4&gt;
+&lt;table&gt;
+ &lt;thead&gt;
+ &lt;tr&gt;
+ &lt;th style="text-align: left"&gt;Región&lt;/th&gt;
+ &lt;th style="text-align: left"&gt;Hoy&lt;/th&gt;
+ &lt;th style="text-align: left"&gt;Ayer&lt;/th&gt;
+ &lt;th style="text-align: left"&gt;Δ Hist (30d)&lt;/th&gt;
+ &lt;th style="text-align: left"&gt;Estado&lt;/th&gt;
+ &lt;/tr&gt;
+ &lt;/thead&gt;
+ &lt;tbody&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: left"&gt;USA_NORTE&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;-0.3080&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;-0.3541&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;-0.3080&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;⚠ Tensión&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: left"&gt;ESPAÑA&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;-0.4667&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;-0.3325&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;-0.4667&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;⚠ Tensión&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: left"&gt;ARGENTINA&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;-0.5560&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;-0.3025&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;-0.5560&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;⚠ Tensión&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: left"&gt;BRASIL&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;-0.3738&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;-0.1200&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;-0.3738&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;⚠ Tensión&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: left"&gt;Europa_DW&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;-0.3424&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;0.0356&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;-0.3424&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;⚠ Tensión&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: left"&gt;Rusia_Eurasia&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;-0.0072&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;0.1500&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;-0.0072&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;⚪ Estable&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: left"&gt;Medio_Oriente&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;-0.4133&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;-0.1854&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;-0.4133&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;⚠ Tensión&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: left"&gt;Asia_Nikkei&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;-0.0583&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;0.1537&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;-0.0583&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;⚪ Estable&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: left"&gt;Africa_Sahel&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;-0.4620&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;0.1767&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;-0.4620&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;⚠ Tensión&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: left"&gt;INDIA_CORE&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;-0.0863&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;-0.1006&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;+0.0143&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;⚪ Estable&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: left"&gt;CHINA_CORE&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;0.0000&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;0.0000&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;+0.0000&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;⚪ Estable&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: left"&gt;TURQUIA_SABAH&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;0.0047&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;0.0487&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;-0.0440&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;⚪ Estable&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: left"&gt;MAR_CHINA&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;-0.0622&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;-0.1803&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;+0.1182&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;🔴 Escalada&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: left"&gt;UCRANIA&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;-0.3449&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;-0.4242&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;+0.0794&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;🔴 Escalada&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h4 id="-radares-de-tendencia"&gt;📊 RADARES DE TENDENCIA&lt;/h4&gt;
+&lt;table&gt;
+ &lt;thead&gt;
+ &lt;tr&gt;
+ &lt;th style="text-align: left"&gt;Región&lt;/th&gt;
+ &lt;th style="text-align: left"&gt;Sentiment&lt;/th&gt;
+ &lt;/tr&gt;
+ &lt;/thead&gt;
+ &lt;tbody&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: left"&gt;🇺🇸 USA&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;-0.2731&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: left"&gt;🇪🇸 ESPAÑA&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;-0.4667&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: left"&gt;🌏 INDIA-CHINA&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;-0.0491&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;&lt;img src="https://mcasrom.github.io/intel_center/images/260223_2000_trend.png" alt="Tendencias"&gt;&lt;/p&gt;</description></item><item><title>INTEL REPORT: 23/02/2026 19:00 (CET)</title><link>https://mcasrom.github.io/intel_center/post/260223_1900-noticias/</link><pubDate>Mon, 23 Feb 2026 19:00:03 +0000</pubDate><guid>https://mcasrom.github.io/intel_center/post/260223_1900-noticias/</guid><description>&lt;h3 id="-resumen-operativo"&gt;⚡ RESUMEN OPERATIVO&lt;/h3&gt;
 &lt;p&gt;&lt;strong&gt;Referencia Temporal:&lt;/strong&gt; 19:00 CET / &lt;strong&gt;2026-02-23 19:00 UTC&lt;/strong&gt;
 Nodo: Odroid-C2 Cluster Principal.&lt;/p&gt;
 &lt;div class="radar-wrapper" style="max-width:550px; margin:0 auto; padding:15px; background:white; border-radius:8px; box-shadow:0 4px 6px rgba(0,0,0,0.1);"&gt;
@@ -1560,10 +1747,4 @@ Nodo: Odroid-C2 Cluster Principal.&lt;/p&gt;
 &lt;li&gt;&lt;strong&gt;P_Legal:&lt;/strong&gt; Robustez del marco jurídico en protección de la expresión.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3 id="2-el-diferencial-de-disonancia-análisis-de-gap"&gt;2. El Diferencial de Disonancia (Análisis de GAP)&lt;/h3&gt;
-&lt;p&gt;Herramienta clave para la detección de propaganda. Se calcula restando el sentimiento de la fuente oficial del sentimiento de la fuente de contraste:&lt;/p&gt;</description></item><item><title>Metodología: Gestión de Zonas de Silencio Informativo</title><link>https://mcasrom.github.io/intel_center/metodologia/sesgo-metodolog%C3%ADa/</link><pubDate>Thu, 19 Feb 2026 17:00:00 +0000</pubDate><guid>https://mcasrom.github.io/intel_center/metodologia/sesgo-metodolog%C3%ADa/</guid><description>&lt;h1 id="-auditoría-de-datos-el-problema-del-00"&gt;🕵️‍♂️ Auditoría de Datos: El Problema del 0.0&lt;/h1&gt;
-&lt;p&gt;En el despliegue del nodo &lt;strong&gt;Odroid-C2&lt;/strong&gt;, se ha identificado una anomalía crítica en el cálculo de varianza para &lt;strong&gt;España&lt;/strong&gt; y &lt;strong&gt;Argentina&lt;/strong&gt;. Aunque la ingesta de noticias es funcional (N=11 y N=13 respectivamente), el sentimiento promediado es nulo.&lt;/p&gt;
-&lt;h2 id="-identificación-del-error"&gt;🔍 Identificación del Error&lt;/h2&gt;
-&lt;p&gt;El comando de depuración CLI reveló:
-&lt;code&gt;ARGENTINA|0.0|13&lt;/code&gt;
-&lt;code&gt;ESPAÑA|0.0|11&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;Esto indica que las noticias existen en la tabla &lt;code&gt;news&lt;/code&gt;, pero el motor de Procesamiento de Lenguaje Natural (NLP) no está asignando un score.&lt;/p&gt;</description></item></channel></rss>
+&lt;p&gt;Herramienta clave para la detección de propaganda. Se calcula restando el sentimiento de la fuente oficial del sentimiento de la fuente de contraste:&lt;/p&gt;</description></item></channel></rss>
