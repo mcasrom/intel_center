@@ -36,17 +36,7 @@
 &lt;li&gt;&lt;strong&gt;Ventana de Control ($T_{-1}$):&lt;/strong&gt; Media aritmética del sentimiento del periodo previo (de 24 a 48 horas atrás).&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Cálculo del Delta (Δ):&lt;/strong&gt; La diferencia neta entre ambas ventanas.&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;$$\Delta = \bar{x}(Sentimiento_{Hoy}) - \bar{x}(Sentimiento_{Ayer})$$&lt;/p&gt;</description></item><item><title>Metodología y Criterios: Volumen y Sentimiento</title><link>https://mcasrom.github.io/intel_center/post/metodologia-analisis/</link><pubDate>Sun, 15 Feb 2026 10:00:00 +0100</pubDate><guid>https://mcasrom.github.io/intel_center/post/metodologia-analisis/</guid><description>&lt;h3 id="-fundamentos-del-nodo-odroid-c2"&gt;🧠 Fundamentos del Nodo Odroid-C2&lt;/h3&gt;
-&lt;p&gt;Este portal de inteligencia opera bajo un modelo de procesamiento local y descentralizado. A continuación, se detallan los criterios técnicos que rigen la generación de informes.&lt;/p&gt;
-&lt;h3 id="-1-el-parámetro-volumen"&gt;📊 1. El Parámetro &amp;ldquo;Volumen&amp;rdquo;&lt;/h3&gt;
-&lt;p&gt;En las tablas estratégicas, el &lt;strong&gt;Volumen&lt;/strong&gt; es la métrica de confianza.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Definición:&lt;/strong&gt; Representa el número total de noticias únicas procesadas y clasificadas para una región específica.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Interpretación:&lt;/strong&gt; Un volumen bajo (ej. &amp;lt;5) indica una anécdota informativa. Un volumen alto (&amp;gt;50) confirma una tendencia sólida en la narrativa regional.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Cálculo:&lt;/strong&gt; Es el sumatorio de registros (&lt;code&gt;COUNT&lt;/code&gt;) en la base de datos SQL del nodo durante el periodo analizado.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id="-2-índice-de-sentimiento-nlp"&gt;📈 2. Índice de Sentimiento (NLP)&lt;/h3&gt;
-&lt;p&gt;Cada titular pasa por un motor de Procesamiento de Lenguaje Natural (NLP) que asigna un valor numérico:&lt;/p&gt;</description></item><item><title>Metodología OSINT: El Libro Blanco del Nodo</title><link>https://mcasrom.github.io/intel_center/post/metodologia-libro-blanco/</link><pubDate>Sun, 08 Feb 2026 23:04:22 +0100</pubDate><guid>https://mcasrom.github.io/intel_center/post/metodologia-libro-blanco/</guid><description>&lt;h3 id="1-introducción"&gt;1. Introducción&lt;/h3&gt;
+&lt;p&gt;$$\Delta = \bar{x}(Sentimiento_{Hoy}) - \bar{x}(Sentimiento_{Ayer})$$&lt;/p&gt;</description></item><item><title>Metodología OSINT: El Libro Blanco del Nodo</title><link>https://mcasrom.github.io/intel_center/post/metodologia-libro-blanco/</link><pubDate>Sun, 08 Feb 2026 23:04:22 +0100</pubDate><guid>https://mcasrom.github.io/intel_center/post/metodologia-libro-blanco/</guid><description>&lt;h3 id="1-introducción"&gt;1. Introducción&lt;/h3&gt;
 &lt;p&gt;El Intel Center opera bajo una arquitectura de &lt;strong&gt;&amp;ldquo;Texto a Números&amp;rdquo;&lt;/strong&gt;. El motor procesa fuentes globales en tiempo real utilizando NLP para convertir narrativas en indicadores cuantitativos.&lt;/p&gt;
 &lt;h3 id="2-el-semáforo-de-tensión-umbral-005"&gt;2. El Semáforo de Tensión (Umbral ±0.05)&lt;/h3&gt;
 &lt;p&gt;Hemos establecido un umbral de &lt;strong&gt;±0.05&lt;/strong&gt; para filtrar el &amp;ldquo;Ruido Basal Diplomático&amp;rdquo; (palabras como &amp;ldquo;preocupación&amp;rdquo; o &amp;ldquo;discusión&amp;rdquo; que sesgan los diccionarios estándar).&lt;/p&gt;
