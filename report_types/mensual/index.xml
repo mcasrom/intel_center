@@ -1,4 +1,5 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Mensual on Intel Center</title><link>https://mcasrom.github.io/intel_center/report_types/mensual/</link><description>Recent content in Mensual on Intel Center</description><generator>Hugo</generator><language>es</language><lastBuildDate>Sun, 22 Feb 2026 17:11:05 +0000</lastBuildDate><atom:link href="https://mcasrom.github.io/intel_center/report_types/mensual/index.xml" rel="self" type="application/rss+xml"/><item><title>Informe Mensual de Inteligencia: February 2026</title><link>https://mcasrom.github.io/intel_center/post/2602-informe-mensual/</link><pubDate>Sun, 22 Feb 2026 17:11:05 +0000</pubDate><guid>https://mcasrom.github.io/intel_center/post/2602-informe-mensual/</guid><description>&lt;h2 id="-análisis-de-volumen-mensual"&gt;📊 Análisis de Volumen Mensual&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Mensual on Intel Center</title><link>https://mcasrom.github.io/intel_center/report_types/mensual/</link><description>Recent content in Mensual on Intel Center</description><generator>Hugo</generator><language>es</language><lastBuildDate>Sun, 22 Feb 2026 17:11:05 +0000</lastBuildDate><atom:link href="https://mcasrom.github.io/intel_center/report_types/mensual/index.xml" rel="self" type="application/rss+xml"/><item><title>Informe Mensual de Inteligencia: February 2026</title><link>https://mcasrom.github.io/intel_center/post/2602-informe-mensual/</link><pubDate>Sun, 22 Feb 2026 17:11:05 +0000</pubDate><guid>https://mcasrom.github.io/intel_center/post/2602-informe-mensual/</guid><description>&lt;p&gt;weight: 5&lt;/p&gt;
+&lt;h2 id="-análisis-de-volumen-mensual"&gt;📊 Análisis de Volumen Mensual&lt;/h2&gt;
 &lt;p&gt;&lt;img src="../../images/mensuales/volumen-2602.png" alt="Volumen Diario"&gt;&lt;/p&gt;
 &lt;h3 id="-balance-regional-de-sentimiento-30-días"&gt;🌏 Balance Regional de Sentimiento (30 días)&lt;/h3&gt;
 &lt;table&gt;
@@ -11,6 +12,12 @@
  &lt;/tr&gt;
  &lt;/thead&gt;
  &lt;tbody&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: left"&gt;weight: 5&lt;/td&gt;
+ &lt;td&gt;&lt;/td&gt;
+ &lt;td&gt;&lt;/td&gt;
+ &lt;td&gt;&lt;/td&gt;
+ &lt;/tr&gt;
  &lt;tr&gt;
  &lt;td style="text-align: left"&gt;ARGENTINA&lt;/td&gt;
  &lt;td style="text-align: center"&gt;-0.002&lt;/td&gt;
