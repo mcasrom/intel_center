@@ -1,31 +1,31 @@
 ---
-title: "Metodología y Criterios: Volumen y Sentimiento"
-date: 2026-02-15T10:00:00+01:00
-report_types: ["metodologia"]
-tags: ["metodología", "osint", "documentación"]
-description: "Explicación detallada sobre el cálculo del Volumen y el Índice de Sentimiento del nodo."
+title: "Metodología de Análisis e Inteligencia de Datos"
+date: 2026-02-23T09:55:00
+author: "M. Castillo"
+tags: ["Metodología", "Documentos", "IRL", "Inteligencia"]
+categories: ["Protocolos"]
 ---
 
-### 🧠 Fundamentos del Nodo Odroid-C2
-Este portal de inteligencia opera bajo un modelo de procesamiento local y descentralizado. A continuación, se detallan los criterios técnicos que rigen la generación de informes.
+## 🏛️ Marco Metodológico: Índice de Realidad de Libertad (IRL)
 
-### 📊 1. El Parámetro "Volumen"
-En las tablas estratégicas, el **Volumen** es la métrica de confianza. 
-* **Definición:** Representa el número total de noticias únicas procesadas y clasificadas para una región específica.
-* **Interpretación:** Un volumen bajo (ej. <5) indica una anécdota informativa. Un volumen alto (>50) confirma una tendencia sólida en la narrativa regional.
-* **Cálculo:** Es el sumatorio de registros (`COUNT`) en la base de datos SQL del nodo durante el periodo analizado.
+Este documento define los criterios técnicos utilizados por el nodo Odroid-C2 para auditar la salud informativa global. Bajo la supervisión de **M. Castillo**, el sistema procesa datos en tres capas de profundidad:
 
-### 📈 2. Índice de Sentimiento (NLP)
-Cada titular pasa por un motor de Procesamiento de Lenguaje Natural (NLP) que asigna un valor numérico:
-* **Valores Positivos (>0.05):** Narrativas de estabilidad, acuerdos o avances.
-* **Rango Neutral (-0.05 a 0.05):** Información puramente fáctica o sin carga emocional.
-* **Valores Negativos (<-0.05):** Retórica de conflicto, crisis o alertas de seguridad.
+### 1. Vectores de Auditoría Estructural (Macro)
+La base del índice se calcula mediante la media ponderada de:
+* **P_Prensa:** Capacidad de ejercicio periodístico sin coacción.
+* **P_Digital:** Nivel de apertura de la red y ausencia de firewalls estatales.
+* **P_Legal:** Robustez del marco jurídico en protección de la expresión.
 
-### 🔄 3. Comparativa de Tendencias
-Comparamos el sentimiento medio de los últimos 7 días contra los 14 días previos para determinar la **Evolución**:
-* **Mejorando:** El índice se desplaza hacia valores positivos.
-* **Deterioro:** El índice cae hacia valores negativos.
-* **Estable:** La variación es menor al 5%.
+### 2. El Diferencial de Disonancia (Análisis de GAP)
+Herramienta clave para la detección de propaganda. Se calcula restando el sentimiento de la fuente oficial del sentimiento de la fuente de contraste:
+> 1735GAP = |Sentimiento_{Oficial} - Sentimiento_{Oposición}|1735
+* Un **GAP > 0.6** dispara una alerta de conflicto narrativo o desinformación activa.
+
+### 3. Dinámica de Sentimiento IA
+Escaneo en tiempo real de la polaridad de las noticias. Los valores fluctúan entre **-1.0 (Crisis/Caos)** y **+1.0 (Estabilidad/Progreso)**.
 
 ---
-*Este documento es dinámico y se actualiza conforme evolucionan los algoritmos de clasificación del nodo.*
+### 🛡️ Registro de Actualización (Feb 2026)
+Se han integrado estos vectores para permitir la trazabilidad evolutiva de 90 días y el ranking rotatorio de países.
+
+**Responsable del Nodo:** M. Castillo
