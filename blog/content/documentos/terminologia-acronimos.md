@@ -1,6 +1,6 @@
 ---
 title: "Terminología y Acrónimos del Nodo"
-date: 2026-02-16T10:00:00+01:00
+date: 2026-02-23T19:39:25.155465
 report_types: ["metodologia"]
 tags: [ "metodología", "documentacion", "glosario", "osint"]
 weight: 5
@@ -24,4 +24,3 @@ weight: 5
 * **Volumen:** Cantidad total de impactos analizados. Es el indicador de la solidez estadística de una tendencia.
 
 ---
-

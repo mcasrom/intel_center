@@ -65,3 +65,7 @@ Ejecutado el: 2026-02-23 17:48:58
 ## 🧹 Informe de Limpieza (Curator)
 Ejecutado el: 2026-02-23 18:10:01
 - **Estado**: Sistema limpio, sin archivos corruptos detectados.
+
+
+## 📚 Diccionario Actualizado
+Se han identificado e incorporado: FACTBOX, EU, EUCOM, ALERTAS CRÍTICAS, GLOBAL, DE TENSIÓN, ALERTAS DE VOLUMEN, ETA, INFORME SEMANAL, AUDITORÍA
