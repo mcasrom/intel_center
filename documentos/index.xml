@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Documentos on Intel Center</title><link>https://mcasrom.github.io/intel_center/documentos/</link><description>Recent content in Documentos on Intel Center</description><generator>Hugo</generator><language>es</language><lastBuildDate>Mon, 23 Feb 2026 19:39:25 +0000</lastBuildDate><atom:link href="https://mcasrom.github.io/intel_center/documentos/index.xml" rel="self" type="application/rss+xml"/><item><title>📌 MANUAL: Operaciones e Interpretación de Inteligencia</title><link>https://mcasrom.github.io/intel_center/documentos/guia-interpretacion-nodos/</link><pubDate>Fri, 06 Feb 2026 17:00:00 +0000</pubDate><guid>https://mcasrom.github.io/intel_center/documentos/guia-interpretacion-nodos/</guid><description>&lt;p&gt;📌 &lt;strong&gt;PROTOCOLO DE INTELIGENCIA CONSOLIDADO (v2.1)&lt;/strong&gt;&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Documentos on Intel Center</title><link>https://mcasrom.github.io/intel_center/documentos/</link><description>Recent content in Documentos on Intel Center</description><generator>Hugo</generator><language>es</language><lastBuildDate>Mon, 23 Feb 2026 20:00:00 +0000</lastBuildDate><atom:link href="https://mcasrom.github.io/intel_center/documentos/index.xml" rel="self" type="application/rss+xml"/><item><title>📌 MANUAL: Operaciones e Interpretación de Inteligencia</title><link>https://mcasrom.github.io/intel_center/documentos/guia-interpretacion-nodos/</link><pubDate>Fri, 06 Feb 2026 17:00:00 +0000</pubDate><guid>https://mcasrom.github.io/intel_center/documentos/guia-interpretacion-nodos/</guid><description>&lt;p&gt;📌 &lt;strong&gt;PROTOCOLO DE INTELIGENCIA CONSOLIDADO (v2.1)&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;Este documento define la metodología aplicada por el motor OSINT de la &lt;strong&gt;Odroid-C2&lt;/strong&gt; para transformar datos masivos en indicadores tácticos.&lt;/p&gt;
 &lt;h4 id="1-semáforo-de-tensión-y-dinámica-política"&gt;1. Semáforo de Tensión y Dinámica Política&lt;/h4&gt;
 &lt;p&gt;El color de cada nodo se calcula mediante NLP y detección de contextos:&lt;/p&gt;
@@ -9,21 +9,26 @@
 &lt;li&gt;🔴 &lt;strong&gt;Rojo (Hostilidad)&lt;/strong&gt;: Polaridad &lt;strong&gt;&amp;lt; -0.05&lt;/strong&gt;. Conflictos o inestabilidad grave.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h4 id="2-clasificación-de-alertas"&gt;2. Clasificación de Alertas&lt;/h4&gt;
-&lt;p&gt;Jerarquía de prioridad para el analista:&lt;/p&gt;</description></item><item><title>Terminología y Acrónimos del Nodo</title><link>https://mcasrom.github.io/intel_center/documentos/terminologia-acronimos/</link><pubDate>Mon, 23 Feb 2026 19:39:25 +0000</pubDate><guid>https://mcasrom.github.io/intel_center/documentos/terminologia-acronimos/</guid><description>&lt;h3 id="-glosario-a-z"&gt;📋 Glosario A-Z&lt;/h3&gt;
+&lt;p&gt;Jerarquía de prioridad para el analista:&lt;/p&gt;</description></item><item><title>Terminología y Acrónimos del Nodo</title><link>https://mcasrom.github.io/intel_center/documentos/terminologia-acronimos/</link><pubDate>Mon, 23 Feb 2026 20:00:00 +0000</pubDate><guid>https://mcasrom.github.io/intel_center/documentos/terminologia-acronimos/</guid><description>&lt;h3 id="-glosario-a-z"&gt;📋 Glosario A-Z&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Alertas Críticas:&lt;/strong&gt; Clasificación de noticias con términos de alta peligrosidad (ej. &amp;ldquo;Ataque&amp;rdquo;, &amp;ldquo;Emergencia&amp;rdquo;). Tienen prioridad visual absoluta.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Feed:&lt;/strong&gt; Flujo de datos entrante (RSS/API) que provee la materia prima informativa al nodo.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Hotspot:&lt;/strong&gt; Punto de alta actividad informativa. Se define por la convergencia de una alta &lt;strong&gt;Intensidad&lt;/strong&gt; de noticias y un nivel de &lt;strong&gt;Tensión&lt;/strong&gt; significativo en el sentimiento regional.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Intensidad:&lt;/strong&gt; Métrica que cuantifica la frecuencia de impactos en un intervalo de tiempo reducido. Una intensidad alta indica un evento de rápida evolución.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Líderes:&lt;/strong&gt; Actores clave o figuras de influencia detectadas que marcan la agenda informativa del periodo analizado.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;NLP (Natural Language Processing):&lt;/strong&gt; Procesamiento de Lenguaje Natural. Tecnología para calificar el sentimiento de los titulares.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Nodo:&lt;/strong&gt; Unidad física de procesamiento local (&lt;strong&gt;Odroid-C2&lt;/strong&gt;) que ejecuta el análisis de forma descentralizada.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;OSINT (Open Source Intelligence):&lt;/strong&gt; Inteligencia de Fuentes Abiertas basada en datos públicos y legales.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Sentimiento (Sent):&lt;/strong&gt; Valor numérico entre -1 y +1 que mide la carga emocional de una narrativa.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;SQLite:&lt;/strong&gt; Base de datos relacional local que almacena el histórico operativo del nodo.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Taxonomía:&lt;/strong&gt; Sistema de organización (Diarios, Semanales, Metodología) para filtrar la inteligencia.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Tensión:&lt;/strong&gt; Indicador del nivel de conflicto o fricción narrativa. Se calcula según la desviación del sentimiento hacia valores negativos o polarizados.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Vigilancia Electoral:&lt;/strong&gt; Categoría dedicada al seguimiento de procesos de votación y encuestas regionales.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Volumen:&lt;/strong&gt; Cantidad total de impactos analizados. Es el indicador de la solidez estadística de una tendencia.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Alertas Críticas&lt;/strong&gt;: Clasificación de noticias con términos de alta peligrosidad.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Feed&lt;/strong&gt;: Flujo de datos entrante (RSS/API).&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Hotspot&lt;/strong&gt;: Punto de alta actividad informativa regional.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Intensidad&lt;/strong&gt;: Métrica de frecuencia de impactos.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Líderes&lt;/strong&gt;: Actores clave detectados en la agenda.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;NLP&lt;/strong&gt;: Procesamiento de Lenguaje Natural para sentimiento.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Nodo&lt;/strong&gt;: Unidad física de procesamiento local (Odroid-C2).&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;OSINT&lt;/strong&gt;: Inteligencia de Fuentes Abiertas.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Sentimiento&lt;/strong&gt;: Valor numérico (-1 a +1) de carga emocional.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;SQLite&lt;/strong&gt;: Base de datos relacional local.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Taxonomía&lt;/strong&gt;: Sistema de organización de inteligencia.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Tensión&lt;/strong&gt;: Indicador de conflicto o fricción narrativa.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Vigilancia Electoral&lt;/strong&gt;: Seguimiento de procesos de votación.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Volumen&lt;/strong&gt;: Cantidad total de impactos analizados.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;hr&gt;</description></item></channel></rss>
+&lt;h3 id="actualización-automática-23022026"&gt;Actualización Automática (23/02/2026)&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;AI&lt;/strong&gt;: Inteligencia Artificial&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;IRL&lt;/strong&gt;: Índice Real de Libertades&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;TASS&lt;/strong&gt;: Agencia rusa&lt;/li&gt;
+&lt;/ul&gt;</description></item></channel></rss>
