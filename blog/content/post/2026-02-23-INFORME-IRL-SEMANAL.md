@@ -1,9 +1,11 @@
 ---
-title: "Índice de Resiliencia y Libertad (IRL): Reporte Trimestral Rotativo"
+weight: 1
+title: "📊 INFORME SEMANAL: Índice Real de Libertades (IRL)"
 date: 2026-02-23T14:58:00
 draft: false
 tags: ["Geopolítica", "Ranking", "metodología", "Libertad"]
 ---
+weight: 1
 
 # ⚖️ Ranking Global de Resiliencia y Libertad (IRL)
 *Última actualización: 2026-02-23 14:58:00*
@@ -12,6 +14,7 @@ Este índice combina el marco legal y digital (ONU) con el análisis de sentimie
 
 | Puesto | Región | Índice IRL | Sent. 90d (IA) | Estado | Noticias |
 | :--- | :--- | :---: | :---: | :---: | :---: |
+weight: 1
 | 1 | **Europa_DW** | 76.82 | 0.003 | ✅ Robusta | 452 |
 | 2 | **ESPAÑA** | 73.23 | -0.003 | ✅ Robusta | 239 |
 | 3 | **USA_NORTE** | 72.14 | 0.018 | ✅ Robusta | 409 |

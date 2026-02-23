@@ -1,4 +1,5 @@
 ---
+weight: 2
 title: "Metodología: Análisis de Varianza de Sentimiento"
 date: 2026-02-17T15:35:00+01:00
 report_types: ["metodologia"]
@@ -6,6 +7,7 @@ tags: ["Metodología", "Documentos", "OSINT", "Análisis"]
 draft: false
 type: "post"
 ---
+weight: 2
 
 ### 📘 Introducción al Cálculo de Varianza Narrativa
 
@@ -36,5 +38,6 @@ Los informes de varianza clasifican automáticamente la tendencia según los sig
 * **Persistencia:** Todos los registros históricos se almacenan en el directorio `/data/` para auditorías posteriores.
 
 ---
+weight: 2
 *Este documento define el estándar de análisis para los informes automáticos de este centro de inteligencia.*
 

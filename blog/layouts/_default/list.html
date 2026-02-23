@@ -1,11 +1,25 @@
 {{ define "main" }}
-  <section class="mw8 center pv4">
-    <h1 class="f2 navy ph3">{{ .Title }}</h1>
-    {{ range .Paginator.Pages }}
-      <div class="mb4 pa3 bt b--light-gray">
-        <h2 class="f3 athelas"><a href="{{ .Permalink }}" class="navy no-underline">{{ .Title }}</a></h2>
-        <div class="f5 lh-copy mid-gray">{{ .Summary }}</div>
+  <main class="pb7" role="main">
+    <article class="cf pa3 pa4-m pa4-l">
+      <header class="f4 mw8 center">
+        <h1 class="f2 navy lh-title mb3">{{ .Title }}</h1>
+      </header>
+      <div class="mw9 center flex-l flex-wrap-l justify-start-l">
+        {{ range .Pages.ByWeight }}
+          <div class="w-100 w-33-l mb4 ph2-l">
+            <div class="ba b--light-gray pa3 br2 shadow-4 bg-white h-100 flex flex-column justify-between">
+              <div>
+                <span class="f7 gray uppercase tracked">{{ .Date.Format "Jan 02, 2006" }}</span>
+                <h2 class="f4 navy athelas mt2">{{ .Title }}</h2>
+                <div class="f6 lh-copy mid-gray">
+                  {{ .Summary | truncate 120 }}
+                </div>
+              </div>
+              <a href="{{ .Permalink }}" class="ba b--blue blue br1 pa2 mt3 db tc f7 uppercase no-underline">Consultar</a>
+            </div>
+          </div>
+        {{ end }}
       </div>
-    {{ end }}
-  </section>
+    </article>
+  </main>
 {{ end }}

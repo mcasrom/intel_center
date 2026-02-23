@@ -1,6 +1,5 @@
 ---
-title: "Informes de Inteligencia"
-type: "post"
+title: "Centro de Informes"
+description: "Archivo histórico de inteligencia OSINT: Diarios, Semanales y Mensuales."
 layout: "list"
 ---
-Listado de reportes diarios procesados por el nodo.
