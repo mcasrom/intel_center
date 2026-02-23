@@ -1,0 +1,11 @@
+{{ define "main" }}
+  <section class="mw8 center pv4">
+    <h1 class="f2 navy ph3">{{ .Title }}</h1>
+    {{ range .Paginator.Pages }}
+      <div class="mb4 pa3 bt b--light-gray">
+        <h2 class="f3 athelas"><a href="{{ .Permalink }}" class="navy no-underline">{{ .Title }}</a></h2>
+        <div class="f5 lh-copy mid-gray">{{ .Summary }}</div>
+      </div>
+    {{ end }}
+  </section>
+{{ end }}

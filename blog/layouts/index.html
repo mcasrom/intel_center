@@ -1,23 +1,42 @@
 {{ define "main" }}
-  <main class="w-100 cf" role="main">
-    <article class="center mw9 ph3 ph4-m ph5-l pv3">
-      {{ $reportes := where .Site.RegularPages "Section" "post" }}
-      {{ range first 1 (where $reportes "Title" "like" "REPORT") }}
-          <div class="tc mb4">
-            <h1 class="f1 athelas tracked-tight blue">{{ .Title }}</h1>
-            <div class="f6 fw4 gray tracked uppercase italic">Monitor de Inteligencia en Tiempo Real</div>
-            <hr class="w-40 center b--light-gray">
+  <div class="w-100 ph3 ph4-m ph5-l">
+    <header class="mw9 center pv4 mb4 bt bb b--light-gray bg-near-white ph4 br2 shadow-4">
+      <div class="flex-l items-start justify-between">
+        <div class="w-100 w-70-l">
+          <h1 class="f2 f1-l fw6 navy mb0 mt0">🛰️ INTEL CENTER ODROID-C2</h1>
+          <h2 class="f4 fw4 i gray mt1 mb3">Nodo de Vigilancia Geopolítica Descentralizada</h2>
+          
+          <div class="f5 lh-copy mid-gray measure-wide">
+            <p>Este nodo operativo constituye una infraestructura <strong>OSINT (Open Source Intelligence)</strong> de soberanía propia, diseñada para filtrar y procesar flujos masivos de datos globales de forma autónoma.</p>
+            
+            <p>Utilizando un cluster de hardware <strong>ARM (Odroid-C2)</strong>, el sistema aplica modelos de <strong>NLP (Procesamiento de Lenguaje Natural)</strong> para detectar variaciones en el sentimiento político, tensiones bélicas y dinámicas diplomáticas en 14 regiones estratégicas. El objetivo es transformar el ruido informativo en <strong>indicadores tácticos</strong> de libre acceso.</p>
           </div>
           
-          <div class="center w-100 mid-gray lh-copy">
-            {{ .Content }}
+          <div class="f6 fw6 silver mt3 uppercase tracked">
+            Operador: M. Castillo — Firmware v2.2 — Basado en Debian/Linux
           </div>
-      {{ else }}
-          <div class="tc pv5">
-            <h2 class="f3 gray">Esperando flujo de datos...</h2>
-            <p>Ejecuta el script de Python para generar el primer reporte.</p>
+        </div>
+
+        <div class="w-100 w-25-l mt4 mt0-l">
+          <div class="bg-white pa3 ba b--light-gray br3 tc shadow-inner">
+             <span class="db f7 fw7 mid-gray uppercase tracked mb2">Sincronización del Nodo</span>
+             <div class="f3 fw6 dark-green">🟢 ONLINE</div>
+             <hr class="mw3 center b--light-gray mv2">
+             <span class="db f7 gray i">Soberanía de Datos: Activa</span>
+             <span class="db f7 gray mt2">Arquitectura: Descentralizada</span>
           </div>
+        </div>
+      </div>
+    </header>
+
+    <section class="center mw9">
+      {{ $reportes := (where .Site.RegularPages "Section" "post") }}
+      {{ range first 1 (where $reportes "Title" "like" "REPORT") }}
+        <article class="cf">
+          <h3 class="f1 athelas tracked-tight dark-blue tc mb4">{{ .Title }}</h3>
+          <div class="center w-100 mid-gray">{{ .Content }}</div>
+        </article>
       {{ end }}
-    </article>
-  </main>
+    </section>
+  </div>
 {{ end }}

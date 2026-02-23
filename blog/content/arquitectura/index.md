@@ -1,4 +1,5 @@
 ---
+type: "arquitectura"
 title: "Arquitectura del Sistema: Inteligencia en Tiempo Real con Alta Disponibilidad"
 date: 2026-02-18T08:30:00+01:00
 draft: false
@@ -7,6 +8,7 @@ categories: ["Infraestructura", "Soberanía de Datos"]
 author: "Odroid-C2 Cluster"
 background_image: "/images/monitor_intel_center_architecture.png" # Mantener la original o actualizar si la nueva imagen es para el fondo.
 ---
+type: "arquitectura"
 
 ### Descripción General del Flujo de Datos
 
@@ -15,6 +17,7 @@ El Intel Center opera sobre una **infraestructura descentralizada y redundante**
 ![Arquitectura del Clúster de Inteligencia OSINT con Redundancia](/images/intel_center_architecture_redundancy.png)
 
 ---
+type: "arquitectura"
 
 ### **Arquitectura del Clúster (Redundancia Activo-Pasivo)**
 
@@ -24,6 +27,7 @@ Aquí se muestra la interconexión lógica de los nodos y el flujo de la intelig
 
 
 ---
+type: "arquitectura"
 
 ### Las Cinco Capas Críticas del Sistema
 
@@ -60,4 +64,5 @@ La capa final utiliza el generador de sitios estáticos **Hugo** (con el tema An
 * **Accesibilidad**: Proporciona una interfaz táctica optimizada para el análisis rápido de la tensión global, con mapas de calor y gráficos de tendencia.
 
 ---
+type: "arquitectura"
 *Nota técnica: Toda la arquitectura corre bajo entorno Linux (DietPi) optimizado para bajo consumo y alta disponibilidad, garantizando una operación resiliente y eficiente.*
