@@ -5,7 +5,7 @@
         "lon": -100.0,
         "intensity": 15,
         "color": "#e74c3c",
-        "sentiment_index": -0.3005
+        "sentiment_index": -0.3014
     },
     {
         "name": "ESPA\u00d1A",
@@ -19,9 +19,9 @@
         "name": "ARGENTINA",
         "lat": -34.0,
         "lon": -64.0,
-        "intensity": 14,
+        "intensity": 15,
         "color": "#e74c3c",
-        "sentiment_index": -0.4886
+        "sentiment_index": -0.4094
     },
     {
         "name": "BRASIL",
@@ -45,7 +45,7 @@
         "lon": 90.0,
         "intensity": 15,
         "color": "#f1c40f",
-        "sentiment_index": -0.0056
+        "sentiment_index": -0.0093
     },
     {
         "name": "Medio_Oriente",
@@ -53,7 +53,7 @@
         "lon": 45.0,
         "intensity": 15,
         "color": "#e74c3c",
-        "sentiment_index": -0.3449
+        "sentiment_index": -0.3453
     },
     {
         "name": "Asia_Nikkei",
@@ -101,7 +101,7 @@
         "lon": 114.1,
         "intensity": 15,
         "color": "#e74c3c",
-        "sentiment_index": -0.1254
+        "sentiment_index": -0.1163
     },
     {
         "name": "UCRANIA",
@@ -109,6 +109,6 @@
         "lon": 30.5,
         "intensity": 15,
         "color": "#e74c3c",
-        "sentiment_index": -0.3044
+        "sentiment_index": -0.3014
     }
 ]
