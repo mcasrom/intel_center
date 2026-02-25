@@ -1,17 +1,17 @@
 ---
-title: "Análisis de Estado - 2026-02-25 00:00"
-date: 2026-02-25T00:00:01
+title: "Análisis de Estado - 2026-02-25 12:00"
+date: 2026-02-25T12:00:01
 layout: "post"
 tags: ["monitor", "sistema"]
 ---
 
 # 🛡️ Dashboard Operativo: Nodo odroid-c2
-Actualización: 25/02/2026 00:00:01
+Actualización: 25/02/2026 12:00:01
 
 ## 🌡️ Telemetría de Hardware
-- **Temperatura CPU**: 19°C
-- **Carga Sistema**:  0.05, 0.03, 0.00
-- **Uptime**: up 1 day, 16 hours, 0 minutes
+- **Temperatura CPU**: 18°C
+- **Carga Sistema**:  0.02, 0.02, 0.00
+- **Uptime**: up 2 days, 4 hours, 0 minutes
 
 ## 📜 Verificación de Scripts Críticos
 - ✅ **OK**: /home/dietpi/intel_center_odroid/automation/run_intel.sh
@@ -25,11 +25,11 @@ Actualización: 25/02/2026 00:00:01
 ## 📊 Calidad de Ingesta (Últimas 24h)
 | Región | Noticias Ingeridas |
 | :--- | :--- |
-| INDIA_CORE | 183 |
-| Rusia_Eurasia | 87 |
-| UCRANIA | 78 |
-| MAR_CHINA | 72 |
-| Medio_Oriente | 67 |
+| INDIA_CORE | 185 |
+| Rusia_Eurasia | 84 |
+| Medio_Oriente | 79 |
+| UCRANIA | 77 |
+| MAR_CHINA | 71 |
 
 
 ## 📊 Perfil Geo-Estratégico de las Áreas en Observación
@@ -43,11 +43,11 @@ Actualización: 25/02/2026 00:00:01
 ## 🕵️ Análisis de Errores (Últimas 12h)
 - ⚠️ **Alertas en logs detectadas**:
 ```text
-2026-02-24 06:00:14,868 - ERROR - [46519] - Error en feed ESPAÑA: database is locked
 2026-02-24 06:00:20,148 - ERROR - [46519] - Error en feed ARGENTINA: database is locked
 2026-02-24 18:00:08,734 - ERROR - [69852] - Error en feed USA_NORTE: database is locked
 2026-02-24 18:00:14,311 - ERROR - [69852] - Error en feed ESPAÑA: database is locked
 2026-02-24 18:00:19,604 - ERROR - [69852] - Error en feed ARGENTINA: database is locked
+2026-02-25 00:00:09,198 - ERROR - [81538] - Error en feed USA_NORTE: database is locked
 ```
 
 ## 🔄 Redundancia (Espejo .149)
