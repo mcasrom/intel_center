@@ -5,7 +5,7 @@
         "lon": -100.0,
         "intensity": 15,
         "color": "#e74c3c",
-        "sentiment_index": -0.2187
+        "sentiment_index": -0.2163
     },
     {
         "name": "ESPA\u00d1A",
@@ -29,7 +29,7 @@
         "lon": -55.0,
         "intensity": 15,
         "color": "#e74c3c",
-        "sentiment_index": -0.3225
+        "sentiment_index": -0.3289
     },
     {
         "name": "Europa_DW",
@@ -37,7 +37,7 @@
         "lon": 10.0,
         "intensity": 15,
         "color": "#e74c3c",
-        "sentiment_index": -0.2329
+        "sentiment_index": -0.2202
     },
     {
         "name": "Rusia_Eurasia",
@@ -45,7 +45,7 @@
         "lon": 90.0,
         "intensity": 15,
         "color": "#f1c40f",
-        "sentiment_index": -0.0279
+        "sentiment_index": -0.0281
     },
     {
         "name": "Medio_Oriente",
@@ -53,7 +53,7 @@
         "lon": 45.0,
         "intensity": 15,
         "color": "#e74c3c",
-        "sentiment_index": -0.2762
+        "sentiment_index": -0.2635
     },
     {
         "name": "Asia_Nikkei",
@@ -61,7 +61,7 @@
         "lon": 135.0,
         "intensity": 15,
         "color": "#f1c40f",
-        "sentiment_index": -0.0343
+        "sentiment_index": -0.023
     },
     {
         "name": "Africa_Sahel",
@@ -69,7 +69,7 @@
         "lon": 15.0,
         "intensity": 15,
         "color": "#e74c3c",
-        "sentiment_index": -0.2868
+        "sentiment_index": -0.3077
     },
     {
         "name": "INDIA_CORE",
@@ -93,7 +93,7 @@
         "lon": 32.8,
         "intensity": 15,
         "color": "#f1c40f",
-        "sentiment_index": -0.0312
+        "sentiment_index": -0.0295
     },
     {
         "name": "MAR_CHINA",
@@ -101,7 +101,7 @@
         "lon": 114.1,
         "intensity": 15,
         "color": "#e74c3c",
-        "sentiment_index": -0.0913
+        "sentiment_index": -0.0854
     },
     {
         "name": "UCRANIA",
@@ -109,6 +109,6 @@
         "lon": 30.5,
         "intensity": 15,
         "color": "#e74c3c",
-        "sentiment_index": -0.2468
+        "sentiment_index": -0.2423
     }
 ]
