@@ -21,7 +21,7 @@
         "lon": -64.0,
         "intensity": 15,
         "color": "#e74c3c",
-        "sentiment_index": -0.1186
+        "sentiment_index": -0.0885
     },
     {
         "name": "BRASIL",
@@ -29,7 +29,7 @@
         "lon": -55.0,
         "intensity": 15,
         "color": "#e74c3c",
-        "sentiment_index": -0.3375
+        "sentiment_index": -0.3297
     },
     {
         "name": "Europa_DW",
@@ -37,7 +37,7 @@
         "lon": 10.0,
         "intensity": 15,
         "color": "#e74c3c",
-        "sentiment_index": -0.2202
+        "sentiment_index": -0.2248
     },
     {
         "name": "Rusia_Eurasia",
@@ -61,7 +61,7 @@
         "lon": 135.0,
         "intensity": 15,
         "color": "#f1c40f",
-        "sentiment_index": -0.023
+        "sentiment_index": -0.0084
     },
     {
         "name": "Africa_Sahel",
@@ -69,7 +69,7 @@
         "lon": 15.0,
         "intensity": 15,
         "color": "#e74c3c",
-        "sentiment_index": -0.3077
+        "sentiment_index": -0.2945
     },
     {
         "name": "INDIA_CORE",
@@ -101,7 +101,7 @@
         "lon": 114.1,
         "intensity": 15,
         "color": "#e74c3c",
-        "sentiment_index": -0.0768
+        "sentiment_index": -0.0754
     },
     {
         "name": "UCRANIA",
@@ -109,6 +109,6 @@
         "lon": 30.5,
         "intensity": 15,
         "color": "#e74c3c",
-        "sentiment_index": -0.2352
+        "sentiment_index": -0.2304
     }
 ]
