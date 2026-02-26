@@ -1,10 +1,10 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Bitácora de Estado del Nodo on Intel Center</title><link>https://mcasrom.github.io/intel_center/reports/</link><description>Recent content in Bitácora de Estado del Nodo on Intel Center</description><generator>Hugo</generator><language>es</language><lastBuildDate>Thu, 26 Feb 2026 00:00:01 +0000</lastBuildDate><atom:link href="https://mcasrom.github.io/intel_center/reports/index.xml" rel="self" type="application/rss+xml"/><item><title>Análisis de Estado - 2026-02-26 00:00</title><link>https://mcasrom.github.io/intel_center/reports/260226_total_analysis/</link><pubDate>Thu, 26 Feb 2026 00:00:01 +0000</pubDate><guid>https://mcasrom.github.io/intel_center/reports/260226_total_analysis/</guid><description>&lt;h1 id="-dashboard-operativo-nodo-odroid-c2"&gt;🛡️ Dashboard Operativo: Nodo odroid-c2&lt;/h1&gt;
-&lt;p&gt;Actualización: 26/02/2026 00:00:01&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Bitácora de Estado del Nodo on Intel Center</title><link>https://mcasrom.github.io/intel_center/reports/</link><description>Recent content in Bitácora de Estado del Nodo on Intel Center</description><generator>Hugo</generator><language>es</language><lastBuildDate>Thu, 26 Feb 2026 12:00:01 +0000</lastBuildDate><atom:link href="https://mcasrom.github.io/intel_center/reports/index.xml" rel="self" type="application/rss+xml"/><item><title>Análisis de Estado - 2026-02-26 12:00</title><link>https://mcasrom.github.io/intel_center/reports/260226_total_analysis/</link><pubDate>Thu, 26 Feb 2026 12:00:01 +0000</pubDate><guid>https://mcasrom.github.io/intel_center/reports/260226_total_analysis/</guid><description>&lt;h1 id="-dashboard-operativo-nodo-odroid-c2"&gt;🛡️ Dashboard Operativo: Nodo odroid-c2&lt;/h1&gt;
+&lt;p&gt;Actualización: 26/02/2026 12:00:01&lt;/p&gt;
 &lt;h2 id="-telemetría-de-hardware"&gt;🌡️ Telemetría de Hardware&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Temperatura CPU&lt;/strong&gt;: 19°C&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Carga Sistema&lt;/strong&gt;: 0.00, 0.02, 0.00&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Uptime&lt;/strong&gt;: up 2 days, 16 hours, 0 minutes&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Temperatura CPU&lt;/strong&gt;: 18°C&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Carga Sistema&lt;/strong&gt;: 0.05, 0.05, 0.00&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Uptime&lt;/strong&gt;: up 3 days, 4 hours, 0 minutes&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id="-verificación-de-scripts-críticos"&gt;📜 Verificación de Scripts Críticos&lt;/h2&gt;
 &lt;ul&gt;
@@ -27,23 +27,23 @@
  &lt;tbody&gt;
  &lt;tr&gt;
  &lt;td style="text-align: left"&gt;INDIA_CORE&lt;/td&gt;
- &lt;td style="text-align: left"&gt;202&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;187&lt;/td&gt;
  &lt;/tr&gt;
  &lt;tr&gt;
  &lt;td style="text-align: left"&gt;Rusia_Eurasia&lt;/td&gt;
- &lt;td style="text-align: left"&gt;103&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;134&lt;/td&gt;
  &lt;/tr&gt;
  &lt;tr&gt;
  &lt;td style="text-align: left"&gt;Medio_Oriente&lt;/td&gt;
- &lt;td style="text-align: left"&gt;82&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;78&lt;/td&gt;
  &lt;/tr&gt;
  &lt;tr&gt;
  &lt;td style="text-align: left"&gt;MAR_CHINA&lt;/td&gt;
- &lt;td style="text-align: left"&gt;71&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;72&lt;/td&gt;
  &lt;/tr&gt;
  &lt;tr&gt;
  &lt;td style="text-align: left"&gt;UCRANIA&lt;/td&gt;
- &lt;td style="text-align: left"&gt;69&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;71&lt;/td&gt;
  &lt;/tr&gt;
  &lt;/tbody&gt;
 &lt;/table&gt;
@@ -93,11 +93,11 @@
 &lt;ul&gt;
 &lt;li&gt;⚠️ &lt;strong&gt;Alertas en logs detectadas&lt;/strong&gt;:&lt;/li&gt;
 &lt;/ul&gt;
-&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-text" data-lang="text"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;2026-02-24 18:00:19,604 - ERROR - [69852] - Error en feed ARGENTINA: database is locked
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;2026-02-25 00:00:09,198 - ERROR - [81538] - Error en feed USA_NORTE: database is locked
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;2026-02-25 12:00:09,181 - ERROR - [104799] - Error en feed USA_NORTE: database is locked
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;2026-02-25 12:00:14,822 - ERROR - [104799] - Error en feed ESPAÑA: database is locked
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-text" data-lang="text"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;2026-02-25 12:00:14,822 - ERROR - [104799] - Error en feed ESPAÑA: database is locked
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;2026-02-25 12:00:20,110 - ERROR - [104799] - Error en feed ARGENTINA: database is locked
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;2026-02-26 00:00:09,774 - ERROR - [128050] - Error en feed USA_NORTE: database is locked
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;2026-02-26 00:00:15,412 - ERROR - [128050] - Error en feed ESPAÑA: database is locked
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;2026-02-26 00:00:20,727 - ERROR - [128050] - Error en feed ARGENTINA: database is locked
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id="-redundancia-espejo-149"&gt;🔄 Redundancia (Espejo .149)&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;🔑 Enlace SSH: &lt;strong&gt;VERIFICADO&lt;/strong&gt; (Backup garantizado)&lt;/li&gt;
