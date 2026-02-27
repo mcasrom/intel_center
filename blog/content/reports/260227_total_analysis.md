@@ -1,17 +1,17 @@
 ---
-title: "Análisis de Estado - 2026-02-27 00:00"
-date: 2026-02-27T00:00:01
+title: "Análisis de Estado - 2026-02-27 12:00"
+date: 2026-02-27T12:00:01
 layout: "post"
 tags: ["monitor", "sistema"]
 ---
 
 # 🛡️ Dashboard Operativo: Nodo odroid-c2
-Actualización: 27/02/2026 00:00:01
+Actualización: 27/02/2026 12:00:01
 
 ## 🌡️ Telemetría de Hardware
-- **Temperatura CPU**: 20°C
-- **Carga Sistema**:  0.10, 0.05, 0.01
-- **Uptime**: up 3 days, 16 hours, 0 minutes
+- **Temperatura CPU**: 18°C
+- **Carga Sistema**:  0.00, 0.00, 0.00
+- **Uptime**: up 4 days, 4 hours, 0 minutes
 
 ## 📜 Verificación de Scripts Críticos
 - ✅ **OK**: /home/dietpi/intel_center_odroid/automation/run_intel.sh
@@ -25,11 +25,11 @@ Actualización: 27/02/2026 00:00:01
 ## 📊 Calidad de Ingesta (Últimas 24h)
 | Región | Noticias Ingeridas |
 | :--- | :--- |
-| INDIA_CORE | 196 |
-| Rusia_Eurasia | 136 |
-| Medio_Oriente | 78 |
-| MAR_CHINA | 78 |
-| UCRANIA | 71 |
+| INDIA_CORE | 217 |
+| Rusia_Eurasia | 134 |
+| MAR_CHINA | 75 |
+| UCRANIA | 70 |
+| Medio_Oriente | 69 |
 
 
 ## 📊 Perfil Geo-Estratégico de las Áreas en Observación
