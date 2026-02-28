@@ -1,17 +1,17 @@
 ---
-title: "Análisis de Estado - 2026-02-28 00:00"
-date: 2026-02-28T00:00:01
+title: "Análisis de Estado - 2026-02-28 12:00"
+date: 2026-02-28T12:00:02
 layout: "post"
 tags: ["monitor", "sistema"]
 ---
 
 # 🛡️ Dashboard Operativo: Nodo odroid-c2
-Actualización: 28/02/2026 00:00:01
+Actualización: 28/02/2026 12:00:02
 
 ## 🌡️ Telemetría de Hardware
-- **Temperatura CPU**: 19°C
-- **Carga Sistema**:  0.00, 0.00, 0.00
-- **Uptime**: up 4 days, 16 hours, 0 minutes
+- **Temperatura CPU**: 18°C
+- **Carga Sistema**:  0.00, 0.04, 0.00
+- **Uptime**: up 1 hour, 0 minutes
 
 ## 📜 Verificación de Scripts Críticos
 - ✅ **OK**: /home/dietpi/intel_center_odroid/automation/run_intel.sh
@@ -25,11 +25,11 @@ Actualización: 28/02/2026 00:00:01
 ## 📊 Calidad de Ingesta (Últimas 24h)
 | Región | Noticias Ingeridas |
 | :--- | :--- |
-| INDIA_CORE | 202 |
-| Rusia_Eurasia | 96 |
-| UCRANIA | 70 |
-| MAR_CHINA | 68 |
-| BRASIL | 64 |
+| INDIA_CORE | 191 |
+| Medio_Oriente | 71 |
+| UCRANIA | 65 |
+| MAR_CHINA | 60 |
+| Rusia_Eurasia | 58 |
 
 
 ## 📊 Perfil Geo-Estratégico de las Áreas en Observación
@@ -37,16 +37,17 @@ Actualización: 28/02/2026 00:00:01
 | :--- | :--- | :--- | :--- | :--- |
 | **INDIA_CORE** | 1,428M | $3.7T | Hinduismo | Alto |
 | **Rusia_Eurasia** | 144M | $2.2T | Ortodoxia | Extremo |
+| **Medio_Oriente** | 450M | $4.5T | Islam | Crítico |
 | **USA_NORTE** | 335M | $26.9T | Cristian. | Moderado |
 
 ## 🕵️ Análisis de Errores (Últimas 12h)
 - ⚠️ **Alertas en logs detectadas**:
 ```text
-2026-02-27 12:00:14,361 - ERROR - [198127] - Error en feed ESPAÑA: database is locked
-2026-02-27 12:00:19,715 - ERROR - [198127] - Error en feed ARGENTINA: database is locked
-2026-02-27 18:00:08,797 - ERROR - [209818] - Error en feed USA_NORTE: database is locked
 2026-02-27 18:00:14,449 - ERROR - [209818] - Error en feed ESPAÑA: database is locked
 2026-02-27 18:00:19,738 - ERROR - [209818] - Error en feed ARGENTINA: database is locked
+2026-02-28 06:00:08,423 - ERROR - [233390] - Error en feed USA_NORTE: database is locked
+2026-02-28 06:00:14,118 - ERROR - [233390] - Error en feed ESPAÑA: database is locked
+2026-02-28 06:00:19,394 - ERROR - [233390] - Error en feed ARGENTINA: database is locked
 ```
 
 ## 🔄 Redundancia (Espejo .149)
