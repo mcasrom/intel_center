@@ -5,7 +5,7 @@
         "lon": -100.0,
         "intensity": 15,
         "color": "#e74c3c",
-        "sentiment_index": -0.2943
+        "sentiment_index": -0.2922
     },
     {
         "name": "ESPA\u00d1A",
@@ -29,7 +29,7 @@
         "lon": -55.0,
         "intensity": 15,
         "color": "#e74c3c",
-        "sentiment_index": -0.3094
+        "sentiment_index": -0.3265
     },
     {
         "name": "Europa_DW",
@@ -37,7 +37,7 @@
         "lon": 10.0,
         "intensity": 15,
         "color": "#e74c3c",
-        "sentiment_index": -0.281
+        "sentiment_index": -0.2825
     },
     {
         "name": "Rusia_Eurasia",
@@ -45,7 +45,7 @@
         "lon": 90.0,
         "intensity": 15,
         "color": "#e74c3c",
-        "sentiment_index": -0.1207
+        "sentiment_index": -0.1302
     },
     {
         "name": "Medio_Oriente",
@@ -53,15 +53,15 @@
         "lon": 45.0,
         "intensity": 15,
         "color": "#e74c3c",
-        "sentiment_index": -0.2699
+        "sentiment_index": -0.2867
     },
     {
         "name": "Asia_Nikkei",
         "lat": 35.0,
         "lon": 135.0,
         "intensity": 15,
-        "color": "#e74c3c",
-        "sentiment_index": -0.0502
+        "color": "#f1c40f",
+        "sentiment_index": -0.0187
     },
     {
         "name": "Africa_Sahel",
@@ -69,7 +69,7 @@
         "lon": 15.0,
         "intensity": 15,
         "color": "#e74c3c",
-        "sentiment_index": -0.2754
+        "sentiment_index": -0.2732
     },
     {
         "name": "INDIA_CORE",
@@ -77,7 +77,7 @@
         "lon": 77.2,
         "intensity": 15,
         "color": "#e74c3c",
-        "sentiment_index": -0.0629
+        "sentiment_index": -0.0606
     },
     {
         "name": "CHINA_CORE",
@@ -101,7 +101,7 @@
         "lon": 114.1,
         "intensity": 15,
         "color": "#e74c3c",
-        "sentiment_index": -0.1039
+        "sentiment_index": -0.1018
     },
     {
         "name": "UCRANIA",
@@ -109,6 +109,6 @@
         "lon": 30.5,
         "intensity": 15,
         "color": "#e74c3c",
-        "sentiment_index": -0.2587
+        "sentiment_index": -0.2617
     }
 ]
