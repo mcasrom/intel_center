@@ -1,26 +1,26 @@
 ---
 title: "Índice de Resiliencia y Libertad (IRL): Reporte Trimestral Rotativo"
-date: 2026-03-01T12:30:01
+date: 2026-03-01T18:30:01
 draft: false
 tags: ["Geopolítica", "Ranking", "metodología", "Libertad"]
 ---
 
 # ⚖️ Ranking Global de Resiliencia y Libertad (IRL)
-*Última actualización: 2026-03-01 12:30:01*
+*Última actualización: 2026-03-01 18:30:01*
 
 Este índice combina el marco legal y digital (ONU) con el análisis de sentimiento en tiempo real procesado por este nodo Odroid-C2 sobre una ventana de **90 días**.
 
 | Puesto | Región | Índice IRL | Sent. 90d (IA) | Estado | Noticias |
 | :--- | :--- | :---: | :---: | :---: | :---: |
-| 1 | **Europa_DW** | 75.71 | -0.071 | ✅ Robusta | 416 |
-| 2 | **ESPAÑA** | 73.15 | -0.008 | ✅ Robusta | 356 |
-| 3 | **USA_NORTE** | 70.53 | -0.09 | ✅ Robusta | 457 |
-| 4 | **ARGENTINA** | 62.17 | -0.029 | ⚠️ Observación | 311 |
-| 5 | **BRASIL** | 60.01 | -0.032 | ⚠️ Observación | 600 |
+| 1 | **Europa_DW** | 75.57 | -0.08 | ✅ Robusta | 418 |
+| 2 | **ESPAÑA** | 73.17 | -0.007 | ✅ Robusta | 361 |
+| 3 | **USA_NORTE** | 70.37 | -0.1 | ✅ Robusta | 459 |
+| 4 | **ARGENTINA** | 62.16 | -0.03 | ⚠️ Observación | 314 |
+| 5 | **BRASIL** | 59.98 | -0.035 | ⚠️ Observación | 599 |
 | 6 | **MARRUECOS** | 51.75 | 0.0 | ⚠️ Observación | 0 |
-| 7 | **UCRANIA** | 41.43 | -0.163 | 🟠 Tensión | 656 |
-| 8 | **Rusia_Eurasia** | 25.24 | -0.018 | 🚫 Crítica | 1413 |
-| 9 | **MAR_CHINA** | 24.88 | -0.041 | 🚫 Crítica | 645 |
+| 7 | **UCRANIA** | 41.35 | -0.168 | 🟠 Tensión | 670 |
+| 8 | **Rusia_Eurasia** | 25.21 | -0.02 | 🚫 Crítica | 1411 |
+| 9 | **MAR_CHINA** | 24.85 | -0.044 | 🚫 Crítica | 665 |
 | 10 | **IRAN** | 23.07 | -0.011 | 🚫 Crítica | 76 |
 
 ## 🛠 Metodología
