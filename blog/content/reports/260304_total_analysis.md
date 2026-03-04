@@ -1,17 +1,17 @@
 ---
-title: "Análisis de Estado - 2026-03-04 00:00"
-date: 2026-03-04T00:00:01
+title: "Análisis de Estado - 2026-03-04 12:00"
+date: 2026-03-04T12:00:01
 layout: "post"
 tags: ["monitor", "sistema"]
 ---
 
 # 🛡️ Dashboard Operativo: Nodo odroid-c2
-Actualización: 04/03/2026 00:00:01
+Actualización: 04/03/2026 12:00:01
 
 ## 🌡️ Telemetría de Hardware
 - **Temperatura CPU**: 20°C
-- **Carga Sistema**:  0.00, 0.03, 0.00
-- **Uptime**: up 3 days, 13 hours, 0 minutes
+- **Carga Sistema**:  0.09, 0.04, 0.01
+- **Uptime**: up 4 days, 1 hour, 0 minutes
 
 ## 📜 Verificación de Scripts Críticos
 - ✅ **OK**: /home/dietpi/intel_center_odroid/automation/run_intel.sh
@@ -25,11 +25,11 @@ Actualización: 04/03/2026 00:00:01
 ## 📊 Calidad de Ingesta (Últimas 24h)
 | Región | Noticias Ingeridas |
 | :--- | :--- |
-| INDIA_CORE | 181 |
-| Rusia_Eurasia | 136 |
+| INDIA_CORE | 192 |
+| Rusia_Eurasia | 122 |
 | Medio_Oriente | 90 |
-| MAR_CHINA | 77 |
-| UCRANIA | 72 |
+| MAR_CHINA | 78 |
+| UCRANIA | 68 |
 
 
 ## 📊 Perfil Geo-Estratégico de las Áreas en Observación
@@ -53,7 +53,7 @@ error: failed to push some refs to 'https://github.com/mcasrom/intel_center.git'
 - 🔑 Enlace SSH: **VERIFICADO** (Backup garantizado)
 
 ## 💾 Almacenamiento
-- **Uso de Disco**: 14%
+- **Uso de Disco**: 17%
 
 ---
 *Auto-reporte generado por el Nodo de Inteligencia odroid-c2.*
