@@ -5,7 +5,7 @@
         "lon": -100.0,
         "intensity": 15,
         "color": "#e74c3c",
-        "sentiment_index": -0.2438
+        "sentiment_index": -0.2434
     },
     {
         "name": "ESPA\u00d1A",
@@ -29,7 +29,7 @@
         "lon": -55.0,
         "intensity": 15,
         "color": "#e74c3c",
-        "sentiment_index": -0.4137
+        "sentiment_index": -0.4
     },
     {
         "name": "Europa_DW",
@@ -37,7 +37,7 @@
         "lon": 10.0,
         "intensity": 15,
         "color": "#e74c3c",
-        "sentiment_index": -0.3742
+        "sentiment_index": -0.3639
     },
     {
         "name": "Rusia_Eurasia",
@@ -45,7 +45,7 @@
         "lon": 90.0,
         "intensity": 15,
         "color": "#e74c3c",
-        "sentiment_index": -0.1902
+        "sentiment_index": -0.1962
     },
     {
         "name": "Medio_Oriente",
@@ -53,15 +53,15 @@
         "lon": 45.0,
         "intensity": 15,
         "color": "#e74c3c",
-        "sentiment_index": -0.4021
+        "sentiment_index": -0.3981
     },
     {
         "name": "Asia_Nikkei",
         "lat": 35.0,
         "lon": 135.0,
         "intensity": 15,
-        "color": "#e74c3c",
-        "sentiment_index": -0.0562
+        "color": "#f1c40f",
+        "sentiment_index": -0.04
     },
     {
         "name": "Africa_Sahel",
@@ -69,7 +69,7 @@
         "lon": 15.0,
         "intensity": 15,
         "color": "#e74c3c",
-        "sentiment_index": -0.2124
+        "sentiment_index": -0.2262
     },
     {
         "name": "INDIA_CORE",
@@ -77,7 +77,7 @@
         "lon": 77.2,
         "intensity": 15,
         "color": "#e74c3c",
-        "sentiment_index": -0.1028
+        "sentiment_index": -0.1034
     },
     {
         "name": "CHINA_CORE",
@@ -93,7 +93,7 @@
         "lon": 32.8,
         "intensity": 15,
         "color": "#e74c3c",
-        "sentiment_index": -0.2138
+        "sentiment_index": -0.2029
     },
     {
         "name": "MAR_CHINA",
@@ -101,7 +101,7 @@
         "lon": 114.1,
         "intensity": 15,
         "color": "#e74c3c",
-        "sentiment_index": -0.2426
+        "sentiment_index": -0.2317
     },
     {
         "name": "UCRANIA",
@@ -109,6 +109,6 @@
         "lon": 30.5,
         "intensity": 15,
         "color": "#e74c3c",
-        "sentiment_index": -0.2999
+        "sentiment_index": -0.3028
     }
 ]
